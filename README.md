@@ -50,25 +50,25 @@ Aporta su creatividad junto con su experiencia en softwares de diseño. En esta 
     ___
 
     - [___Nike___](https://www.nike.com/us/es/)
-        ![Captura](https://www.google.com/url?sa=i&url=https%3A%2F%2Ffakeinet.com%2Fsneakersnike2019-com-tienda-falsa-online-nike%2F&psig=AOvVaw0epfKJ5WSPTu-VWvPO8xej&ust=1590031330701000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCLj1xLy-wekCFQAAAAAdAAAAABAS)
+        ![Captura](https://i2.wp.com/fakeinet.com/wp-content/uploads/2019/11/nnkeug.com-tienda-online-falsa-Nike.jpg?fit=754%2C972&ssl=1)
         ```
         JUST DO IT
     ___
 
     - [___Vans___](https://www.nike.com/us/es/)
-        ![Captura](https://www.google.com/url?sa=i&url=https%3A%2F%2Ffakeinet.com%2Fvsshops-club-tienda-online-falsa-vans%2F&psig=AOvVaw0NpvCBHaOra4QRUzyCmsXc&ust=1590031291137000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCOCuu6W-wekCFQAAAAAdAAAAABAJ)
+        ![Captura](https://i1.wp.com/fakeinet.com/wp-content/uploads/2018/11/vsshops.club-tienda-online-falsa-sneakers-Vans.jpg?fit=752%2C936&ssl=1)
         ```
         VANS OFF THE WALL
     ___
 
     - [___Converse___](https://www.converse.com/us)
-        ![Captura](https://www.google.com/url?sa=i&url=http%3A%2F%2Fovam.com.tr%2FIndex.aspx%3Fgj%3Des%26hl%3Des%26shop%3Donline%2Bconverse%26xi%3D4%26xc%3D12%26pl%3D0%26pr%3D62.99%26you%3D0&psig=AOvVaw3sKYrx2NpJ4JDR57RmhjHf&ust=1590031199272000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCNC6pPm9wekCFQAAAAAdAAAAABAQ)
+        ![Captura](https://i2.wp.com/fakeinet.com/wp-content/uploads/2018/11/crazyshoes.club-tienda-online-falsa-zapatillas-Converse.jpg)
         ```
         ALL STAR
     ___
 
     - [___New Balance___](https://www.newbalance.com/)
-        ![Captura](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.sportchek.ca%2Fbrands%2Fnew-balance.html&psig=AOvVaw3oNPFKCQv6POco8CYFzy7k&ust=1590031120268000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCIDAj9S9wekCFQAAAAAdAAAAABAG)
+        ![Captura](https://fgl.scene7.com/is/image/FGLSportsLtd/FGL_HEADER_MOBILE_728x500_WGN_KAWHI?wid=728&fit=fit,1&op_sharpen=1&resMode=sharp2&qlt=85,1)
         ```
         NB
     ___
