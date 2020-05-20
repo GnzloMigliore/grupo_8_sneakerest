@@ -44,6 +44,7 @@ Aporta su creatividad junto con su experiencia en softwares de diseño. En esta 
 
 + ## ___Referentes___
     - [___Adidas___](https://www.adidas.com/us)
+    
         ![SALE!](https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/enUS/Images/COMM-SS20-MayPromo-MemorialDay-mh-upto50off-d_tcm221-494128.jpg)
         ```
         The brand with the three stripes
@@ -78,6 +79,7 @@ Aporta su creatividad junto con su experiencia en softwares de diseño. En esta 
     ___
 
     - [___Reebok___](https://www.reebok.com/us)
+    
         ![Captura](https://i2.wp.com/fakeinet.com/wp-content/uploads/2018/10/reeboktienda.online-tienda-online-estafa-reebok.jpg?fit=800%2C614&ssl=1&is-pending-load=1)
         ```
         Celebrating our trainers
