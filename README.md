@@ -49,8 +49,8 @@ Aporta su creatividad junto con su experiencia en softwares de diseño. En esta 
         Adidas Store USA
     ___
 
-    - [___Nike___](https://play.cine.ar/bienvenida/)
-        ![Captura](https://www.nike.com/us/es/w/jordan-37eef)
+    - [___Nike___](https://www.nike.com/us/es/)
+        ![Captura](https://www.nike.com/us/es/w/kevin-durant-3hmd1)
         ```
         Nike Store USA
 ___  
