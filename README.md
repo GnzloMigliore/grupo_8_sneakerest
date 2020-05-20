@@ -74,7 +74,7 @@ Aporta su creatividad junto con su experiencia en softwares de diseño. En esta 
     ___
 
     - [___Reebok___](https://www.reebok.com/us)
-        ![Captura](https://www.google.com/url?sa=i&url=https%3A%2F%2Ffakeinet.com%2Fen%2Ftag%2Freebok-en%2F&psig=AOvVaw1JcoKyDw-pPfYF7KGkZJ_N&ust=1590031398182000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCKimhd--wekCFQAAAAAdAAAAABAE)
+        ![Captura](https://i2.wp.com/fakeinet.com/wp-content/uploads/2018/10/reeboktienda.online-tienda-online-estafa-reebok.jpg?fit=800%2C614&ssl=1&is-pending-load=1)
         ```
         Celebrating our trainers
 ___ 
