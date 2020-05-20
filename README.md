@@ -46,12 +46,35 @@ Aporta su creatividad junto con su experiencia en softwares de diseño. En esta 
     - [___Adidas___](https://www.adidas.com/us)
         ![SALE!](https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/enUS/Images/COMM-SS20-MayPromo-MemorialDay-mh-upto50off-d_tcm221-494128.jpg)
         ```
-        Adidas Store USA
+        The brand with the three stripes
     ___
 
     - [___Nike___](https://www.nike.com/us/es/)
-        ![Captura](https://www.nike.com/us/es/w/kevin-durant-3hmd1)
+        ![Captura](https://www.google.com/url?sa=i&url=https%3A%2F%2Ffakeinet.com%2Fsneakersnike2019-com-tienda-falsa-online-nike%2F&psig=AOvVaw0epfKJ5WSPTu-VWvPO8xej&ust=1590031330701000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCLj1xLy-wekCFQAAAAAdAAAAABAS)
         ```
-        Nike Store USA
-___  
+        JUST DO IT
+    ___
 
+    - [___Vans___](https://www.nike.com/us/es/)
+        ![Captura](https://www.google.com/url?sa=i&url=https%3A%2F%2Ffakeinet.com%2Fvsshops-club-tienda-online-falsa-vans%2F&psig=AOvVaw0NpvCBHaOra4QRUzyCmsXc&ust=1590031291137000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCOCuu6W-wekCFQAAAAAdAAAAABAJ)
+        ```
+        VANS OFF THE WALL
+    ___
+
+    - [___Converse___](https://www.converse.com/us)
+        ![Captura](https://www.google.com/url?sa=i&url=http%3A%2F%2Fovam.com.tr%2FIndex.aspx%3Fgj%3Des%26hl%3Des%26shop%3Donline%2Bconverse%26xi%3D4%26xc%3D12%26pl%3D0%26pr%3D62.99%26you%3D0&psig=AOvVaw3sKYrx2NpJ4JDR57RmhjHf&ust=1590031199272000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCNC6pPm9wekCFQAAAAAdAAAAABAQ)
+        ```
+        ALL STAR
+    ___
+
+    - [___New Balance___](https://www.newbalance.com/)
+        ![Captura](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.sportchek.ca%2Fbrands%2Fnew-balance.html&psig=AOvVaw3oNPFKCQv6POco8CYFzy7k&ust=1590031120268000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCIDAj9S9wekCFQAAAAAdAAAAABAG)
+        ```
+        NB
+    ___
+
+    - [___Reebok___](https://www.reebok.com/us)
+        ![Captura](https://www.google.com/url?sa=i&url=https%3A%2F%2Ffakeinet.com%2Fen%2Ftag%2Freebok-en%2F&psig=AOvVaw1JcoKyDw-pPfYF7KGkZJ_N&ust=1590031398182000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCKimhd--wekCFQAAAAAdAAAAABAE)
+        ```
+        Celebrating our trainers
+___ 
