@@ -50,24 +50,28 @@ Aporta su creatividad junto con su experiencia en softwares de diseño. En esta 
     ___
 
     - [___Nike___](https://www.nike.com/us/es/)
+    
         ![Captura](https://i2.wp.com/fakeinet.com/wp-content/uploads/2019/11/nnkeug.com-tienda-online-falsa-Nike.jpg?fit=754%2C972&ssl=1)
         ```
         JUST DO IT
     ___
 
     - [___Vans___](https://www.nike.com/us/es/)
+    
         ![Captura](https://i1.wp.com/fakeinet.com/wp-content/uploads/2018/11/vsshops.club-tienda-online-falsa-sneakers-Vans.jpg?fit=752%2C936&ssl=1)
         ```
         VANS OFF THE WALL
     ___
 
     - [___Converse___](https://www.converse.com/us)
+    
         ![Captura](https://i2.wp.com/fakeinet.com/wp-content/uploads/2018/11/crazyshoes.club-tienda-online-falsa-zapatillas-Converse.jpg)
         ```
         ALL STAR
     ___
 
     - [___New Balance___](https://www.newbalance.com/)
+    
         ![Captura](https://fgl.scene7.com/is/image/FGLSportsLtd/FGL_HEADER_MOBILE_728x500_WGN_KAWHI?wid=728&fit=fit,1&op_sharpen=1&resMode=sharp2&qlt=85,1)
         ```
         NB
