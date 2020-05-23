@@ -83,6 +83,13 @@ Aporta su creatividad junto con su experiencia en softwares de diseño. En esta 
         ![Captura](https://i2.wp.com/fakeinet.com/wp-content/uploads/2018/10/reeboktienda.online-tienda-online-estafa-reebok.jpg?fit=800%2C614&ssl=1&is-pending-load=1)
         ```
         Celebrating our trainers
+    ___
+
+    - [___DC Shoes & ___](https://www.dcshoes.com/)
+    
+        ![Captura](https://pic.accessify.com/thumbnails/777x423/d/dcshoes.co.id.png)
+        ```
+        DCSHOECOUSA
 ___ 
 
 + ## ___Logo___
