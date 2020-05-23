@@ -84,3 +84,10 @@ Aporta su creatividad junto con su experiencia en softwares de diseño. En esta 
         ```
         Celebrating our trainers
 ___ 
+
++ ## ___Logo___
+
+
+|Clasificación | Características        |Ejemplos
+|-------------|------------|--------|
+|Imagotipo|Tipografía y pictograma|[Ejemplo](https://imageneswebb.blogspot.com/Imagenlogonegro)
