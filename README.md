@@ -85,7 +85,7 @@ Aporta su creatividad junto con su experiencia en softwares de diseño. En esta 
         Celebrating our trainers
     ___
 
-    - [___DC Shoes & ___](https://www.dcshoes.com/)
+    - [___DC Shoes ___](https://www.dcshoes.com/)
     
         ![Captura](https://pic.accessify.com/thumbnails/777x423/d/dcshoes.co.id.png)
         ```
