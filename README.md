@@ -95,6 +95,6 @@ ___
 + ## ___Logo___
 
 
-|Clasificación | Características        |Ejemplos
+|Clasificación | Características        |Logo
 |-------------|------------|--------|
 |Imagotipo|Tipografía y pictograma|[Ejemplo](https://imageneswebb.blogspot.com/Imagenlogonegro)
