@@ -18,7 +18,7 @@ El ecommerce ofrecerá calzado urbano. Han sido seleccionados minuciosamente ten
 1. Clasic
 2. Práctico
 3. Selección minusiosa
-4. cool 
+4. Cool 
 
 + ## ___Integrantes___
 
@@ -85,7 +85,7 @@ Aporta su creatividad junto con su experiencia en softwares de diseño. En esta 
         Celebrating our trainers
     ___
 
-    - [___DCSHOES ___](https://www.dcshoes.com/)
+    - [___DC Shoes___](https://www.dcshoes.com/)
     
         ![Captura](https://pic.accessify.com/thumbnails/777x423/d/dcshoes.co.id.png)
         ```
