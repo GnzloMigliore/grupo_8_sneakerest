@@ -97,4 +97,4 @@ ___
 
 |Clasificación | Características        |Logo
 |-------------|------------|--------|
-|Imagotipo|Tipografía y pictograma|[Ejemplo](https://imageneswebb.blogspot.com/Imagenlogonegro)
+|Imagotipo|Tipografía y pictograma|[Logo](https://imageneswebb.blogspot.com/Imagenlogonegro)
