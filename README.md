@@ -85,12 +85,35 @@ Aporta su creatividad junto con su experiencia en softwares de diseño. En esta 
         Celebrating our trainers
     ___
 
-    - [___DC Shoes ___](https://www.dcshoes.com/)
+    - [___DCSHOES ___](https://www.dcshoes.com/)
     
         ![Captura](https://pic.accessify.com/thumbnails/777x423/d/dcshoes.co.id.png)
         ```
         DCSHOECOUSA
-___ 
+___     
+
++ ## ___Paleta de colores___
+    - __Basado en la siguiente:__ [___Link___](https://coolors.co/f94144-f3722c-f8961e-f9c74f-90be6d-43aa8b-577590)
+        1. ![#ffffff](https://via.placeholder.com/15/ffffff/000000?text=+) `#ffffff`
+        2. ![#0c0f0a](https://via.placeholder.com/15/0c0f0a/000000?text=+) `#0c0f0a`
+        3. ![#f94144](https://via.placeholder.com/15/f94144/000000?text=+) `#f94144`
+        4. ![#f3722c](https://via.placeholder.com/15/f3722c/000000?text=+) `#f3722c`
+        5. ![#f8961e](https://via.placeholder.com/15/f8961e/000000?text=+) `#f8961e`
+        6. ![#f9c74f](https://via.placeholder.com/15/f9c74f/000000?text=+) `#f9c74f`
+        7. ![#90be6d](https://via.placeholder.com/15/90be6d/000000?text=+) `#90be6d`
+        8. ![#43aa8b](https://via.placeholder.com/15/43aa8b/000000?text=+) `#43aa8b`
+        9. ![#577590](https://via.placeholder.com/15/577590/000000?text=+) `#577590`
+        
+___
+
++ ## ___Tipografia___
+    | Estilo TIpografico | Ejemplo | Implementacion | Representa |
+    | ------------- | ------------- | ------------- | ------------- |
+    | Serif  | [Courier New](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Courier.svg/1200px-Courier.svg.png) [TImes New Roman](https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Times_New_Roman-sample.svg/1200px-Times_New_Roman-sample.svg.png) | Pedioricos - Documentos Formales  | Autoridad - Sobriedad - Formalidad |
+    | Sans Serif  | [Helvetica](https://upload.wikimedia.org/wikipedia/commons/2/28/HelveticaSpecimenCH.svg) [Verdana](https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/VerdanaSpecimen.svg/1200px-VerdanaSpecimen.svg.png)  | Presentaciones Digitales - Revistas | Modernidad - Alegria - Seguridad |
+    | Script  | [Vivaldi](https://d144mzi0q5mijx.cloudfront.net/img/V/I/VivaldiD.png) [Killigraphy](https://d144mzi0q5mijx.cloudfront.net/img/K/I/Killigraphy.png) [Edwardian Script](https://i.pinimg.com/originals/d6/ec/73/d6ec73daed396b4ab9b2fd1262ed2dd6.jpg)  | Firmas - Titulares |Natural - Personalidad |
+___
+
 
 + ## ___Logo___
 
