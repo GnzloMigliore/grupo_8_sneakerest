@@ -125,6 +125,10 @@ ___
 
 8. ***Mis pedidos***:
 
+![8-100](https://user-images.githubusercontent.com/65030877/82845802-48c2fd00-9ebc-11ea-918b-9def0b89422c.jpg)
+
+9. ***Mis pedidos extendido***:
+
 
 
 
