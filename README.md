@@ -141,6 +141,12 @@ ___
 
 12. ***Productos filtros 1***:
 
+![12-100](https://user-images.githubusercontent.com/65030877/82846108-a86dd800-9ebd-11ea-9897-ea0fae60fce5.jpg)
+
+13. ***Productos filtros 2***:
+
+
+
 
 
 
