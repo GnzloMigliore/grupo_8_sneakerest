@@ -102,7 +102,13 @@ ___
 
 ![2_1-100](https://user-images.githubusercontent.com/65030877/82844582-6477d480-9eb7-11ea-93b4-a298658f3332.jpg)
 
-3. ***Inicio LOGOIN***:
+3. ***Inicio LOGIN***:
+
+![3_1-100](https://user-images.githubusercontent.com/65030877/82844919-bbca7480-9eb8-11ea-8188-135f210c1112.jpg)
+
+4. ***Crear cuenta***:
+
+
 
 
 
