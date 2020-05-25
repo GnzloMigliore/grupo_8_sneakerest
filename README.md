@@ -121,6 +121,11 @@ ___
 
 7. ***Mis datos***:
 
+![7_1-100](https://user-images.githubusercontent.com/65030877/82845739-16b19b00-9ebc-11ea-8d13-ae348ceb7a67.jpg)
+
+8. ***Mis pedidos***:
+
+
 
 
 
