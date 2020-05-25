@@ -166,6 +166,11 @@ ___
 
 17. ***Confirmación pedido***:
 
+![17-100](https://user-images.githubusercontent.com/65030877/82846387-00f1a500-9ebf-11ea-9424-23c2dfdac429.jpg)
+
+18. ***Pago***:
+
+
 
 
 
