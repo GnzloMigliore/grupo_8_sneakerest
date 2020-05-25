@@ -110,12 +110,16 @@ ___
 
 ![4_1-100](https://user-images.githubusercontent.com/65030877/82844971-fc29f280-9eb8-11ea-96e8-0b0e5418bb5c.jpg)
 
-5. *** Inicio seción iniciada***:
+5. ***Inicio Sesión Iniciada***:
 
 
 ![5_1-100](https://user-images.githubusercontent.com/65030877/82845065-56c34e80-9eb9-11ea-9ab4-083bfbc26319.jpg)
 
 6. ***Inicio barra usuario***:
+
+![6_1-100](https://user-images.githubusercontent.com/65030877/82845164-d2bd9680-9eb9-11ea-83bf-c41d52488ec1.jpg)
+
+7. ***Mis datos***:
 
 
 
