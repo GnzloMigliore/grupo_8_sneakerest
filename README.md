@@ -176,28 +176,9 @@ ___
 19. ***Gracias por tu compra!***:
 
 
+![19-100](https://user-images.githubusercontent.com/65030877/82846462-5463f300-9ebf-11ea-9208-86ab7078e582.jpg)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+---
 
 + ## ___Paleta de colores___
     - __Basado en la siguiente:__ [___Link___](https://coolors.co/f94144-f3722c-f8961e-f9c74f-90be6d-43aa8b-577590)
