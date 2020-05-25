@@ -171,6 +171,13 @@ ___
 18. ***Pago***:
 
 
+![18-100](https://user-images.githubusercontent.com/65030877/82846421-2bdbf900-9ebf-11ea-9c17-2720f17b42e5.jpg)
+
+19. ***Gracias por tu compra!***:
+
+
+
+
 
 
 
