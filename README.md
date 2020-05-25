@@ -92,6 +92,10 @@ Aporta su creatividad junto con su experiencia en softwares de diseño. En esta 
         DCSHOECOUSA
 ___     
 
++ ## ___Wireframes___ :
+
+![1_1-100](https://user-images.githubusercontent.com/65030877/82844499-1fec3900-9eb7-11ea-81af-18252b67a43b.jpg)
+
 + ## ___Paleta de colores___
     - __Basado en la siguiente:__ [___Link___](https://coolors.co/f94144-f3722c-f8961e-f9c74f-90be6d-43aa8b-577590)
         1. ![#ffffff](https://via.placeholder.com/15/ffffff/000000?text=+) `#ffffff`
