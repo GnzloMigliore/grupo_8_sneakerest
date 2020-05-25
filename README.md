@@ -113,6 +113,13 @@ ___
 5. *** Inicio seción iniciada***:
 
 
+![5_1-100](https://user-images.githubusercontent.com/65030877/82845065-56c34e80-9eb9-11ea-9ab4-083bfbc26319.jpg)
+
+6. ***Inicio barra usuario***:
+
+
+
+
 
 
 
