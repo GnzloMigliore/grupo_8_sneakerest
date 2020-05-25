@@ -162,6 +162,11 @@ ___
 16.***Carrito***:
 
 
+![16-100](https://user-images.githubusercontent.com/65030877/82846290-6729f800-9ebe-11ea-8cc8-11c5f5f7eeb1.jpg)
+
+17. ***Confirmación pedido***:
+
+
 
 
 
