@@ -154,7 +154,12 @@ ___
 
 ![14_1-100](https://user-images.githubusercontent.com/65030877/82846182-fe428000-9ebd-11ea-88ce-208c5d1ae722.jpg)
 
-15. ***Detalle producto carrito***
+15. ***Detalle producto carrito***:
+
+
+![15_1-100](https://user-images.githubusercontent.com/65030877/82846223-292cd400-9ebe-11ea-96c8-460f59ba2234.jpg)
+
+16.***Carrito***:
 
 
 
