@@ -152,6 +152,11 @@ ___
 14. ***Detalle producto***:
 
 
+![14_1-100](https://user-images.githubusercontent.com/65030877/82846182-fe428000-9ebd-11ea-88ce-208c5d1ae722.jpg)
+
+15. ***Detalle producto carrito***
+
+
 
 
 
