@@ -108,6 +108,12 @@ ___
 
 4. ***Crear cuenta***:
 
+![4_1-100](https://user-images.githubusercontent.com/65030877/82844971-fc29f280-9eb8-11ea-96e8-0b0e5418bb5c.jpg)
+
+5. *** Inicio seción iniciada***:
+
+
+
 
 
 
