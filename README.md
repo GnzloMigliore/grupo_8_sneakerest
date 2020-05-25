@@ -92,7 +92,7 @@ Aporta su creatividad junto con su experiencia en softwares de diseño. En esta 
         DCSHOECOUSA
 ___     
 
-+ ## ___Wireframes___
++ ## ___Wireframe___
 
 1. ***Inicio***:
 
@@ -136,6 +136,11 @@ ___
 ![10_2-100](https://user-images.githubusercontent.com/65030877/82845915-d3a3f780-9ebc-11ea-97cc-59a12017a186.jpg)
 
 11 . ***Produtos***:
+
+![11_1-100](https://user-images.githubusercontent.com/65030877/82846006-33020780-9ebd-11ea-8e9b-90cefc18ab57.jpg)
+
+12. ***Productos filtros 1***:
+
 
 
 
