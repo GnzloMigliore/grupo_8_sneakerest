@@ -102,7 +102,7 @@ ___
 
 ![2_1-100](https://user-images.githubusercontent.com/65030877/82844582-6477d480-9eb7-11ea-93b4-a298658f3332.jpg)
 
-3. ***Inicio LOGIN***:
+3. ***Iniciar sesión***:
 
 ![3_1-100](https://user-images.githubusercontent.com/65030877/82844919-bbca7480-9eb8-11ea-8188-135f210c1112.jpg)
 
@@ -110,12 +110,12 @@ ___
 
 ![4_1-100](https://user-images.githubusercontent.com/65030877/82844971-fc29f280-9eb8-11ea-96e8-0b0e5418bb5c.jpg)
 
-5. ***Inicio Sesión Iniciada***:
+5. ***Sesión iniciada***:
 
 
 ![5_1-100](https://user-images.githubusercontent.com/65030877/82845065-56c34e80-9eb9-11ea-9ab4-083bfbc26319.jpg)
 
-6. ***Inicio barra usuario***:
+6. ***Panel usuario***:
 
 ![6_1-100](https://user-images.githubusercontent.com/65030877/82845164-d2bd9680-9eb9-11ea-83bf-c41d52488ec1.jpg)
 
@@ -127,7 +127,7 @@ ___
 
 ![8-100](https://user-images.githubusercontent.com/65030877/82845802-48c2fd00-9ebc-11ea-918b-9def0b89422c.jpg)
 
-9. ***Mis pedidos extendido***:
+9. ***Mis pedidos detalle***:
 
 ![9-100](https://user-images.githubusercontent.com/65030877/82845860-93447980-9ebc-11ea-8dc5-65d15fee7f76.jpg)
 
@@ -135,15 +135,15 @@ ___
 
 ![10_2-100](https://user-images.githubusercontent.com/65030877/82845915-d3a3f780-9ebc-11ea-97cc-59a12017a186.jpg)
 
-11 . ***Produtos***:
+11 . ***Catálogo***:
 
 ![11_1-100](https://user-images.githubusercontent.com/65030877/82846006-33020780-9ebd-11ea-8e9b-90cefc18ab57.jpg)
 
-12. ***Productos filtros 1***:
+12. ***Catálogo orden***:
 
 ![12-100](https://user-images.githubusercontent.com/65030877/82846108-a86dd800-9ebd-11ea-9897-ea0fae60fce5.jpg)
 
-13. ***Productos filtros 2***:
+13. ***Catálogo filtros***:
 
 
 ![13-100](https://user-images.githubusercontent.com/65030877/82846138-cf2c0e80-9ebd-11ea-84a7-9d280b274f92.jpg)
@@ -175,8 +175,86 @@ ___
 
 19. ***Gracias por tu compra!***:
 
+---
 
-![19-100](https://user-images.githubusercontent.com/65030877/82846462-5463f300-9ebf-11ea-9208-86ab7078e582.jpg)
++ ## ___Mockups___ 
+
+1. ***inicio cursor en resto de la pagina***:
+
+![1-cursor en resto de la pag-100](https://user-images.githubusercontent.com/65030877/82939100-3357dc80-9f69-11ea-9f83-d03020ca50d8.jpg)
+
+
+2. ***inicio cursor en barra***:
+
+![2-cursor sobre barra-100](https://user-images.githubusercontent.com/65030877/82939324-93e71980-9f69-11ea-8a7a-b21fda47df25.jpg)
+
+3. ***Menu de inicio***:
+
+![3-panel generos abierto-100](https://user-images.githubusercontent.com/65030877/82939764-2d163000-9f6a-11ea-8b2e-ff28c6543eaf.jpg)
+
+4. ***Iniciar sesión***:
+
+![4-inicio sesion-100](https://user-images.githubusercontent.com/65030877/82939870-5767ed80-9f6a-11ea-8fb7-6d2eb34d21fb.jpg)
+
+5. ***Crear cuenta***:
+
+![5-crear cuenta-100](https://user-images.githubusercontent.com/65030877/82939946-75cde900-9f6a-11ea-976e-5efaf72b0bcb.jpg)
+
+6. ***Sesión iniciada***:
+
+![6-sesion iniciada-100](https://user-images.githubusercontent.com/65030877/82940015-9302b780-9f6a-11ea-8dfb-1b7ff12df049.jpg)
+
+7. ***Panel usuario***:
+
+![7-sesion iniciada panel-100](https://user-images.githubusercontent.com/65030877/82940086-b168b300-9f6a-11ea-93c8-9cd0a03c883e.jpg)
+
+8.***Mis datos***:
+
+![8-mis datos-100](https://user-images.githubusercontent.com/65030877/82940327-07d5f180-9f6b-11ea-8b13-0901279eed74.jpg)
+
+9. ***Mis pedidos***:
+
+![9-mis pedidos-100](https://user-images.githubusercontent.com/65030877/82940395-20dea280-9f6b-11ea-8fd7-888c9a332b29.jpg)
+
+10. ***Mis pedidos detalle***:
+
+![10-mis pedidos detalle-100](https://user-images.githubusercontent.com/65030877/82940440-36ec6300-9f6b-11ea-9374-7b622fe4b9f9.jpg)
+
+11. ***Contacto***:
+
+![11-contacto-100](https://user-images.githubusercontent.com/65030877/82940481-48ce0600-9f6b-11ea-94dc-9e2cfb3a5258.jpg)
+
+12. ***Catálogo***:
+
+![12-catalogo-100](https://user-images.githubusercontent.com/65030877/82940525-5be0d600-9f6b-11ea-9456-5c5ede6bb3eb.jpg)
+
+13. ***Catálogo orden***:
+
+![13-catalogo orden-100](https://user-images.githubusercontent.com/65030877/82940601-7915a480-9f6b-11ea-923b-b01e167c370c.jpg)
+
+14. ***Catálogo filtros***:
+
+![14-catalogo filtros-100](https://user-images.githubusercontent.com/65030877/82940673-8e8ace80-9f6b-11ea-8998-d01f3e088685.jpg)
+
+15. ***Detalle producto***:
+
+![15-pagina producto-100](https://user-images.githubusercontent.com/65030877/82940782-af532400-9f6b-11ea-80cd-96a36d607daf.jpg)
+
+16. ***Detalle producto carrito***:
+
+![16-pagina producto carrito-100](https://user-images.githubusercontent.com/65030877/82940861-cb56c580-9f6b-11ea-9442-10f80c69fff8.jpg)
+
+17 ***Detalle producto color***:
+
+![17-pagina producto color-100](https://user-images.githubusercontent.com/65030877/82941649-17eed080-9f6d-11ea-912b-5ccc9e85b2f8.jpg)
+
+18.***Detalle producto color carrito***
+
+![18-pagina producto carrito color-100](https://user-images.githubusercontent.com/65030877/82941757-4a98c900-9f6d-11ea-9699-c3689cf072c4.jpg)
+
+
+
+
 
 ---
 
