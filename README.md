@@ -8,7 +8,7 @@ El ecommerce ofrecerá calzado urbano, los cuales han sido seleccionados minucio
 
 ---
 
-+  ## ___Público objetivo___
++ ## ___Público objetivo___
 
  De acuerdo a un estudio de mercado realizado entre personas de 20 a 45 años, con gusto por el estilo vintage, música de años 80 o 90, preferentemente, y que actualmente utilizan la vestimenta que combina perfectamente con este tipo de calzado. Coinciden con su gusto, combinan con la vestimenta que usan y, dentro de un grupo de 10 personas, al menos 2 han adquirido este tipo de calzado en algún momento de su vida
 
@@ -159,7 +159,7 @@ ___
 
 ![15_1-100](https://user-images.githubusercontent.com/65030877/82846223-292cd400-9ebe-11ea-96c8-460f59ba2234.jpg)
 
-16.***Carrito***:
+16. ***Carrito***:
 
 
 ![16-100](https://user-images.githubusercontent.com/65030877/82846290-6729f800-9ebe-11ea-8cc8-11c5f5f7eeb1.jpg)
@@ -179,12 +179,12 @@ ___
 
 + ## ___Mockups___ 
 
-1. ***inicio cursor en resto de la página***:
+1. ***Inicio cursor en resto de la página***:
 
 ![1-cursor en resto de la pag-100](https://user-images.githubusercontent.com/65030877/82939100-3357dc80-9f69-11ea-9f83-d03020ca50d8.jpg)
 
 
-2. ***inicio cursor en barra***:
+2. ***Inicio cursor en barra***:
 
 ![2-cursor sobre barra-100](https://user-images.githubusercontent.com/65030877/82939324-93e71980-9f69-11ea-8a7a-b21fda47df25.jpg)
 
@@ -208,7 +208,7 @@ ___
 
 ![7-sesion iniciada panel-100](https://user-images.githubusercontent.com/65030877/82940086-b168b300-9f6a-11ea-93c8-9cd0a03c883e.jpg)
 
-8.***Mis datos***:
+8. ***Mis datos***:
 
 ![8-mis datos-100](https://user-images.githubusercontent.com/65030877/82940327-07d5f180-9f6b-11ea-8b13-0901279eed74.jpg)
 
@@ -248,11 +248,11 @@ ___
 
 ![17-pagina producto color-100](https://user-images.githubusercontent.com/65030877/82941649-17eed080-9f6d-11ea-912b-5ccc9e85b2f8.jpg)
 
-18.***Detalle producto color carrito***
+18. ***Detalle producto color carrito***
 
 ![18-pagina producto carrito color-100](https://user-images.githubusercontent.com/65030877/82941757-4a98c900-9f6d-11ea-9699-c3689cf072c4.jpg)
 
-19.***Detalle producto color barra***:
+19. ***Detalle producto color barra***:
 
 ![19-pagina producto colorbarra-100](https://user-images.githubusercontent.com/65030877/82942834-fdb5f200-9f6e-11ea-9bfe-f609332e9d09.jpg)
 
@@ -260,15 +260,15 @@ ___
 
 ![20-pagina producto colorbarra carrito-100](https://user-images.githubusercontent.com/65030877/82942905-1920fd00-9f6f-11ea-8d22-dba79b7792cf.jpg)
 
-21.***Carrito***:
+21. ***Carrito***:
 
 ![21-carrito-100](https://user-images.githubusercontent.com/65030877/82942984-3bb31600-9f6f-11ea-8b7b-b9b4482df027.jpg)
 
-22.***Confirmación  pedido***:
+22. ***Confirmación  pedido***:
 
 ![22-formulario compra-100](https://user-images.githubusercontent.com/65030877/82943024-4bcaf580-9f6f-11ea-84cc-92c74c0d4c23.jpg)
 
-23.***Pago***:
+23. ***Pago***:
 
 ![23-pago-100](https://user-images.githubusercontent.com/65030877/82943116-76b54980-9f6f-11ea-9d43-b44cfd502afc.jpg)
 
