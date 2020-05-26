@@ -15,9 +15,9 @@ El ecommerce ofrecerá calzado urbano. Han sido seleccionados minuciosamente ten
 ---
 
 + ## ___Carácteristicas principales___
-1. Clasic
+1. Clásico
 2. Práctico
-3. Selección minusiosa
+3. Selección minuciosa
 4. Cool 
 
 + ## ___Integrantes___
