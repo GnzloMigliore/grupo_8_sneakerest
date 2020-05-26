@@ -252,9 +252,25 @@ ___
 
 ![18-pagina producto carrito color-100](https://user-images.githubusercontent.com/65030877/82941757-4a98c900-9f6d-11ea-9699-c3689cf072c4.jpg)
 
+19.***Detalle producto color barra***:
 
+![19-pagina producto colorbarra-100](https://user-images.githubusercontent.com/65030877/82942834-fdb5f200-9f6e-11ea-9bfe-f609332e9d09.jpg)
 
+20. ***Detalle producto color barra carrito***:
 
+![20-pagina producto colorbarra carrito-100](https://user-images.githubusercontent.com/65030877/82942905-1920fd00-9f6f-11ea-8d22-dba79b7792cf.jpg)
+
+21.***Carrito***:
+
+![21-carrito-100](https://user-images.githubusercontent.com/65030877/82942984-3bb31600-9f6f-11ea-8b7b-b9b4482df027.jpg)
+
+22.***Confirmación  pedido***:
+
+![22-formulario compra-100](https://user-images.githubusercontent.com/65030877/82943024-4bcaf580-9f6f-11ea-84cc-92c74c0d4c23.jpg)
+
+23.***Pago***:
+
+![23-pago-100](https://user-images.githubusercontent.com/65030877/82943116-76b54980-9f6f-11ea-9d43-b44cfd502afc.jpg)
 
 ---
 
