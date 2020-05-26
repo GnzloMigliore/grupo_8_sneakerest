@@ -179,7 +179,7 @@ ___
 
 + ## ___Mockups___ 
 
-1. ***inicio cursor en resto de la pagina***:
+1. ***inicio cursor en resto de la página***:
 
 ![1-cursor en resto de la pag-100](https://user-images.githubusercontent.com/65030877/82939100-3357dc80-9f69-11ea-9f83-d03020ca50d8.jpg)
 
@@ -302,3 +302,7 @@ ___
 |Clasificación | Características        |Logo
 |-------------|------------|--------|
 |Imagotipo|Tipografía y pictograma|[Logo](https://imageneswebb.blogspot.com/Imagenlogonegro)
+
+---
+
+## ___Gracias por leer hasta acá!!!___
