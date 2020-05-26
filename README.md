@@ -4,19 +4,19 @@
 
 + ## ___Acerca de___
 
-El ecommerce ofrecerá calzado urbano. Han sido seleccionados minuciosamente teniendo en cuenta en primer lugar, que a lo largo de los últimos 40 años han perdurado, adaptándose a las modificaciones de color y estilo que la moda ha impuesto año tras año.
+El ecommerce ofrecerá calzado urbano, los cuales han sido seleccionados minuciosamente teniendo en cuenta en primer lugar, que a lo largo de los últimos 40 años han perdurado, adaptándose a las modificaciones de color y estilo que la moda ha impuesto año tras año.
 
 ---
 
 +  ## ___Público objetivo___
 
- De acuerdo a un estudio de mercado realizado entre personas de 20 a 40 años, con gusto por el estilo vintage, música de años 80 o 90 preferentemente y que actualmente utilizan la vestimenta que combina perfectamente con este tipo de calzado. Coinciden con su gusto, combinan con la vestimenta que usan y, dentro de un grupo de 10 personas, al menos 2 han adquirido este tipo de calzado en algún momento de su vida
+ De acuerdo a un estudio de mercado realizado entre personas de 20 a 45 años, con gusto por el estilo vintage, música de años 80 o 90, preferentemente, y que actualmente utilizan la vestimenta que combina perfectamente con este tipo de calzado. Coinciden con su gusto, combinan con la vestimenta que usan y, dentro de un grupo de 10 personas, al menos 2 han adquirido este tipo de calzado en algún momento de su vida
 
 ---
 
 + ## ___Carácteristicas principales___
 1. Clásico
-2. Práctico
+2. Vintage
 3. Selección minuciosa
 4. Cool 
 
@@ -275,7 +275,7 @@ ___
 ---
 
 + ## ___Paleta de colores___
-    - __Basado en la siguiente:__ [___Link___](https://coolors.co/f94144-f3722c-f8961e-f9c74f-90be6d-43aa8b-577590)
+    - __Basado en el siguiente:__ [___Link___](https://coolors.co/f94144-f3722c-f8961e-f9c74f-90be6d-43aa8b-577590)
         1. ![#ffffff](https://via.placeholder.com/15/ffffff/000000?text=+) `#ffffff`
         2. ![#0c0f0a](https://via.placeholder.com/15/0c0f0a/000000?text=+) `#0c0f0a`
         3. ![#f94144](https://via.placeholder.com/15/f94144/000000?text=+) `#f94144`
