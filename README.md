@@ -26,19 +26,19 @@ El ecommerce ofrecerá calzado urbano, los cuales han sido seleccionados minucio
 
 - ___Gonzalo Migliore___
 
-Nuestro Scrum Master, quien en esta primera etapa está a cargo de crear el repositorio, contribuir al debate de los wireframes y aportar su experiencia dentro del rubro del comercio. 
+Nuestro Scrum Master, 24 años, graduado de DH en marketing digital. Emprendedor. Dueño de una marca de muebles con 4 años de antigüedad y empleado de una agencia de marketing. Interesado en el mundo del comercio digital.
 
 ---
 
 - ___Joaquín Dominguez Lodeiro___
 
-Aporta su creatividad junto con su experiencia en softwares de diseño. En esta primera etapa, comenzó aportando varias propuestas para que el diseño principal del ecommerce tenga una interfaz estética sofisticada y ochentosa.
+23 años, estudiante de arquitectura, aporta su creatividad junto con su experiencia en softwares de diseño. En esta primera etapa, comenzó aportando varias propuestas para que el diseño principal del ecommerce tenga una interfaz estética sofisticada y ochentosa.
 
 ---
 
 - ___Ezequiel Paolini___
 
- Se encarga del estudio de mercado realizado para la comercialización del calzado.
+26 años, emprendedor, estudió y trabaja en marketing hace varios años. Para el primer sprint, se encargó de buscar los modelos, competencias y páginas de referencia del mercado de zapatillas urbanas.
 
 ---
 
