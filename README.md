@@ -175,6 +175,8 @@ ___
 
 19. ***Gracias por tu compra!***:
 
+![19-100](https://user-images.githubusercontent.com/65030877/83087938-dc393100-a068-11ea-9565-1259ff4c26cc.jpg)
+
 ---
 
 + ## ___Mockups___ 
