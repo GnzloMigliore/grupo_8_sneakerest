@@ -1,17 +1,16 @@
 {
-  "name": "site",
+  "name": "grupo_8_sneakerest",
   "version": "1.0.0",
-  "description": "Sneakerest - tienda online argentina de calzado urbano ",
+  "description": "---",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "nodemon src/index.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/GonzaloMigliore/grupo_8_sneakerest.git"
   },
-  "keywords": [],
-  "author": "Ezequiel Paolini, Gonzalo Migliore, Joaquín Dominguez Lodeiro",
+  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/GonzaloMigliore/grupo_8_sneakerest/issues"
