@@ -2,7 +2,7 @@ html {
     font-family: 'Montserrat', sans-serif;
     font-size: 62.5%; /*** Reset para REM --> 62.5% = 10px de 16px ***/
 }
--------------------------------------
+
 
 /* NAVBAR */
 .navbar {
@@ -41,8 +41,6 @@ button {
     align-content: center;
 }
 
-
--------------------------------------
 
 /* MENÚ DESPLEGABLE */
 #navbar-div {
@@ -105,8 +103,6 @@ button {
 }
 
 
--------------------------------------
-
 /* PRIMER SLIDE */
 .primera-pagina {
     text-align: center;
@@ -115,7 +111,6 @@ button {
     width: 100%;
     height: 100%;
 }
-
 #new-in {
     color: black;
     padding-top: 300px;
@@ -123,13 +118,11 @@ button {
     font-weight: bold;
     text-align: center;
 }
-
 #new-in-p {
     color: black;
     font-size: 1.3rem;
     text-align: center;
 }
-
 .catalogo {
     text-decoration: none;
     padding: 5px;
@@ -142,8 +135,6 @@ button {
     align-content: center;
 }
 
-
--------------------------------------
 
 /* SEGUNDO SLIDE */
 .segunda-pagina {
@@ -188,8 +179,6 @@ button {
 }
 
 
--------------------------------------
-
 /* TERCER SLIDE */
 .tercera-pagina {
     text-align: center;
@@ -207,8 +196,6 @@ button {
 }
 
 
--------------------------------------
-
 /* MENÚ FONDO INICIO */
 .cat-pie {
     display: flex;
@@ -220,7 +207,6 @@ button {
     padding-top: 200px;
 }
 
--------------------------------------
 
 /* FOOTER */
 .page-footer {;
