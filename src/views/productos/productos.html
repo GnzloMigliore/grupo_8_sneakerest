@@ -10,231 +10,27 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!--Mi CSS-->
-    <link rel="stylesheet" href="/public/css/productos.css">
+    <link rel="stylesheet" href="css/productos.css">
 </head>
 <body>
-    <!--    
-        <header class="container-fullwidth">
-            <nav class="navbar navbar-expand bg-dark"></nav>
-        </header>
-        <main class="container">
-            <div class="container text-right">
-                <div class="row btn-group">
-                    <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle text-uppercase rounded-0" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ordenar</button>
-                        <div class="dropdown-menu dropdown-menu-right text-uppercase" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="#">novedades</a>
-                            <a class="dropdown-item" href="#">Los más vendidos</a>
-                            <a class="dropdown-item" href="#">precio (menor a mayor)</a>
-                            <a class="dropdown-item" href="#">precio (mayor a menor)</a>
-                            
-                        </div>
-                    </div>
-                    <div class="dropdown pl-3">
-                        <button class="btn btn-secondary dropdown-toggle text-uppercase rounded-0" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">+ filtros</button>
-                        <div class="dropdown-menu filtros-dropdown dropdown-menu-right text-uppercase rounded-0 border-0" aria-labelledby="dropdownMenuButton">
-                            <ul class="lista-filtros pl-5">
-                                <li class="titulo-filtros pt-5">marcas</li>
-                                <section class="pt-3">
-                                    <ul>
-                                        <li><a href="#">Adidas</a></li>
-                                        <li><a href="#">converse</a></li>
-                                        <li><a href="#">dc shoes</a></li>
-                                        <li><a href="#">new balance</a></li>
-                                        <li><a href="#">nike</a></li>
-                                        <li><a href="#">rebook</a></li>
-                                        <li><a href="#">vans</a></li>
-                                    </ul>
-                                </section>
-                                <li class="titulo-filtros pt-5">talles</li>
-                                <section class="lista-talles pt-3">
-                                    <div class="numeros-talles text-center">
-                                        <a href="#">38</a>
-                                    </div>
-                                    <div class="numeros-talles text-center">
-                                        <a href="#">38.5</a>
-                                    </div>
-                                    <div class="numeros-talles text-center">
-                                        <a href="#">39</a>
-                                    </div>
-                                    <div class="numeros-talles text-center">
-                                        <a href="#">39.5</a>
-                                    </div>
-                                    <div class="numeros-talles text-center">
-                                        <a href="#">40</a>
-                                    </div>
-                                    <div class="numeros-talles text-center">
-                                        <a href="#">40.5</a>
-                                    </div>
-                                    <div class="numeros-talles text-center">
-                                        <a href="#">41</a>
-                                    </div>
-                                    <div class="numeros-talles text-center">
-                                        <a href="#">41.5</a>
-                                    </div>
-                                    <div class="numeros-talles text-center">
-                                        <a href="#">42</a>
-                                    </div>
-                                    <div class="numeros-talles text-center">
-                                        <a href="#">42.5</a>
-                                    </div>
-                                    <div class="numeros-talles text-center">
-                                        <a href="#">43</a>
-                                    </div>
-                                    <div class="numeros-talles text-center">
-                                        <a href="#">43.5</a>
-                                    </div>
-                                    <div class="numeros-talles text-center">
-                                        <a href="#">44</a>
-                                    </div>
-                                </section>
-                                <li class="titulo-filtros pt-5">Colores</li>
-                                <section class="lista-colores row pt-3">
-                                    <div class="circulos-colores col-2">
-                                        <i class="fas fa-circle circulos-filtros" id="circulo-naranja"></i>
-                                    </div>
-                                    <div class="circulos-colores col-2">
-                                        <i class="fas fa-circle circulos-filtros" id="circulo-celeste"></i>
-                                    </div>
-                                    <div class="circulos-colores col-2">
-                                        <i class="fas fa-circle circulos-filtros" id="circulo-rojo"></i>
-                                    </div>
-                                    <div class="circulos-colores col-2">
-                                        <i class="fas fa-circle circulos-filtros" id="circulo-amarillo"></i>
-                                    </div>
-                                    <div class="circulos-colores col-2">
-                                        <i class="fas fa-circle circulos-filtros" id="circulo-verde"></i>
-                                    </div>
-                                    <div class="circulos-colores col-2">
-                                        <i class="fas fa-circle circulos-filtros" id="circulo-azul"></i>
-                                    </div>
-                                    <div class="circulos-colores col-2">
-                                        <i class="fas fa-circle circulos-filtros" id="circulo-gris"></i>
-                                    </div>
-                                    <div class="circulos-colores col-2">
-                                        <i class="fas fa-circle circulos-filtros" id="circulo-blanco"></i>
-                                    </div>
-                                    <div class="circulos-colores col-2">
-                                        <i class="fas fa-circle circulos-filtros" id="circulo-negro"></i>
-                                    </div>
-                                </section>
-                                <li class="titulo-filtros pt-5">precio</li>
-                                <section class="filtro-precio pt-3">
-                                    <div class="card-body">
-                                        <div class="form-row">
-                                            <div class="form-group col-md-6">
-                                                <label>Min</label>
-                                                <input type="number" class="form-control rounded-0 border border-dark" id="inputEmail4" placeholder="$0">
-                                            </div>
-                                            <div class="form-group col-md-6 text-left">
-                                                <label>Max</label>
-                                                <input type="number" class="form-control rounded-0 border border-dark" placeholder="$1,0000">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </section>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        
-        <div class="row mx-auto">
-            <article class="col  col-lg-3 align-items-center">
-                <div class="card">
-                    <div class="recuadro-gris">
-                        <img src="../../../public/img/Busenitz_Shoes_Blue_FV5876_01_standard.jpg" class="card-img-top" alt="Adidas Busenitz">
-                    </div>
-                    <div class="card-body text-center">
-                        <p class="card-text">Adidas Busenitz</p>
-                        <p class="card-text">$4999</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="recuadro-gris">
-                        <img src="../../../public/img/Busenitz_Shoes_Blue_FV5876_01_standard.jpg" class="card-img-top" alt="Adidas Busenitz">
-                    </div>
-                    <div class="card-body text-center">
-                        <p class="card-text">Adidas Busenitz</p>
-                        <p class="card-text">$4999</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="recuadro-gris">
-                        <img src="../../../public/img/Busenitz_Shoes_Blue_FV5876_01_standard.jpg" class="card-img-top" alt="Adidas Busenitz">
-                    </div>
-                    <div class="card-body text-center">
-                        <p class="card-text">Adidas Busenitz</p>
-                        <p class="card-text">$4999</p>
-                    </div>
-                </div>
-            </article>
-            
-            <div class="card">
-                <div class="recuadro-gris">
-                    <img src="../../../public/img/Campus_ADV_Shoes_Black_B22716_01_standard.jpg" class="card-img-top" alt="Adidas Campus ADV">
-                </div>
-                <div class="card-body text-center">
-                    <p class="card-text">Adidas Campus</p>
-                    <p class="card-text">$5499</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="recuadro-gris">
-                    <img src="../../../public/img/Campus_ADV_Shoes_Black_B22716_01_standard.jpg" class="card-img-top" alt="Adidas Campus ADV">
-                </div>
-                <div class="card-body text-center">
-                    <p class="card-text">Adidas Campus</p>
-                    <p class="card-text">$5499</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="recuadro-gris">
-                    <img src="../../../public/img/Campus_ADV_Shoes_Black_B22716_01_standard.jpg" class="card-img-top" alt="Adidas Campus ADV">
-                </div>
-                <div class="card-body text-center">
-                    <p class="card-text">Adidas Campus</p>
-                    <p class="card-text">$5499</p>
-                </div>
-            </div>
-            
-            
-        </div>
-    </main>
-    <footer class="page-footer font-small mt-5 pt-4 text-uppercase">
-        <div class="container-fluid text-center">
-            <div class="row">
-                <div class="col">
-                    <h5><a href="https://www.instagram.com">Instagram</a></h5>
-                </div>
-                <div class="col">
-                    <h5><a href="https://www.behance.com">Behance</a></h5>
-                </div>
-                <div class="col">
-                    <h5><a href="https://www.facebook.com">Facebook</a></h5>
-                </div>
-            </div>
-        </div>  
-        <div class="logo-footer mx-auto mb-0 pt-4">
-            <a href="/"><img src="../../../public/img/Mesa de trabajo 3@.png" class="img-responsive" alt="Logo Sneakerest"></a>
-        </div>
-        <div class="footer-copyright text-center mb-0 pb-3">© 2020 Copyright:
-            <a href="/">©sneakerest s.r.l.</a>
-        </div>
-    </footer>
--->
-<header class="contenido-nav">
-    <nav class="navbar-detalles">
-        <i class="fas fa-arrow-left iconos-top"></i>
-        <i class="fas fa-shopping-cart iconos-top"></i>
-    </nav>
     
+<header>
+        <!--nav-->
+        <nav class="d-flex justify-content-between align-items-center">
+            <div id="item1" class="box">
+                <a href="/"><img src="img/logonegro@.png" alt=""></i></a>
+            </div>
+            <div id="item2" class="box">
+                <h1 class="m-auto p-auto">NEW IN</h1>
+            </div>
+            <div id="item3" class="box">
+                <a href="/carrito"><i class="fas fa-shopping-cart" style="color: black;"></i></a>
+            </div>
+        </nav>
 </header>
 <main>
     
-    <div class="orden-filtros">
+    <div class="orden-filtros pb-0 mt-0">
         <div class="marcas-arriba d-none d-md-block">
             <a href="#">Adidas</a>
             <a href="#">Converse</a>
@@ -246,7 +42,7 @@
             <a href="#">Ver Todas</a>
         </div>
         
-            <div class="dos-drops col-12 d-flex justify-content-end d-sm-block d-md-none content-mov">
+            <div class="dos-drops1 col-12 d-flex justify-content-end d-sm-block d-md-none content-mov">
                 <div class="dropdown ">
                     <button class="btn btn-secondary dropdown-toggle boton-orden-filtro" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         orden
@@ -328,7 +124,7 @@
                         <a class="dropdown-item" href="#">Precio (mayor a menor)</a>
                     </div>
                 </div>
-                <div class="dropdown" style="margin-right: 10rem;">
+                <div class="dropdown">
                     <button class="btn btn-secondary dropdown-toggle boton-orden-filtro" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         + filtros
                     </button>
@@ -392,7 +188,7 @@
     <div class="lista-productos">
         <div class="box-productos">
             <div class="fondo-gris-productos">
-                <img src="../../../public/img/Busenitz_Shoes_Blue_FV5876_01_standard.jpg" alt="Adidas Busenitz">
+                <img src="img/Busenitz_Shoes_Blue_FV5876_01_standard.jpg" alt="Adidas Busenitz">
             </div>
             <div class="modelo-precio">
                 <p>Adidas Busenitz</p>
@@ -402,7 +198,7 @@
         </div>
         <div class="box-productos">
             <div class="fondo-gris-productos">
-                <img src="../../../public/img/Campus_ADV_Shoes_Black_B22716_01_standard.jpg" alt="Adidas Campus ADV">
+                <img src="img/Campus_ADV_Shoes_Black_B22716_01_standard.jpg" alt="Adidas Campus ADV">
             </div>
             <div class="modelo-precio">
                 <p>Adidas Campus ADV</p>
@@ -411,7 +207,7 @@
         </div>
         <div class="box-productos">
             <div class="fondo-grisOscuro-productos">
-                <img src="../../../public/img/converse/converseChucksAzules/162055C_A_107X1.jpg" alt="Converse Chucks Azules">
+                <img src="img/converse/converseChucksAzules/162055C_A_107X1.jpg" alt="Converse Chucks Azules">
             </div>
             <div class="modelo-precio">
                 <p>Converse Chucks</p>
@@ -420,7 +216,7 @@
         </div>
         <div class="box-productos">
             <div class="fondo-grisOscuro-productos">
-                <img src="../../../public/img/converse/converseChucksNaranjas/chucks1.jpg" alt="Converse Chucks Naranjas">
+                <img src="img/converse/converseChucksNaranjas/chucks1.jpg" alt="Converse Chucks Naranjas">
             </div>
             <div class="modelo-precio">
                 <p>Converse Chucks</p>
@@ -429,7 +225,7 @@
         </div>
         <div class="box-productos">
             <div class="fondo-gris-productos">
-                <img src="../../../public/img/Busenitz_Shoes_Blue_FV5876_01_standard.jpg" alt="Adidas Busenitz">
+                <img src="img/Busenitz_Shoes_Blue_FV5876_01_standard.jpg" alt="Adidas Busenitz">
             </div>
             <div class="modelo-precio">
                 <p>Adidas Busenitz</p>
@@ -439,7 +235,7 @@
         </div>
         <div class="box-productos">
             <div class="fondo-gris-productos">
-                <img src="../../../public/img/Campus_ADV_Shoes_Black_B22716_01_standard.jpg" alt="Adidas Campus ADV">
+                <img src="img/Campus_ADV_Shoes_Black_B22716_01_standard.jpg" alt="Adidas Campus ADV">
             </div>
             <div class="modelo-precio">
                 <p>Adidas Campus ADV</p>
@@ -448,7 +244,7 @@
         </div>
         <div class="box-productos">
             <div class="fondo-gris-productos">
-                <img src="../../../public/img/Campus_ADV_Shoes_Black_B22716_01_standard.jpg" alt="Adidas Campus ADV">
+                <img src="img/Campus_ADV_Shoes_Black_B22716_01_standard.jpg" alt="Adidas Campus ADV">
             </div>
             <div class="modelo-precio">
                 <p>Adidas Campus ADV</p>
@@ -457,7 +253,7 @@
         </div>
         <div class="box-productos">
             <div class="fondo-grisOscuro-productos">
-                <img src="../../../public/img/converse/converseChucksAzules/162055C_A_107X1.jpg" alt="Converse Chucks Azules">
+                <img src="img/converse/converseChucksAzules/162055C_A_107X1.jpg" alt="Converse Chucks Azules">
             </div>
             <div class="modelo-precio">
                 <p>Converse Chucks</p>
@@ -466,7 +262,7 @@
         </div>
         <div class="box-productos">
             <div class="fondo-grisOscuro-productos">
-                <img src="../../../public/img/converse/converseChucksNaranjas/chucks1.jpg" alt="Converse Chucks Naranjas">
+                <img src="img/converse/converseChucksNaranjas/chucks1.jpg" alt="Converse Chucks Naranjas">
             </div>
             <div class="modelo-precio">
                 <p>Converse Chucks</p>
@@ -491,7 +287,7 @@
                 <!--Logo footer-->
                 <div class="col-12 mt-4 mb-0 pb-0">
                     <div class="col-12 text-center">
-                        <a href="#"><img src="/public/img/Mesa de trabajo 3@.png" alt="Logo Sneakerest" class="logo-footer-mobile mx-auto"></a>
+                        <a href="#"><img src="img/Mesa de trabajo 3@.png" alt="Logo Sneakerest" class="logo-footer-mobile mx-auto"></a>
                     </div>
                     <div class="col-12 text-center">
                         <p class="copyright-footer-mobile mx-auto">© 2020 Copyright: SNEAKEREST S.R.L.</p>
@@ -557,7 +353,7 @@
                     <!--Logo Footer-->
                     <div class="col-12 logo-footer">
                         <div class="col-12 text-center">
-                            <a href="/"><img src="/public/img/Mesa de trabajo 3@.png" alt="Logo Sneakerest" class="logo-footer-grande mx-auto"></a>
+                            <a href="/"><img src="img/Mesa de trabajo 3@.png" alt="Logo Sneakerest" class="logo-footer-grande mx-auto"></a>
                         </div>
                         <div class="col-12 text-center">
                             <p class="copyright-footer-grande mx-auto" >© 2020 Copyright: SNEAKEREST S.R.L.</p>
@@ -567,7 +363,7 @@
                 <!--Terminos y condiciones-->
                 <div class="col-12 terminos-condiciones d-flex justify-content-center align-items-center">
                     <a href="#">Términos y condiciones</a>
-                    <p> | </p>
+                    <p class="mb-0"> | </p>
                     <a href="#">Políticas de cambio</a>
                 </div>
             </div>

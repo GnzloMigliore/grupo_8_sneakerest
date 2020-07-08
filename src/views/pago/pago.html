@@ -6,13 +6,30 @@
     <title>PAGO</title>
     <!--Fontawesonme icons & Google Fonts-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!--Mi CSS-->
-    <link rel="stylesheet" href="/public/css/pago.css">
+    <link rel="stylesheet" href="css/pago.css">
+    <!--Fuente-->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
+
+    <header>
+        <!--nav-->
+        <nav class="d-flex justify-content-between align-items-center">
+            <div id="item1" class="box">
+                <a href="/"><img src="img/logonegro@.png" alt=""></i></a>
+            </div>
+            <div id="item2" class="box">
+                <h1 class="m-auto p-auto text-uppercase">revisá y comprá</h1>
+            </div>
+            <div id="item3" class="box">
+                <a href="/carrito"><i class="fas fa-shopping-cart" style="color: black;"></i></a>
+            </div>
+        </nav>
+    </header>
+
     <main>
         <div class="d-sm-block d-md-none">
             <div class="container">
@@ -34,7 +51,7 @@
                     <div class="col-12 row linea-producto d-flex justify-content-between align-items-center mb-3 pb-3">
                         <!--Imagen producto-->
                         <div class="col-3 pl-0">
-                            <img src="/public/img/Campus_ADV_Shoes_Black_B22716_01_standard.jpg" alt="Adidas Campus ADV Black">
+                            <img src="img/Campus_ADV_Shoes_Black_B22716_01_standard.jpg" alt="Adidas Campus ADV Black">
                         </div>
                         <!--Modelo, código y color-->
                         <div class="col-4 descripcion-producto">
@@ -59,7 +76,7 @@
                     <div class="col-12 row linea-producto d-flex justify-content-between align-items-center mb-3 pb-3">
                         <!--Imagen producto-->
                         <div class="col-3 pl-0">
-                            <img src="/public/img/Campus_ADV_Shoes_Black_B22716_01_standard.jpg" alt="Adidas Campus ADV Black">
+                            <img src="img/Campus_ADV_Shoes_Black_B22716_01_standard.jpg" alt="Adidas Campus ADV Black">
                         </div>
                         <!--Modelo, código y color-->
                         <div class="col-4 descripcion-producto">
@@ -168,13 +185,16 @@
                 </div>
             </div>
         </div>
-        <div class="container-fluid d-none d-md-block">
+        <div class="container-fluid d-none d-md-block bg-light">
             <div class="row">
                 <!--Columna izquierda-->
-                <section class="col-7">
+                <section class="col-7 bg-white">
                     <div class="row columna-izquierda mt-5">
                         <!--Resumen: contacto, direccion de envio y costo de envio-->
                         <article class="col-12 mb-3">
+                            <div class="col-12 cabecera-pago mx-auto mb-4">
+                                <p class="text-uppercase my-auto d-flex justify-content-start revisar-pedido-pago pb-3">Tus datos</p>
+                            </div>
                             <div class="col-10 caja-datos-comprador mx-auto">
                                 <!--Primera linea: contacto-->
                                 <div class="col-12 d-flex justify-content-between align-items-center px-0 py-3 datos-comprador">
@@ -262,14 +282,14 @@
                     </div>
                 </section>
                 <!--Columna derecha-->
-                <section class="col-5 bg-light columna-derecha">
+                <section class="col-5 columna-derecha">
                     <div class="row mt-5 pl-4">
                         <article class="col-12">
                             <!--Primer producto revisión de pedido-->
                             <div class="col-12 row linea-producto d-flex justify-content-between align-items-center mb-3 pb-3">
                                 <!--Imagen producto-->
                                 <div class="col-3 pl-0">
-                                    <img src="/public/img/Campus_ADV_Shoes_Black_B22716_01_standard.jpg" alt="Adidas Campus ADV Black">
+                                    <img src="img/Campus_ADV_Shoes_Black_B22716_01_standard.jpg" alt="Adidas Campus ADV Black">
                                 </div>
                                 <!--Modelo, código y color-->
                                 <div class="col-5 descripcion-producto">
@@ -294,10 +314,10 @@
                             <div class="col-12 row linea-producto d-flex justify-content-between align-items-center mb-3 pb-3">
                                 <!--Imagen producto-->
                                 <div class="col-3 pl-0">
-                                    <img src="/public/img/Campus_ADV_Shoes_Black_B22716_01_standard.jpg" alt="Adidas Campus ADV Black">
+                                    <img src="img/Campus_ADV_Shoes_Black_B22716_01_standard.jpg" alt="Adidas Campus ADV Black">
                                 </div>
                                 <!--Modelo, código y color-->
-                                <div class="col-4 descripcion-producto">
+                                <div class="col-5 descripcion-producto">
                                     <p class="font-weight-bold mb-0 modelo-descripcion-producto" id="modeloLg">Adidas Campus ADV</p>
                                     <p class="codigo-descripcion-producto">#AC45B65</p>
                                     <div class="d-flex justify-content-start">
@@ -313,15 +333,6 @@
                                 <!--Precio producto-->
                                 <div class="col-2 precio-producto d-flex justify-content-end pr-0">
                                     <p class="precio-producto my-auto">$4.798.99</p>
-                                </div>
-                            </div>
-                            <!--Campo código descuento-->
-                            <div class="col-12 row linea-producto mb-3">
-                                <div class="input-group mb-3 input-group-sm">
-                                    <input type="text" class="form-control" placeholder="Código descuento" aria-label="Recipient's username" aria-describedby="basic-addon2">
-                                    <div class="input-group-append">
-                                        <button class="btn btn-outline-secondary text-uppercase" type="button">enviar</button>
-                                    </div>
                                 </div>
                             </div>
                             <!--Subtotal y envío-->
@@ -345,11 +356,121 @@
                         </article>
                     </div>
                 </section>
+                <section class="col-12 container ruta-ante-footer bg-white mt-0 pt-5">
+                    <div class="row">
+                        <div class="col-12 d-flex justify-content-center align-items-center ruta-ante-footer-a">
+                            <a href="#" class="px-1 text-uppercase text-decoration-none text-body">SNKRST</a>
+                            <p class="px-1 mb-0"> | </p>
+                            <a href="#" class="px-1 text-uppercase text-decoration-none text-body">Carrito</a>
+                            <p class="px-1 mb-0"> | </p>
+                            <a href="#" class="px-1 text-uppercase text-decoration-none text-body">informacion de envío</a>
+                            <p class="px-1 mb-0"> | </p>
+                            <a href="#" class="px-1 text-uppercase text-decoration-none text-body">pago</a>
+                        </div>
+                    </div>
+                </section>
                 
             </div>
         </div>
     </main>
     
+    <footer>
+        <!--Footer mobile-->
+        <div class="d-sm-block d-md-none">
+            <div class="container-fluid fondo-footer mt-3">
+                <div class="row">
+                    <!--Redes Footer-->
+                    <div class="col-10 d-flex justify-content-between align-items-center redes-footer mt-3 mx-auto">
+                        <a href="https://www.instagram.com">Instagram</a>
+                        <a href="https://www.behance.com">Behance</a>
+                        <a href="https://www.facebook.com">Facebook</a>
+                    </div>
+                    <!--Logo footer-->
+                    <div class="col-12 mt-4 mb-0 pb-0">
+                        <div class="col-12 text-center">
+                            <a href="#"><img src="img/Mesa de trabajo 3@.png" alt="Logo Sneakerest" class="logo-footer-mobile mx-auto"></a>
+                        </div>
+                        <div class="col-12 text-center">
+                            <p class="copyright-footer-mobile mx-auto">© 2020 Copyright: SNEAKEREST S.R.L.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Footer tablet para arriba-->
+        <div class="d-none d-md-block">
+            <div class="container-fluid fondo-footer redes-footer">
+                <div class="row pt-5">
+                    <!--Mapa del sitio-->
+                    <div class="col-7 d-flex justify-content-around mapa-footer mapa-del-sitio">
+                        <!--Categorias-->
+                        <div class="col-2 d-flex flex-column">
+                            <p class="font-weight-bold">Categorias</p>
+                            <a href="#">Men</a>
+                            <a href="#">Women</a>
+                            <a href="#">Kids</a>
+                            <a href="#">New In</a>
+                            <a href="#">Sale</a>
+                        </div>
+                        <!--Marcas-->
+                        <div class="col-2 d-flex flex-column">
+                            <p class="font-weight-bold">Marcas
+                            </p>
+                            <a href="#">Adidas</a>
+                            <a href="#">Converse</a>
+                            <a href="#">DC Shoes</a>
+                            <a href="#">New Balance</a>
+                            <a href="#">Nike</a>
+                            <a href="#">Rebook</a>
+                            <a href="#">Vans</a>
+                        </div>
+                        <!--Soporte-->
+                        <div class="col-2 d-flex flex-column">
+                            <p 
+                            class="font-weight-bold">Soporte</p>
+                            <a href="#">Ayuda</a>
+                            <a href="#">Cambios</a>
+                            <a href="#">Devoluciones</a>
+                            <a href="#">Envíos</a>
+                            <a href="#">Seguimiento</a>
+                            <a href="#">Tabla de talles</a>
+                        </div>
+                        <!--Sobre Nosotros-->
+                        <div class="col-2 d-flex flex-column">
+                            <p class="font-weight-bold">Sobre SNKRST</p>
+                            <a href="#">Nosotros</a>
+                            <a href="#">Proposito</a>
+                            <a href="#">Noticias</a>
+                        </div>
+                    </div>
+                    <!--Redes, logo y TC-->
+                    <div class="col-5 mapa-footer">
+                        <!--Redes Footer-->
+                        <div class="col-12 d-flex justify-content-around">
+                            <a href="https://www.instagram.com">Instagram</a>
+                            <a href="https://www.behance.com">Behance</a>
+                            <a href="https://www.facebook.com">Facebook</a>
+                        </div>
+                        <!--Logo Footer-->
+                        <div class="col-12 logo-footer">
+                            <div class="col-12 text-center">
+                                <a href="/"><img src="img/Mesa de trabajo 3@.png" alt="Logo Sneakerest" class="logo-footer-grande mx-auto"></a>
+                            </div>
+                            <div class="col-12 text-center">
+                                <p class="copyright-footer-grande mx-auto" >© 2020 Copyright: SNEAKEREST S.R.L.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Terminos y condiciones-->
+                    <div class="col-12 terminos-condiciones d-flex justify-content-center align-items-center">
+                        <a href="#">Términos y condiciones</a>
+                        <p> | </p>
+                        <a href="#">Políticas de cambio</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
     
     
     

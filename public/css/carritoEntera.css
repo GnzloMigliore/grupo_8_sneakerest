@@ -1,0 +1,331 @@
+html {
+    min-width: 300px;
+}
+
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Navbar  */   
+
+header {
+    height: 10rem;
+    margin-bottom: 2rem;
+}
+
+nav {
+    width: 100%;   
+    display: flex;
+    flex: auto;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2rem;
+}
+
+#item1 {
+width: 10%;
+font-size: 20px;
+text-align: center;
+
+}
+
+#item1 a img {
+    padding-left: 1rem;
+    width: 100%;
+}
+
+#item2 {
+    width: 60%;
+    height: 3rem; 
+    font-size: 1rem;  
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+
+}
+
+#item3 {
+    width: 10%;
+    height: 3rem;
+    font-size: 20px;
+    text-align: center;
+}
+
+
+.encabezado-carrito {
+    border-bottom: 1px solid black;
+}
+
+.encabezado-carrito h4 {
+    font-size: 1rem;
+}
+
+.encabezado-carrito p {
+    font-size: .8rem;
+}
+
+.linea-producto {
+    border-bottom: 1px solid gray;
+    padding: 1.2rem 0;
+}
+
+.modelo-carrito {
+    font-size: .5rem;
+}
+
+.modelo-carrito p {
+    margin-bottom: 0;
+}
+
+.x-eliminar-producto-carrito a {
+    color: gray;
+}
+
+.talle-carrito {
+    font-size: .5rem;
+}
+
+.precio-carrito {
+    font-size: .5rem;
+}
+
+.detalles-compra {
+    background-color: #E7E7E7;
+    padding: .8rem .8rem;
+}
+
+.detalles-compra {
+    font-size: .75rem;
+}
+
+.iva-incluido {
+    font-size: .5rem;
+}
+
+.texto-boton {
+    font-size: .75rem;
+    border: 1px solid black;
+}
+
+.ruta-ante-footer {
+    margin-top: 15vh;
+    margin-bottom: 0;
+}
+
+.ruta-ante-footer-a {
+    text-decoration: none;
+    color: black;
+    font-size: .75rem;
+}
+
+/**Footer Mobile**/
+.fondo-footer {
+    background-color: #b4b5b4;
+}
+
+.redes-footer a {
+    text-decoration: none;
+    color: black;
+    font-size: .75rem;
+}
+
+.logo-footer-mobile {
+    width: 7rem;
+}
+
+.copyright-footer-mobile {
+    font-size: .5rem;
+}
+
+@media (min-width: 768px) {
+
+    .content-mobile {
+        display: none;
+    }
+
+    .content-mobile-tablet {
+        display: inline-block;
+    }
+
+    .content-tablet-laptop {
+        display: inline-block;
+    }
+
+    .content-laptop {
+        display: none;
+    }
+
+    footer {
+        margin-top: 3vh;
+    }
+
+    .mapa-del-sitio {
+        margin-bottom: 2rem;
+    }
+
+
+    /**Footer**/
+    .logo-footer {
+        margin-top: 4vh;
+    }
+
+    .copyright-footer-grande {
+        font-size: .5rem;
+    }
+
+    .terminos-condiciones a {
+        font-size: .75rem;
+    }
+
+    .terminos-condiciones p {
+        font-size: .75rem;
+        padding: 0 1rem;
+        margin-bottom: 0;
+    }
+
+     
+}
+
+@media (min-width: 992px) {
+
+    html{
+        padding-bottom: 0;
+    }
+
+    body {
+        width: 100%;
+    }
+    
+    .encabezado-carrito h4 {
+        font-size: 1rem;
+        font-weight: 700;
+    }
+
+    .encabezado-carrito p {
+        font-size: 1rem;
+    }
+
+    .linea-producto {
+        border-bottom: 1px solid gray;
+        margin: auto auto;
+        padding: 2vh;
+    }
+
+    .modelo-codigo {
+        margin-bottom: 1rem;
+    }
+
+    .modelo-descripcion-producto {
+        font-size: .7rem;
+    }
+
+    .codigo-descripcion-producto {
+        font-size: .5rem;
+    }
+
+    .circulo-color-carrito {
+        font-size: .65rem;
+        padding: 0 .25rem;
+    }
+
+    .cantidad-producto {
+        font-size: .75rem;
+    }
+
+    .precio-producto {
+        font-size: .75rem;
+    }
+
+    .x-eliminar-producto-carrito {
+        font-size: .75rem;
+    }
+
+    .items-columna-derecha {
+        margin-bottom: 1rem;
+    }
+
+    .boton-columna-derecha {
+        margin-top: 1rem;
+    }
+
+    .total-carrito {
+        font-size: .8rem;
+    }
+
+    .boton-carrito {
+        text-transform: uppercase;
+        font-size: .55rem;
+    }
+
+    #realizar-pedido {
+        height: 1.5rem;
+    }
+
+    #realizar-pedido button {
+        color: white;
+    }
+
+    #seguir-comprando {
+        border: 1px solid black;
+        height: 1.5rem;
+    }
+
+    footer {
+        width: 100%;
+    }
+
+    .mapa-footer div p {
+        font-size: .75rem;
+    }  
+
+    .mapa-footer div a {
+        font-size: .75rem;
+    }   
+
+    .mapa-footer a {
+        font-size: 3rem;
+    }
+
+    .logo-footer {
+        margin: 3rem 0;
+    }
+
+    .copyright-footer-grande {
+        font-size: .2rem;
+    }
+
+    .logo-footer-grande {
+        width: 15vw;
+    }
+
+    .terminos-condiciones a {
+        font-size: .75rem;
+    }
+
+    .terminos-condiciones p {
+        font-size: .75rem;
+        padding: 0 1rem;
+    }
+    
+    .ruta-ante-footer-a {
+        font-size: .75rem;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    .boton-carrito {
+        text-transform: uppercase;
+        font-size: .75rem;
+    }
+}

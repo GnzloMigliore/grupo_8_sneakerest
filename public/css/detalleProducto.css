@@ -1,5 +1,6 @@
 html {
     font-size: 62.5%; /** Reset para rem --> 62.5% = 10px de 16px **/
+    min-width: 300px;
 }
 
 body {
@@ -39,26 +40,56 @@ footer {
     display: none;
 }
 
-/** Navbar  **/
+/* Navbar  */   
 
-.contenido-nav {
-    width: 100%;
-    background-color: white;
-    display: flex;
-    justify-content: center;
+header {
+    height: 10rem;
+    margin-bottom: 2rem;
 }
 
-.navbar-detalles {
-    width: 95%;
-    height: 6vh;
+nav {
+    width: 100%;   
     display: flex;
-    flex: row;
+    flex: auto;
     justify-content: space-between;
+    align-items: center;
+    padding-top: 2rem;
 }
 
-.iconos-top {
-    margin: 1rem 0;
+#item1 {
+width: 10%;
+font-size: 20px;
+text-align: center;
+
 }
+
+#item1 a img {
+    width: 100%;
+    padding-left: 1rem;
+}
+
+#item2 {
+    width: 60%;
+    height: 3rem; 
+    font-size: 1rem;  
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+
+}
+
+#item3 {
+    width: 10%;
+    height: 3rem;
+    font-size: 20px;
+    text-align: center;
+}
+
 
 /** Main **/
 
@@ -223,7 +254,7 @@ footer {
     }
     
     .fotos-laptop {
-        width: 70%;
+        width: 60%;
         margin-top: 3rem;
         background-color: #e7e7e7;
         margin-top: 0;
@@ -252,17 +283,15 @@ footer {
     }
 
     .filtros-laptop {
-        width: 30%;
-        height: 140vh;
+        width: 40%;
         background-color: orange;
-        position: absolute;
-        left: 70%;
         overflow: hidden;
         margin-top: 0;
         text-transform: uppercase;
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         z-index: -1;
+        padding-left: 0;
         
     }
 
@@ -275,11 +304,11 @@ footer {
     }
 
     .titulo-modelo h2 {
-        font-size: 3.5vh;
+        font-size: 2rem;
     }
 
     .titulo-modelo p {
-        font-size: 2vh;
+        font-size: 1rem;
         padding-bottom: 3rem;
     }
 
@@ -325,7 +354,7 @@ footer {
         border: 1px solid black;
         background-color: white;
         height: 5vh;
-        width: 6vw;
+        width: 2rem;
         padding: .75rem;
         margin: 0.2rem;
         display: flex;
@@ -345,7 +374,7 @@ footer {
         height: 4vh;
         background-color: black;
         text-align: center;
-        margin: 4rem auto;
+        margin: 4rem auto 1rem auto;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -356,7 +385,7 @@ footer {
         height: 4vh;
         border: 1px solid white;
         text-align: center;
-        margin: 4rem auto;
+        margin: 1rem auto 4rem auto;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -364,7 +393,6 @@ footer {
 
     
     .container .descripcion-producto-laptop {
-        width: 90%;
         margin: 2rem auto;
         display: flex;
         justify-content: center;
@@ -386,7 +414,7 @@ footer {
 
     .boton-resenas button {
         width: 100%;
-        height: 4vh;
+        height: 3rem;
         background-color: black;
         display: flex;
         flex-wrap: wrap;
@@ -402,7 +430,11 @@ footer {
         display: flex;
         justify-content: space-between;
         margin: auto;
-        padding-top: 1.1rem;
+        padding: auto;
+    }
+
+    .boton-resenas button .contenido-boton-resenas p {
+        margin-bottom: 0;
     }
 
     
@@ -435,60 +467,28 @@ footer {
         padding-top: 1rem;
     }
 
-    /**Footer**/
-    .mapa-del-sitio div a {
-        font-size: 1.2rem;
-    }
-
-    .logo-footer {
-        margin-top: 4vh;
-    }
-
-    .copyright-footer-grande {
-        font-size: .5rem;
-    }
-
-    .terminos-condiciones a {
-        font-size: .75rem;
-    }
-
-    .terminos-condiciones p {
-        font-size: .75rem;
-        padding: 0 1rem;
-        margin-bottom: 0;
-    }
-}
-
-@media (min-width: 992px) {
-
-    .content-mobile {
-        display: none;
-    }
-
-    .content-tablet {
-        display: none;
-    }
-
-    .content-laptop {
-        display: inline-block;
+    footer {
+        width: 100%;
     }
 
     .mapa-footer div p {
-        font-size: 5rem;
+        font-size: 1rem;
     }  
 
     .mapa-footer div a {
-        font-size: 5rem;
+        font-size: .75rem;
     }   
 
     .mapa-footer a {
-        font-size: 5rem;
+        font-size: 3rem;
     }
 
     .logo-footer {
-        padding-top: 10rem;
-        margin-bottom: 15rem;
-        
+        margin: 3rem 0;
+    }
+
+    .copyright-footer-grande {
+        font-size: .2rem;
     }
 
     .logo-footer-grande {
@@ -496,89 +496,13 @@ footer {
     }
 
     .terminos-condiciones a {
-        font-size: 4rem;
+        font-size: .75rem;
     }
 
     .terminos-condiciones p {
-        font-size: 4rem;
+        font-size: .75rem;
         padding: 0 1rem;
     }
-
-
 }
 
-@media (min-width: 1140px) {
 
-    .fotos-resto-laptop a img{
-        width: 40vw;
-    }
-
-    .codigo-texto {
-        margin-bottom: 4vh;
-    }
-
-    .cuadros-colores {
-        margin-top: 2vh;
-    }
-
-    .cuadros-colores div {
-        margin: 1vh 0.5vw;
-    }
-
-    .talles-laptop {
-        margin: 7vh 0;
-    }
-
-    .talles-laptop div p {
-        font-size: 5rem;
-    }
-
-    .talles-laptop div a {
-        font-size: 5rem;
-        
-    }
-
-    .numeros-talles div {
-        height: 1vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .boton-anadir-carrito button {
-        font-size: 3rem;
-    }
-
-    .boton-proceder-pago button {
-        font-size: 3rem;
-        font-weight: bold;
-    }
-
-    .boton-proceder-pago {
-        margin-bottom: 5vh;
-    }
-
-    .descripcion-producto-laptop p {
-        font-size: 4.75rem;
-    }
-
-    .resenas-laptop {
-        margin-top: 5vh;
-    }
-
-    .contenido-boton-resenas p {
-        font-size: 4rem;
-        padding-left: 3rem;
-    }
-
-    .estrellas-resena {
-        padding-right: 3rem;
-    }
-
-    .estrellas-resena i {
-        font-size: 5rem;
-    }
-
-    
-
-}
