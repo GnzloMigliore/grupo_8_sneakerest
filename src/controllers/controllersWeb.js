@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 const path = require('path');
 const controllersWeb = {
     index: function(req,res){
@@ -9,6 +10,8 @@ const controllersWeb = {
 }
 module.exports = controllersWeb;
 =======
+=======
+>>>>>>> 636674885a6f186ec0d3a0966d0dca2b7b55b197
 =======
 >>>>>>> 636674885a6f186ec0d3a0966d0dca2b7b55b197
 const path = require ('path');
@@ -21,12 +24,15 @@ module.exports = {
   }
   ,
 <<<<<<< HEAD
+<<<<<<< HEAD
   productos: function(req,res){
       res.sendFile(path.resolve(__dirname, '..', 'views', 'productos', 'productos.html'));
   }
 }
 >>>>>>> master
 =======
+=======
+>>>>>>> 636674885a6f186ec0d3a0966d0dca2b7b55b197
   contacto: function(req,res){
     res.sendFile(path.resolve(__dirname, '..', 'views','web','contacto.html'))
 },
@@ -36,5 +42,9 @@ module.exports = {
   newsletter: function(req,res){
   res.sendFile(path.resolve(__dirname, '..', 'views','web','newsletter.html'))
 }
+<<<<<<< HEAD
+}
+>>>>>>> 636674885a6f186ec0d3a0966d0dca2b7b55b197
+=======
 }
 >>>>>>> 636674885a6f186ec0d3a0966d0dca2b7b55b197
