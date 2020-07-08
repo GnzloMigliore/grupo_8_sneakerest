@@ -1,0 +1,197 @@
+html {
+    min-width: 245px;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    
+}
+
+.boton-pedido-drop {
+    border-bottom: 1px solid black;
+    padding-bottom: 1rem;
+}
+
+.tu-pedido {
+    font-size: .8rem;
+}
+
+.lista-confirmar-productos {
+    height: 3.5rem;
+}
+
+.boton-revisar-seguir {
+    border-bottom: 1px solid black;
+}
+
+.box-numero {
+    border: 1px solid gray;
+    width: 3rem;
+}
+
+.revisar-pedido {
+    font-size: .7rem;
+}
+
+.revisar-pedido-pago {
+    font-size: .8rem;
+    font-weight: 700;
+    margin: 1rem 0!important;
+    border-bottom: 1px solid black;
+}
+
+.seguir-comprando {
+    font-size: .5rem;
+}
+
+.linea-producto {
+    border-bottom: 1px solid black;
+    margin: auto auto;
+}
+
+.modelo-descripcion-producto {
+    font-size: 1rem;
+}
+
+.codigo-descripcion-producto {
+    font-size: 1.7vw;
+}
+
+.circulo-color-carrito {
+    font-size: 2vw;
+    padding-right: 1vw;
+}
+
+.circulo-blanco {
+    color: lightgray;
+}
+
+.circulo-negro {
+    color: black;
+}
+
+.circulo-dorado {
+    color: goldenrod;
+}
+
+.cantidad-producto {
+    font-size: 2vw;
+}
+
+.precio-producto {
+    font-size: 2vw;
+}
+
+.resumen-valores p {
+    font-size: 2.5vw;
+}
+
+.titulo-tarjetas {
+    text-decoration: none;
+    color: black;
+}
+
+.datos-tarjeta div p {
+    color: white;
+}
+
+.primera-linea-tarjeta p {
+    color: white;
+    border-bottom: 1px solid white;
+}
+
+.card-body input {
+    border: hidden;
+    background-color: #eee;
+    margin-bottom: 1.5rem;
+    line-height: 2rem;
+}
+
+.cvv { 
+    -webkit-text-security: disc !important; 
+}
+
+.ruta-ante-footer {
+    margin-top: 8vh;
+}
+
+.ruta-ante-footer-a {
+    font-size: 2vw;
+}
+
+
+@media (min-width: 768px) {
+    
+    .columna-derecha {
+        height: 100vh;
+    }
+
+    .caja-datos-comprador{
+        border: 1px solid gray;
+    }
+
+    .caja-datos-comprador div p {
+        font-size: .7rem;
+    }
+
+    #contacto-comprador {
+        font-size: 1rem;
+    }
+
+    .cambiar-datos a {
+        font-size: .5rem;
+        color: black;
+        text-decoration: underline;
+    }
+
+    .datos-comprador {
+        border-bottom: 1px solid gray;
+    }
+
+    .modelo-descripcion-producto {
+        font-size: 1vw;
+    }
+
+    .codigo-descripcion-producto {
+        font-size: .8vw;
+    }
+
+    .circulo-color-carrito {
+        font-size: .8vw;
+    }
+
+    .cantidad-producto {
+        font-size: 1vw;
+    }
+
+    .precio-producto {
+        font-size: 1vw;
+    }
+
+    .obtener-descuento {
+        font-size: 1vw;
+    }
+
+    .resumen-valores p {
+        font-size: 1.2vw;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    .columna-derecha {
+        padding-right: 7vw;
+        height: 117vh;
+    }
+
+    .columna-izquierda {
+        padding-left: 3vw;
+    }
+    
+    
+
+}
