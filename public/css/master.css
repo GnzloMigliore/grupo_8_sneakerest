@@ -1,137 +1,245 @@
 html {
-    font-size: 62.5%; /*** Reset para REM --> 62.5% = 10px de 16px ***/
     font-family: 'Montserrat', sans-serif;
+    font-size: 62.5%; /*** Reset para REM --> 62.5% = 10px de 16px ***/
 }
+-------------------------------------
 
-body {
-    font-size: 1.6rem;
-}
-img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-}
-
-a {
-    text-decoration: none;
-    color: black;
-}
-
-ul {
-    list-style: none;
-}
-
+/* NAVBAR */
 .navbar {
-    height: 10vh;
+    position: fixed;
+    top: 0;
+    overflow: hidden;
+    background-color: #ffffff;
+    height: 10%;
+    width: 100%;
+}
+.navbar i {
+    font-size: 15px;
+}
+#hamburguesa {
+    font-size: 25px;
+}
+.burger {
+    outline: none;
+    background-color: transparent;
+    border: 0px solid;
+    font-size: 25px;
+}
+.carrito {
+    outline: none;
+    background-color: transparent;
+    border: 0px solid;
+}
+.lupa {
+    outline: none;
+    background-color: transparent;
+    border: 0px solid;
+}
+button {
+    width: 2rem;
+    height: 2rem;
+    align-content: center;
 }
 
-.filtros-dropdown {
-    min-width: 20rem;
-    
-}
 
-.titulo-filtros {
-    font-weight: 500;
-    font-size: 1.2rem;
-}
+-------------------------------------
 
-.lista-filtros {
-    list-style: none;
-    padding-left: 0;
-}​
-
-.lista-marcas {
-    display: flex;
-    flex-wrap: wrap;
-    align-content: flex-start;
+/* MENÚ DESPLEGABLE */
+#navbar-div {
+    flex-direction: column;
+    width: 100%;
+    color: white;
+    background-color: black;
 }
-
-.lista-talles {
-    display: flex;
-    flex-wrap: wrap;
-    align-content: flex-start;
-    max-width: 15rem;
+.dropdown {
+    position: relative;
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding-top: 50px;
 }
-
-.numeros-talles {
-    border: 1px solid black;
-    width: 25%;
-    margin: .5rem .5rem;
-}
-
-.lista-colores {
-    max-width: 15rem;   
-}
-
-.circulos-colores {
-    padding-bottom: 1rem;
-}
-
-#circulo-naranja {
-    color: orange;
-}
-
-#circulo-celeste {
-    color: #05A4FA;
-}
-
-#circulo-rojo {
-    color: red;
-}
-#circulo-amarillo {
-    color: yellow;
-}
-#circulo-verde {
-    color: lightgreen;
-}
-#circulo-azul {
-    color: blue;
-}
-#circulo-gris {
-    color: gray;
-}
-#circulo-blanco {
-    color: rgb(240, 240, 240);
-}
-#circulo-negro {
+.dropbtn {
     color: black;
+    font-size: 15px;
+    border: none;
+    padding-right: 75px;
+    padding-left: 0px;
+    align-content: center;
+    padding-bottom: 50px;
+    outline: none;
+    padding: 15px;
+}
+.dropdown-content {
+    color: white;
+}
+#menu-women {
+    padding: 25px;
+}
+#menu-men {
+    padding: 25px;
+}
+#menu-kids {
+    padding: 25px;
+}
+.dropdown-contenido-kids {
+    display: none;
+    position: absolute;
+    background-color: ;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
 }
 
-.filtro-precio{
-    max-width: 20rem;
+
+-------------------------------------
+
+/* PRIMER SLIDE */
+.primera-pagina {
+    text-align: center;
+    background-color: white;
+    padding-bottom: 125px;
+    width: 100%;
+    height: 100%;
 }
 
-.card {
-    border: 0;
-    font-size: 2vh;
-    padding-top: 3rem;
+#new-in {
+    color: black;
+    padding-top: 300px;
+    font-size: 6.5rem;
+    font-weight: bold;
+    text-align: center;
 }
 
-.recuadro-gris {
-    background-color: #eceef0;
-    height: 30vh;
+#new-in-p {
+    color: black;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.catalogo {
+    text-decoration: none;
+    padding: 5px;
+    font-weight: 600;
+    font-size: 15px;
+    color: #000000;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    text-align: center;
+    align-content: center;
+}
+
+
+-------------------------------------
+
+/* SEGUNDO SLIDE */
+.segunda-pagina {
+    text-align: center;
+    background-color: white;
+    padding-bottom: 125px;
+    width: 100%;
+    height: 100%;
+}
+#new-in {
+    color: black;
+    padding-top: 300px;
+    font-size: 6.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+#new-in-p {
+    color: black;
+    font-size: 1.3rem;
+    text-align: center;
+}
+.catalogo {
+    text-decoration: none;
+    padding: 5px;
+    font-weight: 600;
+    font-size: 15px;
+    color: #000000;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    text-align: center;
+    align-content: center;
+}
+#bottom-menu {
+    text-decoration: none;
+    padding: 3px;
+    font-weight: 600;
+    font-size: 15px;
+    color: #000000;
+    border: none;
+    text-align: center;
+    align-content: center;
+}
+
+
+-------------------------------------
+
+/* TERCER SLIDE */
+.tercera-pagina {
+    text-align: center;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+}
+#new-in-suscribe {
+    color: black;
+    padding-top: 300px;
+    padding-bottom: 300px;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+-------------------------------------
+
+/* MENÚ FONDO INICIO */
+.cat-pie {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    color: #000000;
+    justify-content: space-evenly;
+}
+#triple-menu {
+    padding-top: 200px;
 }
 
-.card-body {
-    line-height: .6;
-}
+-------------------------------------
 
-footer {
-    background-color:	#b4b4b4;
+/* FOOTER */
+.page-footer {;
+    width: 100%;
+    height: 10%;
 }
-
+#page-footer {
+    background-color:	#b4b4b4
+}
+#redes {
+    text-decoration: none;
+    color: white;
+}
 .page-footer {
     width: 100%;
 }
-
 .logo-footer {
     width: 33%;
 }
-
 .footer-copyright {
     font-size: 1vh;
 }
-
-
