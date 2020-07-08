@@ -1,0 +1,129 @@
+html {
+    font-size: 62.5%; /* Reset para rem --> 62.5% = 10px de 16px */
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6rem;
+}
+
+
+/* Navbar  */   
+nav{
+    width: 100%;   
+    display: flex;
+    flex: auto;
+    justify-content: space-between;
+}
+#item1{
+width: 15%;
+height: 15vh;
+text-align: center;
+padding-top: 2vh;
+
+}
+#item1 a img{
+    width: 50%;
+}
+
+#item2{
+    width: 70%;
+    height: 15vh; 
+    font-size: 1vw;   
+    padding-top: 4vh;
+    text-align: center;
+}
+h1{
+    font-size: 2rem;
+    font-weight: 700;
+
+}
+
+#item3{
+width: 15%;
+height: 15vh;
+font-size: 23px;
+padding-top: 10px;
+text-align: center;
+}
+h2{
+    margin-top: 5vh;
+    font-weight: bold;
+    text-align: center;
+}
+h3{
+    text-align: center;
+}
+
+.card{
+    display: flex;
+    flex-wrap: auto;
+    flex-direction: column;
+    align-items: center;     
+}
+
+.btn-block {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+#headingOne{
+   background-color: white;
+   width: 60%;
+
+}
+.text{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.fa-envelope-square{
+font-size: 5vh;
+width: 45%;
+text-align: right;
+}
+.fa-user-friends{
+    font-size: 5vh;
+width: 45%;
+text-align: right;
+}
+.fa-facebook-f{
+    font-size: 3rem;
+}
+.fa-instagram{
+font-size: 3rem;
+}
+h4{
+    width:50%;
+    font-size: 2.3rem;
+}
+.facebook{
+    width: 100%;
+    display: flex;
+    flex-wrap: auto;
+    flex-direction: row;
+}
+.instagram{
+    width: 100%;
+    display: flex;
+    flex-wrap: auto;
+    flex-direction: row;
+    margin-top: 1vh;
+}
+h5{
+    font-size: 2rem;
+}
+
+.ruta{  
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 35vh;
+ }
+ .ruta a{
+    text-decoration: none;
+ }

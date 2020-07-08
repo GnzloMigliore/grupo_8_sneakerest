@@ -1,0 +1,508 @@
+html {
+    font-size: 62.5%; /** Reset para rem --> 62.5% = 10px de 16px **/
+    min-width: 300px;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6rem;
+    box-sizing: border-box;
+}
+
+/** Globales **/
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+img {
+    max-width: 100%;
+}
+
+section {
+    margin: 4rem 0;
+}
+
+footer {
+    width: 100%;
+    background-color: #b4b5b4;
+    position: absolute;
+    z-index: 1;
+}
+
+
+.content-tablet {
+    display: none;
+}
+
+.content-laptop {
+    display: none;
+}
+
+/* Navbar  */   
+
+header {
+    height: 10rem;
+    margin-bottom: 2rem;
+}
+
+nav {
+    width: 100%;   
+    display: flex;
+    flex: auto;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2rem;
+}
+
+#item1 {
+width: 10%;
+font-size: 20px;
+text-align: center;
+
+}
+
+#item1 a img {
+    width: 100%;
+    padding-left: 1rem;
+}
+
+#item2 {
+    width: 60%;
+    height: 3rem; 
+    font-size: 1rem;  
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+
+}
+
+#item3 {
+    width: 10%;
+    height: 3rem;
+    font-size: 20px;
+    text-align: center;
+}
+
+
+/** Main **/
+
+.cuerpo {
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+/**.foto-producto:hover {
+    opacity: 1%;
+}**/
+
+.info-producto {
+    width: 90%;
+    background-color: white;
+    margin: 4rem auto;
+}
+
+.nombre-precio {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    line-height: 1;
+}
+
+.boton-añadir {
+    border: 1px solid black;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    color: black;
+    padding: 0.5rem 2rem 0 2rem;
+    margin: 2rem 0 2rem 0;
+    
+}
+
+.boton-añadir a div p {
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    padding: 0 1rem;
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+}
+
+.descripcion-producto p {
+    font-size: 1.2rem;
+}
+
+.detalles-producto {
+    margin: 2rem 0 2rem 0;
+}
+
+.detalles-producto p {
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+
+.detalles-producto ul {
+    list-style-type: none;
+    padding: 0;
+    font-size: 1.2rem;
+
+}
+
+.colores{
+    text-transform: uppercase;
+    margin: 4rem 0;
+}
+
+.imagenes-colores{
+    display: flex;
+    justify-content: space-between;
+}
+
+.imagenes-colores img{
+    width: 45%;
+}
+
+.colores h4 {
+    font-size: 1.2rem;
+    margin: 2rem 0 3rem 0;
+}
+
+.links-ruta {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    margin: 6rem 0 4rem 0;
+}
+
+.links-ruta a {
+    text-decoration: none;
+    color: black;
+}
+
+/** Footer **/
+
+.redes-footer-mobile {
+    display: flex;
+    justify-content: space-around;
+    margin:2vh 0 4vh 0;
+}
+
+.redes-footer-mobile a {
+    text-decoration: none;
+    color: black;
+}
+
+.logo-footer-mobile {
+    display: flex;
+    justify-content: center;
+}
+
+.logo-footer-mobile a {
+    width: 40%;
+}
+
+.copyright-footer-mobile {
+    text-align: center;
+    font-size: 1rem;
+}
+
+
+
+@media (min-width: 768px){
+
+
+    html {
+        width: 100%;
+    }
+    
+    body {
+        background-color: orange;
+        width: 100%;
+    }
+
+    nav i {
+        font-size: 4rem;
+    }
+
+    .contenido-nav {
+        height: 10vh;
+        width: 100%;
+    }
+
+    .content-mobile {
+        display: none;
+    }
+
+    .content-laptop {
+        display: inline-block;
+    }
+
+    main {
+        width: 100%;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+        margin-top: 0rem;
+    }
+    
+    .fotos-laptop {
+        width: 60%;
+        margin-top: 3rem;
+        background-color: #e7e7e7;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .foto-top-laptop a img{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .fotos-resto-laptop {
+        margin-top: -3rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .fotos-resto-laptop a  {
+        width: 25vw;
+    }
+
+    .fotos-resto-laptop a img {
+        padding-bottom: 6rem;
+    }
+
+    .filtros-laptop {
+        width: 40%;
+        background-color: orange;
+        overflow: hidden;
+        margin-top: 0;
+        text-transform: uppercase;
+        display: flex;
+        justify-content: flex-start;
+        z-index: -1;
+        padding-left: 0;
+        
+    }
+
+    .contenedor-filtros {
+        margin-top: 4rem;
+    }
+    
+    .titulo-modelo{
+        margin-bottom: 1rem;
+    }
+
+    .titulo-modelo h2 {
+        font-size: 2rem;
+    }
+
+    .titulo-modelo p {
+        font-size: 1rem;
+        padding-bottom: 3rem;
+    }
+
+    .titulo-modelo h5 {
+        font-size: 2vh;
+        padding-left: .5rem;
+    }
+
+    .cuadros-colores {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        margin-bottom: 6rem;
+    }
+
+    .cuadros-colores div {
+        width: 25%;
+        margin: 0.5rem;
+        -webkit-transform: scale(1);
+	    transform: scale(1);
+	    -webkit-transition: .3s ease-in-out;
+	    transition: .3s ease-in-out;
+    }
+
+    .cuadros-colores div:hover {
+        border: 1px solid black;
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+    }
+
+    .talles-laptop {
+        margin-bottom: 6rem;
+    }
+
+    .talles-laptop .numeros-talles{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        margin-bottom: 3rem;
+    }
+
+    .talles-laptop .numeros-talles div {
+        border: 1px solid black;
+        background-color: white;
+        height: 5vh;
+        width: 2rem;
+        padding: .75rem;
+        margin: 0.2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+    }
+
+    .talles-laptop div a {
+        text-decoration: none;
+        color: black;
+        font-size: 1.5rem;
+    }
+    
+    .boton-anadir-carrito {
+        width: 100%;
+        height: 4vh;
+        background-color: black;
+        text-align: center;
+        margin: 4rem auto 1rem auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .boton-proceder-pago {
+        width: 100%;
+        height: 4vh;
+        border: 1px solid white;
+        text-align: center;
+        margin: 1rem auto 4rem auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    
+    .container .descripcion-producto-laptop {
+        margin: 2rem auto;
+        display: flex;
+        justify-content: center;
+        text-align: start;
+    }
+
+    .descripcion-producto-laptop p {
+        font-size: 1.2rem;
+        text-transform: initial;
+        color: white;
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    .container .boton-resenas {
+        text-align: center;
+        width: 100%;
+    }
+
+    .boton-resenas button {
+        width: 100%;
+        height: 3rem;
+        background-color: black;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 4rem;
+        border: none;
+        border-radius: 0;
+    }
+
+    .boton-resenas button .contenido-boton-resenas {
+        width: 100%;
+        text-transform: uppercase;
+        display: flex;
+        justify-content: space-between;
+        margin: auto;
+        padding: auto;
+    }
+
+    .boton-resenas button .contenido-boton-resenas p {
+        margin-bottom: 0;
+    }
+
+    
+
+    .estrellas-resena .flecha-resena{
+        padding-left: .5rem;
+    }
+
+    .boton-resenas button:hover {
+        background-color: white;
+        border: none;
+    }
+
+    .elementos-boton-resena:hover {
+        color: black;
+    }
+
+    .cuadro-resena {
+        background-color: transparent;
+        border: 1px solid white;
+        font-size: 1.2rem;
+        text-transform: initial;
+        color: white;
+        padding: auto;
+        margin: auto auto 4rem auto;
+        border-radius: 0;
+    }
+
+    .cuadro-resena p {
+        padding-top: 1rem;
+    }
+
+    footer {
+        width: 100%;
+    }
+
+    .mapa-footer div p {
+        font-size: 1rem;
+    }  
+
+    .mapa-footer div a {
+        font-size: .75rem;
+    }   
+
+    .mapa-footer a {
+        font-size: 3rem;
+    }
+
+    .logo-footer {
+        margin: 3rem 0;
+    }
+
+    .copyright-footer-grande {
+        font-size: .2rem;
+    }
+
+    .logo-footer-grande {
+        width: 15vw;
+    }
+
+    .terminos-condiciones a {
+        font-size: .75rem;
+    }
+
+    .terminos-condiciones p {
+        font-size: .75rem;
+        padding: 0 1rem;
+    }
+}
+
+
