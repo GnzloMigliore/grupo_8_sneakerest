@@ -2,20 +2,15 @@ const express = require('express');
 const router = express.Router();
 const path = require('path');
 
-Ezequiel
-//Requerir el modulo de los controladores
-const webController = require(path.resolve(__dirname, '../controllers/controllersWeb.js'));
 
-// Métodos en nuestros controladores: index - show - edit - delete 
-router.get('/', controllersWeb.index);
-
-module.exports = router;
-
-
-const controllerWeb = require(path.resolve(__dirname, '..', 'controllers', 'controllersWeb'));
+const controllerWeb = require(path.resolve(__dirname, '..', 'controllers', 'controllersweb'));
+//armo mis rutas
 
 router.get('/', controllerWeb.index);
-router.get('/productos', controllerWeb.productos);
+router.get('/newsletter', controllerWeb.newsletter);
+router.get('/contacto/email', controllerWeb.email);
+router.get('/contacto', controllerWeb.contacto);
 
 module.exports = router; 
-master
+
+

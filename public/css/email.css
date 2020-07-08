@@ -1,0 +1,101 @@
+html {
+    font-size: 62.5%; /* Reset para rem --> 62.5% = 10px de 16px */
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6rem;
+}
+
+
+/* Navbar  */   
+nav{
+    width: 100%;   
+    display: flex;
+    flex: auto;
+    justify-content: space-between;
+}
+#item1{
+width: 10%;
+height: 15vh;
+font-size: 20px;
+text-align: center;
+padding-top: 10px;
+
+}
+
+#item2{
+    width: 70%;
+    height: 15vh; 
+    font-size: 1rem;  
+ 
+    padding-top: 15px;
+    text-align: center;
+}
+h1{
+    font-size: 1.8rem;
+    font-weight: 700;
+
+}
+h2{
+    text-align: center;
+}
+
+#item3{
+width: 10%;
+height: 15vh;
+font-size: 20px;
+padding-top: 10px;
+text-align: center;
+}
+p{
+    color: black;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.3rem;
+    margin-top: 4vh;
+}
+
+form{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;    
+
+}
+
+
+.terminos{
+    margin-top: 4vh;
+    font-size: 1.3rem;
+}
+
+.enviar button{
+    margin-top: 3vh;
+}   
+.form-datos-envio-input{
+border-radius: black;
+}
+.datos-envio-input {
+    background-color: #F2F3F2;
+    border: black;
+    border-radius: 1px;
+    width: 50%;
+}
+.datos-envio-input::placeholder {
+    font-size: 1.5vh;
+    color:black;
+    
+}
+.ruta{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30vh;
+ }
+ .ruta a{
+    text-decoration: none;
+ }

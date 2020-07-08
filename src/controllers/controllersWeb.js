@@ -1,22 +1,19 @@
-Ezequiel
-const path = require('path');
-const controllersWeb = {
-    index: function(req,res){
-        res.sendFile(path.resolve(__dirname, '../views/web/index.html'));
-    }
-
-}
-module.exports = controllersWeb;
-
 const path = require ('path');
+const fs = require('fs');
+
 
 module.exports = {
   index : function(req,res){
       res.sendFile(path.resolve(__dirname, '..', 'views', 'web', 'index.html'));
   }
   ,
-  productos: function(req,res){
-      res.sendFile(path.resolve(__dirname, '..', 'views', 'productos', 'productos.html'));
-  }
+  contacto: function(req,res){
+    res.sendFile(path.resolve(__dirname, '..', 'views','web','contacto.html'))
+},
+  email: function(req,res){
+  res.sendFile(path.resolve(__dirname, '..', 'views','web','email.html'))
+},
+  newsletter: function(req,res){
+  res.sendFile(path.resolve(__dirname, '..', 'views','web','newsletter.html'))
 }
-master
+}

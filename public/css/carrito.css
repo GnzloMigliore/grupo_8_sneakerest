@@ -1,0 +1,47 @@
+html {
+    font-size: 62.5%; /* Reset para rem --> 62.5% = 10px de 16px */
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6rem;
+}
+
+
+/* Navbar  */   
+nav{
+    width: 54%;   
+    display: flex;
+    flex: auto;
+    justify-content: space-between;
+}
+#item1{
+width: 10%;
+height: 10vh;
+font-size: 2rem;
+text-align: center;
+padding-top: 10px;
+}
+.carrito{
+    width: 100%;
+    font-size: 5rem; 
+    display: flex;
+    flex: auto;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5vh;
+}
+.carrito img{
+    width:30%;
+}
+.ruta{
+    width: 100%;    
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20vh;
+ }
+ .ruta a{
+    text-decoration: none;
+ }

@@ -1,0 +1,107 @@
+html {
+    font-size: 62.5%; /* Reset para rem --> 62.5% = 10px de 16px */
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6rem;
+}
+
+
+/* Navbar  */   
+nav{
+    width: 100%;   
+    display: flex;
+    flex: auto;
+    justify-content: space-between;
+}
+#item1{
+width: 10%;
+height: 15vh;
+font-size: 20px;
+text-align: center;
+padding-top: 10px;
+
+}
+
+#item2{
+    width: 70%;
+    height: 15vh; 
+    font-size: 1rem;  
+ 
+    padding-top: 15px;
+    text-align: center;
+}
+h1{
+    font-size: 1.8rem;
+    font-weight: 700;
+
+}
+
+#item3{
+width: 10%;
+height: 15vh;
+font-size: 20px;
+padding-top: 10px;
+text-align: center;
+}
+p{
+    color: black;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+form{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;    
+
+}
+.form-group{
+    align-items: center;
+    margin-top: 7vh; 
+    width: 60%;;
+    height: 10vh;
+
+}
+.estilos{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+}
+
+.suscribir{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.suscribir p{
+    padding-top: 7vh;
+    color: black;
+    text-align: center;
+    font-size: 1rem;
+}
+.suscribir button{
+    margin-top: 5vh;
+    width: 40%;
+}
+.ruta{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15vh;
+ }
+ .ruta a{
+    text-decoration: none;
+ }
