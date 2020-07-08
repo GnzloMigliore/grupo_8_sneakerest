@@ -7,7 +7,7 @@ module.exports = {
         
     },
     form: function(req,res){
-        res.sendFile(path.resolve(__dirname, '..', 'views', 'pago', 'formularioCompra'));
+        res.sendFile(path.resolve(__dirname, '..', 'views', 'pago', 'formularioCompra.html'));
     },
     pago: function(req,res){
         res.sendFile(path.resolve(__dirname, '..', 'views', 'pago', 'pago.html'));     
