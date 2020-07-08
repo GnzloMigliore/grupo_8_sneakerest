@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/GonzaloMigliore/grupo_8_sneakerest#readme",
   "dependencies": {
+    "bootstrap-icons": "^1.0.0-alpha5",
     "express": "^4.17.1"
   },
   "devDependencies": {
