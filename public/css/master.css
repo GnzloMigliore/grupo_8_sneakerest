@@ -8,7 +8,7 @@ navbar-collapse{
     height: 25px;
     overflow: hidden;
     scroll-behavior: none;
-
+}
 /* MENÚ DESPLEGABLE */
 #navbar-div {
     flex-direction: column;
