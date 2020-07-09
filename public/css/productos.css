@@ -37,7 +37,7 @@ nav {
 }
 
 #item1 {
-width: 10%;
+width: 15%;
 font-size: 20px;
 text-align: center;
 
@@ -48,7 +48,7 @@ text-align: center;
 }
 
 #item2 {
-    width: 60%;
+    width: 70%;
     height: 3rem; 
     font-size: 1rem;  
     text-align: center;
@@ -63,7 +63,7 @@ h1 {
 }
 
 #item3 {
-    width: 10%;
+    width: 15%;
     height: 3rem;
     font-size: 20px;
     text-align: center;
