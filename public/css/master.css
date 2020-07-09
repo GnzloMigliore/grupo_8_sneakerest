@@ -1,6 +1,13 @@
 html {
+    min-width: 300px;
+}
+
+body {
     font-family: 'Montserrat', sans-serif;
-    font-size: 62.5%; /*** Reset para REM --> 62.5% = 10px de 16px ***/
+}
+
+img {
+    max-width: 100%;
 }
 
 /* NAVBAR */
@@ -168,24 +175,56 @@ cursor: pointer;
 }
 
 
-/* FOOTER */
-.page-footer {
-    width: 100%;
-    height: 10%;
+/**Footer Mobile**/
+.fondo-footer {
+    background-color: #b4b5b4;
 }
-#page-footer {
-    background-color:	#b4b4b4
-}
-#redes {
+
+.redes-footer a {
     text-decoration: none;
-    color: white;
+    color: black;
+    font-size: .75rem;
 }
-.page-footer {
-    width: 100%;
+
+.logo-footer-mobile {
+    width: 7rem;
 }
-.logo-footer {
-    width: 33%;
+
+.copyright-footer-mobile {
+    font-size: .5rem;
 }
-.footer-copyright {
-    font-size: 1vh;
+
+
+@media (min-width: 768px) {
+    footer {
+        margin-top: 3vh;
+    }
+
+    .mapa-del-sitio {
+        margin-bottom: 2rem;
+    }
+
+
+    /**Footer**/
+    .logo-footer {
+        margin-top: 4vh;
+    }
+
+    .logo-footer-grande {
+        width: 50%;
+    }
+
+    .copyright-footer-grande {
+        font-size: .6rem;
+    }
+
+    .terminos-condiciones a {
+        font-size: .75rem;
+    }
+
+    .terminos-condiciones p {
+        font-size: .75rem;
+        padding: 0 1rem;
+        margin-bottom: 0;
+    }
 }
