@@ -44,15 +44,7 @@ navbar-collapse{
 .dropdown-content {
     color: white;
 }
-#menu-women {
-    padding: 24px;
-}
-#menu-men 
-    padding: 25px;
-}
-#menu-kids {
-    padding: 25px;
-}
+
 .mr-auto{
     font-size: 2rem;
 
@@ -69,11 +61,11 @@ cursor: pointer;
 /* PRIMER SLIDE */
 
 .primera-pagina {
-    background-image: url(/img/superstar.jpg);
+    background-image: url(/img/portada.png);
     background-repeat: no-repeat;
     background-size: cover;  
     text-align: center;  
-    height: 100vh;  
+    height: 90vh;  
 
 }
 #new-in {
