@@ -16,88 +16,61 @@
 </head>
 
 <header>
-    <nav>
-        <div class="navbar container-fluid d-flex fixed-top">
-            <button class="burger mr-auto p-2 navbar-toggler toggler-example" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation"><span><i id="hamburguesa" class="fas fa-bars"></i></span></button>
-            <button type="button" class="carrito p-2"><span><i class="fas fa-shopping-cart carrito"><a href="#"></a></i></span></button>
-            <button type="button" class="lupa p-2"><span> <i class="fas fa-search search"><a href="#"></a></i></span></button>
-        </div>
-    </nav>
+<!--Navbar-->
 
-<div class="collapse navbar-collapse" id="navbarToggleExternalContent">
-    <div class="navbar containter" id="navbar-div">
-        <div class="dropdown">
+<nav class="navbar navbar-light light-blue dark-4">
 
-            <button style="color: white;" class="navbar-toggler toggler-example" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation" id="menu-women">WOMEN</button>
-                <div class="dropdown-content">
-                    <a class="nav-link active" href="#"><h1 style="color: white;">NEW IN</h1></a>
-                    <a class="nav-link active" href="#"><h2 style="color: white;">SALE</h2></a>
-                    <a class="nav-link active" href="#"><h3 style="color: white;">+INFO</h3></a>
-                    <a class="nav-link active" href="#"><h6 style="color: white;">NEWSLETTER</h6></a>
-                    <a class="nav-link active" href="#"><h6 style="color: white;">CONTACTO</h6></a>
-                    <a class="nav-link active" href="#"><h6 style="color: white;">AYUDA</h6></a>
-                    <a class="nav-link active" href="#"><h6 style="color: white;">GIFT CARD</h6></a>
-                </div>
-
-                <button style="color: white;" class="navbar-toggler toggler-example" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation" id="menu-men">MEN</button>
-                <div class="dropdown-content">
-                    <a class="nav-link active" href="#"><h1 style="color: white;">NEW IN</h1></a>
-                        <a class="nav-link active" href="#"><h2 style="color: white;">SALE</h2></a>
-                        <a class="nav-link active" href="#"><h3 style="color: white;">+INFO</h3></a>
-                        <a class="nav-link active" href="#"><h6 style="color: white;">NEWSLETTER</h6></a>
-                        <a class="nav-link active" href="#"><h6 style="color: white;">CONTACTO</h6></a>
-                        <a class="nav-link active" href="#"><h6 style="color: white;">AYUDA</h6>h6></a>
-                    <a class="nav-link active" href="#"><h6 style="color: white;">GIFT CARD</h6></a>
-                </div>
-
-                <button style="color: white;" class="navbar-toggler toggler-example" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation" id="menu-kids">KIDS</button>
-                            <div class="dropdown-content">
-                            <a class="nav-link active" href="#"><h1 style="color: white;">GIRL</h1></a>
-                            <p>6-14 years</p>
-                            <a class="nav-link active" href="#"><h1 style="color: white;">BOY</h1></a>
-                            <p>6-14 years</p>
-                            <a class="nav-link active" href="#"><h1 style="color: white;">BABY GIRL</h1></a>
-                            <p>3 months - 5 years</p>
-                            <a class="nav-link active" href="#"><h1 style="color: white;">BABY BOY</h1></a>
-                            <p>3 months - 5 years</p>
-                            <a class="nav-link active" href="#"><h3 style="color: white;">+INFO</h3></a>
-                            <a class="nav-link active" href="#"><h6 style="color: white;">NEWSLETTER</h6></a>
-                            <a class="nav-link active" href="#"><h6 style="color: white;">CONTACTO</h6></a>
-                            <a class="nav-link active" href="#"><h6 style="color: white;">AYUDA</h6></a>
-                            <a class="nav-link active" href="#"><h6 style="color: white;">GIFT CARD</h6></a>
-                            </div>
-                </div>
-            <div>
-        </div>
+    <!-- Navbar brand -->
+    <a class="navbar-brand" href="#"><img src="/img/logonegro@.png" alt="logo negro"></a>
+  
+    <!-- Collapse button -->
+    <button class="navbar-toggler toggler-example" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1"
+      aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"><span class="dark-blue-text"><i
+          class="fas fa-bars fa-1x"></i></span></button>
+  
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+  
+      <!-- Links -->
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/contacto">Contacto<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/login">login</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/productos">Productos</a>
+          </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/carrito"><i class="fas fa-shopping-cart" style="color: black;"></i></a>
+        </li>
+      </ul>
+      <!-- Links -->
+  
+    </div>
+    <!-- Collapsible content -->
+  
+  </nav>
+  <!--/.Navbar-->
+</nav>
 </header>
 
 <body>
     <section>
-        <div class="container primera-pagina text-center">
+        <div class="primera-pagina text-center">
             <h1 id="new-in">NEW IN</h1>
             <p style="line-height: 100%;" id="new-in-p">Explorá los modelos lanzados esta última</p>
             <p style="line-height: 100%;" id="new-in-p">semana, seleccionados exclusivamente</p>
             <p style="line-height: 100%;" id="new-in-p">para vos.</p><br>
-            <a style="text-align: center; color: black; text-decoration: none;" class="catalogo" href="/catalogo">CATÁLOGO</a>
+            <a style="text-align: center; color: black; text-decoration: none;" class="catalogo" href="/productos">CATÁLOGO</a>
         </div>
 
-        <div class="container text-center cat-pie">
-            <div class="row" id="triple-menu">
-                <div class="col">
-                    <a id="bottom-menu" href="#">WOMEN</a>
-                </div>
-                <div class="col">
-                    <a id="bottom-menu" href="#">MEN</a>
-                </div>
-                <div class="col">
-                    <a id="bottom-menu" href="#">KIDS</a>
-                </div>
-            </div>
-        </div>
+        
     </section>
 
     <section>
-        <div class="container segunda-pagina text-center">
+        <div class="segunda-pagina text-center">
             <h1 id="new-in">SALE</h1>
             <p style="line-height: 100%;" id="new-in-p">Descubrí las ofertas de esta semana,</p>
             <p style="line-height: 100%;" id="new-in-p">seleccionadas exclusivamente para vos.</p>
@@ -105,26 +78,14 @@
             <a style="text-align: center; color: black; text-decoration: none;" class="catalogo" href="/productos">CATÁLOGO</a>
         </div>
 
-        <div class="container text-center cat-pie">
-            <div class="row" id="triple-menu">
-                <div class="col">
-                    <a id="bottom-menu" href="#">WOMEN</a>
-                </div>
-                <div class="col">
-                    <a id="bottom-menu" href="#">MEN</a>
-                </div>
-                <div class="col">
-                    <a id="bottom-menu" href="#">KIDS</a>
-                </div>
-            </div>
-        </div>
+       
     </section>
 
     <section>
         <div class="container tercera-pagina text-center">
             <h3 id="new-in-suscribe"><a style="text-align: center; color: black; text-decoration: none;" class="catalogo" href="/newsletter">SUSCRIBITE AL NEWSLETTER</a></h3>
-            <a href="#">Términos y Condiciones | </a>
-            <a href="#">Políticas de cambios</a>
+            <a style="color: black; text-decoration: none;" href="#">Términos y Condiciones | </a>
+            <a style="color: black; text-decoration: none;"" href="#">Políticas de cambios</a>
         </div>
 
     </section>

@@ -3,44 +3,11 @@ html {
     font-size: 62.5%; /*** Reset para REM --> 62.5% = 10px de 16px ***/
 }
 
-
 /* NAVBAR */
-.navbar {
-    position: fixed;
-    top: 0;
+navbar-collapse{
+    height: 25px;
     overflow: hidden;
-    background-color: #ffffff;
-    height: 10%;
-    width: 100%;
-}
-.navbar i {
-    font-size: 15px;
-}
-#hamburguesa {
-    font-size: 25px;
-}
-.burger {
-    outline: none;
-    background-color: transparent;
-    border: 0px solid;
-    font-size: 25px;
-}
-.carrito {
-    outline: none;
-    background-color: transparent;
-    border: 0px solid;
-}
-.lupa {
-    outline: none;
-    background-color: transparent;
-    border: 0px solid;
-}
-button {
-    width: 2rem;
-    height: 2rem;
-    align-content: center;
-}
-
+    scroll-behavior: none;
 
 /* MENÚ DESPLEGABLE */
 #navbar-div {
@@ -73,46 +40,38 @@ button {
 #menu-women {
     padding: 24px;
 }
-#menu-men {
+#menu-men 
     padding: 25px;
 }
 #menu-kids {
     padding: 25px;
 }
-.dropdown-contenido-kids {
-    display: none;
-    position: absolute;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
+.mr-auto{
+    font-size: 2rem;
+
 }
-.dropdown-content a {
-    float: none;
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
+.fa-1x {
+font-size: 3rem;
 }
-.dropdown-content a:hover {
-    background-color: #dddddd;
+.navbar-toggler.toggler-example {
+cursor: pointer;
 }
-.dropdown:hover .dropdown-content {
-    display: block;
-}
+
 
 
 /* PRIMER SLIDE */
+
 .primera-pagina {
-    text-align: center;
-    background-color: white;
-    padding-bottom: 125px;
-    width: 100%;
-    height: 100%;
+    background-image: url(/img/superstar.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;  
+    text-align: center;  
+    height: 100vh;  
+
 }
 #new-in {
     color: black;
-    padding-top: 300px;
+    padding-top: 150px;
     font-size: 6.5rem;
     font-weight: bold;
     text-align: center;
@@ -137,15 +96,17 @@ button {
 
 /* SEGUNDO SLIDE */
 .segunda-pagina {
+    background-image: url(/img/nike1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; 
     text-align: center;
-    background-color: white;
     padding-bottom: 125px;
     width: 100%;
-    height: 100%;
+    height: 100vh;  
 }
 #new-in {
     color: black;
-    padding-top: 300px;
+    padding-top: 301px;
     font-size: 6.5rem;
     font-weight: bold;
     text-align: center;
@@ -159,7 +120,7 @@ button {
     text-decoration: none;
     padding: 5px;
     font-weight: 600;
-    font-size: 15px;
+    font-size: 3rem;
     color: #000000;
     background-color: #ffffff;
     border: 1px solid #000000;
