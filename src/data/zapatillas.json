@@ -8,7 +8,7 @@
         "precio": 5000,
         "descripcion": "Zapatilla de época Adidas Superstar versión para Hombres",
         "imagen": "superstar01.jpg",
-        "descuento": 0,
+        "descuento": 0
     },
     {
         "id": 2,
@@ -19,7 +19,7 @@
         "precio": 3000,
         "descripcion": "Zapatilla de época Vans Old Skool versión para Niños",
         "imagen": "oldskoolblue01.png",
-        "descuento": 15,
+        "descuento": 15
     },
     {
         "id": 3,
@@ -30,7 +30,7 @@
         "precio": 4500,
         "descripcion": "Zapatilla de época Nike Air Jordan versión para Mujeres",
         "imagen": "airjordanpinkblack01.jpg",
-        "descuento": 0,
+        "descuento": 0
     },
     {
         "id": 4,
@@ -41,6 +41,6 @@
         "precio": 3500,
         "descripcion": "Zapatilla de época New Balance 574 versión para Hombres",
         "imagen": "574mengrey01.jpg",
-        "descuento": 30,
-    },
+        "descuento": 30
+    }
 ]

@@ -5,12 +5,12 @@ const path = require('path');
 
 
 
-const controllerWeb = require(path.resolve(__dirname, '..', 'controllers', 'controllersweb'));
+const controllersWeb = require(path.resolve(__dirname, '..', 'controllers', 'controllersweb'));
 //armo mis rutas
 
-router.get('/', controllerWeb.index);
-router.get('/newsletter', controllerWeb.newsletter);
-router.get('/contacto/email', controllerWeb.email);
-router.get('/contacto', controllerWeb.contacto);
+router.get('/', controllersWeb.index);
+router.get('/newsletter', controllersWeb.newsletter);
+router.get('/contacto/email', controllersWeb.email);
+router.get('/contacto', controllersWeb.contacto);
 
 module.exports = router; 
