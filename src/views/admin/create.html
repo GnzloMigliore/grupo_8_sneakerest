@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear producto</title>
+    <!--Fontawesonme icons-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!--Mi CSS-->
+    <link rel="stylesheet" href="/public/css/administrar.css">
+    <!--Fuente-->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    
+    <main class="container-fluid">
+        <section class="row my-5">
+            <article class="col-12">
+                <h2 class="titulo-crear text-center pt-5 mx-auto text-uppercase">Cargar nuevo producto</h2>
+            </article>
+        </section>
+        <section class="container">
+            <div class="row">
+                <article class="col-8 mx-auto">
+                    <form action="/admin/crear" method="POST" enctype="multipart/form-data">
+                        <!--Marca-->
+                        <div class="form-group">
+                            <input type="text" class="form-control border-0 rounded-0 bg-light" name="marca" placeholder="Marca" required="required" value="">
+                        </div>
+                        <!--Modelo-->
+                        <div class="form-group">
+                            <input type="text" class="form-control border-0 rounded-0 bg-light" name="modelo" placeholder="Modelo" required="required" value="">
+                        </div>
+                        <!--Género, color, talles, precio y descuento-->
+                        <div class="row">
+                            <!--Género-->
+                            <div class="form-group col-4">
+                                <select class="custom-select border-0 rounded-0 bg-light">
+                                    <option selected>Género</option>
+                                    <option value="1">Men</option>
+                                    <option value="2">Women</option>
+                                    <option value="3">Kids</option>
+                                </select>
+                            </div>
+                            <!--Color-->
+                            <div class="form-group col-2 pl-0">
+                                <input type="color" class="form-control border-0 rounded-0 bg-light" name="color" required="required" value="">
+                            </div>
+                            <!--Talles-->
+                            <div class="form-group col-6 pl-0">
+                                <input class="form-control border-0 rounded-0 bg-light" name="talles" placeholder="Talles (separados por guión sin espacio)" required="required" value="">
+                            </div>
+                            <!--Precio-->
+                            <div class="form-group col-7">
+                                <input type="number" class="form-control border-0 rounded-0 bg-light" name="precio" placeholder="$" required="required" value="">
+                            </div>
+                            <!--Descuento-->
+                            <div class="form-group col-5 pl-0">
+                                <input type="number" class="form-control border-0 rounded-0 bg-light" name="descuento" placeholder="%" required="required" value="">
+                            </div>
+                        </div>
+                        <!--Descripción de producto-->
+                        <div class="form-group">
+                            <input type="text" class="form-control border-0 rounded-0 bg-light" name="descripcion" placeholder="Descripción del producto" required="required" value="">
+                        </div>
+                        <!--Seleccionar imagenes-->
+                        <div class="form-group d-flex justify-content-between">
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" id="customFile" multiple>
+                                <label class="custom-file-label border-0 rounded-0 bg-light" for="customFile">Seleccionar imagenes</label>
+                            </div>
+                        </div>
+                        <!--Botones guardar volver-->
+                        <div class="form-group row d-flex justify-content-center mx-auto mt-5">
+                            <button type="submit" class="btn btn-dark col-8 border-0 rounded-0">Guardar producto</button>
+                        </div>
+                        <div class="form-group row d-flex justify-content-center mx-auto">
+                            <a href="/admin" class=" text-decoration-none text-body col-12 text-center pl-0">Volver</a>
+                        </div>
+                        
+                        
+                        
+                    </form>
+                </article>
+            </div>
+        </section>
+    </main>
+    
+    
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
