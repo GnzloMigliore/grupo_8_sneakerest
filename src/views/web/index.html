@@ -5,55 +5,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>SNEAKEREST</title>
-
+    
     <!--Fontawesonme icons & Google Fonts-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-
+    
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/master.css">
 </head>
 
 <header>
-<!--Navbar-->
-
-<nav class="navbar navbar-light light-blue dark-4">
-
-    <!-- Navbar brand -->
-    <a class="navbar-brand" href="#"><img src="/img/logonegro@.png" alt="logo negro"></a>
-  
-    <!-- Collapse button -->
-    <button class="navbar-toggler toggler-example" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1"
-      aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"><span class="dark-blue-text"><i
-          class="fas fa-bars fa-1x"></i></span></button>
-  
-    <!-- Collapsible content -->
-    <div class="collapse navbar-collapse" id="navbarSupportedContent1">
-  
-      <!-- Links -->
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="/contacto">Contacto<span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/login">login</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="/productos">Productos</a>
-          </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/carrito"><i class="fas fa-shopping-cart" style="color: black;"></i></a>
-        </li>
-      </ul>
-      <!-- Links -->
-  
+    
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">WOMEN</a>
+        <a href="#">MEN</a>
+        <a href="#">KIDS</a>
+        <a href="#">NEW IN</a>
+        <a href="#">SALE</a>
+        <br>
+        <br>
+        <a href="#">+INFO</a>
+            <a id="menuinfo" href="#">NEWSLETTER</a>
+            <a id="menuinfo" href="#">CONTACTO</a>
+            <a id="menuinfo" href="#">NOSOTROS</a>
+            <a id="menuinfo" href="#">GIFT CARD</a>
+            <a id="menuinfo" href="#">AYUDA</a>        
     </div>
-    <!-- Collapsible content -->
-  
-  </nav>
-  <!--/.Navbar-->
-</nav>
+
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+    
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+        
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
+    
 </header>
 
 <body>
@@ -65,10 +57,10 @@
             <p style="line-height: 100%;" id="new-in-p">para vos.</p><br>
             <a style="text-align: center; color: black; text-decoration: none;" class="catalogo" href="/productos">CATÁLOGO</a>
         </div>
-
+        
         
     </section>
-
+    
     <section>
         <div class="segunda-pagina text-center">
             <h1 id="new-in">SALE</h1>
@@ -77,17 +69,17 @@
             <br>
             <a style="text-align: center; color: black; text-decoration: none;" class="catalogo" href="/productos">CATÁLOGO</a>
         </div>
-
-       
+        
+        
     </section>
-
+    
     <section>
         <div class="container tercera-pagina text-center">
             <h3 id="new-in-suscribe"><a style="text-align: center; color: black; text-decoration: none;" class="catalogo" href="/newsletter">SUSCRIBITE AL NEWSLETTER</a></h3>
             <a style="color: black; text-decoration: none;" href="#">Términos y Condiciones | </a>
             <a style="color: black; text-decoration: none;"" href="#">Políticas de cambios</a>
         </div>
-
+        
     </section>
 </body>
 

@@ -10,51 +10,67 @@ img {
     max-width: 100%;
 }
 
-/* NAVBAR */
-navbar-collapse{
-    height: 25px;
-    overflow: hidden;
-    scroll-behavior: none;
+
+/* The side navigation menu */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
 }
-/* MENÚ DESPLEGABLE */
-#navbar-div {
-    flex-direction: column;
-    width: 100%;
-    color: white;
-    background-color: black;
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
 }
-.dropdown {
-    position: relative;
-    width: 100%;
-    background-color: black;
-    color: white;
-    padding-top: 50px;
-}
-.dropbtn {
-    color: black;
+
+#menuinfo {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
     font-size: 15px;
-    border: none;
-    padding-right: 75px;
-    padding-left: 0px;
-    align-content: center;
-    padding-bottom: 50px;
-    outline: none;
-    padding: 15px;
-}
-.dropdown-content {
-    color: white;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
 }
 
-.mr-auto{
-    font-size: 2rem;
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+    color: #f1f1f1;
+}
 
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
 }
-.fa-1x {
-font-size: 3rem;
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
 }
-.navbar-toggler.toggler-example {
-cursor: pointer;
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
 }
+
+
 
 
 
@@ -66,7 +82,7 @@ cursor: pointer;
     background-size: cover;  
     text-align: center;  
     height: 90vh;  
-
+    
 }
 #new-in {
     color: black;
@@ -191,29 +207,29 @@ cursor: pointer;
     footer {
         margin-top: 3vh;
     }
-
+    
     .mapa-del-sitio {
         margin-bottom: 2rem;
     }
-
-
+    
+    
     /**Footer**/
     .logo-footer {
         margin-top: 4vh;
     }
-
+    
     .logo-footer-grande {
         width: 50%;
     }
-
+    
     .copyright-footer-grande {
         font-size: .6rem;
     }
-
+    
     .terminos-condiciones a {
         font-size: .75rem;
     }
-
+    
     .terminos-condiciones p {
         font-size: .75rem;
         padding: 0 1rem;
