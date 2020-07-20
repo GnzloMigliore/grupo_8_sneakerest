@@ -48,8 +48,9 @@
                         <% zapatillas.forEach(zapatilla => { %> 
                             <tr>
                                 <td><%= zapatilla.id %> </td>
-                                <td><%= zapatilla.nombre %> </td>
-                                <td><a href="/admin/detail/<%= zapatilla.id %> ">Ver detalle</a></td>
+                                <td><%= zapatilla.marca %> </td>
+                                <td><%= zapatilla.modelo %> </td>
+                                <td><a href="/admin/detalle/<%= zapatilla.id %> ">Ver detalle</a></td>
                                 <td><a href="/admin/crear/<%= zapatilla.id %> ">Editar producto</a></td>
                                 <td><a href="/admin/eliminar/<%= zapatilla.id %> ">Eliminar producto</a></td>
                             </tr>
