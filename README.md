@@ -42,6 +42,15 @@ Nuestro Scrum Master, 24 años, graduado de DH en marketing digital. Emprendedor
 
 ---
 
++ ## ___Repositorio___
+- [https://github.com/GonzaloMigliore/grupo_8_sneakerest.git](https://github.com/GonzaloMigliore/grupo_8_sneakerest.git)
+
+---
+
++ ## ___Link de Trello___ 
+
+https://trello.com/b/Ryn6TDbX/tabla-de-tareas
+
 + ## ___Referentes___
     - [___Adidas___](https://www.adidas.com/us)
     
