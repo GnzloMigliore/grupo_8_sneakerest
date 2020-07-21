@@ -41,10 +41,37 @@
   },
   {
     "id": 5,
-    "marca": "Prueba",
-    "modelo": "Modelo Prueba",
+    "marca": "asd",
+    "modelo": "asd",
     "color": "#000000",
-    "precio": "4200",
-    "descripcion": "Hola mundo"
+    "precio": "123123",
+    "descripcion": "asdsd"
+  },
+  {
+    "id": 6,
+    "marca": "asd",
+    "modelo": "asd",
+    "color": "#000000",
+    "precio": "123123",
+    "descripcion": "asdsd",
+    "imagen": "zapatilla-1595371576445.jpeg"
+  },
+  {
+    "id": 7,
+    "marca": "asdasd",
+    "modelo": "asdasd",
+    "color": "#000000",
+    "precio": "123123",
+    "descripcion": "asdasdasd",
+    "imagen": "zapatilla-1595371949571.jpeg"
+  },
+  {
+    "id": 8,
+    "marca": "asdasd",
+    "modelo": "asdasdas",
+    "color": "#000000",
+    "precio": "123123",
+    "descripcion": "asdasdasd",
+    "imagen": "zapatilla-1595372778027.jpg"
   }
 ]

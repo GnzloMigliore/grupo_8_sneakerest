@@ -11,10 +11,11 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!--Mi CSS-->
     <link rel="stylesheet" href="css/productos.css">
+    <link rel="stylesheet" href="css/footer.css">
 </head>
 <body>
     
-<header>
+    <header>
         <!--nav-->
         <nav class="d-flex justify-content-between align-items-center">
             <div id="item1" class="box">
@@ -27,21 +28,22 @@
                 <a href="/carrito"><i class="fas fa-shopping-cart" style="color: black;"></i></a>
             </div>
         </nav>
-</header>
-<main>
-    
-    <div class="orden-filtros pb-0 mt-0">
-        <div class="marcas-arriba d-none d-md-block">
-            <a href="#">Adidas</a>
-            <a href="#">Converse</a>
-            <a href="#">DC Shoes</a>
-            <a href="#">New Balance</a>
-            <a href="#">Nike</a>
-            <a href="#">Rebook</a>
-            <a href="#">Vans</a>
-            <a href="#">Ver Todas</a>
-        </div>
+    </header>
+    <main>
         
+        <div class="orden-filtros pb-0 mt-0">
+            <div class="marcas-arriba d-none d-md-block">
+                <a href="#">Adidas</a>
+                <a href="#">Converse</a>
+                <a href="#">DC Shoes</a>
+                <a href="#">New Balance</a>
+                <a href="#">Nike</a>
+                <a href="#">Rebook</a>
+                <a href="#">Vans</a>
+                <a href="#">Ver Todas</a>
+            </div>
+            
+            <!--Filtros mobile-->
             <div class="dos-drops1 col-12 d-flex justify-content-end d-sm-block d-md-none content-mov">
                 <div class="dropdown ">
                     <button class="btn btn-secondary dropdown-toggle boton-orden-filtro" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -112,6 +114,7 @@
                     </div>
                 </div>
             </div>
+            <!--Filtros >=md -->
             <div class="dos-drops content-drop">
                 <div class="dropdown ">
                     <button class="btn btn-secondary dropdown-toggle boton-orden-filtro" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -165,7 +168,7 @@
                             </div>
                         </div>
                         <div class="contenedores-panel-filtros">
-                            <p class="titulo-panel-filtros">Precio</p>
+                            <p class="titulo-panel-filtros mt-5">Precio</p>
                             <div class="card-body padre-box-precio">
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
@@ -181,217 +184,34 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> 
+        </div>
+        <section class="lista-productos row d-flex justify-content-start">
+            <% for (let i=0; i<zapatillas.length; i++){ %>
+                <article class="col-5 col-md-4 col-lg-3 p-2">
+                    <figure>
+                        <a href="/productos/detalle/<%= zapatillas[i].id %>">
+                            <div class="fondo-gris-productos mx-auto">
+                                <img src="img/<%= zapatillas[i].imagen %>" alt="<%= zapatillas[i].marca + " " + zapatillas[i].modelo %> ">
+                            </div>
+                        </a>
+                        <div class="modelo-precio text-center">
+                            <p><%= zapatillas[i].marca + " " + zapatillas[i].modelo %></p>
+                            <p><%= "$" + zapatillas[i].precio %> </p>
+                        </div>
+                    </figure>
+                </article>
+            <% } %>
+        </section>  
         
         
-    </div>
-    <div class="lista-productos">
-        <div class="box-productos">
-            <a href="/detalleProducto" class="jover">
-            <div class="fondo-gris-productos">
-                <img src="img/Busenitz_Shoes_Blue_FV5876_01_standard.jpg" alt="Adidas Busenitz">
-            </div>
-            </a>
-            <div class="modelo-precio">
-                <p>Adidas Busenitz</p>
-                <p>$4789</p>
-            </div>
-            
-        </div>
-        <div class="box-productos">
-            <a href="/detalleProducto" class="jover">
-            <div class="fondo-gris-productos">
-                <img src="img/Campus_ADV_Shoes_Black_B22716_01_standard.jpg" alt="Adidas Campus ADV">
-            </div>
-            </a>
-            <div class="modelo-precio">
-                <p>Adidas Campus ADV</p>
-                <p>$5999</p>
-            </div>
-        </div>
-        <div class="box-productos">
-            <a href="/detalleProducto" class="jover">
-            <div class="fondo-grisOscuro-productos">
-                <img src="img/converse/converseChucksAzules/162055C_A_107X1.jpg" alt="Converse Chucks Azules">
-            </div>
-            </a>
-            <div class="modelo-precio">
-                <p>Converse Chucks</p>
-                <p>$3259</p>
-            </div>
-        </div>
-        <div class="box-productos">
-            <a href="/detalleProducto" class="jover">
-            <div class="fondo-grisOscuro-productos">
-                <img src="img/converse/converseChucksNaranjas/chucks1.jpg" alt="Converse Chucks Naranjas">
-            </div>
-            </a>
-            <div class="modelo-precio">
-                <p>Converse Chucks</p>
-                <p>$3259</p>
-            </div>
-        </div>
-        <div class="box-productos">
-            <a href="/detalleProducto" class="jover">
-            <div class="fondo-gris-productos">
-                <img src="img/Busenitz_Shoes_Blue_FV5876_01_standard.jpg" alt="Adidas Busenitz">
-            </div>
-            </a>
-            <div class="modelo-precio">
-                <p>Adidas Busenitz</p>
-                <p>$4789</p>
-            </div>
-            
-        </div>
-        <div class="box-productos">
-            <a href="/detalleProducto" class="jover">
-            <div class="fondo-gris-productos">
-                <img src="img/Campus_ADV_Shoes_Black_B22716_01_standard.jpg" alt="Adidas Campus ADV">
-            </div>
-            </a>
-            <div class="modelo-precio">
-                <p>Adidas Campus ADV</p>
-                <p>$5999</p>
-            </div>
-        </div>
-        <div class="box-productos">
-            <a href="/detalleProducto" class="jover">
-            <div class="fondo-gris-productos">
-                <img src="img/Campus_ADV_Shoes_Black_B22716_01_standard.jpg" alt="Adidas Campus ADV">
-            </div>
-            </a>
-            <div class="modelo-precio">
-                <p>Adidas Campus ADV</p>
-                <p>$5999</p>
-            </div>
-        </div>
-        <div class="box-productos">
-            <a href="/detalleProducto" class="jover">
-            <div class="fondo-grisOscuro-productos">
-                <img src="img/converse/converseChucksAzules/162055C_A_107X1.jpg" alt="Converse Chucks Azules">
-            </div>
-            </a>
-            <div class="modelo-precio">
-                <p>Converse Chucks</p>
-                <p>$3259</p>
-            </div>
-        </div>
-        <div class="box-productos">
-            <a href="/detalleProducto" class="jover">
-                <div class="fondo-grisOscuro-productos">
-                    <img src="img/converse/converseChucksNaranjas/chucks1.jpg" alt="Converse Chucks Naranjas">
-                </div>
-            </a>
-            <div class="modelo-precio">
-                <p>Converse Chucks</p>
-                <p>$3259</p>
-            </div>
-        </div>
-    </div>
-    
-    
-</main>
-<footer>
-    <!--Footer mobile-->
-    <div class="d-sm-block d-md-none">
-        <div class="container-fluid fondo-footer mt-3">
-            <div class="row">
-                <!--Redes Footer-->
-                <div class="col-10 d-flex justify-content-between align-items-center redes-footer mt-3 mx-auto">
-                    <a href="https://www.instagram.com">Instagram</a>
-                    <a href="https://www.behance.com">Behance</a>
-                    <a href="https://www.facebook.com">Facebook</a>
-                </div>
-                <!--Logo footer-->
-                <div class="col-12 mt-4 mb-0 pb-0">
-                    <div class="col-12 text-center">
-                        <a href="#"><img src="img/Mesa de trabajo 3@.png" alt="Logo Sneakerest" class="logo-footer-mobile mx-auto"></a>
-                    </div>
-                    <div class="col-12 text-center">
-                        <p class="copyright-footer-mobile mx-auto">© 2020 Copyright: SNEAKEREST S.R.L.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--Footer tablet para arriba-->
-    <div class="d-none d-md-block">
-        <div class="container-fluid fondo-footer redes-footer mx-auto w-100">
-            <div class="col-12 row pt-5">
-                <!--Mapa del sitio-->
-                <div class="col-7 d-flex justify-content-around mapa-footer mapa-del-sitio">
-                    <!--Categorias-->
-                    <div class="col-2 d-flex flex-column">
-                        <p class="font-weight-bold">Categorias</p>
-                        <a href="#">Men</a>
-                        <a href="#">Women</a>
-                        <a href="#">Kids</a>
-                        <a href="#">New In</a>
-                        <a href="#">Sale</a>
-                    </div>
-                    <!--Marcas-->
-                    <div class="col-2 d-flex flex-column">
-                        <p class="font-weight-bold">Marcas
-                        </p>
-                        <a href="#">Adidas</a>
-                        <a href="#">Converse</a>
-                        <a href="#">DC Shoes</a>
-                        <a href="#">New Balance</a>
-                        <a href="#">Nike</a>
-                        <a href="#">Rebook</a>
-                        <a href="#">Vans</a>
-                    </div>
-                    <!--Soporte-->
-                    <div class="col-2 d-flex flex-column">
-                        <p 
-                        class="font-weight-bold">Soporte</p>
-                        <a href="#">Ayuda</a>
-                        <a href="#">Cambios</a>
-                        <a href="#">Devoluciones</a>
-                        <a href="#">Envíos</a>
-                        <a href="#">Seguimiento</a>
-                        <a href="#">Tabla de talles</a>
-                    </div>
-                    <!--Sobre Nosotros-->
-                    <div class="col-2 d-flex flex-column">
-                        <p class="font-weight-bold">Sobre SNKRST</p>
-                        <a href="#">Nosotros</a>
-                        <a href="#">Proposito</a>
-                        <a href="#">Noticias</a>
-                    </div>
-                </div>
-                <!--Redes, logo y TC-->
-                <div class="col-5 mapa-footer">
-                    <!--Redes Footer-->
-                    <div class="col-12 d-flex justify-content-around">
-                        <a href="https://www.instagram.com">Instagram</a>
-                        <a href="https://www.behance.com">Behance</a>
-                        <a href="https://www.facebook.com">Facebook</a>
-                    </div>
-                    <!--Logo Footer-->
-                    <div class="col-12 logo-footer">
-                        <div class="col-12 text-center">
-                            <a href="/"><img src="img/Mesa de trabajo 3@.png" alt="Logo Sneakerest" class="logo-footer-grande mx-auto"></a>
-                        </div>
-                        <div class="col-12 text-center">
-                            <p class="copyright-footer-grande mx-auto" >© 2020 Copyright: SNEAKEREST S.R.L.</p>
-                        </div>
-                    </div>
-                </div>
-                <!--Terminos y condiciones-->
-                <div class="col-12 terminos-condiciones d-flex justify-content-center align-items-center">
-                    <a href="#">Términos y condiciones</a>
-                    <p class="mb-0"> | </p>
-                    <a href="#">Políticas de cambio</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</footer>
-<!-- Optional JavaScript -->
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </main>
+    <!-- FOOTER -->
+    <%- include('../partials/footer.ejs') %>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -25,7 +25,7 @@ module.exports = {
             talle : req.body.talle,
             precio:req.body.precio,
             descripcion:req.body.descripcion,
-            imagen : req.filename
+            imagen : req.file.filename
         };
         zapatillas.push(nuevoProducto);
         let nuevoProductoGuardar = JSON.stringify(zapatillas,null,2)

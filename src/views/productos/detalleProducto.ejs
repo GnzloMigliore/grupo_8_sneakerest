@@ -10,7 +10,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!--Mi CSS-->
-    <link rel="stylesheet" href="css/detalleProducto.css">
+    <link rel="stylesheet" href="css/detalleProducto.css" type="text/css">
 </head>
 <body>
     <header>
@@ -29,7 +29,7 @@
     </header>
     
     <main>
-        
+        <!--Mobile-->
         <section class="cuerpo content-mobile">
             <a href="#"><img src="img/Campus_ADV_Shoes_Black_B22716_01_standard.jpg" alt="Adidas Campus ADV Black" class="foto-producto"></a>
             <a href="#"><img src="img/Campus_ADV_Shoes_Black_B22716_01_standard.jpg" alt="Adidas Campus ADV Black" class="foto-producto"></a>
@@ -75,25 +75,26 @@
                 <a href="#">New in</a>
             </div>
         </section>
+        <!-->=lg-->
         <section class="content-laptop fotos-laptop">
             <div class="foto-top-laptop">
-                <a href="#"><img src="img/converse/converseChucksNaranjas/chucks1.jpg" alt="Converse Chucks Naranja"></a>
+                <a href="#"><img src="/img/<%= miZapatilla.imagen %> " alt="<%= miZapatilla.marca + " "%> + <%= miZapatilla.modelo %>"></a>
             </div>
             <div class="fotos-resto-laptop">
-                <a href="#"><img src="img/converse/converseChucksNaranjas/chucks2.jpg" alt="Converse Chucks Naranja"></a>
-                <a href="#"><img src="img/converse/converseChucksNaranjas/chucks3.jpg" alt="Converse Chucks Naranja"></a>
-                <a href="#"><img src="img/converse/converseChucksNaranjas/chucks4.jpg" alt="Converse Chucks Naranja"></a>
-                <a href="#"><img src="img/converse/converseChucksNaranjas/chucks5.jpg" alt="Converse Chucks Naranja"></a>
-                <a href="#"><img src="img/converse/converseChucksNaranjas/chucks6.jpg" alt="Converse Chucks Naranja"></a>
-                <a href="#"><img src="img/converse/converseChucksNaranjas/chucks7.jpg" alt="Converse Chucks Naranja"></a>
+                <a href="#"><img src="img/chucks2.jpg" alt="Converse Chucks Naranja"></a>
+                <a href="#"><img src="img/chucks3.jpg" alt="Converse Chucks Naranja"></a>
+                <a href="#"><img src="img/chucks4.jpg" alt="Converse Chucks Naranja"></a>
+                <a href="#"><img src="img/chucks5.jpg" alt="Converse Chucks Naranja"></a>
+                <a href="#"><img src="img/chucks6.jpg" alt="Converse Chucks Naranja"></a>
+                <a href="#"><img src="img/chucks7.jpg" alt="Converse Chucks Naranja"></a>
             </div>
         </section>
         <section class="content-laptop filtros-laptop">
             <div class="container contenedor-filtros col-10">
                 <div class="titulo-modelo">
-                    <h2>converse chuck 70 high top</h2>
-                    <p class="codigo-texto">#ccht7020</p>
-                    <h5>$8249,99</h5>
+                    <h2><%= miZapatilla.marca + " "%> + <%= miZapatilla.modelo %></h2>
+                    <p class="codigo-texto"><%= miZapatilla.id %> </p>
+                    <h5>$+<%= miZapatilla.precio %> </h5>
                 </div>
                 <div class="cuadros-colores">
                     <div>
