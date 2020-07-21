@@ -1,14 +1,50 @@
 [
-  null,
-  null,
-  null,
-  null,
+  {
+    "id": 1,
+    "marca": "Adidas",
+    "modelo": "Superstar",
+    "color": "Blanco",
+    "precio": 5000,
+    "descripcion": "Zapatilla de época Adidas Superstar versión para Hombres",
+    "imagen": "Superstar01.jpg",
+    "descuento": 0
+  },
+  {
+    "id": 2,
+    "marca": "Vans",
+    "modelo": "Old Skool",
+    "color": "Rojo",
+    "precio": 3000,
+    "descripcion": "Zapatilla de época Vans Old Skool versión para Hombres",
+    "imagen": "oldskoolred01.png",
+    "descuento": 15
+  },
+  {
+    "id": 3,
+    "marca": "Nike",
+    "modelo": "Air Jordan",
+    "color": "Verde, blanco y negro",
+    "precio": 4500,
+    "descripcion": "Zapatilla de época Nike Air Jordan versión para Hombres",
+    "imagen": "airjordan01.jpg",
+    "descuento": 0
+  },
+  {
+    "id": 4,
+    "marca": "New Balance",
+    "modelo": "574 Men",
+    "color": "Gris, rojo y blanco",
+    "precio": 3500,
+    "descripcion": "Zapatilla de época New Balance 574 versión para Hombres",
+    "imagen": "newbalance01.jpg",
+    "descuento": 30
+  },
   {
     "id": 5,
-    "marca": "nike",
-    "modelo": "air",
+    "marca": "Prueba",
+    "modelo": "Modelo Prueba",
     "color": "#000000",
-    "precio": "1234",
-    "descripcion": "Zapatilla blanca con tres lineas negras"
+    "precio": "4200",
+    "descripcion": "Hola mundo"
   }
 ]
