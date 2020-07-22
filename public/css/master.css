@@ -70,7 +70,20 @@ img {
     .sidenav a {font-size: 18px;}
 }
 
+#carrito {
+    text-align: right;
+    align-self: right;
+    align-content: right;
+}
 
+.navbar {
+    align-content: right;
+}
+
+.search-container {
+    border: none;
+    align-content: center;
+}
 
 
 
