@@ -34,8 +34,31 @@ body {
         margin-bottom: 2rem;
     }
     
-    
+    /**titulos**/
+    h1{
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;
+        padding-top: 10vh;
+    }
+    /*section detalle*/
+    #article{
+        background-color: #E1DCDB;
+    }
+    /*crear producto*/
+    #crear{
+        background-color: #E1DCDB;
+    }
+    #editar{
+        background-color: #E1DCDB;
+    }
+    }
+    .form-group{
+        margin-top: 2vh;
+    }
     /**Footer**/
+    footer{
+        margin-top: 30vh;
+    }
     .logo-footer {
         margin-top: 4vh;
     }

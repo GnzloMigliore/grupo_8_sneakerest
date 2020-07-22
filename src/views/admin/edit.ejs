@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Crear producto</title>
+        <!--Fontawesonme icons-->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <!--Mi CSS-->
+        <link rel="stylesheet" href="/css/administrar.css">
+        <!--Fuente-->
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+        
+    </head>
+<body>
+    
+     <section class="row">
+      <article class="col-12  card pt-5" >
+              <div class="card-body">
+                <h1 class="card-title text-center">EDITAR PRODUCTOS</h1>
+              </div>
+      </article>
+  </section>
+
+    <section class="bg-home pt-4">
+        <div class="container">
+            <div class="row" >
+                <div id="editar" class="col-8 mx-auto">
+                    <div class="create-form">
+                        <form action="/edit/<%= zapatillaEditar.id%>?_method=PUT
+                          " method="POST" enctype="multipart/form-data" >
+                           
+                            <div class="form-group">
+                              <input type="text" class="form-control" name="marca" placeholder="Marca" required="required" value="<%= zapatillaEditar.marca%>">
+                          </div>	
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="descripcion" placeholder="Descripción del producto" required="required" value="<%= zapatillaEditar.descripcion%>">
+                            </div>
+                            <div class="form-group">
+                                <input type="number" class="form-control" name="precio" placeholder="Indique el precio" required="required" value="<%=zapatillaEditar.precio%>">
+
+                            </div>
+                            <div class="form-group">
+                                
+                                <select  name="descuento" class="custom-select" id="validationCustom04" required>
+                                  <option disabled value="#">Seleccione un descuento"</option>
+                                  <option value="0" <%= zapatillaEditar.descuento == 0 ? "selected" : null %>
+                                    >Sin descuento</option>
+                                  <option value="10" <%= zapatillaEditar.descuento == 10 ? "selected" : null %>>10%</option>
+                                  
+                                </select>
+                            </div>
+                        <!--Aqui solicito la imagen al usuario-->
+                        <div class="custom-file">
+                          <figure class="form-group">
+                            <img class="w-100" src="/images/zapatillas/<%= zapatillaEditar.imagen %> " alt="habano <%= zapatillaEditar.nombre %>">
+
+                          </figure>
+                          <input type="hidden"  name="oldImagen"  value="<%= zapatillaEditar.imagen%>">
+                                    <!--De esta forma logro conservar y que viaje la imagen anterior de esta forma evito que el usuario seleccione una imagen nuevamente, ( si no lo desea) -->
+
+                          <input type="file" name="imagen"  multiple>
+                          <!--<input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01" name="imagen" required value=" ">
+                          <label class="custom-file-label" for="inputGroupFile01">Seleccione una imagen</label>-->
+                        </div>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn btn-dark">Actualizar</button>
+                                <a href="/admin" class="btn btn-dark">Volver</a>
+                            </div>
+                            
+                        </form>
+                </div>                        
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer-->
+     <!-- FOOTER -->
+     <%- include('../partials/footer.ejs') %>
+    
+     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+
+</html>
