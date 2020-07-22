@@ -15,60 +15,9 @@
     <link rel="stylesheet" href="/css/master.css">
 </head>
 
-<header>
-    <div class="navbar">
+<!-- HEADER -->
+<%- include('../partials/header.ejs') %>
 
-        <div id="item1" class="box">
-            <a href="/"><img src="/img/logonegro@.png" alt=""></i></a>
-        </div>
-
-        <div id="mySidenav" class="sidenav">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href="/productos">WOMEN</a>
-            <a href="/productos">MEN</a>
-            <a href="/productos">KIDS</a>
-            <a href="/productos">NEW IN</a>
-            <a href="/productos">SALE</a>
-            <br>
-            <br>
-            <a href="#">+INFO</a>
-                <a id="menuinfo" href="#">NEWSLETTER</a>
-                <a id="menuinfo" href="#">CONTACTO</a>
-                <a id="menuinfo" href="#">NOSOTROS</a>
-                <a id="menuinfo" href="#">GIFT CARD</a>
-                <a id="menuinfo" href="#">AYUDA</a>
-            <br>
-            <br>
-            <a href="/login">LOG IN</a>
-            <a href="/admin">ADMIN</a>     
-        </div>
-
-        <div id="carrito"><a href="/carrito"><i class="fas fa-shopping-cart" style="font-size: 1.5rem; color: black;"></i></a></div>
-
-        <div class="search-container">
-            <form action="/action_page.php">
-            <input type="text" placeholder="Search" name="search">
-            <button type="submit" style="border: none; background-color: white; font-size: 1rem;"><i class="fa fa-search"></i></button>
-            </form>
-        </div>
-
-    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
-
-</div>
-    
-    <script>
-        function openNav() {
-            document.getElementById("mySidenav").style.width = "250px";
-        }
-        
-        function closeNav() {
-            document.getElementById("mySidenav").style.width = "0";
-        }
-    </script>
-    
-    
-
-</header>
 
 <body>
     <section>
