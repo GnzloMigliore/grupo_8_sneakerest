@@ -127,3 +127,77 @@ h5{
  .ruta a{
     text-decoration: none;
  }
+/*footer*/
+.fondo-footer {
+    background-color: #b4b5b4;
+}
+
+.redes-footer a {
+    text-decoration: none;
+    color: black;
+    font-size: .75rem;
+}
+
+.logo-footer-mobile {
+    width: 7rem;
+}
+
+.copyright-footer-mobile {
+    font-size: .5rem;
+}
+
+@media (min-width: 768px) {
+    footer {
+        margin-top: 3vh;
+    }
+    
+    .mapa-del-sitio {
+        margin-bottom: 2rem;
+    }
+    
+    /**titulos**/
+    h1{
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;
+        padding-top: 10vh;
+    }
+    /*section detalle*/
+    #article{
+        background-color: #E1DCDB;
+    }
+    /*crear producto*/
+    #crear{
+        background-color: #E1DCDB;
+    }
+    #editar{
+        background-color: #E1DCDB;
+    }
+    }
+    .form-group{
+        margin-top: 2vh;
+    }
+    /**Footer**/
+    footer{
+        margin-top: 30vh;
+    }
+    .logo-footer {
+        margin-top: 4vh;
+    }
+    
+    .logo-footer-grande {
+        width: 50%;
+    }
+    
+    .copyright-footer-grande {
+        font-size: .6rem;
+    }
+    
+    .terminos-condiciones a {
+        font-size: .75rem;
+    }
+    
+    .terminos-condiciones p {
+        font-size: .75rem;
+        padding: 0 1rem;
+        margin-bottom: 0;
+    }

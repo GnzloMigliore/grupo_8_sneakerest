@@ -1,6 +1,4 @@
-html {
-    min-width: 300px;
-}
+
 
 body {
     font-family: 'Montserrat', sans-serif;
@@ -79,6 +77,15 @@ img {
 .navbar {
     align-content: right;
 }
+#carritonav{
+padding: 10px;
+}
+#carritonav a{
+    padding-right: 10px;
+    }
+    #carritonav span{
+        font-size: 3rem;
+        }
 
 .search-container {
     border: none;
@@ -100,13 +107,13 @@ img {
 #new-in {
     color: black;
     padding-top: 150px;
-    font-size: 6.5rem;
+    font-size: 3rem;
     font-weight: bold;
     text-align: center;
 }
 #new-in-p {
     color: black;
-    font-size: 1.3rem;
+    font-size: 1rem;
     text-align: center;
 }
 .catalogo {
@@ -135,20 +142,20 @@ img {
 #new-in {
     color: black;
     padding-top: 301px;
-    font-size: 6.5rem;
+    font-size: 4rem;
     font-weight: bold;
     text-align: center;
 }
 #new-in-p {
     color: black;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     text-align: center;
 }
 .catalogo {
     text-decoration: none;
     padding: 5px;
     font-weight: 600;
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: #000000;
     background-color: #ffffff;
     border: 1px solid #000000;
@@ -248,4 +255,20 @@ img {
         padding: 0 1rem;
         margin-bottom: 0;
     }
+}
+@media (max-width: 500px){
+    #carritonav{
+        padding: 10px;
+        }
+        #carritonav a{
+            padding-right: 10px;
+            }
+            #carritonav span{
+                font-size: 3rem;
+                }
+        
+        .search-container {
+            display: none;
+        }
+        
 }

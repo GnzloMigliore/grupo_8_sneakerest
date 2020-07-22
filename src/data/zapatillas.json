@@ -16,5 +16,14 @@
     "precio": "1234",
     "descripcion": "Zapatilla blanca con tres lineas negras",
     "imagen": "zapatilla-1595434720463.png"
+  },
+  {
+    "id": 3,
+    "marca": "Nike",
+    "modelo": "323",
+    "color": "#000000",
+    "precio": "123412",
+    "descripcion": "233123",
+    "imagen": "zapatilla-1595441999646.jpg"
   }
 ]

@@ -9,12 +9,12 @@ module.exports = {
     res.render(path.resolve(__dirname, '..', 'views', 'web', 'index'));
   },
   contacto: function(req,res){
-    res.render(path.resolve(__dirname, '..', 'views','web','contacto.html'))
+    res.render(path.resolve(__dirname, '..', 'views','web','contacto'))
   },
   email: function(req,res){
-    res.render(path.resolve(__dirname, '..', 'views','web','email.html'))
+    res.render(path.resolve(__dirname, '..', 'views','web','email'))
   },
   newsletter: function(req,res){
-    res.render(path.resolve(__dirname, '..', 'views','web','newsletter.html'))
+    res.render(path.resolve(__dirname, '..', 'views','web','newsletter'))
   }
 }
