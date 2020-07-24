@@ -25,7 +25,7 @@ module.exports = {
             talle : req.body.talle,
             precio:req.body.precio,
             descripcion:req.body.descripcion,
-            imagen : req.file.filename
+            imagen : req.file.filename,
         };
         zapatillas.push(nuevoProducto);
         let nuevoProductoGuardar = JSON.stringify(zapatillas,null,2)
@@ -91,4 +91,26 @@ module.exports = {
         res.redirect('/admin');      
         
     },
+            },
+
+            update (req,res){
+                let productoZapatillas = JSON.parse(fs.readFileSync(path.resolve(__dirname,"..", "data","zapatillas.json")));
+            
+                req.body.id = req.params.id;
+              
+                req.body.imagen = req.file ? req.file.filename : req.body.oldImagen;
+                //Aca voy a contener el nuevo habano que ya se actualizo
+                let zapatillaUpdate = productoZapatillas.map(productoZapatilla => {
+                    if(productoZapatilla.id == req.body.id){
+                        return productoZapatilla = req.body;
+                    }
+                    return productoZapatilla;
+                });
+                let zapatillasActualizar = JSON.stringify(zapatillaUpdate,null,2)
+                //Aqui sobre escribo nuestro archivo Json para guardar los nuevos productos
+                fs.writeFileSync(path.resolve(__dirname,'..','data','zapatillas.json'),zapatillasActualizar);
+                //Aqui redireccionamos los nuevos productos a la vista administrar
+                res.redirect('/admin');      
+
+            },
 }
