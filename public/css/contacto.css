@@ -1,82 +1,131 @@
-html {
-    font-size: 62.5%; /* Reset para rem --> 62.5% = 10px de 16px */
-}
+
 
 body {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.6rem;
 }
-
-
-/* Navbar  */   
-nav{
-    width: 100%;   
-    display: flex;
-    flex: auto;
-    justify-content: space-between;
-}
-#item1{
-width: 15%;
-height: 15vh;
-text-align: center;
-padding-top: 2vh;
-
-}
-#item1 a img{
-    width: 50%;
-}
-
-#item2{
-    width: 70%;
-    height: 15vh; 
-    font-size: 1vw;   
-    padding-top: 4vh;
-    text-align: center;
-}
-h1{
-    font-size: 2rem;
-    font-weight: 700;
-
-}
-
-#item3{
-width: 15%;
-height: 15vh;
-font-size: 23px;
-padding-top: 10px;
-text-align: center;
-}
 h2{
-    margin-top: 5vh;
-    font-weight: bold;
     text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    padding-top: 10vh;
 }
 h3{
     text-align: center;
 }
 
-.card{
-    display: flex;
-    flex-wrap: auto;
-    flex-direction: column;
-    align-items: center;     
+h4{
+    width:50%;
+    font-size: 2.3rem;
+}
+h5{
+    font-size: 2rem;
 }
 
+/* Navbar  */   
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+#menuinfo {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 15px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+#carrito {
+    text-align: right;
+    align-self: right;
+    align-content: right;
+}
+
+.navbar {
+    align-content: right;
+}
+#carritonav{
+padding: 10px;
+}
+#carritonav a{
+    padding-right: 10px;
+    }
+    #carritonav span{
+        font-size: 3rem;
+        }
+
+.search-container {
+    border: none;
+    align-content: center;
+}
+
+
+/*main*/
+.card-header{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+.card-header1{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
 .btn-block {
     outline: none !important;
     box-shadow: none !important;
 }
 
-#headingOne{
-   background-color: white;
-   width: 60%;
 
-}
 .text{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    justify-content: center;
 }
 
 .fa-envelope-square{
@@ -95,15 +144,13 @@ text-align: right;
 .fa-instagram{
 font-size: 3rem;
 }
-h4{
-    width:50%;
-    font-size: 2.3rem;
-}
+
 .facebook{
     width: 100%;
     display: flex;
     flex-wrap: auto;
     flex-direction: row;
+    justify-content: center;
 }
 .instagram{
     width: 100%;
@@ -111,9 +158,14 @@ h4{
     flex-wrap: auto;
     flex-direction: row;
     margin-top: 1vh;
+    justify-content: center;
 }
-h5{
-    font-size: 2rem;
+#mandarmail{
+    width: 100%;
+    display: flex;
+    flex-wrap: auto;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .ruta{  
@@ -122,7 +174,7 @@ h5{
     flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
-    margin-top: 35vh;
+    margin-top: 15vh;
  }
  .ruta a{
     text-decoration: none;
@@ -156,11 +208,7 @@ h5{
     }
     
     /**titulos**/
-    h1{
-        text-align: center;
-        font-family: 'Montserrat', sans-serif;
-        padding-top: 10vh;
-    }
+    
     /*section detalle*/
     #article{
         background-color: #E1DCDB;
@@ -200,4 +248,20 @@ h5{
         font-size: .75rem;
         padding: 0 1rem;
         margin-bottom: 0;
+    }
+    @media (max-width: 500px){
+        #carritonav{
+            padding: 10px;
+            }
+            #carritonav a{
+                padding-right: 10px;
+                }
+                #carritonav span{
+                    font-size: 3rem;
+                    }
+            
+            .search-container {
+                display: none;
+            }
+            
     }

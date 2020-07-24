@@ -49,7 +49,7 @@ p{
     color: black;
     text-align: center;
     font-weight: bold;
-    font-size: 1.3rem;
+    font-size: 1.8rem;
 }
 
 form{
@@ -65,7 +65,10 @@ form{
     margin-top: 7vh; 
     width: 60%;;
     height: 10vh;
-
+}
+.form-group input{
+    height: 4vh;
+    align-content: center;
 }
 .estilos{
     display: flex;
@@ -93,6 +96,7 @@ form{
 .suscribir button{
     margin-top: 5vh;
     width: 40%;
+    height: 4vh;
 }
 .ruta{
     width: 100%;
