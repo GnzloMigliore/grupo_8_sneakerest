@@ -42,7 +42,7 @@ module.exports = {
         let miZapatilla;
         zapatillas.forEach(zapatilla => {
             if(zapatilla.id == req.params.id){
-                miZapatilla=zapatilla;         
+                miZapatilla = zapatilla;         
             }
         });
         res.render(path.resolve(__dirname, '..','views','admin','detail.ejs'), {miZapatilla})
