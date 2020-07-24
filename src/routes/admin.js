@@ -4,7 +4,6 @@ const path = require('path');
 const multer = require('multer');
 
 const storage = multer.diskStorage({
-<<<<<<< HEAD
   destination: function (req, file, cb) {
     cb(null, path.resolve(__dirname, '..','..','public','images','zapatillas'));
   },
@@ -12,15 +11,6 @@ const storage = multer.diskStorage({
     cb(null, 'zapatilla-'+Date.now() + path.extname(file.originalname));
   }
 })
-=======
-    destination: function (req, file, cb) {
-      cb(null, path.resolve(__dirname, '..','..','public','images','zapatillas'));
-    },
-    filename: function (req, file, cb) {
-      cb(null, 'zapatilla-'+Date.now() + path.extname(file.originalname));
-    }
-  })
->>>>>>> joaquín
 
 const upload = multer({ storage });
 
@@ -32,5 +22,5 @@ router.post("/admin/create", upload.any('imagen'), controllersAdmin.save);
 router.get('/admin/detail/:id', controllersAdmin.show);
 router.get("/delete/:id", controllersAdmin.destroy);
 router.get("/edit/:id", controllersAdmin.edit);
-router.put("/edit/:id", upload.any('imagen'), controllersAdmin.update);
+router.put("/edit/:id", upload.any('imagen'), controllersAdmin.updateZapatillas);
 module.exports = router;

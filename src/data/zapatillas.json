@@ -1,79 +1,12 @@
 [
   {
-<<<<<<< HEAD
-    "marca": "Adidas",
-    "descripcion": "Zapatilla blanca con rayas negras. Urbanassss",
-    "precio": "5000444111",
-    "descuento": "0",
-    "oldImagen": "superstarblanca01.jpg",
-    "id": "1",
-    "imagen": "superstarblanca01.jpg"
-  },
-  {
-    "marca": "Nike",
-    "descripcion": "233123",
-    "precio": "123412",
-    "descuento": "0",
-    "oldImagen": "zapatilla-1595441999646.jpg",
-    "id": "3",
-    "imagen": "zapatilla-1595441999646.jpg"
-  },
-  {
-    "id": "31",
-    "marca": "Nike",
-    "modelo": "Superstar",
-    "color": "#000000",
-    "precio": "090",
-    "descripcion": "Nike Air pipa marron con una mezcla entre gris y azul",
-    "imagen": "zapatilla-1595541770481.png"
-  },
-  {
-    "marca": "Nike",
-    "descripcion": "Zapatilla blanca con rayas negras. Urbanassss",
-    "precio": "1234567",
-    "descuento": "0",
-    "oldImagen": "zapatilla-1595603146643.png",
-    "id": "311",
-    "imagen": "zapatilla-1595603146643.png"
-=======
-    "id": 7,
     "marca": "oooooooooo",
-    "modelo": "000000000",
-    "color": "#000000",
-    "precio": "654654",
     "descripcion": "ooooooooooooooooooooo",
-    "imagen": [
-      {
-        "fieldname": "imagen[]",
-        "originalname": "asdasd.jpg",
-        "encoding": "7bit",
-        "mimetype": "image/jpeg",
-        "destination": "D:\\digitalHouse\\Proyecto\\site\\public\\images\\zapatillas",
-        "filename": "zapatilla-1595461995468.jpg",
-        "path": "D:\\digitalHouse\\Proyecto\\site\\public\\images\\zapatillas\\zapatilla-1595461995468.jpg",
-        "size": 52654
-      },
-      {
-        "fieldname": "imagen[]",
-        "originalname": "bc2af127-reebok-its-a-mans-world-release-date-3-640x449.jpg",
-        "encoding": "7bit",
-        "mimetype": "image/jpeg",
-        "destination": "D:\\digitalHouse\\Proyecto\\site\\public\\images\\zapatillas",
-        "filename": "zapatilla-1595461995469.jpg",
-        "path": "D:\\digitalHouse\\Proyecto\\site\\public\\images\\zapatillas\\zapatilla-1595461995469.jpg",
-        "size": 31833
-      },
-      {
-        "fieldname": "imagen[]",
-        "originalname": "ea7a4043-reebok-its-a-mans-world-release-date-1-640x449.jpg",
-        "encoding": "7bit",
-        "mimetype": "image/jpeg",
-        "destination": "D:\\digitalHouse\\Proyecto\\site\\public\\images\\zapatillas",
-        "filename": "zapatilla-1595461995471.jpg",
-        "path": "D:\\digitalHouse\\Proyecto\\site\\public\\images\\zapatillas\\zapatilla-1595461995471.jpg",
-        "size": 37853
-      }
-    ]
+    "precio": "654654",
+    "descuento": "0",
+    "oldImagen": "[object Object],[object Object],[object Object]",
+    "id": "7",
+    "imagen": "[object Object],[object Object],[object Object]"
   },
   {
     "id": 8,
@@ -186,126 +119,21 @@
     ]
   },
   {
-    "id": 10,
     "marca": "nike",
-    "modelo": "nnose",
-    "color": "#000000",
-    "precio": "3232",
     "descripcion": "sada",
-    "imagen": [
-      {
-        "fieldname": "imagen",
-        "originalname": "air-max-2090-mens-shoe-3pVM46 (1).jpg",
-        "encoding": "7bit",
-        "mimetype": "image/jpeg",
-        "destination": "D:\\digitalHouse\\Proyecto\\site\\public\\images\\zapatillas",
-        "filename": "zapatilla-1595608323345.jpg",
-        "path": "D:\\digitalHouse\\Proyecto\\site\\public\\images\\zapatillas\\zapatilla-1595608323345.jpg",
-        "size": 52400
-      },
-      {
-        "fieldname": "imagen",
-        "originalname": "air-max-2090-mens-shoe-3pVM46 (2).jpg",
-        "encoding": "7bit",
-        "mimetype": "image/jpeg",
-        "destination": "D:\\digitalHouse\\Proyecto\\site\\public\\images\\zapatillas",
-        "filename": "zapatilla-1595608323346.jpg",
-        "path": "D:\\digitalHouse\\Proyecto\\site\\public\\images\\zapatillas\\zapatilla-1595608323346.jpg",
-        "size": 24745
-      },
-      {
-        "fieldname": "imagen",
-        "originalname": "air-max-2090-mens-shoe-3pVM46 (3).jpg",
-        "encoding": "7bit",
-        "mimetype": "image/jpeg",
-        "destination": "D:\\digitalHouse\\Proyecto\\site\\public\\images\\zapatillas",
-        "filename": "zapatilla-1595608323348.jpg",
-        "path": "D:\\digitalHouse\\Proyecto\\site\\public\\images\\zapatillas\\zapatilla-1595608323348.jpg",
-        "size": 38787
-      },
-      {
-        "fieldname": "imagen",
-        "originalname": "air-max-2090-mens-shoe-3pVM46 (4).jpg",
-        "encoding": "7bit",
-        "mimetype": "image/jpeg",
-        "destination": "D:\\digitalHouse\\Proyecto\\site\\public\\images\\zapatillas",
-        "filename": "zapatilla-1595608323349.jpg",
-        "path": "D:\\digitalHouse\\Proyecto\\site\\public\\images\\zapatillas\\zapatilla-1595608323349.jpg",
-        "size": 73720
-      },
-      {
-        "fieldname": "imagen",
-        "originalname": "air-max-2090-mens-shoe-3pVM46 (5).jpg",
-        "encoding": "7bit",
-        "mimetype": "image/jpeg",
-        "destination": "D:\\digitalHouse\\Proyecto\\site\\public\\images\\zapatillas",
-        "filename": "zapatilla-1595608323350.jpg",
-        "path": "D:\\digitalHouse\\Proyecto\\site\\public\\images\\zapatillas\\zapatilla-1595608323350.jpg",
-        "size": 47458
-      },
-      {
-        "fieldname": "imagen",
-        "originalname": "air-max-2090-mens-shoe-3pVM46 (6).jpg",
-        "encoding": "7bit",
-        "mimetype": "image/jpeg",
-        "destination": "D:\\digitalHouse\\Proyecto\\site\\public\\images\\zapatillas",
-        "filename": "zapatilla-1595608323350.jpg",
-        "path": "D:\\digitalHouse\\Proyecto\\site\\public\\images\\zapatillas\\zapatilla-1595608323350.jpg",
-        "size": 45022
-      },
-      {
-        "fieldname": "imagen",
-        "originalname": "air-max-2090-mens-shoe-3pVM46 (7).jpg",
-        "encoding": "7bit",
-        "mimetype": "image/jpeg",
-        "destination": "D:\\digitalHouse\\Proyecto\\site\\public\\images\\zapatillas",
-        "filename": "zapatilla-1595608323352.jpg",
-        "path": "D:\\digitalHouse\\Proyecto\\site\\public\\images\\zapatillas\\zapatilla-1595608323352.jpg",
-        "size": 113879
-      },
-      {
-        "fieldname": "imagen",
-        "originalname": "air-max-2090-mens-shoe-3pVM46 (8).jpg",
-        "encoding": "7bit",
-        "mimetype": "image/jpeg",
-        "destination": "D:\\digitalHouse\\Proyecto\\site\\public\\images\\zapatillas",
-        "filename": "zapatilla-1595608323396.jpg",
-        "path": "D:\\digitalHouse\\Proyecto\\site\\public\\images\\zapatillas\\zapatilla-1595608323396.jpg",
-        "size": 148430
-      },
-      {
-        "fieldname": "imagen",
-        "originalname": "video.mp4",
-        "encoding": "7bit",
-        "mimetype": "video/mp4",
-        "destination": "D:\\digitalHouse\\Proyecto\\site\\public\\images\\zapatillas",
-        "filename": "zapatilla-1595608323400.mp4",
-        "path": "D:\\digitalHouse\\Proyecto\\site\\public\\images\\zapatillas\\zapatilla-1595608323400.mp4",
-        "size": 1515218
-      }
-    ]
+    "precio": "3232",
+    "descuento": "0",
+    "oldImagen": "[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]",
+    "id": "10",
+    "imagen": "[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]"
   },
   {
-    "id": 11,
     "marca": "asd",
-    "modelo": "asd",
-    "genero": "1",
-    "color": "#000000",
-    "talle": "38-38.5-39",
-    "precio": "4500",
     "descripcion": "askdhdkbsdjbsdcs",
-    "imagen": [
-      {
-        "fieldname": "imagen",
-        "originalname": "air-max-2090-mens-shoe-3pVM46.jpg",
-        "encoding": "7bit",
-        "mimetype": "image/jpeg",
-        "destination": "D:\\digitalHouse\\Proyecto\\site\\public\\images\\zapatillas",
-        "filename": "zapatilla-1595611738641.jpg",
-        "path": "D:\\digitalHouse\\Proyecto\\site\\public\\images\\zapatillas\\zapatilla-1595611738641.jpg",
-        "size": 43703
-      }
-    ]
->>>>>>> joaquín
+    "precio": "4500",
+    "descuento": "0",
+    "oldImagen": "[object Object]",
+    "id": "11",
+    "imagen": "[object Object]"
   }
 ]
