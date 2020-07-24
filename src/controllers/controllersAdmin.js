@@ -25,7 +25,7 @@ module.exports = {
             talle : req.body.talle,
             precio:req.body.precio,
             descripcion:req.body.descripcion,
-            imagen : req.file.filename
+            imagen : req.file.filename,
         };
         zapatillas.push(nuevoProducto);
         let nuevoProductoGuardar = JSON.stringify(zapatillas,null,2)
@@ -71,7 +71,7 @@ module.exports = {
         
             },
 
-            updateZapatillas (req,res){
+            update (req,res){
                 let productoZapatillas = JSON.parse(fs.readFileSync(path.resolve(__dirname,"..", "data","zapatillas.json")));
             
                 req.body.id = req.params.id;
