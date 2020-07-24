@@ -28,8 +28,8 @@
             <article class="col-12 px-0">
                 <div class="col-12 px-0">
                     <div class="imagenes-resto px-0">
-                    <% for (let i=0; i<miZapatilla.imagen.length; i++){ %>
-                            <img src="/images/zapatillas/<%= miZapatilla.imagen[i] %>" alt="<%= miZapatilla.marca + " "%><%= miZapatilla.modelo %>" class="col-12 align-self-center px-0">
+                    <% for (let i=0; i<miZapatilla.imagen; i++){ %>
+                            <img src="/images/zapatillas/<%= miZapatilla.imagen2 %>" alt="<%= miZapatilla.marca + " "%><%= miZapatilla.modelo %>" class="col-12 align-self-center px-0">
                     <% } %>
                     </div>
                 </div>
@@ -47,12 +47,12 @@
                     <p class="descripcion-producto"><%= miZapatilla.descripcion %> </p>
                 </div>
                 <div class="col-12">
-                    <p class="text-uppercase font-weight-bold"><%= "Colores: " + miZapatilla.imagen.length %> </p>
+                    <p class="text-uppercase font-weight-bold"><%= "Colores: " + miZapatilla.imagen1 %> </p>
                 </div>
                 <div class="mb-4">
-                    <% for (let i=0; i<miZapatilla.length; i++) { %>
+                    <% for (let i=0; i<miZapatilla; i++) { %>
                         <% if (miZapatilla.marca == miZapatilla[i].marca &&miZapatilla.modelo == miZapatilla[i].modelo) { %>
-                            <img class="col-12" src="img/<%= miZapatilla[i].imagen %>" alt="<%= miZapatilla.marca + " "%><%= miZapatilla.modelo %>">
+                            <img class="col-12" src="/images/zapatillas/<%= miZapatilla[i].imagen2 %>" alt="<%= miZapatilla.marca + " "%><%= miZapatilla.modelo %>">
                         <% } %>  
                     <% } %>
                 </div>
@@ -73,14 +73,14 @@
             <article class="col-8 d-none d-lg-block px-0">
                 <div class="col-12 px-0">
                     <% for (let i=0; i<1; i++){ %>
-                        <img src="/images/zapatillas/<%= miZapatilla.imagen[i].filename %>" alt="<%= miZapatilla.marca + " "%><%= miZapatilla.modelo %>" class="col-12 px-0">
+                        <img src="/images/zapatillas/<%= miZapatilla.imagen1 %>" alt="<%= miZapatilla.marca + " "%><%= miZapatilla.modelo %>" class="col-12 px-0">
                     <% } %> 
                     
                 </div>
                 <div class="col-12 padre-imagenes-resto">
                     <div class="imagenes-resto d-flex flex-wrap justify-content-around">
-                    <% for (let i=1; i<miZapatilla.imagen.length; i++){ %>
-                            <img src="/images/zapatillas/<%= miZapatilla.imagen[i].filename %>" alt="<%= miZapatilla.marca + " "%><%= miZapatilla.modelo %>" class="col-5 py-5 align-self-center">
+                    <% for (let i=1; i<miZapatilla.imagen; i++){ %>
+                            <img src="/images/zapatillas/<%= miZapatilla.imagen2 %>" alt="<%= miZapatilla.marca + " "%><%= miZapatilla.modelo %>" class="col-5 py-5 align-self-center">
                     <% } %>
                     </div>
                 </div>                 

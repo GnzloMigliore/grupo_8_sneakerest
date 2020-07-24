@@ -1,7 +1,7 @@
 const path = require('path');
 const fs = require('fs');
 
-
+let zapatillas = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../data/zapatillas.json')));
 
 module.exports = {
     index: (req,res) =>{   
@@ -25,7 +25,10 @@ module.exports = {
             talle : req.body.talle,
             precio:req.body.precio,
             descripcion:req.body.descripcion,
-            imagen : req.files
+            imagen1: req.files[0].filename,
+            imagen2: req.files[1].filename,
+            imagen3: req.files[2].filename,
+            imagen4: req.files[3].filename,
         };
         zapatillas.push(nuevoProducto);
         let nuevoProductoGuardar = JSON.stringify(zapatillas,null,2)
@@ -71,23 +74,29 @@ module.exports = {
     },
     
     updateZapatillas (req,res){
-        let productoZapatillas = JSON.parse(fs.readFileSync(path.resolve(__dirname,"..", "data","zapatillas.json")));
-        
+             
         req.body.id = req.params.id;
         
-        req.body.imagen = req.file ? req.file.filename : req.body.oldImagen;
-        //Aca voy a contener elproducto que ya se actualizo
-        let zapatillaUpdate = productoZapatillas.map(zapatilla => {
+        req.body.imagen1 = req.files[0] ? req.files[0].filename : req.body.oldImagen1;
+        req.body.imagen2 = req.files[1] ? req.files[1].filename : req.body.oldImagen2;
+        req.body.imagen3 = req.files[2] ? req.files[2].filename : req.body.oldImagen3;
+        req.body.imagen4 = req.files[3] ? req.files[3].filename : req.body.oldImagen4;
+        let zapatillasUpdate = zapatillas.map(zapatilla=>{
             if(zapatilla.id == req.body.id){
-                return zapatilla = req.body;
-            }
-            return zapatilla;
+           return zapatilla= req.body;
+          }
+        return zapatilla;
         });
-        let zapatillasActualizar = JSON.stringify(zapatillaUpdate,null,2)
-        //Aqui sobre escribo nuestro archivo Json para guardar los nuevos productos
-        fs.writeFileSync(path.resolve(__dirname,'..','data','zapatillas.json'),zapatillasActualizar);
-        //Aqui redireccionamos los nuevos productos a la vista administrar
-        res.redirect('/admin');      
+        let oldImages = [, req.body.oldImagen1, req.body.oldImagen2, req.body.oldImagen3, req.body.oldImagen4]
+        for(let i = 0; i < oldImages.length; i++){
+        if(req.files[i]){
+          fs.unlink(path.resolve(__dirname, '/images/zapatillas/'+ oldImages[i]),(err) => {
+            if (err){console.log(err)};
+            console.log('/images/zapatillas/'+ oldImages[i] + ' fue borrada');
+          });
+        }}
+          fs.writeFileSync(path.resolve(__dirname,'../data/zapatillas.json'),JSON.stringify(zapatillasUpdate, null, 2));
+          res.redirect('/admin');
+        },   
         
-    },
-}
+    }

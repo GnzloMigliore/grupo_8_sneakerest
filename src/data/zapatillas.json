@@ -128,12 +128,17 @@
     "imagen": "[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]"
   },
   {
-    "marca": "asd",
-    "descripcion": "askdhdkbsdjbsdcs",
-    "precio": "4500",
-    "descuento": "0",
-    "oldImagen": "[object Object]",
-    "id": "11",
-    "imagen": "[object Object]"
+    "id": "101",
+    "marca": "Nike ",
+    "modelo": "Air",
+    "genero": "2",
+    "color": "#000000",
+    "talle": "1234",
+    "precio": "1234",
+    "descripcion": "Zapatilla blanca con tres lineas negras",
+    "imagen1": "zapatilla-1595630819099.jpg",
+    "imagen2": "zapatilla-1595630819100.png",
+    "imagen3": "zapatilla-1595630819171.png",
+    "imagen4": "zapatilla-1595630819205.jpg"
   }
 ]

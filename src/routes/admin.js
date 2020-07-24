@@ -18,9 +18,9 @@ const controllersAdmin = require(path.resolve(__dirname, '..', 'controllers', 'c
 
 router.get('/admin', controllersAdmin.index);
 router.get("/admin/create", controllersAdmin.create);
-router.post("/admin/create", upload.any('imagen'), controllersAdmin.save);
+router.post("/admin/create", upload.any(), controllersAdmin.save);
 router.get('/admin/detail/:id', controllersAdmin.show);
 router.get("/delete/:id", controllersAdmin.destroy);
 router.get("/edit/:id", controllersAdmin.edit);
-router.put("/edit/:id", upload.any('imagen'), controllersAdmin.updateZapatillas);
+router.put("/edit/:id", upload.any(), controllersAdmin.updateZapatillas);
 module.exports = router;
