@@ -1,5 +1,6 @@
 [
   {
+<<<<<<< HEAD
     "marca": "Adidas",
     "descripcion": "Zapatilla blanca con rayas negras. Urbanassss",
     "precio": "5000444111",
@@ -34,5 +35,277 @@
     "oldImagen": "zapatilla-1595603146643.png",
     "id": "311",
     "imagen": "zapatilla-1595603146643.png"
+=======
+    "id": 7,
+    "marca": "oooooooooo",
+    "modelo": "000000000",
+    "color": "#000000",
+    "precio": "654654",
+    "descripcion": "ooooooooooooooooooooo",
+    "imagen": [
+      {
+        "fieldname": "imagen[]",
+        "originalname": "asdasd.jpg",
+        "encoding": "7bit",
+        "mimetype": "image/jpeg",
+        "destination": "D:\\digitalHouse\\Proyecto\\site\\public\\images\\zapatillas",
+        "filename": "zapatilla-1595461995468.jpg",
+        "path": "D:\\digitalHouse\\Proyecto\\site\\public\\images\\zapatillas\\zapatilla-1595461995468.jpg",
+        "size": 52654
+      },
+      {
+        "fieldname": "imagen[]",
+        "originalname": "bc2af127-reebok-its-a-mans-world-release-date-3-640x449.jpg",
+        "encoding": "7bit",
+        "mimetype": "image/jpeg",
+        "destination": "D:\\digitalHouse\\Proyecto\\site\\public\\images\\zapatillas",
+        "filename": "zapatilla-1595461995469.jpg",
+        "path": "D:\\digitalHouse\\Proyecto\\site\\public\\images\\zapatillas\\zapatilla-1595461995469.jpg",
+        "size": 31833
+      },
+      {
+        "fieldname": "imagen[]",
+        "originalname": "ea7a4043-reebok-its-a-mans-world-release-date-1-640x449.jpg",
+        "encoding": "7bit",
+        "mimetype": "image/jpeg",
+        "destination": "D:\\digitalHouse\\Proyecto\\site\\public\\images\\zapatillas",
+        "filename": "zapatilla-1595461995471.jpg",
+        "path": "D:\\digitalHouse\\Proyecto\\site\\public\\images\\zapatillas\\zapatilla-1595461995471.jpg",
+        "size": 37853
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "marca": "eeeeeeeeee",
+    "modelo": "eeeeeeeeee",
+    "color": "#000000",
+    "precio": "123",
+    "descripcion": "eeeeeeeeeeeeeeee",
+    "imagen": [
+      {
+        "fieldname": "imagen[]",
+        "originalname": "asdasd.jpg",
+        "encoding": "7bit",
+        "mimetype": "image/jpeg",
+        "destination": "D:\\digitalHouse\\Proyecto\\site\\public\\images\\zapatillas",
+        "filename": "zapatilla-1595462198443.jpg",
+        "path": "D:\\digitalHouse\\Proyecto\\site\\public\\images\\zapatillas\\zapatilla-1595462198443.jpg",
+        "size": 52654
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "marca": "Prueba de fuego",
+    "modelo": "Prueba de fuego",
+    "color": "#000000",
+    "precio": "4500",
+    "descripcion": "Más te vale que te crees bien",
+    "imagen": [
+      {
+        "fieldname": "imagen",
+        "originalname": "162054C_A_107X1 (1).jpg",
+        "encoding": "7bit",
+        "mimetype": "image/jpeg",
+        "destination": "D:\\digitalHouse\\Proyecto\\site\\public\\images\\zapatillas",
+        "filename": "zapatilla-1595467144532.jpg",
+        "path": "D:\\digitalHouse\\Proyecto\\site\\public\\images\\zapatillas\\zapatilla-1595467144532.jpg",
+        "size": 85318
+      },
+      {
+        "fieldname": "imagen",
+        "originalname": "162054C_B_08X1.jpg",
+        "encoding": "7bit",
+        "mimetype": "image/jpeg",
+        "destination": "D:\\digitalHouse\\Proyecto\\site\\public\\images\\zapatillas",
+        "filename": "zapatilla-1595467144538.jpg",
+        "path": "D:\\digitalHouse\\Proyecto\\site\\public\\images\\zapatillas\\zapatilla-1595467144538.jpg",
+        "size": 11774
+      },
+      {
+        "fieldname": "imagen",
+        "originalname": "162054C_C_08X1.jpg",
+        "encoding": "7bit",
+        "mimetype": "image/jpeg",
+        "destination": "D:\\digitalHouse\\Proyecto\\site\\public\\images\\zapatillas",
+        "filename": "zapatilla-1595467144538.jpg",
+        "path": "D:\\digitalHouse\\Proyecto\\site\\public\\images\\zapatillas\\zapatilla-1595467144538.jpg",
+        "size": 15653
+      },
+      {
+        "fieldname": "imagen",
+        "originalname": "162054C_D_08X1.jpg",
+        "encoding": "7bit",
+        "mimetype": "image/jpeg",
+        "destination": "D:\\digitalHouse\\Proyecto\\site\\public\\images\\zapatillas",
+        "filename": "zapatilla-1595467144539.jpg",
+        "path": "D:\\digitalHouse\\Proyecto\\site\\public\\images\\zapatillas\\zapatilla-1595467144539.jpg",
+        "size": 23717
+      },
+      {
+        "fieldname": "imagen",
+        "originalname": "162054C_E_08X1.jpg",
+        "encoding": "7bit",
+        "mimetype": "image/jpeg",
+        "destination": "D:\\digitalHouse\\Proyecto\\site\\public\\images\\zapatillas",
+        "filename": "zapatilla-1595467144541.jpg",
+        "path": "D:\\digitalHouse\\Proyecto\\site\\public\\images\\zapatillas\\zapatilla-1595467144541.jpg",
+        "size": 25974
+      },
+      {
+        "fieldname": "imagen",
+        "originalname": "162054C_F_08X1.jpg",
+        "encoding": "7bit",
+        "mimetype": "image/jpeg",
+        "destination": "D:\\digitalHouse\\Proyecto\\site\\public\\images\\zapatillas",
+        "filename": "zapatilla-1595467144542.jpg",
+        "path": "D:\\digitalHouse\\Proyecto\\site\\public\\images\\zapatillas\\zapatilla-1595467144542.jpg",
+        "size": 26851
+      },
+      {
+        "fieldname": "imagen",
+        "originalname": "162054C_G_08X1.jpg",
+        "encoding": "7bit",
+        "mimetype": "image/jpeg",
+        "destination": "D:\\digitalHouse\\Proyecto\\site\\public\\images\\zapatillas",
+        "filename": "zapatilla-1595467144543.jpg",
+        "path": "D:\\digitalHouse\\Proyecto\\site\\public\\images\\zapatillas\\zapatilla-1595467144543.jpg",
+        "size": 13017
+      },
+      {
+        "fieldname": "imagen",
+        "originalname": "162054C_H_08X1.jpg",
+        "encoding": "7bit",
+        "mimetype": "image/jpeg",
+        "destination": "D:\\digitalHouse\\Proyecto\\site\\public\\images\\zapatillas",
+        "filename": "zapatilla-1595467144544.jpg",
+        "path": "D:\\digitalHouse\\Proyecto\\site\\public\\images\\zapatillas\\zapatilla-1595467144544.jpg",
+        "size": 23372
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "marca": "nike",
+    "modelo": "nnose",
+    "color": "#000000",
+    "precio": "3232",
+    "descripcion": "sada",
+    "imagen": [
+      {
+        "fieldname": "imagen",
+        "originalname": "air-max-2090-mens-shoe-3pVM46 (1).jpg",
+        "encoding": "7bit",
+        "mimetype": "image/jpeg",
+        "destination": "D:\\digitalHouse\\Proyecto\\site\\public\\images\\zapatillas",
+        "filename": "zapatilla-1595608323345.jpg",
+        "path": "D:\\digitalHouse\\Proyecto\\site\\public\\images\\zapatillas\\zapatilla-1595608323345.jpg",
+        "size": 52400
+      },
+      {
+        "fieldname": "imagen",
+        "originalname": "air-max-2090-mens-shoe-3pVM46 (2).jpg",
+        "encoding": "7bit",
+        "mimetype": "image/jpeg",
+        "destination": "D:\\digitalHouse\\Proyecto\\site\\public\\images\\zapatillas",
+        "filename": "zapatilla-1595608323346.jpg",
+        "path": "D:\\digitalHouse\\Proyecto\\site\\public\\images\\zapatillas\\zapatilla-1595608323346.jpg",
+        "size": 24745
+      },
+      {
+        "fieldname": "imagen",
+        "originalname": "air-max-2090-mens-shoe-3pVM46 (3).jpg",
+        "encoding": "7bit",
+        "mimetype": "image/jpeg",
+        "destination": "D:\\digitalHouse\\Proyecto\\site\\public\\images\\zapatillas",
+        "filename": "zapatilla-1595608323348.jpg",
+        "path": "D:\\digitalHouse\\Proyecto\\site\\public\\images\\zapatillas\\zapatilla-1595608323348.jpg",
+        "size": 38787
+      },
+      {
+        "fieldname": "imagen",
+        "originalname": "air-max-2090-mens-shoe-3pVM46 (4).jpg",
+        "encoding": "7bit",
+        "mimetype": "image/jpeg",
+        "destination": "D:\\digitalHouse\\Proyecto\\site\\public\\images\\zapatillas",
+        "filename": "zapatilla-1595608323349.jpg",
+        "path": "D:\\digitalHouse\\Proyecto\\site\\public\\images\\zapatillas\\zapatilla-1595608323349.jpg",
+        "size": 73720
+      },
+      {
+        "fieldname": "imagen",
+        "originalname": "air-max-2090-mens-shoe-3pVM46 (5).jpg",
+        "encoding": "7bit",
+        "mimetype": "image/jpeg",
+        "destination": "D:\\digitalHouse\\Proyecto\\site\\public\\images\\zapatillas",
+        "filename": "zapatilla-1595608323350.jpg",
+        "path": "D:\\digitalHouse\\Proyecto\\site\\public\\images\\zapatillas\\zapatilla-1595608323350.jpg",
+        "size": 47458
+      },
+      {
+        "fieldname": "imagen",
+        "originalname": "air-max-2090-mens-shoe-3pVM46 (6).jpg",
+        "encoding": "7bit",
+        "mimetype": "image/jpeg",
+        "destination": "D:\\digitalHouse\\Proyecto\\site\\public\\images\\zapatillas",
+        "filename": "zapatilla-1595608323350.jpg",
+        "path": "D:\\digitalHouse\\Proyecto\\site\\public\\images\\zapatillas\\zapatilla-1595608323350.jpg",
+        "size": 45022
+      },
+      {
+        "fieldname": "imagen",
+        "originalname": "air-max-2090-mens-shoe-3pVM46 (7).jpg",
+        "encoding": "7bit",
+        "mimetype": "image/jpeg",
+        "destination": "D:\\digitalHouse\\Proyecto\\site\\public\\images\\zapatillas",
+        "filename": "zapatilla-1595608323352.jpg",
+        "path": "D:\\digitalHouse\\Proyecto\\site\\public\\images\\zapatillas\\zapatilla-1595608323352.jpg",
+        "size": 113879
+      },
+      {
+        "fieldname": "imagen",
+        "originalname": "air-max-2090-mens-shoe-3pVM46 (8).jpg",
+        "encoding": "7bit",
+        "mimetype": "image/jpeg",
+        "destination": "D:\\digitalHouse\\Proyecto\\site\\public\\images\\zapatillas",
+        "filename": "zapatilla-1595608323396.jpg",
+        "path": "D:\\digitalHouse\\Proyecto\\site\\public\\images\\zapatillas\\zapatilla-1595608323396.jpg",
+        "size": 148430
+      },
+      {
+        "fieldname": "imagen",
+        "originalname": "video.mp4",
+        "encoding": "7bit",
+        "mimetype": "video/mp4",
+        "destination": "D:\\digitalHouse\\Proyecto\\site\\public\\images\\zapatillas",
+        "filename": "zapatilla-1595608323400.mp4",
+        "path": "D:\\digitalHouse\\Proyecto\\site\\public\\images\\zapatillas\\zapatilla-1595608323400.mp4",
+        "size": 1515218
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "marca": "asd",
+    "modelo": "asd",
+    "genero": "1",
+    "color": "#000000",
+    "talle": "38-38.5-39",
+    "precio": "4500",
+    "descripcion": "askdhdkbsdjbsdcs",
+    "imagen": [
+      {
+        "fieldname": "imagen",
+        "originalname": "air-max-2090-mens-shoe-3pVM46.jpg",
+        "encoding": "7bit",
+        "mimetype": "image/jpeg",
+        "destination": "D:\\digitalHouse\\Proyecto\\site\\public\\images\\zapatillas",
+        "filename": "zapatilla-1595611738641.jpg",
+        "path": "D:\\digitalHouse\\Proyecto\\site\\public\\images\\zapatillas\\zapatilla-1595611738641.jpg",
+        "size": 43703
+      }
+    ]
+>>>>>>> joaquín
   }
 ]

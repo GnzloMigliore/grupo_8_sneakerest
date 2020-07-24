@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito</title>
+    <!--Fontawesonme icons & Google Fonts-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!--Mi CSS-->
+    <link rel="stylesheet" href="css/carritoEntera.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/master.css">
+     <!--Fuente-->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <%- include('../partials/navBar.ejs') %>
+    </header>
+    <main class="container-fluid">
+        <section class="row">
+            <article class="col-12 text-center">
+                <h2 class="text-uppercase text-center">¡Muchas gracias por tu compra!</h2>
+                <div class="col-12 mb-5">
+                    <img src="img/Mesa de trabajo 3@.png" alt="Logo Sneakerest" class="logo-footer-mobile mx-auto">
+                </div>
+                <a href="/" class="text-uppercase text-body text-underline " style="font-size: .7rem;">volver al inicio</a>
+            </article>
+        </section>
+    </main>
+    <!-- FOOTER -->
+    <%- include('../partials/footer.ejs') %>
+</body>
+</html>

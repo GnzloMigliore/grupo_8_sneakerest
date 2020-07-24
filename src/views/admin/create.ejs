@@ -40,8 +40,8 @@
                         <!--Género, color, talles, precio y descuento-->
                         <div class="row">
                             <!--Género-->
-                            <div class="form-group col-4" name="genero"placeholder="Modelo" required="required" value="">
-                                <select class="custom-select border-0 rounded-0 bg-light">
+                            <div class="form-group col-4" placeholder="Modelo" required="required" value="">
+                                <select class="custom-select border-0 rounded-0 bg-light"  name="genero">
                                     <option selected>Género</option>
                                     <option value="1">Men</option>
                                     <option value="2">Women</option>
@@ -54,7 +54,7 @@
                             </div>
                             <!--Talles-->
                             <div class="form-group col-6 pl-0">
-                                <input class="form-control border-0 rounded-0 bg-light" name="talles" placeholder="Talles (separados por guión sin espacio)" required="required" value="">
+                                <input class="form-control border-0 rounded-0 bg-light" name="talle" placeholder="Talles (separados por guión sin espacio)" required="required" value="">
                             </div>
                             <!--Precio-->
                             <div class="form-group col-7">
@@ -76,7 +76,7 @@
                                 <label class="custom-file-label border-0 rounded-0 bg-light" for="customFile"></label>
                             </div>-->
                             <div class="custom-file">
-                                <input type="file" name="imagen" >
+                                <input type="file" name="imagen" multiple>
                             </div>
                         </div>
                         <!--Botones guardar volver-->
