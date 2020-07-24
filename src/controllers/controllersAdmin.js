@@ -48,47 +48,47 @@ module.exports = {
         //Aca pasamos los datos del archivo Json de Habanos a un Array
         let productoZapatillas = JSON.parse(fs.readFileSync(path.resolve(__dirname,"..", "data","zapatillas.json")));
         
-            const zapatillaDeleteId = req.params.id;
-           
-            const zapatillasFinal = productoZapatillas.filter(productoZapatilla => productoZapatilla.id != zapatillaDeleteId);
-            
-            let zapatillasGuardar = JSON.stringify(zapatillasFinal,null,2);
-          
-            fs.writeFileSync(path.resolve(__dirname,'..','data','zapatillas.json'),zapatillasGuardar);
-            
-            res.redirect('/admin');
-        },
-        edit: (req,res) => {
-            //Aca pasamos los datos del archivo Json de Habanos a un Array
-            let productoZapatillas = JSON.parse(fs.readFileSync(path.resolve(__dirname,"..", "data","zapatillas.json")));
-            
-            const zapatillaId = req.params.id;
+        const zapatillaDeleteId = req.params.id;
         
-            
-                let zapatillaEditar= productoZapatillas.find(productoZapatilla => productoZapatilla.id == zapatillaId);
-            //Aca pongo lo que le voy a mandar a la vista 
-            res.render(path.resolve(__dirname, '..','views','admin','edit'), {zapatillaEditar});             
+        const zapatillasFinal = productoZapatillas.filter(productoZapatilla => productoZapatilla.id != zapatillaDeleteId);
         
-            },
-
-            updateZapatillas (req,res){
-                let productoZapatillas = JSON.parse(fs.readFileSync(path.resolve(__dirname,"..", "data","zapatillas.json")));
-            
-                req.body.id = req.params.id;
-              
-                req.body.imagen = req.file ? req.file.filename : req.body.oldImagen;
-                //Aca voy a contener el nuevo habano que ya se actualizo
-                let zapatillaUpdate = productoZapatillas.map(productoZapatilla => {
-                    if(productoZapatilla.id == req.body.id){
-                        return productoZapatilla = req.body;
-                    }
-                    return productoZapatilla;
-                });
-                let zapatillasActualizar = JSON.stringify(zapatillaUpdate,null,2)
-                //Aqui sobre escribo nuestro archivo Json para guardar los nuevos productos
-                fs.writeFileSync(path.resolve(__dirname,'..','data','zapatillas.json'),zapatillasActualizar);
-                //Aqui redireccionamos los nuevos productos a la vista administrar
-                res.redirect('/admin');      
-
-            },
+        let zapatillasGuardar = JSON.stringify(zapatillasFinal,null,2);
+        
+        fs.writeFileSync(path.resolve(__dirname,'..','data','zapatillas.json'),zapatillasGuardar);
+        
+        res.redirect('/admin');
+    },
+    edit: (req,res) => {
+        //Aca pasamos los datos del archivo Json de Habanos a un Array
+        let productoZapatillas = JSON.parse(fs.readFileSync(path.resolve(__dirname,"..", "data","zapatillas.json")));
+        
+        const zapatillaId = req.params.id;
+        
+        
+        let zapatillaEditar= productoZapatillas.find(productoZapatilla => productoZapatilla.id == zapatillaId);
+        //Aca pongo lo que le voy a mandar a la vista 
+        res.render(path.resolve(__dirname, '..','views','admin','edit'), {zapatillaEditar});             
+        
+    },
+    
+    updateZapatillas (req,res){
+        let productoZapatillas = JSON.parse(fs.readFileSync(path.resolve(__dirname,"..", "data","zapatillas.json")));
+        
+        req.body.id = req.params.id;
+        
+        req.body.imagen = req.file ? req.file.filename : req.body.oldImagen;
+        //Aca voy a contener el nuevo habano que ya se actualizo
+        let zapatillaUpdate = productoZapatillas.map(productoZapatilla => {
+            if(productoZapatilla.id == req.body.id){
+                return productoZapatilla = req.body;
+            }
+            return productoZapatilla;
+        });
+        let zapatillasActualizar = JSON.stringify(zapatillaUpdate,null,2)
+        //Aqui sobre escribo nuestro archivo Json para guardar los nuevos productos
+        fs.writeFileSync(path.resolve(__dirname,'..','data','zapatillas.json'),zapatillasActualizar);
+        //Aqui redireccionamos los nuevos productos a la vista administrar
+        res.redirect('/admin');      
+        
+    },
 }

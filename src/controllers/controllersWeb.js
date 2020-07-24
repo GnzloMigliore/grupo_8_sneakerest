@@ -16,5 +16,14 @@ module.exports = {
   },
   newsletter: function(req,res){
     res.render(path.resolve(__dirname, '..', 'views','web','newsletter'))
+  },
+  nosotros: function(req,res){
+    res.render(path.resolve(__dirname, '..', 'views','web','nosotros'))
+  },
+  giftcard: function(req,res){
+    res.render(path.resolve(__dirname, '..', 'views','web','giftcard'))
+  },
+  ayuda: function(req,res){
+    res.render(path.resolve(__dirname, '..', 'views','web','ayuda'))
   }
 }

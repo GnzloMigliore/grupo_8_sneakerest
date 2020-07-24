@@ -91,97 +91,16 @@ padding: 10px;
 }
 
 
-
-/* PRIMER SLIDE */
-
-.primera-pagina {
-    background-image: url(/img/portada.png);
-    background-repeat: no-repeat;
-    background-size: cover;  
-    text-align: center;  
-    height: 90vh;  
-    
-}
-#new-in {
-    color: black;
-    padding-top: 150px;
-    font-size: 3rem;
-    font-weight: bold;
-    text-align: center;
-}
-#new-in-p {
-    color: black;
-    font-size: 1rem;
-    text-align: center;
-}
-.catalogo {
-    text-decoration: none;
-    padding: 5px;
-    font-weight: 600;
-    font-size: 15px;
-    color: #000000;
-    background-color: #ffffff;
-    border: 1px solid #000000;
-    text-align: center;
-    align-content: center;
-}
-
-
-/* SEGUNDO SLIDE */
-.segunda-pagina {
-    background-image: url(/img/nike1.jpg);
-    background-repeat: no-repeat;
-    background-size: cover; 
-    text-align: center;
-    padding-bottom: 125px;
-    width: 100%;
-    height: 100vh;  
-}
-#new-in {
-    color: black;
-    padding-top: 301px;
-    font-size: 4rem;
-    font-weight: bold;
-    text-align: center;
-}
-#new-in-p {
-    color: black;
-    font-size: 1.2rem;
-    text-align: center;
-}
-.catalogo {
-    text-decoration: none;
-    padding: 5px;
-    font-weight: 600;
-    font-size: 2.5rem;
-    color: #000000;
-    background-color: #ffffff;
-    border: 1px solid #000000;
-    text-align: center;
-    align-content: center;
-}
-#bottom-menu {
-    text-decoration: none;
-    padding: 3px;
-    font-weight: 600;
-    font-size: 15px;
-    color: #000000;
-    border: none;
-    text-align: center;
-    align-content: center;
-}
-
-
-/* TERCER SLIDE */
-.tercera-pagina {
+/* SLIDE AYUDA */
+.ayuda-pagina {
     text-align: center;
     background-color: white;
     width: 100%;
     height: 100%;
 }
-#new-in-suscribe {
+#help-us {
     color: black;
-    padding-top: 300px;
+    padding-top: 150px;
     padding-bottom: 300px;
     font-size: 2rem;
     font-weight: bold;
@@ -189,16 +108,8 @@ padding: 10px;
 }
 
 
-/* MENÚ FONDO INICIO */
-.cat-pie {
-    display: flex;
-    flex-direction: column;
-    color: #000000;
-    justify-content: space-evenly;
-}
-#triple-menu {
-    padding-top: 200px;
-}
+
+
 
 
 /**Footer Mobile**/
