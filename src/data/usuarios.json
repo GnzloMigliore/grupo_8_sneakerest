@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "nombre": "Gonzalo",
+    "apellido": "Migliore",
+    "email": "gonzalomigliore@gmail.com",
+    "contraseña": "1234"
+  },
+  {
+    "id": 2,
+    "nombre": "GONZALO",
+    "apellido": "migliore",
+    "contraseña": "1234",
+    "imagen": "usuario-1595601232979.jpg"
+  },
+  {
+    "id": 3,
+    "nombre": "GONZALO",
+    "apellido": "migliore",
+    "contraseña": "1234",
+    "imagen": "usuario-1595601890010.jpg"
+  }
+]

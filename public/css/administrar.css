@@ -180,7 +180,23 @@ body {
     .search-container {
         border: none;
         align-content: center;
-    }    
+    }  
+    @media (max-width: 500px){
+        #carritonav{
+            padding: 10px;
+            }
+            #carritonav a{
+                padding-right: 10px;
+                }
+                #carritonav span{
+                    font-size: 3rem;
+                    }
+            
+            .search-container {
+                display: none;
+            }
+            
+    }  
     /* MENÚ FONDO INICIO */
     .cat-pie {
         display: flex;
@@ -245,20 +261,4 @@ body {
             padding: 0 1rem;
             margin-bottom: 0;
         }
-    }
-    @media (max-width: 500px){
-        #carritonav{
-            padding: 10px;
-            }
-            #carritonav a{
-                padding-right: 10px;
-                }
-                #carritonav span{
-                    font-size: 3rem;
-                    }
-            
-            .search-container {
-                display: none;
-            }
-            
     }

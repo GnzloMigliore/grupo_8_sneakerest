@@ -9,15 +9,6 @@
     "imagen": "superstarblanca01.jpg"
   },
   {
-    "id": 2,
-    "marca": "Nike",
-    "modelo": "Superstar",
-    "color": "#000000",
-    "precio": "1234",
-    "descripcion": "Zapatilla blanca con tres lineas negras",
-    "imagen": "zapatilla-1595434720463.png"
-  },
-  {
     "marca": "Nike",
     "descripcion": "233123",
     "precio": "123412",
@@ -25,5 +16,23 @@
     "oldImagen": "zapatilla-1595441999646.jpg",
     "id": "3",
     "imagen": "zapatilla-1595441999646.jpg"
+  },
+  {
+    "id": "31",
+    "marca": "Nike",
+    "modelo": "Superstar",
+    "color": "#000000",
+    "precio": "090",
+    "descripcion": "Nike Air pipa marron con una mezcla entre gris y azul",
+    "imagen": "zapatilla-1595541770481.png"
+  },
+  {
+    "id": "311",
+    "marca": "Nike",
+    "modelo": "323",
+    "color": "#000000",
+    "precio": "1234",
+    "descripcion": "Zapatilla blanca con rayas negras. Urbanassss",
+    "imagen": "zapatilla-1595603146643.png"
   }
 ]
