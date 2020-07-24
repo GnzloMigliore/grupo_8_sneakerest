@@ -1,8 +1,8 @@
 [
   {
     "marca": "Adidas",
-    "descripcion": "Zapatilla blanca con rayas negras. Urbanas",
-    "precio": "5000444",
+    "descripcion": "Zapatilla blanca con rayas negras. Urbanassss",
+    "precio": "5000444111",
     "descuento": "0",
     "oldImagen": "superstarblanca01.jpg",
     "id": "1",
@@ -27,12 +27,12 @@
     "imagen": "zapatilla-1595541770481.png"
   },
   {
-    "id": "311",
     "marca": "Nike",
-    "modelo": "323",
-    "color": "#000000",
-    "precio": "1234",
     "descripcion": "Zapatilla blanca con rayas negras. Urbanassss",
+    "precio": "1234567",
+    "descuento": "0",
+    "oldImagen": "zapatilla-1595603146643.png",
+    "id": "311",
     "imagen": "zapatilla-1595603146643.png"
   }
 ]

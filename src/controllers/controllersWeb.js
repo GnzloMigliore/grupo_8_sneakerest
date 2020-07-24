@@ -6,7 +6,8 @@ const zapatillas =  JSON.parse(fs.readFileSync(path.resolve(__dirname,'..','data
 
 module.exports = {
   index : function(req,res){
-    res.render(path.resolve(__dirname, '..', 'views', 'web', 'index'));
+    let usuarios =  JSON.parse(fs.readFileSync(path.resolve(__dirname,'..','data','usuarios.json')));  
+        res.render(path.resolve(__dirname, '..', 'views', 'web', 'index'), {usuarios});;
   },
   contacto: function(req,res){
     res.render(path.resolve(__dirname, '..', 'views','web','contacto'))
