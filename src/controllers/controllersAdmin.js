@@ -91,7 +91,7 @@ module.exports = {
         res.redirect('/admin');      
         
     },
-            },
+          
 
             update (req,res){
                 let productoZapatillas = JSON.parse(fs.readFileSync(path.resolve(__dirname,"..", "data","zapatillas.json")));
