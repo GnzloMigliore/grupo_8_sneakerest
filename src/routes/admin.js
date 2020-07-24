@@ -22,5 +22,5 @@ router.post("/admin/create", upload.any('imagen'), controllersAdmin.save);
 router.get('/admin/detail/:id', controllersAdmin.show);
 router.get("/delete/:id", controllersAdmin.destroy);
 router.get("/edit/:id", controllersAdmin.edit);
-router.put("/edit/:id", upload.any('imagen'), controllersAdmin.updateZapatillas);
+router.put("/edit/:id", upload.any('imagen'), controllersAdmin.update);
 module.exports = router;

@@ -58,7 +58,9 @@
                         <!--Aqui solicito la imagen al usuario-->
                         <div class="custom-file">
                           <figure class="form-group">
-                            <img class="w-100" src="/images/zapatillas/<%= zapatillaEditar.imagen %> " alt="habano <%= zapatillaEditar.nombre %>">
+                            <% for (let i=0; i<1; i++){ %>
+                              <img src="/images/zapatillas/<%= zapatillaEditar.imagen[i].filename %>" alt="<%= zapatillaEditar.marca + " "%><%= zapatillaEditar.modelo %>" class="col-12 px-0">
+                            <% } %> 
 
                           </figure>
                           <input type="hidden"  name="oldImagen"  value="<%= zapatillaEditar.imagen%>">
