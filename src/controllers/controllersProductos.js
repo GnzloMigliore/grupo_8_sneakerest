@@ -16,7 +16,7 @@ module.exports = {
                 miZapatilla = zapatilla;         
             }
         });
-        res.render(path.resolve(__dirname, '..','views','productos','detalleProducto2'), {miZapatilla})
+        res.render(path.resolve(__dirname, '..','views','productos','detalleProducto'), {miZapatilla})
 
 }    
 }

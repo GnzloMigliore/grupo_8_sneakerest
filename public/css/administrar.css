@@ -5,17 +5,6 @@ body {
 .titulo-admin {
     color: black;
 }
-  /*section detalle*/
-  #article{
-    background-color: #E1DCDB;
-}
-/*crear producto*/
-#crear{
-    background-color: #E1DCDB;
-}
-#editar{
-    background-color: #E1DCDB;
-}
 
 /**Footer Mobile**/
 .fondo-footer {
@@ -50,17 +39,7 @@ body {
         text-align: center;
         font-family: 'Montserrat', sans-serif;
             }
-    /*section detalle*/
-    #article{
-        background-color: #E1DCDB;
-    }
-    /*crear producto*/
-    #crear{
-        background-color: #E1DCDB;
-    }
-    #editar{
-        background-color: #E1DCDB;
-    }
+
     }
     .form-group{
         margin-top: 2vh;

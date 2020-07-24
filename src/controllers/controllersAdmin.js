@@ -20,12 +20,12 @@ module.exports = {
             id: ultimaZapatilla.id+1,
             marca: req.body.marca,
             modelo: req.body.modelo,
-            genero: req.genero,
+            genero: req.body.genero,
             color: req.body.color,
             talle : req.body.talle,
             precio:req.body.precio,
             descripcion:req.body.descripcion,
-            imagen : req.file.filename
+            imagen : req.files
         };
         zapatillas.push(nuevoProducto);
         let nuevoProductoGuardar = JSON.stringify(zapatillas,null,2)
@@ -45,7 +45,6 @@ module.exports = {
         
     },
     destroy:(req, res) => {
-        //Aca pasamos los datos del archivo Json de Habanos a un Array
         let productoZapatillas = JSON.parse(fs.readFileSync(path.resolve(__dirname,"..", "data","zapatillas.json")));
         
             const zapatillaDeleteId = req.params.id;
@@ -59,13 +58,13 @@ module.exports = {
             res.redirect('/admin');
         },
         edit: (req,res) => {
-            //Aca pasamos los datos del archivo Json de Habanos a un Array
+            //Aca pasamos los datos del archivo Json de zapatillas a un Array
             let productoZapatillas = JSON.parse(fs.readFileSync(path.resolve(__dirname,"..", "data","zapatillas.json")));
             
             const zapatillaId = req.params.id;
         
             
-                let zapatillaEditar= productoZapatillas.find(productoZapatilla => productoZapatilla.id == zapatillaId);
+                let zapatillaEditar= productoZapatillas.find(zapatilla => zapatilla.id == zapatillaId);
             //Aca pongo lo que le voy a mandar a la vista 
             res.render(path.resolve(__dirname, '..','views','admin','edit'), {zapatillaEditar});             
         
@@ -77,12 +76,12 @@ module.exports = {
                 req.body.id = req.params.id;
               
                 req.body.imagen = req.file ? req.file.filename : req.body.oldImagen;
-                //Aca voy a contener el nuevo habano que ya se actualizo
-                let zapatillaUpdate = productoZapatillas.map(productoZapatilla => {
-                    if(productoZapatilla.id == req.body.id){
-                        return productoZapatilla = req.body;
+                //Aca voy a contener elproducto que ya se actualizo
+                let zapatillaUpdate = productoZapatillas.map(zapatilla => {
+                    if(zapatilla.id == req.body.id){
+                        return zapatilla = req.body;
                     }
-                    return productoZapatilla;
+                    return zapatilla;
                 });
                 let zapatillasActualizar = JSON.stringify(zapatillaUpdate,null,2)
                 //Aqui sobre escribo nuestro archivo Json para guardar los nuevos productos
