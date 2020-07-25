@@ -29,6 +29,7 @@ module.exports = {
             imagen2: req.files[1].filename,
             imagen3: req.files[2].filename,
             imagen4: req.files[3].filename,
+            imagen5: req.files[4].filename,
         };
         zapatillas.push(nuevoProducto);
         let nuevoProductoGuardar = JSON.stringify(zapatillas,null,2)
@@ -81,6 +82,7 @@ module.exports = {
         req.body.imagen2 = req.files[1] ? req.files[1].filename : req.body.oldImagen2;
         req.body.imagen3 = req.files[2] ? req.files[2].filename : req.body.oldImagen3;
         req.body.imagen4 = req.files[3] ? req.files[3].filename : req.body.oldImagen4;
+        req.body.imagen5 = req.files[4] ? req.files[4].filename : req.body.oldImagen4;
         let zapatillasUpdate = zapatillas.map(zapatilla=>{
             if(zapatilla.id == req.body.id){
            return zapatilla= req.body;

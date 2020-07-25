@@ -19,5 +19,41 @@
     "apellido": "migliore",
     "contraseña": "1234",
     "imagen": "usuario-1595601890010.jpg"
+  },
+  {
+    "id": 4,
+    "nombre": "joaquin",
+    "apellido": "Dominguez",
+    "contraseña": "123456"
+  },
+  {
+    "id": 5,
+    "nombre": "asdioj",
+    "apellido": "asdoij",
+    "contraseña": "123456",
+    "imagen": {
+      "fieldname": "imagen",
+      "originalname": "air-max-2090-mens-shoe-3pVM46 (1).jpg",
+      "encoding": "7bit",
+      "mimetype": "image/jpeg",
+      "destination": "D:\\digitalHouse\\Proyecto\\site\\public\\images\\usuarios",
+      "filename": "usuario-1595636625551.jpg",
+      "path": "D:\\digitalHouse\\Proyecto\\site\\public\\images\\usuarios\\usuario-1595636625551.jpg",
+      "size": 52400
+    }
+  },
+  {
+    "id": 6,
+    "nombre": "asdioj",
+    "apellido": "asdoij",
+    "contraseña": "123456",
+    "imagen": "usuario-1595636667443.jpg"
+  },
+  {
+    "id": 7,
+    "nombre": "asdioj",
+    "apellido": "asdoij",
+    "contraseña": "132123",
+    "imagen": "usuario-1595636793050.jpg"
   }
 ]
