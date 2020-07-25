@@ -45,6 +45,7 @@
     "imagen5": "zapatilla-1595642754419.jpg"
   },
   {
+<<<<<<< HEAD
     "id": "111",
     "marca": "Adidas",
     "modelo": "Continental 80",
@@ -58,12 +59,46 @@
     "imagen3": "zapatilla-1595642998513.jpg",
     "imagen4": "zapatilla-1595642998514.jpg",
     "imagen5": "zapatilla-1595642998514.jpg"
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+    "marca": "Nike",
+    "descripcion": "233123",
+    "precio": "123412",
+    "descuento": "0",
+    "oldImagen": "zapatilla-1595441999646.jpg",
+    "id": "3",
+    "imagen": "zapatilla-1595441999646.jpg"
+=======
+    "id": "311",
+=======
+    "id": "10111",
+>>>>>>> master
+    "marca": "Nike",
+    "modelo": "asd",
+    "genero": "1",
+    "color": "#000000",
+<<<<<<< HEAD
+    "precio": "1234",
+    "descripcion": "Zapatilla blanca con rayas negras. Urbanassss",
+    "imagen": "zapatilla-1595603146643.png"
+>>>>>>> master
+=======
+    "talle": "38-38.5-39",
+    "precio": "123",
+    "descripcion": "123",
+    "imagen1": "zapatilla-1595636202694.jpg",
+    "imagen2": "zapatilla-1595636202695.jpg",
+    "imagen3": "zapatilla-1595636202696.jpg",
+    "imagen4": "zapatilla-1595636202697.jpg"
+>>>>>>> Ezequiel
   },
   {
     "marca": "Nike",
     "descripcion": "La leyenda sigue viva con las Nike Air Force 1, que se mantienen fiel a sus raíces con el icónico estilo AF1 y Nike Air para una comodidad durante todo el día y un uso duradero.",
     "precio": "6879",
     "descuento": "0",
+<<<<<<< HEAD
     "oldImagen1": "zapatilla-1595643522310.jpg",
     "oldImagen2": "zapatilla-1595643522311.jpg",
     "oldImagen3": "zapatilla-1595643522311.jpg",
@@ -120,5 +155,19 @@
     "imagen3": "zapatilla-1595644173965.jpg",
     "imagen4": "zapatilla-1595644173971.jpg",
     "imagen5": "zapatilla-1595644173972.jpg"
+=======
+    "oldImagen1": "zapatilla-1595636310416.jpg",
+    "oldImagen2": "zapatilla-1595636274648.jpg",
+    "oldImagen3": "zapatilla-1595636274649.jpg",
+    "oldImagen4": "zapatilla-1595636274650.jpg",
+    "oldImagen5": "zapatilla-1595636274650.jpg",
+    "id": "101111",
+    "imagen1": "zapatilla-1595636344823.jpg",
+    "imagen2": "zapatilla-1595636344825.jpg",
+    "imagen3": "zapatilla-1595636344826.jpg",
+    "imagen4": "zapatilla-1595636344827.jpg",
+    "imagen5": "zapatilla-1595636344828.jpg"
+>>>>>>> master
+>>>>>>> Ezequiel
   }
 ]
