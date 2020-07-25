@@ -21,7 +21,7 @@ module.exports = {
             email: req.body.email,
             contraseña: req.body.contraseña,
             genero: req.body.genero,    
-            imagen: req.file.filename,   
+            imagen: req.file.filename   
         };
         usuarios.push(nuevoUsuario);
         let nuevoUsuarioGuardar = JSON.stringify(usuarios,null,2)
