@@ -1,6 +1,6 @@
 [
   {
-    "id": "1011111",
+    "id": 1,
     "marca": "Adidas",
     "modelo": "Adilette",
     "genero": "1",
@@ -15,7 +15,7 @@
     "imagen5": "zapatilla-1595642267871.jpg"
   },
   {
-    "id": "1",
+    "id": 2,
     "marca": "Adidas",
     "modelo": "Busenitz",
     "genero": "1",
@@ -30,7 +30,7 @@
     "imagen5": "zapatilla-1595642535431.jpg"
   },
   {
-    "id": "11",
+    "id": 3,
     "marca": "Adidas",
     "modelo": "Campus",
     "genero": "2",
@@ -46,7 +46,11 @@
   },
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
     "id": "111",
+=======
+    "id": 4,
+>>>>>>> 084ec2dee9a4c3a9fa8b86699e0010688903d85d
     "marca": "Adidas",
     "modelo": "Continental 80",
     "genero": "2",
@@ -94,10 +98,13 @@
 >>>>>>> Ezequiel
   },
   {
+    "id": 5,
     "marca": "Nike",
+    "modelo": "AIR FORCE",
     "descripcion": "La leyenda sigue viva con las Nike Air Force 1, que se mantienen fiel a sus raíces con el icónico estilo AF1 y Nike Air para una comodidad durante todo el día y un uso duradero.",
     "precio": "6879",
     "descuento": "0",
+<<<<<<< HEAD
 <<<<<<< HEAD
     "oldImagen1": "zapatilla-1595643522310.jpg",
     "oldImagen2": "zapatilla-1595643522311.jpg",
@@ -105,6 +112,8 @@
     "oldImagen4": "zapatilla-1595643522313.jpg",
     "oldImagen5": "zapatilla-1595643522313.jpg",
     "id": "1111",
+=======
+>>>>>>> 084ec2dee9a4c3a9fa8b86699e0010688903d85d
     "imagen1": "zapatilla-1595644391485.jpg",
     "imagen2": "zapatilla-1595644391486.jpg",
     "imagen3": "zapatilla-1595644391487.jpg",
@@ -112,7 +121,7 @@
     "imagen5": "zapatilla-1595644391490.jpg"
   },
   {
-    "id": "11111",
+    "id": 6,
     "marca": "Vans",
     "modelo": "OLD SKOOL",
     "genero": "1",
@@ -127,7 +136,7 @@
     "imagen5": "zapatilla-1595643812107.png"
   },
   {
-    "id": "111111",
+    "id": 7,
     "marca": "Vans",
     "modelo": "SK8-HI",
     "genero": "2",
@@ -142,7 +151,7 @@
     "imagen5": "zapatilla-1595643995788.png"
   },
   {
-    "id": "1111111",
+    "id": 8,
     "marca": "Rebook",
     "modelo": "Classic Leather Kids",
     "genero": "3",
