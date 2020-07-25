@@ -1,6 +1,6 @@
 [
   {
-    "id": "0",
+    "id": 1,
     "marca": "Adidas",
     "modelo": "Adilette",
     "genero": "1",
@@ -15,7 +15,7 @@
     "imagen5": "zapatilla-1595642267871.jpg"
   },
   {
-    "id": "1",
+    "id": 2,
     "marca": "Adidas",
     "modelo": "Busenitz",
     "genero": "1",
@@ -30,22 +30,20 @@
     "imagen5": "zapatilla-1595642535431.jpg"
   },
   {
-    "id": "2",
+    "id": "3",
     "marca": "Adidas",
     "modelo": "Campus",
-    "genero": "2",
-    "color": "#000000",
-    "talle": "38-38.5-39-39.5-40-40.5-41-41.5-42-42.5-43-43.5-44-44.5-45",
-    "precio": "6499",
     "descripcion": "Con una silueta icónica que influyó en la moda, la cultura pop y más, las Campus vuelven con materiales de calidad. Estas zapatillas lucen un exterior de nobuk de cerdo con estilo urbano. La suela de caucho aerodinámica actualiza el estilo clásico. La puntera reforzada y las 3 Tiras con borde dentado en cuero dejan clara la herencia de adidas.",
-    "imagen1": "zapatilla-1595642754416.jpg",
+    "precio": "6499",
+    "descuento": "0",
+    "imagen1": "zapatilla-1595648664210.jpg",
     "imagen2": "zapatilla-1595642754417.jpg",
     "imagen3": "zapatilla-1595642754417.jpg",
     "imagen4": "zapatilla-1595642754418.jpg",
-    "imagen5": "zapatilla-1595642754419.jpg"
+    "imagen5": "zapatilla-1595642754418.jpg"
   },
   {
-    "id": "3",
+    "id": 4,
     "marca": "Adidas",
     "modelo": "Continental 80",
     "genero": "2",
@@ -60,16 +58,12 @@
     "imagen5": "zapatilla-1595642998514.jpg"
   },
   {
+    "id": 5,
     "marca": "Nike",
+    "modelo": "AIR FORCE",
     "descripcion": "La leyenda sigue viva con las Nike Air Force 1, que se mantienen fiel a sus raíces con el icónico estilo AF1 y Nike Air para una comodidad durante todo el día y un uso duradero.",
     "precio": "6879",
     "descuento": "0",
-    "oldImagen1": "zapatilla-1595643522310.jpg",
-    "oldImagen2": "zapatilla-1595643522311.jpg",
-    "oldImagen3": "zapatilla-1595643522311.jpg",
-    "oldImagen4": "zapatilla-1595643522313.jpg",
-    "oldImagen5": "zapatilla-1595643522313.jpg",
-    "id": "4",
     "imagen1": "zapatilla-1595644391485.jpg",
     "imagen2": "zapatilla-1595644391486.jpg",
     "imagen3": "zapatilla-1595644391487.jpg",
@@ -77,7 +71,7 @@
     "imagen5": "zapatilla-1595644391490.jpg"
   },
   {
-    "id": "5",
+    "id": 6,
     "marca": "Vans",
     "modelo": "OLD SKOOL",
     "genero": "1",
@@ -92,7 +86,7 @@
     "imagen5": "zapatilla-1595643812107.png"
   },
   {
-    "id": "6",
+    "id": 7,
     "marca": "Vans",
     "modelo": "SK8-HI",
     "genero": "2",
@@ -107,7 +101,7 @@
     "imagen5": "zapatilla-1595643995788.png"
   },
   {
-    "id": "7",
+    "id": 8,
     "marca": "Rebook",
     "modelo": "Classic Leather Kids",
     "genero": "3",
