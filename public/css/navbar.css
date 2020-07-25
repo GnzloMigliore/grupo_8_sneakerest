@@ -51,6 +51,7 @@
     padding: 20px;
 }
 
+
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
@@ -79,4 +80,9 @@ padding: 10px;
 .search-container {
     border: none;
     align-content: center;
+}
+
+#item1 {
+    display: flex;
+    align-items: center;
 }

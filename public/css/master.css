@@ -90,6 +90,10 @@ padding: 10px;
     align-content: center;
 }
 
+#item1{
+    display: flex;
+    align-items: center;
+}
 
 
 /* PRIMER SLIDE */
