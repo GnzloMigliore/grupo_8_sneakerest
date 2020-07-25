@@ -1,4 +1,5 @@
 html {
+    min-width: 300px;
      /** Reset para rem --> 62.5% = 10px de 16px **/
 }
 

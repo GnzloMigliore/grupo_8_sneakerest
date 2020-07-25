@@ -12,22 +12,11 @@
     <!--Mi CSS-->
     <link rel="stylesheet" href="css/productos.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/master.css">
 </head>
 <body>
-    
     <header>
-        <!--nav-->
-        <nav class="d-flex justify-content-between align-items-center">
-            <div id="item1" class="box">
-                <a href="/"><img src="img/logonegro@.png" alt=""></i></a>
-            </div>
-            <div id="item2" class="box">
-                <h1 class="m-auto p-auto">NEW IN</h1>
-            </div>
-            <div id="item3" class="box">
-                <a href="/carrito"><i class="fas fa-shopping-cart" style="color: black;"></i></a>
-            </div>
-        </nav>
+        <%- include('../partials/navBar.ejs') %>
     </header>
     <main>
         
@@ -186,13 +175,13 @@
                 </div>
             </div> 
         </div>
-        <section class="lista-productos row d-flex justify-content-start">
+        <section class="lista-productos row d-flex justify-content-start mx-auto">
             <% for (let i=0; i<zapatillas.length; i++){ %>
-                <article class="col-5 col-md-4 col-lg-3 p-2">
+                <article class="col-6 col-md-6 col-lg-4 col-xl-3 p-2">
                     <figure>
                         <a href="/productos/detalle/<%= zapatillas[i].id %>">
                             <div class="fondo-gris-productos mx-auto">
-                                <img src="/images/zapatillas/<%= zapatillas[i].imagen %>" alt="<%= zapatillas[i].marca + " " + zapatillas[i].modelo %> ">
+                                <img src="/images/zapatillas/<%= zapatillas[i].imagen1%>" alt="<%= zapatillas[i].marca + " " + zapatillas[i].modelo %> ">
                             </div>
                         </a>
                         <div class="modelo-precio text-center">

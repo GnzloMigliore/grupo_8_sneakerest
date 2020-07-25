@@ -1,32 +1,44 @@
 [
   {
-    "marca": "Adidas",
-    "descripcion": "Zapatilla blanca con rayas negras. Urbanas",
-    "precio": "5000444",
+    "marca": "oooooooooo",
+    "descripcion": "ooooooooooooooooooooo",
+    "precio": "654654",
     "descuento": "0",
-    "oldImagen": "superstarblanca01.jpg",
-    "id": "1",
-    "imagen": "superstarblanca01.jpg"
+    "oldImagen": "[object Object],[object Object],[object Object]",
+    "id": "7",
+    "imagen": "[object Object],[object Object],[object Object]"
   },
   {
-    "marca": "Nike",
-    "descripcion": "233123",
-    "precio": "123412",
+    "marca": "Nike ",
+    "descripcion": "Zapatilla blanca con tres lineas negras",
+    "precio": "1234",
     "descuento": "0",
-    "oldImagen": "zapatilla-1595441999646.jpg",
-    "id": "3",
-    "imagen": "zapatilla-1595441999646.jpg"
+    "oldImagen1": "zapatilla-1595630819099.jpg",
+    "oldImagen2": "zapatilla-1595630819100.png",
+    "oldImagen3": "zapatilla-1595630819171.png",
+    "oldImagen4": "zapatilla-1595630819205.jpg",
+    "id": "101",
+    "imagen1": "zapatilla-1595634310362.jpg",
+    "imagen2": "zapatilla-1595630819100.png",
+    "imagen3": "zapatilla-1595630819171.png",
+    "imagen4": "zapatilla-1595630819205.jpg"
   },
   {
-    "id": "31",
+    "id": "1011",
     "marca": "Nike",
-    "modelo": "Superstar",
+    "modelo": "asd",
+    "genero": "1",
     "color": "#000000",
-    "precio": "090",
-    "descripcion": "Nike Air pipa marron con una mezcla entre gris y azul",
-    "imagen": "zapatilla-1595541770481.png"
+    "talle": "123",
+    "precio": "123",
+    "descripcion": "asdasdasdsadasd",
+    "imagen1": "zapatilla-1595636105128.jpg",
+    "imagen2": "zapatilla-1595636105129.jpg",
+    "imagen3": "zapatilla-1595636105131.jpg",
+    "imagen4": "zapatilla-1595636105132.jpg"
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
     "marca": "Nike",
     "descripcion": "233123",
@@ -37,12 +49,43 @@
     "imagen": "zapatilla-1595441999646.jpg"
 =======
     "id": "311",
+=======
+    "id": "10111",
+>>>>>>> master
     "marca": "Nike",
-    "modelo": "323",
+    "modelo": "asd",
+    "genero": "1",
     "color": "#000000",
+<<<<<<< HEAD
     "precio": "1234",
     "descripcion": "Zapatilla blanca con rayas negras. Urbanassss",
     "imagen": "zapatilla-1595603146643.png"
+>>>>>>> master
+=======
+    "talle": "38-38.5-39",
+    "precio": "123",
+    "descripcion": "123",
+    "imagen1": "zapatilla-1595636202694.jpg",
+    "imagen2": "zapatilla-1595636202695.jpg",
+    "imagen3": "zapatilla-1595636202696.jpg",
+    "imagen4": "zapatilla-1595636202697.jpg"
+  },
+  {
+    "marca": "Nike",
+    "descripcion": "asdasdasdsadasd",
+    "precio": "123",
+    "descuento": "0",
+    "oldImagen1": "zapatilla-1595636310416.jpg",
+    "oldImagen2": "zapatilla-1595636274648.jpg",
+    "oldImagen3": "zapatilla-1595636274649.jpg",
+    "oldImagen4": "zapatilla-1595636274650.jpg",
+    "oldImagen5": "zapatilla-1595636274650.jpg",
+    "id": "101111",
+    "imagen1": "zapatilla-1595636344823.jpg",
+    "imagen2": "zapatilla-1595636344825.jpg",
+    "imagen3": "zapatilla-1595636344826.jpg",
+    "imagen4": "zapatilla-1595636344827.jpg",
+    "imagen5": "zapatilla-1595636344828.jpg"
 >>>>>>> master
   }
 ]

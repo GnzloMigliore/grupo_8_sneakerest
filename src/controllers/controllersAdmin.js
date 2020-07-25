@@ -1,7 +1,7 @@
 const path = require('path');
 const fs = require('fs');
 
-
+let zapatillas = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../data/zapatillas.json')));
 
 module.exports = {
     index: (req,res) =>{   
@@ -20,12 +20,16 @@ module.exports = {
             id: ultimaZapatilla.id+1,
             marca: req.body.marca,
             modelo: req.body.modelo,
-            genero: req.genero,
+            genero: req.body.genero,
             color: req.body.color,
             talle : req.body.talle,
             precio:req.body.precio,
             descripcion:req.body.descripcion,
-            imagen : req.file.filename,
+            imagen1: req.files[0].filename,
+            imagen2: req.files[1].filename,
+            imagen3: req.files[2].filename,
+            imagen4: req.files[3].filename,
+            imagen5: req.files[4].filename,
         };
         zapatillas.push(nuevoProducto);
         let nuevoProductoGuardar = JSON.stringify(zapatillas,null,2)
@@ -38,14 +42,13 @@ module.exports = {
         let miZapatilla;
         zapatillas.forEach(zapatilla => {
             if(zapatilla.id == req.params.id){
-                miZapatilla=zapatilla;         
+                miZapatilla = zapatilla;         
             }
         });
         res.render(path.resolve(__dirname, '..','views','admin','detail.ejs'), {miZapatilla})
         
     },
     destroy:(req, res) => {
-        //Aca pasamos los datos del archivo Json de Habanos a un Array
         let productoZapatillas = JSON.parse(fs.readFileSync(path.resolve(__dirname,"..", "data","zapatillas.json")));
         
         const zapatillaDeleteId = req.params.id;
@@ -59,58 +62,43 @@ module.exports = {
         res.redirect('/admin');
     },
     edit: (req,res) => {
-        //Aca pasamos los datos del archivo Json de Habanos a un Array
+        //Aca pasamos los datos del archivo Json de zapatillas a un Array
         let productoZapatillas = JSON.parse(fs.readFileSync(path.resolve(__dirname,"..", "data","zapatillas.json")));
         
         const zapatillaId = req.params.id;
         
         
-        let zapatillaEditar= productoZapatillas.find(productoZapatilla => productoZapatilla.id == zapatillaId);
+        let zapatillaEditar= productoZapatillas.find(zapatilla => zapatilla.id == zapatillaId);
         //Aca pongo lo que le voy a mandar a la vista 
         res.render(path.resolve(__dirname, '..','views','admin','edit'), {zapatillaEditar});             
         
     },
     
     updateZapatillas (req,res){
-        let productoZapatillas = JSON.parse(fs.readFileSync(path.resolve(__dirname,"..", "data","zapatillas.json")));
-        
+             
         req.body.id = req.params.id;
         
-        req.body.imagen = req.file ? req.file.filename : req.body.oldImagen;
-        //Aca voy a contener el nuevo habano que ya se actualizo
-        let zapatillaUpdate = productoZapatillas.map(productoZapatilla => {
-            if(productoZapatilla.id == req.body.id){
-                return productoZapatilla = req.body;
-            }
-            return productoZapatilla;
+        req.body.imagen1 = req.files[0] ? req.files[0].filename : req.body.oldImagen1;
+        req.body.imagen2 = req.files[1] ? req.files[1].filename : req.body.oldImagen2;
+        req.body.imagen3 = req.files[2] ? req.files[2].filename : req.body.oldImagen3;
+        req.body.imagen4 = req.files[3] ? req.files[3].filename : req.body.oldImagen4;
+        req.body.imagen5 = req.files[4] ? req.files[4].filename : req.body.oldImagen4;
+        let zapatillasUpdate = zapatillas.map(zapatilla=>{
+            if(zapatilla.id == req.body.id){
+           return zapatilla= req.body;
+          }
+        return zapatilla;
         });
-        let zapatillasActualizar = JSON.stringify(zapatillaUpdate,null,2)
-        //Aqui sobre escribo nuestro archivo Json para guardar los nuevos productos
-        fs.writeFileSync(path.resolve(__dirname,'..','data','zapatillas.json'),zapatillasActualizar);
-        //Aqui redireccionamos los nuevos productos a la vista administrar
-        res.redirect('/admin');      
+        let oldImages = [, req.body.oldImagen1, req.body.oldImagen2, req.body.oldImagen3, req.body.oldImagen4]
+        for(let i = 0; i < oldImages.length; i++){
+        if(req.files[i]){
+          fs.unlink(path.resolve(__dirname, '/images/zapatillas/'+ oldImages[i]),(err) => {
+            if (err){console.log(err)};
+            console.log('/images/zapatillas/'+ oldImages[i] + ' fue borrada');
+          });
+        }}
+          fs.writeFileSync(path.resolve(__dirname,'../data/zapatillas.json'),JSON.stringify(zapatillasUpdate, null, 2));
+          res.redirect('/admin');
+        },   
         
-    },
-            },
-
-            update (req,res){
-                let productoZapatillas = JSON.parse(fs.readFileSync(path.resolve(__dirname,"..", "data","zapatillas.json")));
-            
-                req.body.id = req.params.id;
-              
-                req.body.imagen = req.file ? req.file.filename : req.body.oldImagen;
-                //Aca voy a contener el nuevo habano que ya se actualizo
-                let zapatillaUpdate = productoZapatillas.map(productoZapatilla => {
-                    if(productoZapatilla.id == req.body.id){
-                        return productoZapatilla = req.body;
-                    }
-                    return productoZapatilla;
-                });
-                let zapatillasActualizar = JSON.stringify(zapatillaUpdate,null,2)
-                //Aqui sobre escribo nuestro archivo Json para guardar los nuevos productos
-                fs.writeFileSync(path.resolve(__dirname,'..','data','zapatillas.json'),zapatillasActualizar);
-                //Aqui redireccionamos los nuevos productos a la vista administrar
-                res.redirect('/admin');      
-
-            },
-}
+    }

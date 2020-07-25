@@ -11,6 +11,7 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <!--Mi CSS-->
         <link rel="stylesheet" href="/css/administrar.css">
+        <link rel="stylesheet" href="css/footer.css">
         <!--Fuente-->
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&display=swap" rel="stylesheet">
         
@@ -57,14 +58,34 @@
                             </div>
                         <!--Aqui solicito la imagen al usuario-->
                         <div class="custom-file">
-                          <figure class="form-group">
-                            <img class="w-100" src="/images/zapatillas/<%= zapatillaEditar.imagen %> " alt="habano <%= zapatillaEditar.nombre %>">
-
-                          </figure>
-                          <input type="hidden"  name="oldImagen"  value="<%= zapatillaEditar.imagen%>">
-                                  
-                          <input type="file" name="imagen"  multiple>
-                          
+                         
+                        
+                      </div>                                
+                      <figure>
+                          <img class="w-100 border-1 p-1" src="/images/zapatillas/<%= zapatillaEditar.imagen1%>" alt="imagen">
+                          <input type="hidden" name="oldImagen1"  value="<%= zapatillaEditar.imagen1%>">
+                          <input type="file" name="imagen1" class="botonImg" >
+                      
+                      <figure ">
+                          <img class="w-100 border-1 p-1" src="/images/zapatillas/<%= zapatillaEditar.imagen2%>" alt="imagen">
+                          <input type="hidden" name="oldImagen2"  value="<%= zapatillaEditar.imagen2%>">
+                          <input type="file" name="imagen2" class="botonImg" >
+                      </figure>
+                      <figure">
+                          <img class="w-100 border-1 p-1" src="/images/zapatillas/<%= zapatillaEditar.imagen3%>" alt="imagen">
+                          <input type="hidden" name="oldImagen3"  value="<%= zapatillaEditar.imagen3%>">
+                          <input type="file" name="imagen3" class="botonImg" >
+                      </figure>
+                      <figure">
+                          <img class="w-100 border-1 p-1" src="/images/zapatillas/<%= zapatillaEditar.imagen4%>" alt="imagen">
+                          <input type="hidden" name="oldImagen4"  value="<%= zapatillaEditar.imagen4%>">
+                          <input type="file" name="imagen4" class="botonImg" >
+                      </figure>
+                      <figure class=" col-12 col-md-6 col-lg-3 foto">
+                        <img class="w-100 border-1 p-1" src="/images/zapatillas/<%= zapatillaEditar.imagen5%>" alt="imagen">
+                        <input type="hidden" name="oldImagen5"  value="<%= zapatillaEditar.imagen5%>">
+                        <input type="file" name="imagen5" class="botonImg" >
+                    </figure>
                         </div>
                             <div class="form-group">
                                 <button type="submit" class="btn btn btn-dark">Actualizar</button>
