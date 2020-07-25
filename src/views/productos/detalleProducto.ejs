@@ -28,9 +28,7 @@
             <article class="col-12 px-0">
                 <div class="col-12 px-0">
                     <div class="imagenes-resto px-0">
-                    <% for (let i=0; i<miZapatilla.imagen; i++){ %>
-                            <img src="/images/zapatillas/<%= miZapatilla.imagen2 %>" alt="<%= miZapatilla.marca + " "%><%= miZapatilla.modelo %>" class="col-12 align-self-center px-0">
-                    <% } %>
+                        <img src="/images/zapatillas/<%= miZapatilla.imagen1 %>" alt="<%= miZapatilla.marca + " "%><%= miZapatilla.modelo %>" class="col-12 px-0 align-self-center">
                     </div>
                 </div>
             </article>
@@ -46,15 +44,14 @@
                 <div class="col-12 mb-4 pt-4">
                     <p class="descripcion-producto"><%= miZapatilla.descripcion %> </p>
                 </div>
-                <div class="col-12">
-                    <p class="text-uppercase font-weight-bold"><%= "Colores: " + miZapatilla.imagen1 %> </p>
-                </div>
-                <div class="mb-4">
-                    <% for (let i=0; i<miZapatilla; i++) { %>
-                        <% if (miZapatilla.marca == miZapatilla[i].marca &&miZapatilla.modelo == miZapatilla[i].modelo) { %>
-                            <img class="col-12" src="/images/zapatillas/<%= miZapatilla[i].imagen2 %>" alt="<%= miZapatilla.marca + " "%><%= miZapatilla.modelo %>">
-                        <% } %>  
-                    <% } %>
+                <!--<div class="col-12">
+                    <p class="text-uppercase font-weight-bold"><!--%= "Colores: " + miZapatilla.imagen1 %> </p>
+                </div>-->
+                <div class="mb-4 d-flex flex-wrap justify-content-between">
+                    <img src="/images/zapatillas/<%= miZapatilla.imagen2 %>" alt="<%= miZapatilla.marca + " "%><%= miZapatilla.modelo %>" class="col-6 py-3 align-self-center">
+                    <img src="/images/zapatillas/<%= miZapatilla.imagen3 %>" alt="<%= miZapatilla.marca + " "%><%= miZapatilla.modelo %>" class="col-6 py-3 align-self-center">
+                    <img src="/images/zapatillas/<%= miZapatilla.imagen4 %>" alt="<%= miZapatilla.marca + " "%><%= miZapatilla.modelo %>" class="col-6 py-3 align-self-center">
+                    <img src="/images/zapatillas/<%= miZapatilla.imagen5 %>" alt="<%= miZapatilla.marca + " "%><%= miZapatilla.modelo %>" class="col-6 py-3 align-self-center">
                 </div>
                 <div class="mb-5">
                     <p class="col-12 text-uppercase envios-devoluciones">Envíos gratis. Devoluciones gratis</p>
