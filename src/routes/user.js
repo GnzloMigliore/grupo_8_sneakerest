@@ -18,8 +18,8 @@ const storage = multer.diskStorage({
 const controllersUser = require(path.resolve(__dirname, '..', 'controllers', 'controllersUser'));
 
 router.get('/login', controllersUser.index);
-router.get("/login/registro", controllersUser.create);
-router.post("/login/registro", upload.single('imagen'),controllersUser.save);
+router.get('/login/registro', controllersUser.create);
+router.post('/login/registro', upload.single('imagen'),controllersUser.save);
 router.get('/recover', controllersUser.recover);
 
 module.exports = router;

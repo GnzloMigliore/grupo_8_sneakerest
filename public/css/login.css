@@ -1,36 +1,10 @@
-html {
-    font-size: 62.5%; /* Reset para rem --> 62.5% = 10px de 16px */
-}
-
 body {
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.6rem;
 }
 
 
 /* Navbar  */   
-nav{
-    width: 100%;   
-    display: flex;
-    flex: auto;
-    justify-content: space-between;
-}
-#item1{
-width: 15%;
-height: 15vh;
-font-size: 20px;
-text-align: center;
-padding-top: 10px;
 
-}
-
-h2{
-    color: black;
-    text-align: center;
-    font-weight: bold;
-    font-size: 2rem;
-    margin-top: 4vh;
-}
 
 form{
     display: flex;
@@ -38,8 +12,8 @@ form{
     flex-direction: column;
     align-items: center;
     width: 100%;    
-
 }
+
 .form-datos-envio-input{
     border-radius: black;
     }
@@ -50,14 +24,13 @@ form{
         width: 60%;
     }
     .datos-envio-input::placeholder {
-        font-size: 1.5vh;
+        font-size: .65rem;
         color:black;
     }
 
  form a p{
     color: black;
-    text-align: center;
-    font-size: 1.2rem;
+    font-size: .85rem;
     text-decoration: none;
 }
 .ingresar{
@@ -72,12 +45,13 @@ form{
 
 
 .ingresar button{
-    margin-top: 2vh;
     width: 60%;
+    font-size: .75rem;
 }
 .ingresar a{
     margin-top: 2vh;
     width: 60%;
+    font-size: 1rem;
 }
 .ruta{
     width: 100%;

@@ -5,26 +5,26 @@ const fs = require('fs');
 const zapatillas =  JSON.parse(fs.readFileSync(path.resolve(__dirname,'..','data','zapatillas.json')));
 
 module.exports = {
-  index : function(req,res){
+  index : (req,res) => {
     let usuarios =  JSON.parse(fs.readFileSync(path.resolve(__dirname,'..','data','usuarios.json')));  
         res.render(path.resolve(__dirname, '..', 'views', 'web', 'index'), {usuarios});;
   },
-  contacto: function(req,res){
+  contacto: (req,res) => {
     res.render(path.resolve(__dirname, '..', 'views','web','contacto'))
   },
-  email: function(req,res){
+  email: (req,res) => {
     res.render(path.resolve(__dirname, '..', 'views','web','email'))
   },
-  newsletter: function(req,res){
+  newsletter: (req,res) => {
     res.render(path.resolve(__dirname, '..', 'views','web','newsletter'))
   },
-  nosotros: function(req,res){
+  nosotros: (req,res) => {
     res.render(path.resolve(__dirname, '..', 'views','web','nosotros'))
   },
-  giftcard: function(req,res){
+  giftcard: (req,res) => {
     res.render(path.resolve(__dirname, '..', 'views','web','giftcard'))
   },
-  ayuda: function(req,res){
+  ayuda: (req,res) => {
     res.render(path.resolve(__dirname, '..', 'views','web','ayuda'))
   }
 }

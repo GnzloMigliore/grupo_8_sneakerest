@@ -1,56 +1,8 @@
 html {
-    font-size: 62.5%; /* Reset para rem --> 62.5% = 10px de 16px */
 }
 
 body {
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.6rem;
-}
-
-
-/* Navbar  */   
-nav{
-    width: 100%;   
-    display: flex;
-    flex: auto;
-    justify-content: space-between;
-}
-#item1{
-width: 10%;
-height: 15vh;
-font-size: 20px;
-text-align: center;
-padding-top: 10px;
-
-}
-
-#item2{
-    width: 70%;
-    height: 15vh; 
-    font-size: 1rem;  
- 
-    padding-top: 15px;
-    text-align: center;
-}
-h1{
-    font-size: 1.8rem;
-    font-weight: 700;
-
-}
-
-#item3{
-width: 10%;
-height: 15vh;
-font-size: 20px;
-padding-top: 10px;
-text-align: center;
-}
-p{
-    color: black;
-    text-align: center;
-    font-weight: bold;
-    font-size: 1.8rem;
-    margin-top: 4vh;
 }
 
 form{
@@ -60,30 +12,27 @@ form{
     align-items: center;
     width: 100%;    
     margin-top: 4vh;
-    
-
 }
+
 .form-datos-envio-input{
     border-radius: black;
     height: 15vh;
-    
-    }
+}
 
-
-    .datos-envio-input {
-        background-color: #F2F3F2;
-        border: black;
-        border-radius: 1px;
-        width: 60%;
-        margin-top: 1vh;
-    }
-    .datos-envio-input::placeholder {
-        font-size: 1.5vh;
-        color:black;
-        height: 5vh;
-        border-radius: 1px black;
-    }
- form a p{
+.datos-envio-input {
+    background-color: #F2F3F2;
+    border: black;
+    border-radius: 1px;
+    width: 60%;
+    margin-top: 1vh;
+}
+.datos-envio-input::placeholder {
+    font-size: .75rem;
+    color:black;
+    height: 5vh;
+    border-radius: 1px black;
+}
+form a p{
     color: black;
     text-align: center;
     font-size: 1.2rem;
@@ -92,19 +41,10 @@ form{
 
 .terminos{
     margin-top: 4vh;
-    font-size: 1.3rem;
+    font-size: .75rem;
 }
 
-.ingresar{
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 4vh;
-    height: 4vh;
-    
-}
+
 .form-group{
     width: 60%;
     
@@ -112,24 +52,16 @@ form{
 #genero{
     width: 60%;
     height: 4vh;
-    font-size: 1.3rem;
-    font-family: 'Montserrat', sans-serif ;
+    font-size: .75rem;
     background-color: #F2F3F2;
-    margin-top: 1vh;
+    color: black;
 }
 
 .custom-file{
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
-margin-top: 1vh;
-}
-
-.ingresar button{
-    margin-top: 2vh;
-    width: 60%;
-    height: 4vh;
-    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 1vh;
 }
 
 .ruta{
@@ -139,7 +71,7 @@ margin-top: 1vh;
     flex-direction: column;
     align-items: center;
     margin-top: 30vh;
- }
- .ruta a{
+}
+.ruta a{
     text-decoration: none;
- }
+}

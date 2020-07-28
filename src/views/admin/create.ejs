@@ -1,18 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crear producto</title>
-    <!--Fontawesonme icons-->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <%- include('../partials/head.ejs') %>
     <!--Mi CSS-->
-    <link rel="stylesheet" href="/css/administrar.css">
-    <!--Fuente-->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-    
+    <link rel="stylesheet" href="/css/administrar.css">    
 </head>
 <body>
     <header>
@@ -21,8 +12,8 @@
     
     <main class="container-fluid">
         <section class="row my-5">
-            <article class="col-12">
-                <h2 class="titulo-crear text-center pt-5 mx-auto text-uppercase">Cargar nuevo producto</h2>
+            <article class="col-8 mx-auto">
+                <h2 class="titulo-crear pb-3 border-bottom text-center pt-5 mx-auto text-uppercase">Cargar nuevo producto</h2>
             </article>
         </section>
         <section class="container">
@@ -70,12 +61,11 @@
                             <input type="text" class="form-control border-0 rounded-0 bg-light" name="descripcion" placeholder="Descripción del producto" required="required" value="">
                         </div>
                         <!--Seleccionar imagenes-->
-                        <div class="form-group d-flex justify-content-between">
+                        <div class="form-group d-flex flex-wrap justify-content-between">
                             <!--<div class="custom-file">
                                 <input type="file" class="custom-file-input" id="customFile" placeholder="Seleccionar imágenes" multiple>
                                 <label class="custom-file-label border-0 rounded-0 bg-light" for="customFile"></label>
                             </div>-->
-                            <div>
                             <div class="custom-file">
                                 <input type="file" name="imagen1">
                             </div>
@@ -91,7 +81,6 @@
                             <div class="custom-file">
                                 <input type="file" name="imagen5">
                             </div>
-                        </div>
                         </div>
                         <!--Botones guardar volver-->
                         <div class="form-group row d-flex justify-content-center mx-auto mt-5">

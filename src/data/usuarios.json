@@ -55,5 +55,12 @@
     "apellido": "asdoij",
     "contraseña": "132123",
     "imagen": "usuario-1595636793050.jpg"
+  },
+  {
+    "id": 8,
+    "nombre": "asd",
+    "apellido": "asd",
+    "contraseña": "asdasdasd",
+    "imagen": "usuario-1595967650874.jpg"
   }
 ]

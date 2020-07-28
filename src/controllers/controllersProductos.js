@@ -2,12 +2,12 @@ const path = require('path');
 const fs = require('fs');
 
 module.exports = {
-    productos: function(req,res){
+    productos: (req,res) => {
         let zapatillas =  JSON.parse(fs.readFileSync(path.resolve(__dirname,'..','data','zapatillas.json')));
         res.render(path.resolve(__dirname, '..', 'views', 'productos', 'productos'), {zapatillas});
         
     },
-    detail: function(req,res){
+    detail: (req,res) => {
         let zapatillas =  JSON.parse(fs.readFileSync(path.resolve(__dirname,'..','data','zapatillas.json')));
     
         let miZapatilla;

@@ -72,7 +72,7 @@ form{
         width: 60%;
     }
     .datos-envio-input::placeholder {
-        font-size: 1.5vh;
+        font-size: 1.2rem;
         color:black;
         
     }
@@ -90,13 +90,11 @@ form{
     flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
-    margin-top: 4vh;
     
 }
 
 
 button{
-    margin-top: 4vh;
     width: 60%;
 }
 
