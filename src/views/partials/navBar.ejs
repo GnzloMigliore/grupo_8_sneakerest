@@ -32,9 +32,23 @@
         <button type="submit" style="border: none; background-color: white; font-size: 1rem;"><i class="fa fa-search"></i></button>
         </form>
     </div>
-    
+    <% if(locals.usuario) { %>
+        <div>
+            <a href="#">¡Hola <%= locals.usuario.nombre %> !</a>
+        </div>
+        <div>
+            <a href="/logout">Cerrar sesión</a>
+        </div>
+    <% } else { %>  
+        <div>
+            <a href="/login">Iniciar sesión</a>
+        </div>
+        <div>
+            <a href="/login/registro">Registrarse</a>
+        </div>
+    <% } %> 
     <div id="carritonav">
-    <a href="/carrito"><i class="fas fa-shopping-cart" style="font-size: 1.5rem; color: black;"></i></a>
+        <a href="/carrito"><i class="fas fa-shopping-cart" style="font-size: 1.5rem; color: black;"></i></a>
     </div>
 
 

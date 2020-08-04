@@ -1,0 +1,151 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+/* The side navigation menu */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+#menuinfo {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 15px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+input:focus, textarea:focus, select:focus{
+    outline: none;
+}
+
+.buscar-input {
+    font-size: .75rem;
+    text-align: center;
+}
+
+.buscar-input::-webkit-input-placeholder { /* WebKit browsers */
+    font-size: .7rem;
+    text-align: center;
+    color: lightgray;
+     
+}
+
+.buscar-input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    font-size: .7rem;
+    text-align: center;
+    color: lightgray;
+}
+
+.buscar-input::-moz-placeholder { /* Mozilla Firefox 19+ */
+     font-size: .7rem;
+     text-align: center;
+     color: lightgray;
+}
+
+.buscar-input:-ms-input-placeholder { /* Internet Explorer 10+ */
+    font-size: .7rem;
+    text-align: center;
+    color: lightgray;
+} 
+
+#carrito {
+    text-align: right;
+    align-self: right;
+    align-content: right;
+}
+
+.modelo-carrito p {
+    font-size: .5rem;
+}
+
+.x-eliminar-producto-carrito a i {
+    font-size: .5rem;
+}
+
+.descripcion-producto p {
+    font-size: .5rem;
+}
+
+.cantidad-carrito {
+    font-size: .4rem;
+    height: .6rem;
+}
+
+.total-carrito {
+    font-size: .6rem;
+}
+
+.navbar {
+    align-content: right;
+}
+#carritonav{
+    padding: 10px;
+}
+#carritonav a{
+    padding-right: 10px;
+}
+#carritonav span{
+    font-size: 3rem;
+}
+
+.search-container {
+    border: none;
+    align-content: center;
+}
+
+#item1{
+    display: flex;
+    align-items: center;
+}

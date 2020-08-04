@@ -18,62 +18,68 @@
       </article>
     </section>
     
-    
-    <!--Formulario-->
-    <!--Email-->
-    <form action="/login/registro" method="POST" enctype="multipart/form-data" class="mt-0">
-      <input type="text" name="nombre" placeholder="Nombre" class="col-12 mb-2 datos-envio-input" required="required" value="">
-      <input type="text" name="apellido" placeholder="Apellido" class="col-12 mb-2 datos-envio-input" required="required" value="">
-      <input type="Email" name="Email" placeholder="Email" class="col-12 mb-2 datos-envio-input" required="required" value="">
-      <input type="password" name="contraseña" placeholder="Contraseña" class="col-12 mb-2 datos-envio-input" required="required" value="">
-      <input type="password" name="password" placeholder="Repetir contraseña" class="col-12 mb-2 datos-envio-input"  required="required" value="">
-      <!--<input type="text" name="descripcion" placeholder="Descripción" class="col-12 mb-2 datos-envio-input"  required="required" value="">-->
-      
-      <select id="genero" class="custom-select border-0 btn btn-outline-dark py-0">
-        <option selected>Género</option>
-        <option value="1">Men</option>
-        <option value="2">Women</option>
-        <option value="3">Kids</option>
-      </select>
-      <div class="custom-file py-3 mx-auto">
-        <input type="file" name="imagen" required>
-      </div>
-      <!--terminos y condiciones-->
-      <div class="col-12 row align px-auto d-flex justify-content-center mt-3">
-        <div class="form-check col-4 text-center">
-          <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="..."> Quiero novedades de snkrst.com
+    <% if(typeof(errors) != 'undefined'){%>
+      <ul class="alert alert-danger">
+        <% errors.forEach(error => { %>
+          <li><%= error.msg%></li>
+        <%});%>
+      </ul>
+    <%}%>
+        <!--Formulario-->
+        <!--Email-->
+        <form action="/login/registro" method="POST" enctype="multipart/form-data" class="mt-0">
+          <input type="text" name="nombre" placeholder="Nombre" class="col-12 mb-2 datos-envio-input" required="required" value="<%= typeof old != 'undefined' ? old.nombre : '' %>">
+          <input type="text" name="apellido" placeholder="Apellido" class="col-12 mb-2 datos-envio-input" required="required" value="<%= typeof old != 'undefined' ? old.apellido : '' %>">
+          <input type="Email" name="email" placeholder="Email" class="col-12 mb-2 datos-envio-input" required="required" value="<%= typeof old != 'undefined' ? old.email : '' %>">
+          <input type="password" name="contraseña" placeholder="Contraseña" class="col-12 mb-2 datos-envio-input" required="required" value="">
+          <input type="password" name="confirmar_contraseña" placeholder="Repetir contraseña" class="col-12 mb-2 datos-envio-input"  required="required" value="">
+          <!--<input type="text" name="descripcion" placeholder="Descripción" class="col-12 mb-2 datos-envio-input"  required="required" value="">-->
+          
+          <select id="genero" name="genero" class="custom-select border-0 btn btn-outline-dark py-0" value="<%= typeof old != 'undefined' ? old.genero : '' %>">
+            <option selected>Género</option>
+            <option value="Men">Men</option>
+            <option value="Women">Women</option>
+            <option value="Kids">Kids</option>
+          </select>
+          <div class="custom-file py-3 mx-auto">
+            <input type="file" name="imagen" value="<%= typeof old != 'undefined' ? old.file : '' %>" required>
+          </div>
+          <!--terminos y condiciones-->
+          <div class="col-12 row align px-auto d-flex justify-content-center mt-3">
+            <div class="form-check col-4 text-center">
+              <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="..."> Quiero novedades de snkrst.com
+            </div>
+            <div class="form-check col-4 text-center">
+              <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="..." required> Acepto los terminos y condiciones 
+            </div>
+          </div>
+          <!--Botón crear cuenta-->
+          <div class="ingresar col-12 mx-auto px-auto text-center mt-3">
+            <button type="submit" class=" col-6 btn btn-dark border-0 rounded-0 pt-auto pb-auto text-uppercase">Crear cuenta</button>
+          </div>
+        </form>
+        
+        <!--ruta-->
+        <div class="col-12 d-flex justify-content-center align-items-center ruta-ante-footer pt-5">
+          <a href="/" class="px-2 text-decoration-none text-body">SNKRST</a>
+          <p class="my-auto">|</p>
+          <a href="/productos" class="px-2 text-decoration-none text-body"> HOMBRE</a>
+          <p class="my-auto">|</p>
+          <a href="/productos" class="px-2 text-decoration-none text-body"> NEW IN</a>
         </div>
-        <div class="form-check col-4 text-center">
-          <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="..."> Acepto los terminos y condiciones 
-        </div>
-      </div>
-      <!--Botón crear cuenta-->
-      <div class="ingresar col-12 mx-auto px-auto text-center mt-3">
-        <button type="submit" class=" col-6 btn btn-dark border-0 rounded-0 pt-auto pb-auto text-uppercase">Crear cuenta</button>
-      </div>
-    </form>
-    
-    <!--ruta-->
-    <div class="col-12 d-flex justify-content-center align-items-center ruta-ante-footer pt-5">
-      <a href="/" class="px-2 text-decoration-none text-body">SNKRST</a>
-      <p class="my-auto">|</p>
-      <a href="/productos" class="px-2 text-decoration-none text-body"> HOMBRE</a>
-      <p class="my-auto">|</p>
-      <a href="/productos" class="px-2 text-decoration-none text-body"> NEW IN</a>
+        
+        
+        
+      </main>
     </div>
     
     
-    
-  </main>
-</div>
-
-
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-</body>
-
-<!--Footer-->
-
-</html>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  </body>
+  
+  <!--Footer-->
+  
+  </html>

@@ -2,18 +2,9 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>SNEAKEREST</title>
-    
-    <!--Fontawesonme icons & Google Fonts-->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-    
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/master.css">
+    <%- include('../partials/head.ejs') %>
     <link rel="stylesheet" href="/css/navbar.css">
+    
 </head>
 
 
@@ -25,11 +16,17 @@
     </header>
     <section>
         <div class="primera-pagina text-center">
-            <h1 id="new-in">NEW IN</h1>
-            <p style="line-height: 100%;" id="new-in-p">Explorá los modelos lanzados esta última</p>
-            <p style="line-height: 100%;" id="new-in-p">semana, seleccionados exclusivamente</p>
-            <p style="line-height: 100%;" id="new-in-p">para vos.</p><br>
-            <a style="text-align: center; color: black; text-decoration: none;" class="catalogo" href="/productos">CATÁLOGO</a>
+            <div class="padre-new-in">
+                <h1 id="new-in" class="index-hover">NEW IN</h1>
+                <div class="index-hover mb-4">
+                    <p style="line-height: 100%;" id="new-in-p">Explorá los modelos lanzados esta última</p>
+                    <p style="line-height: 100%;" id="new-in-p">semana, seleccionados exclusivamente</p>
+                    <p style="line-height: 100%;" id="new-in-p" class="mb-0">para vos.</p>
+                </div>
+                
+                <a style="text-align: center; color: black; text-decoration: none;" class="catalogo" href="/productos">CATÁLOGO</a>
+            </div>
+            
         </div>
         
         

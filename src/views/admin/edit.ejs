@@ -1,104 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <%- include('../partials/head.ejs') %>
-        <link rel="stylesheet" href="/css/administrar.css">
-    </head>
+<head>
+    <%- include('../partials/head.ejs') %>
+    <link rel="stylesheet" href="/css/administrar.css">
+</head>
 <body>
     <header>
         <%- include('../partials/navBar.ejs') %>
     </header>
-     <section class="row">
-      <article class="col-12 card pt-5 border-0">
-              <div class="card-body">
+    <section class="row">
+        <article class="col-12 card pt-5 border-0">
+            <div class="card-body">
                 <h1 class="col-8 mx-auto pb-3 card-title text-center border-bottom">EDITAR PRODUCTOS</h1>
-              </div>
-      </article>
-  </section>
-
+            </div>
+        </article>
+    </section>
+    
     <section class="bg-home pt-4">
         <div class="container">
             <div class="row" >
                 <div id="editar" class="col-8 mx-auto">
                     <div class="create-form">
                         <form action="/edit/<%= zapatillaEditar.id%>?_method=PUT
-                          " method="POST" enctype="multipart/form-data" >
-                           
+                            " method="POST" enctype="multipart/form-data" >
+                            
                             <div class="form-group">
-                              <input type="text" class="form-control" name="marca" placeholder="Marca" required="required" value="<%= zapatillaEditar.marca%>">
-                          </div>	
-                          <div class="form-group">
-                            <input type="text" class="form-control" name="modelo" placeholder="Modelo" required="required" value="<%= zapatillaEditar.modelo%>">
-                        </div>
+                                <input type="text" class="form-control" name="marca" placeholder="Marca" required="required" value="<%= zapatillaEditar.marca%>">
+                            </div>	
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="modelo" placeholder="Modelo" required="required" value="<%= zapatillaEditar.modelo%>">
+                            </div>
                             <div class="form-group">
                                 <input type="text" class="form-control" name="descripcion" placeholder="Descripción del producto" required="required" value="<%= zapatillaEditar.descripcion%>">
                             </div>
                             <div class="form-group">
                                 <input type="number" class="form-control" name="precio" placeholder="Indique el precio" required="required" value="<%=zapatillaEditar.precio%>">
-
                             </div>
                             <div class="form-group">
                                 
                                 <select  name="descuento" class="custom-select" id="validationCustom04" required>
-                                  <option disabled value="#">Seleccione un descuento"</option>
-                                  <option value="0" <%= zapatillaEditar.descuento == 0 ? "selected" : null %>
-                                    >Sin descuento</option>
-                                  <option value="10" <%= zapatillaEditar.descuento == 10 ? "selected" : null %>>10%</option>
-                                  
-                                </select>
-                            </div>
-                        <!--Aqui solicito la imagen al usuario-->
-                        <div class="custom-file">
-                         
-                        
-                      </div>                                
-                      <figure>
-                          <img class="w-100 border-1 p-1" src="/images/zapatillas/<%= zapatillaEditar.imagen1%>" alt="imagen">
-                          <input type="hidden" name="oldImagen1"  value="<%= zapatillaEditar.imagen1%>">
-                          <input type="file" name="imagen1" class="botonImg" >
-                      
-                      <figure ">
-                          <img class="w-100 border-1 p-1" src="/images/zapatillas/<%= zapatillaEditar.imagen2%>" alt="imagen">
-                          <input type="hidden" name="oldImagen2"  value="<%= zapatillaEditar.imagen2%>">
-                          <input type="file" name="imagen2" class="botonImg" >
-                      </figure>
-                      <figure">
-                          <img class="w-100 border-1 p-1" src="/images/zapatillas/<%= zapatillaEditar.imagen3%>" alt="imagen">
-                          <input type="hidden" name="oldImagen3"  value="<%= zapatillaEditar.imagen3%>">
-                          <input type="file" name="imagen3" class="botonImg" >
-                      </figure>
-                      <figure">
-                          <img class="w-100 border-1 p-1" src="/images/zapatillas/<%= zapatillaEditar.imagen4%>" alt="imagen">
-                          <input type="hidden" name="oldImagen4"  value="<%= zapatillaEditar.imagen4%>">
-                          <input type="file" name="imagen4" class="botonImg" >
-                      </figure>
-                      <figure>
-                        <img class="w-100 border-1 p-1" src="/images/zapatillas/<%= zapatillaEditar.imagen5%>" alt="imagen">
-                        <input type="hidden" name="oldImagen5"  value="<%= zapatillaEditar.imagen5%>">
-                        <input type="file" name="imagen5" class="botonImg" >
-                    </figure>
+                                    <option disabled value="#">Seleccione un descuento"</option>
+                                    <option value="0" <%= zapatillaEditar.descuento == 0 ? "selected" : null %>
+                                        >Sin descuento</option>
+                                        <option value="10" <%= zapatillaEditar.descuento == 10 ? "selected" : null %>>10%</option>
+                                        
+                                    </select>
+                                </div>
+                                <!--Aqui solicito la imagen al usuario-->
+                                <div class="custom-file">
+                                    
+                                    
+                                </div>                                
+                                <figure>
+                                    <img class="w-100 border-1 p-1" src="/images/zapatillas/<%= zapatillaEditar.imagen1%>" alt="imagen">
+                                    <input type="hidden" name="oldImagen1"  value="<%= zapatillaEditar.imagen1%>">
+                                    <input type="file" name="imagen1" class="botonImg" >
+                                    
+                                    <figure ">
+                                        <img class="w-100 border-1 p-1" src="/images/zapatillas/<%= zapatillaEditar.imagen2%>" alt="imagen">
+                                        <input type="hidden" name="oldImagen2"  value="<%= zapatillaEditar.imagen2%>">
+                                        <input type="file" name="imagen2" class="botonImg" >
+                                    </figure>
+                                    <figure">
+                                    <img class="w-100 border-1 p-1" src="/images/zapatillas/<%= zapatillaEditar.imagen3%>" alt="imagen">
+                                    <input type="hidden" name="oldImagen3"  value="<%= zapatillaEditar.imagen3%>">
+                                    <input type="file" name="imagen3" class="botonImg" >
+                                </figure>
+                                <figure">
+                                <img class="w-100 border-1 p-1" src="/images/zapatillas/<%= zapatillaEditar.imagen4%>" alt="imagen">
+                                <input type="hidden" name="oldImagen4"  value="<%= zapatillaEditar.imagen4%>">
+                                <input type="file" name="imagen4" class="botonImg" >
+                            </figure>
+                            <figure>
+                                <img class="w-100 border-1 p-1" src="/images/zapatillas/<%= zapatillaEditar.imagen5%>" alt="imagen">
+                                <input type="hidden" name="oldImagen5"  value="<%= zapatillaEditar.imagen5%>">
+                                <input type="file" name="imagen5" class="botonImg" >
+                            </figure>
                         </div>
-                            <div class="form-group">
-                                <button type="submit" class="btn btn btn-dark">Actualizar</button>
-                                <a href="/admin" class="btn btn-dark">Volver</a>
-                            </div>
-                            
-                        </form>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn btn-dark">Actualizar</button>
+                            <a href="/admin" class="btn btn-dark">Volver</a>
+                        </div>
+                        
+                    </form>
                 </div>                        
-                </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Footer-->
-     <!-- FOOTER -->
-     <%- include('../partials/footer.ejs') %>
-    
-     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<!-- Footer-->
+<!-- FOOTER -->
+<%- include('../partials/footer.ejs') %>
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 
 </html>
