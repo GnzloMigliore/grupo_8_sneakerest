@@ -7,6 +7,7 @@ const {
     validationResult,
     body
 } = require('express-validator');
+const { userInfo } = require('os');
 
 module.exports = {
     index: (req, res) => {
@@ -68,7 +69,25 @@ module.exports = {
         res.cookie('email',null,{maxAge: -1});
         res.redirect('/')
     },
-    recover: (req, res) => {
-        res.render(path.resolve(__dirname,'..','views','usuarios','recover'))
+    show: (req, res) => {
+        let usuarios =  JSON.parse(fs.readFileSync(path.resolve(__dirname,'..','data','usuarios.json')));
+        const usuarioEmail = req.params.email;
+        let usuarioMostrar = usuarios.find(usuario => usuario.email == usuarioEmail);
+        res.render(path.resolve(__dirname, '../views/usuarios/perfilUsuario'), {usuarioMostrar});
+    },
+    /*update: (req,res) =>{
+        let usuarios =  JSON.parse(fs.readFileSync(path.resolve(__dirname,'..','data','usuarios.json')));
+        req.body.email = req.params.email;
+        req.body.imagen = req.file ? req.file.filename : req.body.oldImagen;
+        let userUpdate = usuarios.map(usuario => {
+            if(usuario.email  == req.body.email){
+                return usuario = req.body;
+            }
+            return usuario;
+        });
+        let usuarioActualizado = JSON.stringify(userUpdate,null,2)
+        fs.writeFileSync(path.resolve(__dirname,'..','data','usuarios.json'), usuarioActualizado);
+        res.redirect('/');
     }
+    */
 }

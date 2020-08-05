@@ -73,11 +73,8 @@ module.exports = {
         res.render(path.resolve(__dirname, '..','views','admin','edit'), {zapatillaEditar});             
         
     },
-    
-    updateZapatillas:(req,res)=>{
-             
+    updateZapatillas: (req,res) => {
         req.body.id = req.params.id;
-        
         req.body.imagen1 = req.files[0] ? req.files[0].filename : req.body.oldImagen1;
         req.body.imagen2 = req.files[1] ? req.files[1].filename : req.body.oldImagen2;
         req.body.imagen3 = req.files[2] ? req.files[2].filename : req.body.oldImagen3;

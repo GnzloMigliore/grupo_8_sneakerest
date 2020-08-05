@@ -32,7 +32,7 @@ let archivoUsuarios =  JSON.parse(fs.readFileSync(path.resolve(__dirname, '../da
 
 router.get('/login', controllersUser.index);
 router.post('/login',[
-  check('email').isEmail().withMessage('Agregar un email válido'),
+  check('email').isEmail().withMessage('Debe agregar un email válido'),
   body('email').custom( (value) =>{
     for (let i = 0; i < archivoUsuarios.length; i++) {
       if (archivoUsuarios[i].email == value) {
@@ -41,7 +41,7 @@ router.post('/login',[
       }
     }
     return false   
-  }).withMessage('Usuario no se encuentra registrado...'),
+  }).withMessage('¡Ups...! El usuario no se encuentra registrado'),
   check('contraseña').isLength({min: 6 }).withMessage('La contraseña debe tener un mínimo de 6 caractéres'),
   body('contraseña').custom((value, {req}) =>{
     for (let i = 0; i < archivoUsuarios.length; i++) {
@@ -100,6 +100,8 @@ router.post('/login/registro', upload.single('imagen'),[
   }).withMessage('Debe elegir su avatar y debe ser un archivo con formato: .JPG ó JPEG ó PNG')
 ],controllersUser.save);
 router.get('/logout', controllersUser.logout);
-router.get('/recover', controllersUser.recover);
+router.get('/perfil', controllersUser.show);
+//router.put('/perfil/edit/', upload.single('imagen'), controllersUser.update);
+//router.get('/recover', controllersUser.recover);
 
 module.exports = router;

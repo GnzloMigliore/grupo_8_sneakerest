@@ -14,5 +14,14 @@
     "genero": "Kids",
     "imagen": "usuario-1596687711472.png",
     "role": 1
+  },
+  {
+    "nombre": "Joaquín",
+    "apellido": "Dominguez Lodeiro",
+    "email": "joaquin@gmail.com",
+    "contraseña": "$2a$10$NZgwVvsiIiCP2cGLvEtrYer5/SEgao4fZ.hknSnDZfWSs4uwzwye.",
+    "genero": "Men",
+    "imagen": "usuario-1596653037338.jpg",
+    "role": 1
   }
 ]

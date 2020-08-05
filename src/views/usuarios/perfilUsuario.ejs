@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head.ejs') %>
+    <link rel="stylesheet" href="/css/perfilUsuario.css">
+</head>
+<body>
+    <%- include('../partials/navBar.ejs') %>
+    <main class="container">
+        <section class="row mx-auto">
+            <article class="col-12 p-auto">
+                <div class="circulo-imagen mx-auto">
+                    <img src="/images/usuarios/<%= locals.usuario.imagen %>" alt="">
+                </div>
+                <div class="col-8 text-center mx-auto my-3">
+                    <p class="col-8 mx-auto border-bottom"><%= locals.usuario.nombre %> <%= locals.usuario.apellido %> </p>
+                </div>
+                <div class="col-8 text-center mx-auto my-3">
+                    <p class="col-8 mx-auto border-bottom"><%= locals.usuario.email %> </p>
+                </div>
+                <div class="col-8 text-center mx-auto my-3">
+                    <p class="col-8 mx-auto border-bottom"><%= locals.usuario.genero %> </p>
+                </div>
+            </article>
+             <!--<article class="col-12">
+                <div class="mx-auto circulo-imagen">
+                    <img src="/img/carrito1.png" alt="">
+                </div>
+                <form action="/perfil/edit/%= locals.usuario %>?_method=put" method="POST" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <input type="text" name="nombre" placeholder="" required value="%= locals.usuario.nombre %>">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="apellido" placeholder="" required value="%= locals.usuario.apellido %>">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="email" placeholder="" required value="%= locals.usuario.email %>">
+                    </div>
+                    <div class="form-group">
+                        <select id="genero" name="genero" class="custom-select border-0 btn btn-outline-dark py-0" value="%= locals.usuario.genero %>"> 
+                            <option selected>Género</option>
+                            <option value="Men">Men</option>
+                            <option value="Women">Women</option>
+                            <option value="Kids">Kids</option>
+                        </select>
+                    </div>
+                    <div class="custom-file">
+                        <input type="hidden" name="oldImagen" value=" %= locals.usuario.imagen %> ">
+                        <input type="file" name="imagen">
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-dark rounded-0">Actualizar Información</button>
+                        <a href="/" class="text-decoration-none text-body">Volver al inicio</a>
+                    </div>
+
+
+                </form>
+
+            </article>-->
+        </section>
+    </main>
+    <!-- FOOTER -->
+    <%- include('../partials/footer.ejs') %>    
+</body>
+</html>
