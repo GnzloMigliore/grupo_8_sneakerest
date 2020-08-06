@@ -8,47 +8,9 @@ body {
 }
 
 
-/* Navbar  */   
-nav{
-    width: 100%;   
-    display: flex;
-    flex: auto;
-    justify-content: space-between;
-}
-#item1{
-width: 10%;
-height: 15vh;
-font-size: 25px;
-text-align: center;
-padding-top: 10px;
-
-}
-
-#item2{
-    width: 70%;
-    height: 15vh; 
-    font-size: 2rem;  
- 
-    padding-top: 15px;
-    text-align: center;
-}
-h1{
-    font-size: 3rem;
-    font-weight: 700;
-
-}
-
-#item3{
-width: 10%;
-height: 15vh;
-font-size: 25px;
-padding-top: 10px;
-text-align: center;
-}
 p{
     color: black;
     text-align: center;
-    font-weight: bold;
     font-size: 1.8rem;
 }
 
