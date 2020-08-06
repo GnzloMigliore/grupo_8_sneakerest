@@ -56,33 +56,10 @@
 @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
+
 }
 
-#carrito {
-    text-align: right;
-    align-self: right;
-    align-content: right;
-}
 
-.navbar {
-    align-content: right;
-}
-#carritonav{
-padding: 10px;
-}
-#carritonav a{
-    padding-right: 10px;
-    }
-    #carritonav span{
-        font-size: 3rem;
-        }
 
-.search-container {
-    border: none;
-    align-content: center;
-}
 
-#item1 {
-    display: flex;
-    align-items: center;
-}
+

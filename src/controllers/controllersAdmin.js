@@ -74,7 +74,7 @@ module.exports = {
         
     },
     
-    updateZapatillas (req,res){
+    updateZapatillas:(req,res)=>{
              
         req.body.id = req.params.id;
         

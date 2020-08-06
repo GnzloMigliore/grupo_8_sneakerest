@@ -5,5 +5,14 @@
     "apellido": "Migliore",
     "email": "gonzalomigliore@gmail.com",
     "contraseña": "1234"
+  },
+  {
+    "nombre": "Gonzalo",
+    "apellido": "Migliore",
+    "email": "Gonzalomigliore@gmail.com",
+    "contraseña": "$2a$10$qSaqyhxhQ9DO3iXujm8LMeU4eknEstYtljksTmJqIW/J.tMWOPSkS",
+    "genero": "Kids",
+    "imagen": "usuario-1596687711472.png",
+    "role": 1
   }
 ]
