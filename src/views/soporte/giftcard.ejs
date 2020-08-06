@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <%- include('../partials/head.ejs') %>
+    <link rel="stylesheet" href="/css/giftcard.css">
+    <link rel="stylesheet" href="/css/navBar.css">
+    <link rel="stylesheet" href="/css/footer.css">
+</head>
+<body>
+    <%- include('../partials/navBar.ejs') %>
+    <section>
+        <div class="container giftcard-pagina text-center">
+            <h3 id="carta-regalo">REGALA SNEAKEREST</h3>
+        </div>
+        
+        <div class="container" id="parrafo">
+            <h4>Descubrí nuestra Gift Card SNKRST, encontrala en nuestras sucursal o a través de nuestra web, realizá la carga que quieras y usala para tus próximas compras en todos nuestros productos. Ideal para casamientos, cumpleaños, regalos, etc. REGALÁ Y SORPRENDÉ.</h4>
+        </div>
+        
+        <div class="container" id="tarjeta-regalo">
+            <img
+            id="imagen-tarjeta" src="img/gift-card.jpeg" alt="gift-card">
+        </div>
+        
+        <div class="container" id="instrucciones">
+            <h3>Cómo cargar la Gift Card por Home Banking</h3>
+            <ul>
+                <li>Ingresá a Pagos Mis Cuentas desde Home banking</li>
+                <li>Buscá la opción tarjeta de crédito y seleccioná Tarjeta SNKRST</li>
+                <li>Ingresá los 16 números que figuran en el frente de tu tarjeta de crédito</li>
+                <li>Ingresá el monto que deseas cargar</li>
+                <li>¡Listo! El monto en la tarjeta se efectivizará dentro de las 72 horas hábiles.</li>
+            </ul>
+        </div>
+        <div class="container">
+            <h3>Retirar la Gift Card por el local</h3>
+            <div class="container" id="direccion">
+                <h5>Estamos aquí:</h5>
+                <br>
+                <p>Dirección: Av. Monroe 860, C1428 BKD, Buenos Aires</p>
+            </div>
+            
+            <div class="container" id="mapa">
+                <h4>Estamos aquí:</h4>
+                <br>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13144.745852812272!2d-58.45240950745639!3d-34.54883398910763!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb436efe09303%3A0xfb39818e7624ac76!2sDigital%20House!5e0!3m2!1ses-419!2sar!4v1595599098201!5m2!1ses-419!2sar" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </div>
+        </div>
+        
+        <div class="container text-center">
+            <a style="color: black; text-decoration: none;" href="#">Términos y Condiciones | </a>
+            <a style="color: black; text-decoration: none;"" href="#">Políticas de cambios</a>
+        </div>        
+    </section>
+    <!-- FOOTER -->
+    <%- include('../partials/footer.ejs') %>
+</body>
+</html>

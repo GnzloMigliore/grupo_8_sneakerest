@@ -36,12 +36,14 @@ const userRouter = require('./routes/user');
 const pagoRouter = require('./routes/pago');
 const ProductosRouter = require('./routes/productos');
 const adminRoutes = require('./routes/admin');
+const soporteRouter = require ('./routes/soporte');
 
 app.use(webRouter);
 app.use(userRouter);
 app.use(ProductosRouter);
 app.use(pagoRouter);
 app.use(adminRoutes);
+app.use(soporteRouter);
 
 
 //Activar servidor
