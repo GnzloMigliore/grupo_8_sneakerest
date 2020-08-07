@@ -23,5 +23,14 @@
     "genero": "Men",
     "imagen": "usuario-1596653037338.jpg",
     "role": 1
+  },
+  {
+    "nombre": "Angel ",
+    "apellido": "Fuentes",
+    "email": "angelfuentes@gmail.com",
+    "contraseña": "$2a$10$NsFbmdS2bYFTV3yNGshrK.HNZL4CTDFRKH3qHHqC6.jGdv5nG.DlO",
+    "genero": "Men",
+    "imagen": "usuario-1596835418255.jpg",
+    "role": 1
   }
 ]
