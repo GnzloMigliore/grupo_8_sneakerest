@@ -5,7 +5,7 @@
 ___
 + ## ___Hacer más___
     ```
-Usar mas Bootstrap. Cambiamos muchas vistas a Bootstrap pero algunas siguen con CSS.
+    Usar mas Bootstrap. Cambiamos muchas vistas a Bootstrap pero algunas siguen con CSS.
 ___
 + ## ___Seguir haciendo___
     ```
