@@ -8,7 +8,6 @@ img {
 .modal-content{
     background-image: url(/img/newsletter.jpg);
     background-size: cover;
-    background-repeat: no-repeat;
 }
 .modal-body .icono{
     font-size: 10rem;
