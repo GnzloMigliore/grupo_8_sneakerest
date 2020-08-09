@@ -11,18 +11,18 @@
     <%- include('../partials/navBar.ejs') %>
   </header>
   <div class="conteiner">
-  
+    
     <div class="row">
       <h1 class="col-8 mx-auto mb-5 py-4 pb-3 text-center border-bottom mt-5">SUSCRIBETE AL NEWSLETTER</h1>
-  </div>
-   
+    </div>
+    
     <!--texto-->
     <main>
       <p>Suscribete a nuestro newsletter para recibir  nuestras noticias <br>semanales e información sobre nuevas tendencias</p>
       
       <!--Email-->
       <form>
-        <div class="form-group">
+        <div class="form-group mt-4">
           <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Email">
         </div>
         
@@ -30,19 +30,24 @@
         <!--Estilos-->
         <div class="estilos">
           <h3> Estilos preferidos:</h3><br>
-          <div class="form-check">
-            <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="..."> Mujer 
-          </div>
-          <div class="form-check">
-            <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="..."> Varón
-          </div>
-          <div class="form-check">
-            <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="..."> Niños
+          <div class="padre-generos-estilos">
+            <div class="form-check px-5">
+              <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="..."> Mujer 
+            </div>
+            <div class="form-check px-5">
+              <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="..."> Varón
+            </div>
+            <div class="form-check px-5">
+              <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="..."> Niño
+            </div>
+            <div class="form-check px-5">
+              <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="..."> Niña
+            </div>
           </div>
         </div>
         <!--suscribir-->
         <div class="suscribir">
-          <p id="info">*al enviar esta información , ustes acepta nuestra política de privacidad.</p>
+          <p id="info">*al enviar esta información , usted acepta nuestra política de privacidad.</p>
           
           <button type="button" class="btn btn-dark">SUSCRIBIR</button>
         </div>
