@@ -32,5 +32,14 @@
     "genero": "Men",
     "imagen": "usuario-1596835418255.jpg",
     "role": 1
+  },
+  {
+    "nombre": "Juan",
+    "apellido": "Migliore",
+    "email": "juanmigliore@gmail.com",
+    "contraseña": "$2a$10$5eYNQEorGEV8/HiZL2tMLOuizGCU2FreHzncFAlqCnVV4wWcTwb/O",
+    "genero": "Men",
+    "imagen": "usuario-1596847492757.jpg",
+    "role": 1
   }
 ]

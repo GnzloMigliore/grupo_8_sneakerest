@@ -2,11 +2,43 @@
 <html lang="en">
     
       <head>
-         <%- include('../partials/head.ejs') %>
-         <link rel="stylesheet" href="/css/navbar.css">     
+          <%- include('../partials/head.ejs') %>
+         <link rel="stylesheet" href="/css/navbar.css">  
+         <script>
+             $(document).ready(function(){
+                $('#myModal').modal('show',)
+
+             })
+         </script>   
       </head>
 
 <body>
+<!-- Modal -->
+<div id="myModal" class=" modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true"id="myModal">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">     
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="d-flex justify-content-center"><ion-icon class="icono" name="mail-open-outline"></ion-icon></div>
+        <h2 class="modal-title text-center mt-3" id="exampleModalLongTitle">¡SUSCRIBETE AL NEWSLETTER!</h2>
+        <p class="text-center mt-3"><strong>¡Suscribete a nuestro newsletter para recibir  nuestras noticias <br>semanales e información sobre nuevas tendencias!</strong></p>
+      </div>
+      <div class="modal-footer d-flex justify-content-center">
+        <form class="form-inline mt-3 mb-3">
+            <div class="form-group  mr-2">              
+              <input type="email" class="form-control" placeholder="Email">
+            </div>
+            <button type="button" class="btn btn-dark">ENVIAR</button>
+          </form>
+       
+      </div>
+    </div>
+  </div>
+</div>
     <header>
         <%- include('../partials/navBar.ejs') %>
     </header>
@@ -40,8 +72,8 @@
         
     </section>
     
-    <section>
-        <div class="container tercera-pagina text-center">
+    <section> <div class="container tercera-pagina text-center">
+       
             <h3 id="new-in-suscribe"><a style="text-align: center; color: black; text-decoration: none;" class="catalogo" href="/newsletter">SUSCRIBITE AL NEWSLETTER</a></h3>
             <a style="color: black; text-decoration: none;" href="#">Términos y Condiciones | </a>
             <a style="color: black; text-decoration: none;"" href="#">Políticas de cambios</a>
