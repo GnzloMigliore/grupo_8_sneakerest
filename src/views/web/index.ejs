@@ -4,45 +4,39 @@
       <head>
           <%- include('../partials/head.ejs') %>
          <link rel="stylesheet" href="/css/navbar.css">  
-         <script>
-             $(window).on('load',function(){
-                setTimeout(function(){
-                 $('#myModal').modal('show',)
-                },3000)             
-             })
-         </script>   
       </head>
 
 <body>
 <!-- Modal -->
-<div id="myModal" class=" modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true"id="myModal">
-  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-    <div class="modal-content">
-      <div>     
-        <button type="button" class="close mt-2 mr-2" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <div class="d-flex justify-content-center"><ion-icon class="icono" name="mail-open-outline"></ion-icon></div>
-        <h2 class="modal-title text-center mt-3">¡SUSCRIBETE AL NEWSLETTER!</h2>
-        <p class="text-center mt-3"><strong>¡Suscribete a nuestro newsletter para recibir  nuestras noticias <br>semanales e información sobre nuevas tendencias!</strong></p>
-      </div>
-      <div class="modal-footer d-flex justify-content-center">
-        <form class="form-inline mt-3 mb-3">
-            <div class="form-group  mr-2">              
-              <input type="email" class="form-control" placeholder="Email">
-            </div>
-            <button type="button" class="btn btn-dark">ENVIAR</button>
-          </form>
-       
-      </div>
-    </div>
-  </div>
-</div>
     <header>
         <%- include('../partials/navBar.ejs') %>
     </header>
+    <section>
+        <div id="modalSuscribirse" class=" modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true"id="myModal">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+              <div class="modal-content">
+                <div>     
+                  <button type="button" class="close mt-2 mr-2" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="d-flex justify-content-center"><ion-icon class="icono" name="mail-open-outline"></ion-icon></div>
+                  <h2 class="modal-title text-center mt-3">¡SUSCRIBETE AL NEWSLETTER!</h2>
+                  <p class="text-center mt-3"><strong>¡Suscribete a nuestro newsletter para recibir  nuestras noticias <br>semanales e información sobre nuevas tendencias!</strong></p>
+                </div>
+                <div class="modal-footer d-flex justify-content-center">
+                  <form class="form-inline mt-3 mb-3">
+                      <div class="form-group  mr-2">              
+                        <input type="email" class="form-control" placeholder="Email">
+                      </div>
+                      <button type="button" class="btn btn-dark">ENVIAR</button>
+                    </form>
+                </div>
+              </div>
+            </div>
+          </div>
+    </section>
     <section>
         <div class="primera-pagina text-center">
             <div class="padre-new-in">
@@ -86,5 +80,6 @@
 
 <!-- FOOTER -->
 <%- include('../partials/footer.ejs') %>
+<script src="/js/index.js"></script>
 </body>
 </html>
