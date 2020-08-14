@@ -21,7 +21,7 @@
             <h2 class="titulo-admin pb-3 border-bottom text-center pt-5 mx-auto text-uppercase">administrar</h2>
             </article>
             <article class="col-12 my-3">
-                <a href="/admin/create"><button type="button" class="btn btn-outline-dark rounded-0">+ Agregar producto</button>
+                <a href="/adminProducts/create"><button type="button" class="btn btn-outline-dark rounded-0">+ Agregar producto</button>
                 </a>
             </article>
             <article class="col-12">
@@ -42,9 +42,9 @@
                                 <td><%= zapatilla.id %></td>
                                 <td><%= zapatilla.marca %></td>
                                 <td><%= zapatilla.modelo %></td>
-                                <td><a href="/admin/detail/<%= zapatilla.id %>">Ver detalle</a></td>
-                                <td><a href="/edit/<%= zapatilla.id%>">Editar producto</a></td>
-                                <td><a href="/delete/<%= zapatilla.id%>">Eliminar producto</a></td>
+                                <td><a href="/adminProducts/detail/<%= zapatilla.id %>">Ver detalle</a></td>
+                                <td><a href="/adminProducts/edit/<%= zapatilla.id%>">Editar producto</a></td>
+                                <td><a href="/adminProducts/delete/<%= zapatilla.id%>">Eliminar producto</a></td>
                                
                             </tr>
                         <% }); %> 

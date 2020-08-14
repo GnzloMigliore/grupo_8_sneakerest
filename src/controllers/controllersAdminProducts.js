@@ -6,11 +6,11 @@ let zapatillas = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../data/zap
 module.exports = {
     index: (req,res) =>{   
         let zapatillas =  JSON.parse(fs.readFileSync(path.resolve(__dirname,'..','data','zapatillas.json')));  
-        res.render(path.resolve(__dirname, '..', 'views', 'admin', 'administrar'), {zapatillas});
+        res.render(path.resolve(__dirname, '..', 'views', 'admin', 'administrarProductos'), {zapatillas});
     },
     create: (req, res) => {
         let zapatillas =  JSON.parse(fs.readFileSync(path.resolve(__dirname,'..','data','zapatillas.json')));
-        res.render(path.resolve(__dirname, '..','views','admin','create'));
+        res.render(path.resolve(__dirname, '..','views','admin','createProductos'));
     },
     save: (req,res)=>{
         let zapatillas =  JSON.parse(fs.readFileSync(path.resolve(__dirname,'..','data','zapatillas.json')));      
@@ -34,7 +34,7 @@ module.exports = {
         zapatillas.push(nuevoProducto);
         let nuevoProductoGuardar = JSON.stringify(zapatillas,null,2)
         fs.writeFileSync(path.resolve(__dirname,'..','data','zapatillas.json'), nuevoProductoGuardar);
-        res.redirect('/admin');
+        res.redirect('/adminProducts');
     },
     show: (req,res)=>{
         let zapatillas =  JSON.parse(fs.readFileSync(path.resolve(__dirname,'..','data','zapatillas.json')));
@@ -45,7 +45,7 @@ module.exports = {
                 miZapatilla = zapatilla;         
             }
         });
-        res.render(path.resolve(__dirname, '..','views','admin','detail.ejs'), {miZapatilla})
+        res.render(path.resolve(__dirname, '..','views','admin','detailProducto'), {miZapatilla})
         
     },
     destroy:(req, res) => {
@@ -53,13 +53,13 @@ module.exports = {
         
         const zapatillaDeleteId = req.params.id;
         
-        const zapatillasFinal = productoZapatillas.filter(productoZapatilla => productoZapatilla.id != zapatillaDeleteId);
+        const zapatillasFinal = productoZapatillas.filter(productoZapatilla => productoZapatilla.email != zapatillaDeleteId);
         
         let zapatillasGuardar = JSON.stringify(zapatillasFinal,null,2);
         
         fs.writeFileSync(path.resolve(__dirname,'..','data','zapatillas.json'),zapatillasGuardar);
         
-        res.redirect('/admin');
+        res.redirect('/adminProducts');
     },
     edit: (req,res) => {
         //Aca pasamos los datos del archivo Json de zapatillas a un Array
@@ -70,7 +70,7 @@ module.exports = {
         
         let zapatillaEditar= productoZapatillas.find(zapatilla => zapatilla.id == zapatillaId);
         //Aca pongo lo que le voy a mandar a la vista 
-        res.render(path.resolve(__dirname, '..','views','admin','edit'), {zapatillaEditar});             
+        res.render(path.resolve(__dirname, '..','views','admin','editProductos'), {zapatillaEditar});             
         
     },
     updateZapatillas: (req,res) => {
@@ -95,7 +95,7 @@ module.exports = {
           });
         }}
           fs.writeFileSync(path.resolve(__dirname,'../data/zapatillas.json'),JSON.stringify(zapatillasUpdate, null, 2));
-          res.redirect('/admin');
+          res.redirect('/adminProducts');
         },   
         
     }

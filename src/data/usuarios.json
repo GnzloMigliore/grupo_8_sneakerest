@@ -3,12 +3,6 @@
     "id": 1,
     "nombre": "Gonzalo",
     "apellido": "Migliore",
-    "email": "gonzalomigliore@gmail.com",
-    "contraseña": "1234"
-  },
-  {
-    "nombre": "Gonzalo",
-    "apellido": "Migliore",
     "email": "Gonzalomigliore@gmail.com",
     "contraseña": "$2a$10$qSaqyhxhQ9DO3iXujm8LMeU4eknEstYtljksTmJqIW/J.tMWOPSkS",
     "genero": "Kids",
@@ -16,15 +10,7 @@
     "role": 1
   },
   {
-    "nombre": "Joaquín",
-    "apellido": "Dominguez Lodeiro",
-    "email": "joaquin@gmail.com",
-    "contraseña": "$2a$10$NZgwVvsiIiCP2cGLvEtrYer5/SEgao4fZ.hknSnDZfWSs4uwzwye.",
-    "genero": "Men",
-    "imagen": "usuario-1596653037338.jpg",
-    "role": 1
-  },
-  {
+    "id": 3,
     "nombre": "Angel ",
     "apellido": "Fuentes",
     "email": "angelfuentes@gmail.com",
@@ -34,12 +20,7 @@
     "role": 1
   },
   {
-    "nombre": "Juan",
-    "apellido": "Migliore",
-    "email": "juanmigliore@gmail.com",
-    "contraseña": "$2a$10$5eYNQEorGEV8/HiZL2tMLOuizGCU2FreHzncFAlqCnVV4wWcTwb/O",
-    "genero": "Men",
-    "imagen": "usuario-1596847492757.jpg",
-    "role": 1
+    "role": "9",
+    "email": "joaquin@gmail.com"
   }
 ]

@@ -10,6 +10,19 @@ img {
     color: black;
 }
 
+.circulo-imagen {
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    background-color: white;
+    margin: 10px;
+    border-radius: 50%;
+}
 
 
 

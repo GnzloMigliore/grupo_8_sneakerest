@@ -35,14 +35,16 @@ const webRouter = require('./routes/web');
 const userRouter = require('./routes/user');
 const pagoRouter = require('./routes/pago');
 const ProductosRouter = require('./routes/productos');
-const adminRoutes = require('./routes/admin');
+const adminProductosRoutes = require('./routes/adminProducts');
+const adminUsersRoutes = require('./routes/adminUsers');
 const soporteRouter = require ('./routes/soporte');
 
 app.use(webRouter);
 app.use(userRouter);
 app.use(ProductosRouter);
 app.use(pagoRouter);
-app.use(adminRoutes);
+app.use(adminProductosRoutes);
+app.use(adminUsersRoutes);
 app.use(soporteRouter);
 
 

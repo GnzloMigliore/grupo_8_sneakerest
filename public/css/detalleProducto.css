@@ -18,7 +18,13 @@ img {
     max-width: 100%;
 }
 
+.fotos-ampliadas {
+    transition: transform .2s;
+}
 
+.fotos-ampliadas:hover {
+    transform: scale(1.2);
+}
 
 /** Main **/
 
