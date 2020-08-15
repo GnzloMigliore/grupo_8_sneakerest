@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) =>{
-    let alias = 'Model';
+    let alias = 'examples';
     
     let cols = {
         id: {
@@ -15,18 +15,18 @@ module.exports = (sequelize, DataTypes) =>{
         timestamps: false
     }*/
     
-    const Model = sequelize.define(alias,cols);
+    const examples = sequelize.define(alias,cols);
     
     // Esto es la relacion entre Product, Brand, Model y Gender
-    /*Model.associate = function (models){
-        Model.hasMany(
-            models.Product,
+    examples.associate = function (models){
+        examples.hasMany(
+            models.products,
             {
                 as: "products",
-                foreignKey: "model_id"
+                foreignKey: "example_id"
             }
             )
-        }*/
+        }
         
-        return Model;
+        return examples;
     }

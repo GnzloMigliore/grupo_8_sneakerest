@@ -1,36 +1,41 @@
-module.exports = (sequelize, DataTypes) =>{
-    let alias = 'Product';
-    
+module.exports = (sequelize, dataTypes) => {
+    let alias = 'products';
     let cols = {
         id: {
-            type: DataTypes.INTEGER,
-            primaryKey : true,
+            type: dataTypes.INTEGER,
+            primaryKey: true,
             allowNull: false,
             autoIncrement: true
         },
-        price: DataTypes.DECIMAL,
-        description: DataTypes.STRING,
-        image: DataTypes.STRING,
-        stock: DataTypes.INTEGER,
+        price: dataTypes.DECIMAL,
+        description: dataTypes.STRING,
+        image: dataTypes.STRING,
+        stock: dataTypes.INTEGER,
     };
-    
     /*let config = {
-        tableName : 'products',
+        tableName: 'Papachos',
         timestamps: false
-    }*/
-    
-    const Product = sequelize.define(alias,cols);
-    
-    // Esto es la relacion entre Product, Brand, Model y Gender
-    /*Product.associate = models => {
-        Product.belongsTo(
-            models.Brand,
-            {
-                as: 'brands',
-                foreingKey: 'brand_id'
-            }
-            )
-        }*/
+    };*/
         
-        return Product;
-    }
+    
+    const products = sequelize.define(alias, cols)
+    //Aquí creo mi relación entre Platos (Diskes) y Categorias (Categories)
+    products.associate = function(models) {
+        products.belongsTo(
+            models.brands,
+            {
+                as : 'brands',
+                foreignKey: 'brand_id'
+            }
+        )
+        products.belongsTo(
+            models.examples,
+            {
+                as : 'examples',
+                foreignKey: 'example_id'
+            }
+        )
+    };
+
+    return products
+}

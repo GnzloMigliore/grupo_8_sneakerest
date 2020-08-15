@@ -167,19 +167,23 @@
         </div>
         <section class="lista-productos row d-flex justify-content-start mx-auto">
             <% for (let i=0; i<zapatillas.length; i++){ %>
+            <% for (let i=0; i<marcas.length; i++){ %>
+            <% for (let i=0; i<modelos.length; i++){ %>
                 <article class="col-6 col-md-6 col-lg-4 col-xl-3 p-2">
                     <figure>
                         <a href="/productos/detalle/<%= zapatillas[i].id %>">
                             <div class="fondo-gris-productos mx-auto">
-                                <img src="/images/zapatillas/<%= zapatillas[i].image%>" alt="<%= zapatillas[i].marca + " " + zapatillas[i].modelo %> ">
+                                <img src="/images/zapatillas/<%= zapatillas[i].image%>" alt="<%= marcas[i].name + " " + modelos[i].name %> ">
                             </div>
                         </a>
                         <div class="modelo-precio text-center">
-                            <p><%= zapatillas[i].marca + " " + zapatillas[i].modelo %></p>
+                            <p><%= marcas[i].name + " " + modelos[i].name %></p>
                             <p><%= "$" + zapatillas[i].price %> </p>
                         </div>
                     </figure>
                 </article>
+            <% } %> 
+            <% } %> 
             <% } %>
         </section>  
         
