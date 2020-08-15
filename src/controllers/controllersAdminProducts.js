@@ -1,46 +1,50 @@
 const path = require('path');
 const fs = require('fs');
-
+const { Op } = require("sequelize");
 const {products, brands, examples} = require ('../database/models');
 
+
 module.exports = {
-    index: (req,res) =>{   
-        const zapatillas = products.findAll();
-        const marcas = brands.findAll();
-        const modelos = examples.findAll();
-        Promise.all([zapatillas, marcas, modelos])
-        .then(([zapatillas, marcas, modelos]) =>{
-            //return res.send({zapatillas, marcas, modelos})
-            res.render(path.resolve(__dirname , '..','views','admin','administrarProductos') , {zapatillas, marcas, modelos});
-        })           
-        .catch(error => res.send(error))
+    index: async (req,res) =>{   
+        const zapatillas = await products.findAll({include: ['brands', 'examples']})
+            //return res.send(zapatillas); 
+            res.render(path.resolve(__dirname , '..','views','admin','administrarProductos') , {zapatillas});           
     },
     
     create: (req, res) => {
         res.render(path.resolve(__dirname, '..','views','admin','createProductos'));
     },
-    save: (req,res)=>{
-        const zapatillas = products.findAll();
-        const marcas = brands.findAll();
-        const modelos = examples.findAll();
+    save: async (req,res)=>{
+        const zapatillas = await products.findAll();
+        const marcas = await brands.findAll({where: {name: {[Op.like]: req.body.marca}}});
+        const modelos = await examples.findAll({where: {name: {[Op.like]: req.body.modelo}}});
+        let marcas_body = null;
+        let modelos_body = null;
+        if(marcas.length > 1){
+            marcas_body = marcas[0].id;
+        } else {
+            let newBrand = await brands.create({name: req.body.marca})
+            marcas_body = newBrand.id;
+        }
+        if(modelos.length > 1){
+            modelos_body = modelos[0].id 
+        } else {
+            let newModelo = await examples.create({name: req.body.modelo})
+            modelo_body = newModelo.id
+        }
         const zapatillas_body = { 
             //return res.send(_body);
             price: req.body.precio,
             description: req.body.descripcion,
             image: req.file ? req.file.filename : 'error',
             stock: req.body.descuento,
+            brand_id: marcas_body,
+            example_id: modelos_body
         }
-        const marcas_body = req.body.marca;
-        const modelos_body = req.body.modelo;
-        Promise.all([zapatillas, marcas, modelos])    
-        return res.send({zapatillas_body, marcas_body, modelos_body});
-        /*products.create(zapatillas_body)
-        brands.create(marcas_body)
-        examples.create(modelos_body)
-        .then(zapatilla =>{
-            res.redirect('/adminProducts');
-        })
-        .catch(error => res.send(error))*/
+        
+        //return res.send(zapatillas_body);
+        let newZapatilla = await products.create(zapatillas_body)
+            res.redirect(`/detalleProducto/${newZapatilla.id}`);
         
     },
     show: (req,res)=>{

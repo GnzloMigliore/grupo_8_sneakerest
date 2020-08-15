@@ -38,19 +38,17 @@
                     </thead>
                     <tbody>
                         <% zapatillas.forEach(zapatilla => { %>
-                        <% marcas.forEach(marca => { %> 
-                        <% modelos.forEach(modelo => { %> 
+                        
                             <tr>
                                 <td><%= zapatilla.id %></td>
-                                <td><%= marca.name %></td>
-                                <td><%= modelo.name %></td>
+                                <td><%= zapatilla.brands.name %></td>
+                                <td><%= zapatilla.examples.name %></td>
                                 <td><a href="/adminProducts/detail/<%= zapatilla.id %>">Ver detalle</a></td>
                                 <td><a href="/adminProducts/edit/<%= zapatilla.id%>">Editar producto</a></td>
                                 <td><a href="/adminProducts/delete/<%= zapatilla.id%>">Eliminar producto</a></td>
                                
                             </tr>
-                        <% }); %>
-                        <% }); %>    
+                           
                         <% }); %> 
                     </tbody>
                 </table>
