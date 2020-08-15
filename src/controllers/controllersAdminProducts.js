@@ -10,7 +10,6 @@ module.exports = {
             //return res.send(zapatillas); 
             res.render(path.resolve(__dirname , '..','views','admin','administrarProductos') , {zapatillas});           
     },
-    
     create: (req, res) => {
         res.render(path.resolve(__dirname, '..','views','admin','createProductos'));
     },
@@ -44,8 +43,8 @@ module.exports = {
         
         //return res.send(zapatillas_body);
         let newZapatilla = await products.create(zapatillas_body)
-            res.redirect(`/detalleProducto/${newZapatilla.id}`);
-        
+            //res.redirect(`/detalleProducto/${newZapatilla.id}`);
+            res.redirect('/adminProducts')
     },
     show: (req,res)=>{
         let zapatillas =  JSON.parse(fs.readFileSync(path.resolve(__dirname,'..','data','zapatillas.json')));

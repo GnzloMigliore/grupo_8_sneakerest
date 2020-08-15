@@ -22,5 +22,14 @@
   {
     "role": "9",
     "email": "joaquin@gmail.com"
+  },
+  {
+    "nombre": "asd",
+    "apellido": "Dominguez Lodeiro",
+    "email": "asd123@gmail.com",
+    "contraseña": "$2a$10$YW7xwKYY2H.OEJTRcvUw3.tPR.bZvgiKKpG9lbWOT.qQRbPuwWTpm",
+    "genero": "Women",
+    "imagen": "usuario-1597522070698.jpg",
+    "role": 1
   }
 ]
