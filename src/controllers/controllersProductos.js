@@ -10,16 +10,10 @@ module.exports = {
             //return res.send(zapatillas); 
             res.render(path.resolve(__dirname , '..','views','productos','productos') , {zapatillas});           
     },    
-    detail: (req,res) => {
-        let zapatillas =  JSON.parse(fs.readFileSync(path.resolve(__dirname,'..','data','zapatillas.json')));
-    
-        let miZapatilla;
-        zapatillas.forEach(zapatilla => {
-            if(zapatilla.id == req.params.id){
-                miZapatilla = zapatilla;         
-            }
-        });
-        res.render(path.resolve(__dirname, '..','views','productos','detalleProducto'), {miZapatilla})
+    detail: async (req,res) => {
+        const zapatillas = await products.findByPk(req.params.id, {include: ['brands', 'examples']})
+        //return res.send(zapatillas);
+        res.render(path.resolve(__dirname , '..','views','productos','detalleProducto') , {zapatillas});           
 
 }    
 }

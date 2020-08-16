@@ -16,30 +16,30 @@
             <article class="col-12 px-0">
                 <div class="col-12 px-0">
                     <div class="imagenes-resto px-0">
-                        <img src="/images/zapatillas/<%= miZapatilla.imagen1 %>" alt="<%= miZapatilla.marca + " "%><%= miZapatilla.modelo %>" class="col-12 px-0 align-self-center">
+                        <img src="/images/zapatillas/<%= zapatillas.image %>" alt="<%= zapatillas.brands.name + " "%><%= zapatillas.examples.name %>" class="col-12 px-0 align-self-center">
                     </div>
                 </div>
             </article>
             <!--Info producto-->
             <article class="col-12 col-md-12">
                 <div class="col-12 mb-4">
-                    <p class="text-uppercase font-weight-bold mt-4 mb-0"><%= miZapatilla.marca + " "%><%= miZapatilla.modelo %></p>
-                    <p class="font-weight-bold"><%= '$' + miZapatilla.precio %></p>
+                    <p class="text-uppercase font-weight-bold mt-4 mb-0"><%= zapatillas.brands.name + " "%><%= zapatillas.examples.name %></p>
+                    <p class="font-weight-bold"><%= '$' + zapatillas.price %></p>
                 </div>
                 <div class="col-12 mb-4 d-flex justify-content-center">
                     <button type="button" class="btn btn-outline-dark col-11 text-uppercase rounded-0 boton-añadir">añadir</button>
                 </div>
                 <div class="col-12 mb-4 pt-4">
-                    <p class="descripcion-producto"><%= miZapatilla.descripcion %> </p>
+                    <p class="descripcion-producto"><%= zapatillas.description %> </p>
                 </div>
                 <!--<div class="col-12">
-                    <p class="text-uppercase font-weight-bold"><!--%= "Colores: " + miZapatilla.imagen1 %> </p>
+                    <p class="text-uppercase font-weight-bold"><!--%= "Colores: " + zapatillas.imagen1 %> </p>
                 </div>-->
                 <div class="mb-4 d-flex flex-wrap justify-content-between">
-                    <img src="/images/zapatillas/<%= miZapatilla.imagen2 %>" alt="<%= miZapatilla.marca + " "%><%= miZapatilla.modelo %>" class="col-6 py-3 align-self-center">
-                    <img src="/images/zapatillas/<%= miZapatilla.imagen3 %>" alt="<%= miZapatilla.marca + " "%><%= miZapatilla.modelo %>" class="col-6 py-3 align-self-center">
-                    <img src="/images/zapatillas/<%= miZapatilla.imagen4 %>" alt="<%= miZapatilla.marca + " "%><%= miZapatilla.modelo %>" class="col-6 py-3 align-self-center">
-                    <img src="/images/zapatillas/<%= miZapatilla.imagen5 %>" alt="<%= miZapatilla.marca + " "%><%= miZapatilla.modelo %>" class="col-6 py-3 align-self-center">
+                    <!--<img src="/images/zapatillas/%= miZapatilla.imagen2 %>" alt="%= miZapatilla.marca + " "%>%= miZapatilla.modelo %>" class="col-6 py-3 align-self-center">
+                    <img src="/images/zapatillas/%= miZapatilla.imagen3 %>" alt="%= miZapatilla.marca + " "%>%= miZapatilla.modelo %>" class="col-6 py-3 align-self-center">
+                    <img src="/images/zapatillas/%= miZapatilla.imagen4 %>" alt="%= miZapatilla.marca + " "%>%= miZapatilla.modelo %>" class="col-6 py-3 align-self-center">
+                    <img src="/images/zapatillas/%= miZapatilla.imagen5 %>" alt="%= miZapatilla.marca + " "%>%= miZapatilla.modelo %>" class="col-6 py-3 align-self-center">-->
                 </div>
                 <div class="mb-5">
                     <p class="col-12 text-uppercase envios-devoluciones">Envíos gratis. Devoluciones gratis</p>
@@ -57,33 +57,33 @@
         <section class="row mt-0">
             <article class="col-8 d-none d-lg-block px-0">
                 <div class="col-12 px-0">
-                        <img src="/images/zapatillas/<%= miZapatilla.imagen1 %>" alt="<%= miZapatilla.marca + " "%><%= miZapatilla.modelo %>" class="col-12 px-0">   
+                        <img src="/images/zapatillas/<%= zapatillas.image %>" alt="<%=  zapatillas.brands.name + " "%><%= zapatillas.examples.name %>" class="col-12 px-0">   
                 </div>
                 <div class="col-12 padre-imagenes-resto">
                     <div class="imagenes-resto d-flex flex-wrap justify-content-around">
-                            <img src="/images/zapatillas/<%= miZapatilla.imagen2 %>" alt="<%= miZapatilla.marca + " "%><%= miZapatilla.modelo %>" class="col-5 py-5 align-self-center fotos-ampliadas">
-                            <img src="/images/zapatillas/<%= miZapatilla.imagen3 %>" alt="<%= miZapatilla.marca + " "%><%= miZapatilla.modelo %>" class="col-5 py-5 align-self-center fotos-ampliadas">
-                            <img src="/images/zapatillas/<%= miZapatilla.imagen4 %>" alt="<%= miZapatilla.marca + " "%><%= miZapatilla.modelo %>" class="col-5 py-5 align-self-center fotos-ampliadas">
-                            <img src="/images/zapatillas/<%= miZapatilla.imagen5 %>" alt="<%= miZapatilla.marca + " "%><%= miZapatilla.modelo %>" class="col-5 py-5 align-self-center fotos-ampliadas">
+                            <!--<img src="/images/zapatillas/%= zapatillas.imagen2 %>" alt="%=  zapatillas.brands.name + " "%>%= zapatillas.examples.name %>" class="col-5 py-5 align-self-center fotos-ampliadas">
+                            <img src="/images/zapatillas/%= zapatillas.imagen3 %>" alt="%=  zapatillas.brands.name + " "%>%= zapatillas.examples.name %>" class="col-5 py-5 align-self-center fotos-ampliadas">
+                            <img src="/images/zapatillas/%= zapatillas.imagen4 %>" alt="%=  zapatillas.brands.name + " "%>%= zapatillas.examples.name %>" class="col-5 py-5 align-self-center fotos-ampliadas">
+                            <img src="/images/zapatillas/%= zapatillas.imagen5 %>" alt="%=  zapatillas.brands.name + " "%>%= zapatillas.examples.name %>" class="col-5 py-5 align-self-center fotos-ampliadas">-->
                     </div>
                 </div>                 
             </article>
             <article class="col-4 bg-light d-none d-lg-block">
                 <!--Marca, modelo, id-->
                 <div class="col-12 pt-3 pb-5">
-                    <h2 class="text-uppercase font-weight-bold"><%= miZapatilla.marca + " "%><%= miZapatilla.modelo %></h2>
-                    <p class="text-uppercase"><%= "código de producto: " + miZapatilla.id %></p>
+                    <h2 class="text-uppercase font-weight-bold"><%=  zapatillas.brands.name + " "%><%= zapatillas.examples.name %></h2>
+                    <p class="text-uppercase"><%= "código de producto: " + zapatillas.id %></p>
                 </div>
                 <!--Precio-->
                 <div class="col-12 mt-5">
-                    <h3 class="font-weight-bold"><%= '$' + miZapatilla.precio %></h3>
+                    <h3 class="font-weight-bold"><%= '$' + zapatillas.price %></h3>
                 </div>
                 <!--Imágenes colores-->
                 <div class="col-12 d-flex flex-wrap justify-content-start mt-5">
-                    <!--% for (let i=0; i<miZapatilla.length; i++) { %>
-                        % if (miZapatilla.marca && miZapatilla.modelo == miZapatilla[i].modelo) { %>
+                    <!--% for (let i=0; i<zapatillas.length; i++) { %>
+                        % if (zapatillas.marca && zapatillas.modelo == zapatillas[i].modelo) { %>
                             <div class="col-4">
-                                <img src="img/%= miZapatilla[0].imagen %>" alt="%= miZapatilla.marca + " "%>%= miZapatilla.modelo %>">
+                                <img src="img/%= zapatillas[0].imagen %>" alt="%= zapatillas.marca + " "%>%= zapatillas.modelo %>">
                             </div>
                         % } %>  
                     % } %-->
@@ -131,7 +131,7 @@
                 <!--Boton añadir al carrito-->
                 <div class="col-12 mt-5 d-flex justify-content-center">
                     <form action="/carrito" method="POST" class="col-12">
-                        <input type="hidden" name="id" value="<%= miZapatilla.id %>">
+                        <input type="hidden" name="id" value="<%= zapatillas.id %>">
                         <button type="button" class="btn btn-dark col-12 text-uppercase rounded-0 boton-añadir">añadir al carrito</button>
                     </form>
                     
@@ -142,7 +142,7 @@
                 </div>
                 <!--Descripción de producto-->
                 <div class="col-12 mt-5 d-flex flex-wrap justify-content-center">
-                    <p><%= miZapatilla.descripcion %></p>
+                    <p><%= zapatillas.description %></p>
                 </div>
                 <!--Reseñas-->
                 <div class="col-12 mt-5">
@@ -181,9 +181,9 @@
         <!--<section class="content-laptop filtros-laptop d-none d-lg-block">
                     <div class="container contenedor-filtros col-10">
                         <div class="titulo-modelo">
-                            <h2>%= miZapatilla.marca + " "%> + %= miZapatilla.modelo %></h2>
-                            <p class="codigo-texto">%= miZapatilla.id %> </p>
-                            <h5>$+%= miZapatilla.precio %> </h5>
+                            <h2>%= zapatillas.marca + " "%> + %= zapatillas.modelo %></h2>
+                            <p class="codigo-texto">%= zapatillas.id %> </p>
+                            <h5>$+%= zapatillas.precio %> </h5>
                         </div>
                         <div class="cuadros-colores">
                             <div>

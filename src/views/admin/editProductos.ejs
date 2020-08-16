@@ -22,79 +22,76 @@
             <div class="row" >
                 <div id="editar" class="col-8 mx-auto">
                     <div class="create-form">
-                        <form action="/adminProducts/edit/<%= zapatillaEditar.id%>?_method=PUT
+                        <form action="/adminProducts/edit/<%= zapatillas.id%>?_method=PUT
                             " method="POST" enctype="multipart/form-data" >
                             
                             <div class="form-group">
-                                <input type="text" class="form-control" name="marca" placeholder="Marca" required="required" value="<%= zapatillaEditar.marca%>">
+                                <input type="text" class="form-control" name="marca" placeholder="Marca" required="required" value="<%= zapatillas.brands.name%>">
                             </div>	
                             <div class="form-group">
-                                <input type="text" class="form-control" name="modelo" placeholder="Modelo" required="required" value="<%= zapatillaEditar.modelo%>">
+                                <input type="text" class="form-control" name="modelo" placeholder="Modelo" required="required" value="<%= zapatillas.examples.name%>">
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control" name="descripcion" placeholder="Descripción del producto" required="required" value="<%= zapatillaEditar.descripcion%>">
+                                <input type="text" class="form-control" name="descripcion" placeholder="Descripción del producto" required="required" value="<%= zapatillas.description%>">
                             </div>
                             <div class="form-group">
-                                <input type="number" class="form-control" name="precio" placeholder="Indique el precio" required="required" value="<%=zapatillaEditar.precio%>">
+                                <input type="number" class="form-control" name="precio" placeholder="Indique el precio" required="required" value="<%=zapatillas.price%>">
                             </div>
                             <div class="form-group">
                                 
                                 <select  name="descuento" class="custom-select" id="validationCustom04" required>
                                     <option disabled value="#">Seleccione un descuento"</option>
-                                    <option value="0" <%= zapatillaEditar.descuento == 0 ? "selected" : null %>
-                                        >Sin descuento</option>
-                                        <option value="10" <%= zapatillaEditar.descuento == 10 ? "selected" : null %>>10%</option>
-                                        
-                                    </select>
-                                </div>
-                                <!--Aqui solicito la imagen al usuario-->
-                                <div class="custom-file">
+                                    <option value="0" <%= zapatillas.descuento == 0 ? "selected" : null %>>Sin descuento</option>
+                                    <option value="10" <%= zapatillas.descuento == 10 ? "selected" : null %>>10%</option>
                                     
-                                    
-                                </div>                                
-                                <figure>
-                                    <img class="w-100 border-1 p-1" src="/images/zapatillas/<%= zapatillaEditar.imagen1%>" alt="imagen">
-                                    <input type="hidden" name="oldImagen1"  value="<%= zapatillaEditar.imagen1%>">
-                                    <input type="file" name="imagen1" class="botonImg" >
-                                    
-                                    <figure>
-                                        <img class="w-100 border-1 p-1" src="/images/zapatillas/<%= zapatillaEditar.imagen2%>" alt="imagen">
-                                        <input type="hidden" name="oldImagen2"  value="<%= zapatillaEditar.imagen2%>">
-                                        <input type="file" name="imagen2" class="botonImg" >
-                                    </figure>
-                                    <figure>
-                                        <img class="w-100 border-1 p-1" src="/images/zapatillas/<%= zapatillaEditar.imagen3%>" alt="imagen">
-                                        <input type="hidden" name="oldImagen3"  value="<%= zapatillaEditar.imagen3%>">
-                                        <input type="file" name="imagen3" class="botonImg" >
-                                    </figure>
-                                    <figure>
-                                        <img class="w-100 border-1 p-1" src="/images/zapatillas/<%= zapatillaEditar.imagen4%>" alt="imagen">
-                                        <input type="hidden" name="oldImagen4"  value="<%= zapatillaEditar.imagen4%>">
-                                        <input type="file" name="imagen4" class="botonImg" >
-                                    </figure>
-                                    <figure>
-                                        <img class="w-100 border-1 p-1" src="/images/zapatillas/<%= zapatillaEditar.imagen5%>" alt="imagen">
-                                        <input type="hidden" name="oldImagen5"  value="<%= zapatillaEditar.imagen5%>">
-                                        <input type="file" name="imagen5" class="botonImg" >
-                                    </figure>
-                                </div>
-                                <div class="form-group">
-                                    <button type="submit" class="btn btn btn-dark">Actualizar</button>
-                                    <a href="/adminProducts" class="btn btn-dark">Volver</a>
-                                </div>
+                                </select>
+                            </div>
+                            <!--Aqui solicito la imagen al usuario-->
+                            <div class="custom-file">
                                 
-                            </form>
-                        </div>                        
-                    </div>
+                                
+                            </div>                                
+                            <figure>
+                                <img class="w-100 border-1 p-1" src="/images/zapatillas/<%= zapatillas.image%>" alt="imagen">
+                                <input type="hidden" name="oldImagen1"  value="<%= zapatillas.image%>">
+                                <input type="file" name="imagen1" class="botonImg" >
+                            </figure>    
+                            <!--<figure>
+                                <img class="w-100 border-1 p-1" src="/images/zapatillas/%= zapatillaEditar.imagen2%>" alt="imagen">
+                                <input type="hidden" name="oldImagen2"  value="%= zapatillaEditar.imagen2%>">
+                                <input type="file" name="imagen2" class="botonImg" >
+                            </figure>
+                            <figure>
+                                <img class="w-100 border-1 p-1" src="/images/zapatillas/%= zapatillaEditar.imagen3%>" alt="imagen">
+                                <input type="hidden" name="oldImagen3"  value="%= zapatillaEditar.imagen3%>">
+                                <input type="file" name="imagen3" class="botonImg" >
+                            </figure>
+                            <figure>
+                                <img class="w-100 border-1 p-1" src="/images/zapatillas/%= zapatillaEditar.imagen4%>" alt="imagen">
+                                <input type="hidden" name="oldImagen4"  value="%= zapatillaEditar.imagen4%>">
+                                <input type="file" name="imagen4" class="botonImg" >
+                            </figure>
+                            <figure>
+                                <img class="w-100 border-1 p-1" src="/images/zapatillas/%= zapatillaEditar.imagen5%>" alt="imagen">
+                                <input type="hidden" name="oldImagen5"  value="%= zapatillaEditar.imagen5%>">
+                                <input type="file" name="imagen5" class="botonImg" >
+                            </figure>-->
+                            <div class="form-group">
+                                <button type="submit" class="btn btn btn-dark">Actualizar</button>
+                                <a href="/adminProducts" class="btn btn-dark">Volver</a>
+                            </div>
+                            
+                        </form>
+                    </div>                        
                 </div>
             </div>
-        </section>
-        
-        <!-- Footer-->
-        <!-- FOOTER -->
-        <%- include('../partials/footer.ejs') %>
-        
-    </body>
+        </div>
+    </section>
     
-    </html>
+    <!-- Footer-->
+    <!-- FOOTER -->
+    <%- include('../partials/footer.ejs') %>
     
+</body>
+
+</html>
