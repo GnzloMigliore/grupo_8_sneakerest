@@ -27,15 +27,22 @@ module.exports = (sequelize, dataTypes) => {
                 as : 'brands',
                 foreignKey: 'brand_id'
             }
-        )
+        ),
         products.belongsTo(
             models.examples,
             {
                 as : 'examples',
                 foreignKey: 'example_id'
             }
+        ),
+        products.belongsTo(
+            models.genders,
+            {
+                as : 'genders',
+                foreignKey: 'gender_id'
+            }
         )
     };
 
-    return products
+    return products;
 }
