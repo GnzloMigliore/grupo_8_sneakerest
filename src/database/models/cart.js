@@ -1,21 +1,44 @@
-module.exports = (sequelize, dataTypes) =>{
+module.exports = (sequelize, DataTypes) =>{
     let alias = 'carts';
+    
     let cols = {
         id: {
-            type: dataTypes.INTEGER,
+            type: DataTypes.INTEGER,
             primaryKey : true,
-            allowNull: false,
             autoIncrement: true
         },
-        total: dataTypes.INTEGER
+        total: DataTypes.INTEGER,
     };
     
-    const carts = sequelize.define(alias, cols)
-    
-    // Esto es la relacion entre Product, cartss, Model y Gender
-    /*carts.associate = function (models){ 
-        carts.belongsTo(models.users, { as: 'users', foreignKey: 'user_id'})
+    /*let config = {
+        tableName : 'products',
+        timestamps: false
     }*/
-            
-    return carts;
-}
+    
+    const carts = sequelize.define(alias,cols);
+    
+    // Esto es la relacion entre Product, carts, Model y Gender
+    carts.associate = function (models){
+        carts.hasMany(
+            models.cartProduct,
+            {
+                as: 'cartProduct',
+                foreignKey: 'cart_id'
+            },
+            models.orders,
+            {
+                as: 'orders',
+                foreignKey: 'cart_id'
+            }
+            ),
+            users.belongsTo(
+                models.users,
+                {
+                    as : 'users',
+                    foreignKey: 'user_id'
+                }
+            )
+        }
+        
+        return carts;
+    }
