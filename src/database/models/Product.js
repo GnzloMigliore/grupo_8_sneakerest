@@ -8,14 +8,12 @@ module.exports = (sequelize, dataTypes) => {
             autoIncrement: true
         },
         price: dataTypes.DECIMAL,
+        //discount: dataTypes.INTEGER,
         description: dataTypes.STRING,
         image: dataTypes.STRING,
         stock: dataTypes.INTEGER,
     };
-    /*let config = {
-        tableName: 'Papachos',
-        timestamps: false
-    };*/
+
         
     
     const products = sequelize.define(alias, cols)

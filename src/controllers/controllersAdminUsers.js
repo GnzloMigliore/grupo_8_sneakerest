@@ -1,45 +1,28 @@
 const path = require('path');
 const fs = require('fs');
+const {users, adresses} = require ('../database/models');
 
 
 
 module.exports = {
-    index: (req,res) =>{   
-        let usuarios =  JSON.parse(fs.readFileSync(path.resolve(__dirname,'..','data','usuarios.json')));  
-        res.render(path.resolve(__dirname, '../views/admin/administrarUsuarios'), {usuarios});
+    index: async (req,res) =>{   
+        const usuarios = await users.findAll()
+        //return res.send(usuarios); 
+        res.render(path.resolve(__dirname , '..','views','admin','administrarUsuarios') , {usuarios}); 
     },
-    show: (req,res) =>{   
-        let usuarios =  JSON.parse(fs.readFileSync(path.resolve(__dirname,'..','data','usuarios.json')));  
-        let unUsuario;
-        usuarios.forEach(usuario => {
-            if(usuario.email == req.params.email){
-                unUsuario = usuario;         
-            }
-        });
-        res.render(path.resolve(__dirname, '..','views','admin','detailUsuario'), {unUsuario})
+    show: async (req,res) =>{   
+        const usuarios = await users.findByPk(req.params.id)
+        //return res.send(usuarios); 
+        res.render(path.resolve(__dirname , '..','views','admin','detailUsuario') , {usuarios}); 
     },
-    destroy:(req,res) =>{   
-        let usuarioSeleccionado =  JSON.parse(fs.readFileSync(path.resolve(__dirname,'..','data','usuarios.json')));  
-        
-        const usuarioDeleteEmail = req.params.email;
-        const usuarioFinal = usuarioSeleccionado.filter(usuario => usuario.email != usuarioDeleteEmail);
-        
-        let usuarioGuardar = JSON.stringify(usuarioFinal, null, 2);
-        
-        fs.writeFileSync(path.resolve(__dirname, '../data/usuarios.json'), usuarioGuardar);
-        
-        res.redirect('/adminUsers');
+    destroy: async (req,res) =>{ 
+        let destroyUsuario = await usuarios.destroy({where: {id: req.params.id}, force: true})
+        res.redirect('/adminUsers')
     },
-    edit:(req,res) =>{   
-        //Aca pasamos los datos del archivo Json de zapatillas a un Array
-        let usuarios = JSON.parse(fs.readFileSync(path.resolve(__dirname,"..", "data","usuarios.json")));
-        
-        const usuarioEmail = req.params.email;
-        
-        
-        let usuarioEditar= usuarios.find(usuario => usuario.email == usuarioEmail);
-        //Aca pongo lo que le voy a mandar a la vista 
-        res.render(path.resolve(__dirname, '..','views','admin','editUsuario'), {usuarioEditar});
+    edit: async (req,res) =>{   
+        const usuarios = await users.findAll()
+        //return res.send(usuarios); 
+        res.render(path.resolve(__dirname , '..','views','admin','administrarUsuarios') , {usuarios});    
     },
     updateRole: (req,res) =>{ 
         req.body.email = req.params.email;

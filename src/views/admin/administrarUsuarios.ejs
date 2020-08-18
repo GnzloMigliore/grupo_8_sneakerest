@@ -36,11 +36,11 @@
                         <% usuarios.forEach(usuario => { %> 
                             <tr>
                                 <td><%= usuario.role %></td>
-                                <td><%= usuario.nombre + ' ' + usuario.apellido %></td>
+                                <td><%= usuario.first_name + ' ' + usuario.last_name %></td>
                                 <td><%= usuario.email %></td>
-                                <td><a href="/adminUsers/detail/<%= usuario.email %> ">Ver usuario</a></td>
-                                <td><a href="/adminUsers/edit/<%= usuario.email %> ">Editar Rol de usuario</a></td>
-                                <td><a href="/adminUsers/delete/<%= usuario.email%>">Eliminar usuario</a></td>
+                                <td><a href="/adminUsers/detail/<%= usuario.id %> ">Ver usuario</a></td>
+                                <td><a href="/adminUsers/edit/<%= usuario.id %> ">Editar Rol de usuario</a></td>
+                                <td><a href="/adminUsers/delete/<%= usuario.id%>">Eliminar usuario</a></td>
                                
                             </tr>
                         <% }); %> 

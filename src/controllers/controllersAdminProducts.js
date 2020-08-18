@@ -34,8 +34,9 @@ module.exports = {
         const zapatillas_body = { 
             //return res.send(_body);
             price: req.body.precio,
+            //discount: req.body.descuento,
             description: req.body.descripcion,
-            image: req.file ? req.file.filename : 'error',
+            image: req.file ? req.file.filename : '',
             stock: req.body.descuento,
             brand_id: marcas_body,
             example_id: modelos_body
@@ -43,33 +44,18 @@ module.exports = {
         
         //return res.send(zapatillas_body);
         let newZapatilla = await products.create(zapatillas_body)
-        //res.redirect(`/detalleProducto/${newZapatilla.id}`);
+        res.redirect(`/productos/detalle/${newZapatilla.id}`);
+        //res.redirect('/adminProducts')
+    },
+    show: async (req,res)=>{
+        const zapatillas = await products.findByPk(req.params.id, {include: ['brands', 'examples']});
+        //return res.send(zapatillas);
+        res.render(path.resolve(__dirname , '..','views','admin','detailProducto') , {zapatillas});    
+        
+    },
+    destroy: async (req, res) => {
+        let destroyZapatilla = await products.destroy({where: {id: req.params.id}, force: true})
         res.redirect('/adminProducts')
-    },
-    show: (req,res)=>{
-        let zapatillas =  JSON.parse(fs.readFileSync(path.resolve(__dirname,'..','data','zapatillas.json')));
-        //res.send(req.params.id);
-        let miZapatilla;
-        zapatillas.forEach(zapatilla => {
-            if(zapatilla.id == req.params.id){
-                miZapatilla = zapatilla;         
-            }
-        });
-        res.render(path.resolve(__dirname, '..','views','admin','detailProducto'), {miZapatilla})
-        
-    },
-    destroy:(req, res) => {
-        let productoZapatillas = JSON.parse(fs.readFileSync(path.resolve(__dirname,"..", "data","zapatillas.json")));
-        
-        const zapatillaDeleteId = req.params.id;
-        
-        const zapatillasFinal = productoZapatillas.filter(productoZapatilla => productoZapatilla.email != zapatillaDeleteId);
-        
-        let zapatillasGuardar = JSON.stringify(zapatillasFinal,null,2);
-        
-        fs.writeFileSync(path.resolve(__dirname,'..','data','zapatillas.json'),zapatillasGuardar);
-        
-        res.redirect('/adminProducts');
     },
     edit: async (req,res) => {
         const zapatillas = await products.findByPk(req.params.id, {include: ['brands', 'examples']})
@@ -83,66 +69,37 @@ module.exports = {
         const modelos = await examples.findAll({where: {name: {[Op.like]: req.body.modelo}}});
         let marcas_body = null;
         let modelos_body = null;
-        if(marcas.length > 1){
-            marcas_body = marcas[0].id;
+        if (marcas.length > 1){
+            let actualizarBrand = await brands.update({name: req.body.marca})
+            marcas_body = actualizarBrand.id
+            //marcas_body = marcas[0].id;
         } else {
-            let newBrand = await brands.update({name: req.body.marca})
+            let newBrand = await brands.create({name: req.body.marca})
             marcas_body = newBrand.id;
         }
-        if(modelos.length > 1){
-            modelos_body = modelos[0].id 
+        if (examples.length > 1){
+            let actualizarExample = await examples.update({name: req.body.modelo})
+            modelos_body = actualizarExample.id
+            //modelos_body = marcas[0].id;
         } else {
-            let newModelo = await examples.update({name: req.body.modelo})
-            modelo_body = newModelo.id
+            let newExample = await examples.create({name: req.body.marca})
+            modelos_body = newExample.id;
         }
         const zapatillas_body = { 
             //return res.send(_body);
             price: req.body.precio,
             description: req.body.descripcion,
-            image: req.file ? req.file.filename : 'error',
+            image: req.file ? req.file.filename : req.body.oldImagen,
             stock: req.body.descuento,
             brand_id: marcas_body,
             example_id: modelos_body
         }
-        
         //return res.send(zapatillas_body);
         let newZapatilla = await products.update(zapatillas_body, {where: {id: req.params.id}})
-        //res.redirect(`/detalleProducto/${newZapatilla.id}`);
-        res.redirect('/adminProducts')
-
-
-
-
-
-
-
-
-
-
-
-        /*req.body.id = req.params.id;
-        req.body.imagen1 = req.files[0] ? req.files[0].filename : req.body.oldImagen1;
-        req.body.imagen2 = req.files[1] ? req.files[1].filename : req.body.oldImagen2;
-        req.body.imagen3 = req.files[2] ? req.files[2].filename : req.body.oldImagen3;
-        req.body.imagen4 = req.files[3] ? req.files[3].filename : req.body.oldImagen4;
-        req.body.imagen5 = req.files[4] ? req.files[4].filename : req.body.oldImagen4;
-        let zapatillasUpdate = zapatillas.map(zapatilla=>{
-            if(zapatilla.id == req.body.id){
-                return zapatilla= req.body;
-            }
-            return zapatilla;
-        });
-        let oldImages = [, req.body.oldImagen1, req.body.oldImagen2, req.body.oldImagen3, req.body.oldImagen4]
-        for(let i = 0; i < oldImages.length; i++){
-            if(req.files[i]){
-                fs.unlink(path.resolve(__dirname, '/images/zapatillas/'+ oldImages[i]),(err) => {
-                    if (err){console.log(err)};
-                    console.log('/images/zapatillas/'+ oldImages[i] + ' fue borrada');
-                });
-            }}
-            fs.writeFileSync(path.resolve(__dirname,'../data/zapatillas.json'),JSON.stringify(zapatillasUpdate, null, 2));
-            res.redirect('/adminProducts');*/
-        },   
+        //return res.send(newZapatilla)
+        res.redirect(`/productos/detalle/${newZapatilla.id}`);
+        //res.redirect('/adminProducts')
+    }     
         
-    }
+}
     

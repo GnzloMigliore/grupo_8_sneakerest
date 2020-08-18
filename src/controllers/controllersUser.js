@@ -8,11 +8,13 @@ const {
     body
 } = require('express-validator');
 const { userInfo } = require('os');
+const {users, adresses} = require ('../database/models');
 
 module.exports = {
-    index: (req, res) => {
-        let usuarios =  JSON.parse(fs.readFileSync(path.resolve(__dirname,'..','data','usuarios.json')));
-        res.render(path.resolve(__dirname, '..', 'views', 'usuarios', 'login'),{usuarios});
+    index: async (req, res) => {
+        const usuarios = await users.findAll()
+        //return res.send(usuarios); 
+        res.render(path.resolve(__dirname , '..','views','usuarios','login') , {usuarios}); 
     },
     login: (req, res) => {
         const errors = validationResult(req);
@@ -35,45 +37,52 @@ module.exports = {
             res.render(path.resolve(__dirname, '../views/usuarios/login'),{errors:errors.mapped(),old:req.body});  
         }
     },
-    create: (req, res) => {
-        let usuarios =  JSON.parse(fs.readFileSync(path.resolve(__dirname,'..','data','usuarios.json')));
-        res.render(path.resolve(__dirname, '..','views','usuarios','registro'));
+    create: async (req, res) => {
+        const usuarios = await users.findAll()
+        //return res.send(usuarios); 
+        res.render(path.resolve(__dirname , '..','views','usuarios','registro') , {usuarios}); 
     },
     save: (req, res) => {
-        
         let errors = validationResult(req);
-        if (errors.isEmpty()) {
-            let nuevoUsuario={
-                nombre: req.body.nombre,
-                apellido : req.body.apellido,
-                email: req.body.email,
-                contraseña: bcrypt.hashSync(req.body.contraseña, 10),
-                genero: req.body.genero,    
-                imagen: req.file.filename,
-                role: 1   
-            };
-            let usuarios =  JSON.parse(fs.readFileSync(path.resolve(__dirname,'..','data','usuarios.json')));
-            usuarios.push(nuevoUsuario);
-            
-            let nuevoUsuarioGuardar = JSON.stringify(usuarios,null,2)
-            fs.writeFileSync(path.resolve(__dirname,'..','data','usuarios.json'), nuevoUsuarioGuardar);
-            res.redirect('/login');
-        } else {
+        if (!errors.isEmpty()) {
             return res.render(path.resolve(__dirname, '../views/usuarios/registro'), {
                 errors: errors.errors,  old: req.body
             });
         }
+        let usuario={
+            first_name: req.body.nombre,
+            last_name : req.body.apellido,
+            //telephone : req.body.telefono,
+            email: req.body.email,
+            password: bcrypt.hashSync(req.body.contraseña, 10),
+            //genre: req.body.genero,    
+            image: req.file.filename,
+            role: 1   
+        };
+        
+        users.create(usuario)
+        .then((usuarioRegistrado) => {
+            return res.redirect('/login');
+        })
+        .catch(error => console.log(error));    
     },
+
+
+
+
     logout: (req, res) => {
         req.session.destroy();
         res.cookie('email',null,{maxAge: -1});
         res.redirect('/')
     },
-    show: (req, res) => {
-        let usuarios =  JSON.parse(fs.readFileSync(path.resolve(__dirname,'..','data','usuarios.json')));
+    show: async (req, res) => {
+        const usuarios = await users.findAll()
+        //return res.send(usuarios); 
+        res.render(path.resolve(__dirname , '..','views','usuarios','registro') , {usuarios}); 
+        /*let usuarios =  JSON.parse(fs.readFileSync(path.resolve(__dirname,'..','data','usuarios.json')));
         const usuarioEmail = req.params.email;
         let usuarioMostrar = usuarios.find(usuario => usuario.email == usuarioEmail);
-        res.render(path.resolve(__dirname, '../views/usuarios/perfilUsuario'), {usuarioMostrar});
+        res.render(path.resolve(__dirname, '../views/usuarios/perfilUsuario'), {usuarioMostrar});*/
     },
     /*update: (req,res) =>{
         let usuarios =  JSON.parse(fs.readFileSync(path.resolve(__dirname,'..','data','usuarios.json')));

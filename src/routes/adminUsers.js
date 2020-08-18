@@ -17,10 +17,10 @@ const upload = multer({ storage });
 const controllersAdminUsers = require(path.resolve(__dirname, '..', 'controllers', 'controllersAdminUsers'));
 
 router.get('/adminUsers', controllersAdminUsers.index);
-router.get('/adminUsers/detail/:email', controllersAdminUsers.show);
-router.get("/adminUsers/delete/:email", controllersAdminUsers.destroy);
-router.get("/adminUsers/edit/:email", controllersAdminUsers.edit);
-router.put("/adminUsers/edit/:email", controllersAdminUsers.updateRole);
+router.get('/adminUsers/detail/:id', controllersAdminUsers.show);
+router.get("/adminUsers/delete/:id", controllersAdminUsers.destroy);
+router.get("/adminUsers/edit/:id", controllersAdminUsers.edit);
+router.put("/adminUsers/edit/:id", controllersAdminUsers.updateRole);
 
 
 module.exports = router;

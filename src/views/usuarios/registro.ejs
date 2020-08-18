@@ -26,23 +26,28 @@
       </ul>
     <%}%>
         <!--Formulario-->
-        <!--Email-->
         <form action="/login/registro" method="POST" enctype="multipart/form-data" class="mt-0">
+          <!--Nombre-->
           <input type="text" name="nombre" placeholder="Nombre" class="col-12 mb-2 datos-envio-input" required="required" value="<%= typeof old != 'undefined' ? old.nombre : '' %>">
+          <!--Apellido-->
           <input type="text" name="apellido" placeholder="Apellido" class="col-12 mb-2 datos-envio-input" required="required" value="<%= typeof old != 'undefined' ? old.apellido : '' %>">
+          <!--Email-->
           <input type="Email" name="email" placeholder="Email" class="col-12 mb-2 datos-envio-input" required="required" value="<%= typeof old != 'undefined' ? old.email : '' %>">
+          <!--password-->
           <input type="password" name="contraseña" placeholder="Contraseña" class="col-12 mb-2 datos-envio-input" required="required" value="">
+          <!--Confirmar password-->
           <input type="password" name="confirmar_contraseña" placeholder="Repetir contraseña" class="col-12 mb-2 datos-envio-input"  required="required" value="">
           <!--<input type="text" name="descripcion" placeholder="Descripción" class="col-12 mb-2 datos-envio-input"  required="required" value="">-->
-          
-          <select id="genero" name="genero" class="custom-select border-0 btn btn-outline-dark py-0" value="<%= typeof old != 'undefined' ? old.genero : '' %>">
+          <!--Genero-->
+          <!--<select id="genero" name="genero" class="custom-select border-0 btn btn-outline-dark py-0" value="%= typeof old != 'undefined' ? old.genero : '' %>">
             <option selected>Género</option>
             <option value="Men">Men</option>
             <option value="Women">Women</option>
             <option value="Boy">Boy</option>
             <option value="Girl">Girl</option>
             <option value="Otro">Otro</option>
-          </select>
+          </select>-->
+          <!--Imagen-->
           <div class="custom-file py-3 mx-auto">
             <input type="file" name="imagen" value="<%= typeof old != 'undefined' ? old.file : '' %>" required>
           </div>

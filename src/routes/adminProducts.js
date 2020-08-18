@@ -18,10 +18,10 @@ const controllersAdminProducts = require(path.resolve(__dirname, '..', 'controll
 
 router.get('/adminProducts', controllersAdminProducts.index);
 router.get("/adminProducts/create", controllersAdminProducts.create);
-router.post("/adminProducts/create", upload.any(), controllersAdminProducts.save);
+router.post("/adminProducts/create", upload.single('imagen'), controllersAdminProducts.save);
 router.get('/adminProducts/detail/:id', controllersAdminProducts.show);
 router.get("/adminProducts/delete/:id", controllersAdminProducts.destroy);
 router.get("/adminProducts/edit/:id", controllersAdminProducts.edit);
-router.put("/adminProducts/edit/:id", upload.any(), controllersAdminProducts.updateZapatillas);
+router.put("/adminProducts/edit/:id", upload.single('imagen'), controllersAdminProducts.updateZapatillas);
 module.exports = router;
 

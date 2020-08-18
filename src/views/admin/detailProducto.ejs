@@ -17,12 +17,12 @@
           <h1 class="col-12 mt-5 text-center">DETALLE DE PRODUCTO</h1>
           <article id="article" class="col-12 col-md-6 mx-auto mt-5">
             <div class="card-body">
-              <img src="/images/zapatillas/<%= miZapatilla.imagen1 %>" alt="<%= miZapatilla.marca + " "%><%= miZapatilla.modelo %>" class="col-12 px-0">
-              <h4 class="card-title">Marca:<%= miZapatilla.marca%></h4>
-              <h5 class="card-title">Modelo:<%= miZapatilla.modelo %></h5>
-              <h5 class="card-title">$<%= miZapatilla.precio %></h5>  
-              <h5 class="card-title">Descuento: <%= miZapatilla.descuento %></h5>            
-              <p class="card-text"><%= miZapatilla.descripcion %></p>
+              <img src="/images/zapatillas/<%= zapatillas.image %>" alt="<%= zapatillas.brands.name + " "%><%= zapatillas.examples.name %>" class="col-12 px-0">
+              <h4 class="card-title">Marca:<%= zapatillas.brands.name %></h4>
+              <h5 class="card-title">Modelo:<%= zapatillas.examples.name %></h5>
+              <h5 class="card-title">$<%= zapatillas.price %></h5>  
+              <h5 class="card-title">Descuento: <%= zapatillas.discount %></h5>            
+              <p class="card-text"><%= zapatillas.description %></p>
               <a href="/adminProducts" class="btn btn-dark">Volver</a>
             </div> 
              
