@@ -15,7 +15,7 @@ module.exports = (sequelize, dataTypes) => {
     
     const adressUser = sequelize.define(alias, cols)
     //Aquí creo mi relación entre Platos (Diskes) y Categorias (Categories)
-    adressUser.associate = function(models) {
+    /*adressUser.associate = function(models) {
         adressUser.belongsTo(
             models.users,
             {
@@ -30,7 +30,7 @@ module.exports = (sequelize, dataTypes) => {
                 foreignKey: 'adress_id'
             }
         )
-    };
+    };*/
 
     return adressUser;
 }

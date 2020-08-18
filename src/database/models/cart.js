@@ -18,7 +18,7 @@ module.exports = (sequelize, DataTypes) =>{
     const carts = sequelize.define(alias,cols);
     
     // Esto es la relacion entre Product, carts, Model y Gender
-    carts.associate = function (models){
+    /*carts.associate = function (models){
         carts.hasMany(
             models.cartProduct,
             {
@@ -38,7 +38,7 @@ module.exports = (sequelize, DataTypes) =>{
                     foreignKey: 'user_id'
                 }
             )
-        }
+        }*/
         
         return carts;
     }
