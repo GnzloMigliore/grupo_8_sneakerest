@@ -10,7 +10,7 @@ module.exports = (sequelize, dataTypes) => {
         price: dataTypes.DECIMAL,
         //discount: dataTypes.INTEGER,
         description: dataTypes.STRING,
-        image: dataTypes.STRING,
+        //image: dataTypes.STRING,
         stock: dataTypes.INTEGER,
     };
 
@@ -31,6 +31,15 @@ module.exports = (sequelize, dataTypes) => {
             {
                 as : 'examples',
                 foreignKey: 'example_id'
+            }
+        )
+        products.belongsToMany(
+            models.images,
+            {
+                as: 'images',
+                through: 'imageproducts',
+                foreignKey: 'image_id',
+                otherKey: 'product_id'
             }
         )
     };

@@ -14,6 +14,7 @@ module.exports = {
         res.render(path.resolve(__dirname, '..','views','admin','createProductos'));
     },
     save: async (req,res)=>{
+        //return res.send(req.files)
         const zapatillas = await products.findAll();
         const marcas = await brands.findAll({where: {name: {[Op.like]: req.body.marca}}});
         const modelos = await examples.findAll({where: {name: {[Op.like]: req.body.modelo}}});
@@ -36,14 +37,23 @@ module.exports = {
             price: req.body.precio,
             //discount: req.body.descuento,
             description: req.body.descripcion,
-            image: req.file ? req.file.filename : '',
+            //image: req.file ? req.file.filename : '',
             stock: req.body.descuento,
             brand_id: marcas_body,
             example_id: modelos_body
         }
+        let images = [];
+        req.files.forEach(async file => {
+            let newImage = await image.create({filename: file.filename})
+            images.push(newImage.id)
+        });
         
         //return res.send(zapatillas_body);
         let newZapatilla = await products.create(zapatillas_body)
+        //hay que hacer el modelo imageProducts
+        images.forEach(async image => {
+            await imageProducts.create({image_id: image, product_id: newZapatilla.id})
+        })
         res.redirect(`/productos/detalle/${newZapatilla.id}`);
         //res.redirect('/adminProducts')
     },
@@ -63,6 +73,12 @@ module.exports = {
         res.render(path.resolve(__dirname , '..','views','admin','editProductos') , {zapatillas});                       
         
     },
+
+    //Agregar varias iamgenes
+    //crear array con id de las  imagenes que el producto actualmente tiene
+    //despues recorrer ese array y eliminar las relaciones donde coincida la imagen del producto con el producto(imgID con el Array)
+    // despues denuevo guardarlas en la tabla intermedia agregando al nuevo array las nuevas que se eliminan
+    // opcion buscarlas en la carpeta y eliminarlas fisicamente (fs unlink)
     updateZapatillas: async (req,res) => {
         const zapatillas = await products.findAll();
         const marcas = await brands.findAll({where: {name: {[Op.like]: req.body.marca}}});
@@ -77,7 +93,7 @@ module.exports = {
             let newBrand = await brands.create({name: req.body.marca})
             marcas_body = newBrand.id;
         }
-        if (examples.length > 1){
+        if (modelos.length > 1){
             let actualizarExample = await examples.update({name: req.body.modelo})
             modelos_body = actualizarExample.id
             //modelos_body = marcas[0].id;

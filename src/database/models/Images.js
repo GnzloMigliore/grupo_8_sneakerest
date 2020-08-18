@@ -14,22 +14,18 @@ module.exports = (sequelize, DataTypes) =>{
     const images = sequelize.define(alias,cols);
     
     // Esto es la relacion entre Product, images, Model y Gender
-    /*images.associate = function (models){
-        images.hasMany(
+    images.associate = function(models){
+        images.belongsToMany(
             models.products,
             {
-                as: 'products',
-                foreignKey: 'image_id'
+                as: 'images',
+                through: 'imageproducts',
+                foreignKey: 'image_id',
+                otherKey: 'product_id'
             }
-            ),
-            images.belongsTo(
-                models.products,
-                {
-                    as : 'products',
-                    foreignKey: 'product_id'
-                }
-            )
-        }*/
+        )
+    }
+    
         
         return images;
     }

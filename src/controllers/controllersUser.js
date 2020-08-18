@@ -16,20 +16,17 @@ module.exports = {
         //return res.send(usuarios); 
         res.render(path.resolve(__dirname , '..','views','usuarios','login') , {usuarios}); 
     },
-    login: (req, res) => {
+    login: async (req, res) => {
         const errors = validationResult(req);
         //return res.send(errors.mapped());
-        if(errors.isEmpty()) {
-            let archivoUsuarios = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../data/usuarios.json')));
-            let usuarioLogueado = archivoUsuarios.find(usuario => usuario.email == req.body.email);
-            //Se puede borrar de lo que le llega al formulario lo que se desee
-            //Por seguridad todo dato crítico se puede borrar
-            delete usuarioLogueado.password;
+        if(!errors.isEmpty()) {
+            const usuario = await users.findAll({where: {email: req.body.email}})
+            delete usuario[0].password;
             //Acá voy a guardar en session al usuario
-            req.session.usuario = usuarioLogueado;  //Guardar del lado del servidor
+            req.session.usuario = usuario[0];  //Guardar del lado del servidor
             //Aquí voy a guardar las cookies del usuario que se loguea
             if(req.body.recordarme){
-                res.cookie('email',usuarioLogueado.email,{maxAge: 1000 * 60 * 60 * 24})
+                res.cookie('email',usuario[0].email,{maxAge: 1000 * 60 * 60 * 24})
             }
             return res.redirect('/');   //Aquí ustedes mandan al usuario para donde quieran (Perfil- home)
         }else{
@@ -84,8 +81,9 @@ module.exports = {
         let usuarioMostrar = usuarios.find(usuario => usuario.email == usuarioEmail);
         res.render(path.resolve(__dirname, '../views/usuarios/perfilUsuario'), {usuarioMostrar});*/
     },
-    /*update: (req,res) =>{
-        let usuarios =  JSON.parse(fs.readFileSync(path.resolve(__dirname,'..','data','usuarios.json')));
+    update: async (req,res) =>{
+        const usuarios = await users.findAll({where: {email: req.session.email}})  
+        //tengo que buscar usuarios[0].id
         req.body.email = req.params.email;
         req.body.imagen = req.file ? req.file.filename : req.body.oldImagen;
         let userUpdate = usuarios.map(usuario => {
@@ -98,5 +96,5 @@ module.exports = {
         fs.writeFileSync(path.resolve(__dirname,'..','data','usuarios.json'), usuarioActualizado);
         res.redirect('/');
     }
-    */
+    
 }
