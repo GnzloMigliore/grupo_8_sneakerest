@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <%- include('../partials/head.ejs') %>
+  <link rel="stylesheet" href="/css/navbar.css">  
+</head>
+
+<body>
+  
+  <header>
+    <%- include('../partials/navBar.ejs') %>
+  </header>
+  
+  <main class="container-fluid mt-3">
+    <div class="row">
+      <h2 class="col-8 mx-auto mb-4 pt-4 pb-3 text-center border-bottom">ATENCIÓN AL CLIENTE</h2>
+    </div>
+    <section class="row mt-5 mb-5 pb-5">
+      <!--Modals-->
+      <div class="col-12 d-flex justify-content-center mb-5 pb-5">
+        <!--Modal email-->
+        <div class="col-6 mx-auto px-auto d-flex justify-content-center">
+          <!-- Button trigger modal -->
+          <button type="button" class="col-10 btn btn-dark rounded-0 mx-auto px-auto" data-toggle="modal" data-target="#exampleModal">
+            <div class="d-flex justify-content-center align-items-center">
+              <i class="fas fa-envelope-square"></i>
+              <p class="pl-3 mb-0">Email</p>
+            </div>
+          </button>
+          
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Por favor escriba su mensaje</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <textarea name="contacto" id="contacto-email" cols="53" rows="10"></textarea>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary rounded-0" data-dismiss="modal">Cerrar</button>
+                  <button type="button" class="btn btn-white border rounded-0">Enviar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Modal redes sociales-->
+        <div class="col-6 mx-auto px-auto d-flex justify-content-center">
+          <!-- Button trigger modal -->
+          <button type="button" class="col-10 btn btn-dark rounded-0 mx-auto px-auto" data-toggle="modal" data-target="#exampleModal2">
+            <div class="d-flex justify-content-center align-items-center">
+              <i class="fas fa-user-friends"></i>
+              <p class="pl-3 mb-0">Redes Sociales</p>
+            </div>
+          </button>
+          
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel2">¡Visítenos!</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body col-12 d-flex justify-content-around">
+                  <div class="text-center col-4">
+                    <i class="fab fa-facebook-f"></i>
+                    <a href="https://www.facebook.com" class="text-decoration-none text-body"><h5>Facebook</h5></a>
+                  </div>
+                  <div class="text-center col-4">
+                    <i class="fab fa-instagram"></i>
+                    <a href="https://www.instagram.com" class="text-decoration-none text-body"><h5>Instagram</h5></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    
+    <!--ruta-->
+    <div class="ruta text-center mt-5 pt-5 pb-4">
+      <a class="text-body text-decoration-none" href="/">SNKRST  | </a>
+      <a href="#" class="text-body text-decoration-none">CONTACTO</a>
+    </div>
+  </main>
+  
+  <%- include('../partials/footer.ejs') %>
+  
+  <div class="conteiner">
+    <main>
+      <H2>ATENCIÓN AL CLIENTE</H2>
+      <h3>Consultas cobre compras online</h3>
+      
+      
+      <div class="card-header" ">      
+        
+        <i class="fas fa-envelope-square" style="color: black;"></i>
+        <h4 style="color: black;">Email</h4> 
+        
+      </button>       
+    </div> 
+    <div id="mandarmail">
+      <a href="/contacto/email" class="btn btn-light btn-dark " tabindex="-1" role="button" aria-disabled="true">MANDAR MAIL</a>  
+    </div>
+  </div>
+  
+  <div class="card-header ">
+    <i class="fas fa-user-friends" style="color: black;"></i>
+    <h5 style="color: black;">Redes Sociales</h5> 
+  </div>
+  
+  
+  <div class="facebook">
+    <i class="fab fa-facebook-f"></i>
+    <a style="color: black; text-decoration: none;" href="https://www.facebook.com"><h5>@Snkrst</h5></a>
+  </div>
+  <div class="instagram">
+    <i class="fab fa-instagram"></i>
+    <a style="color: black; text-decoration: none;" href="https://www.instagram.com"><h5>@Snkrst</h5></a>
+    
+  </div>
+</div>
+</div>
+
+<!--ruta-->
+<div class="ruta">
+  <a style="color: black;" href="/">SNKRST  |  INICIAR SESIÓN</a>
+</div>
+
+</main>
+<%- include('../partials/footer.ejs') %>
+</div>
+
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+
+<!--Footer-->
+
+</html>

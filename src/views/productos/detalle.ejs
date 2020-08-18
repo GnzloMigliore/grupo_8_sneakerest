@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sneakerest</title>
+    <!--Fontawesonme icons & Google Fonts-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!--Mi CSS-->
+    <link rel="stylesheet" href="css/detalleProducto.css">
+    <link rel="stylesheet" href="css/footer.css">
+</head>
+<body>
+    <header>
+        <!--nav-->
+        <nav class="d-flex justify-content-between align-items-center">
+            <div id="item1" class="box">
+                <a href="/"><img src="img/logonegro@.png" alt=""></i></a>
+            </div>
+            <div id="item2" class="box">
+                <h1 class="m-auto p-auto">NEW IN</h1>
+            </div>
+            <div id="item3" class="box">
+                <a href="/carrito"><i class="fas fa-shopping-cart" style="color: black;"></i></a>
+            </div>
+        </nav>
+    </header>
+    
+    <main>
+        <!--Mobile-->
+        <section class="cuerpo content-mobile">
+            <a href="#"><img src="img/Campus_ADV_Shoes_Black_B22716_01_standard.jpg" alt="Adidas Campus ADV Black" class="foto-producto"></a>
+            <a href="#"><img src="img/Campus_ADV_Shoes_Black_B22716_01_standard.jpg" alt="Adidas Campus ADV Black" class="foto-producto"></a>
+            <a href="#"><img src="img/Campus_ADV_Shoes_Black_B22716_01_standard.jpg" alt="Adidas Campus ADV Black" class="foto-producto"></a>
+            <a href="#"><img src="img/Campus_ADV_Shoes_Black_B22716_01_standard.jpg" alt="Adidas Campus ADV Black" class="foto-producto"></a>
+        </section>
+        <section class="info-producto content-mobile">
+            <div class="nombre-precio">
+                <p>Adidas Campus ADV Black</p>
+                <p>$4999</p>
+            </div>
+            <div class="boton-añadir">
+                <a href="#">
+                    <div>
+                        <p>añadir</p>
+                    </div>
+                </a>
+            </div>
+            <div class="descripcion-producto">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas excepturi modi neque! Odio iste magni id porro ipsam reprehenderit fugit harum possimus sint libero maxime quasi dolorem, omnis totam at.</p>
+            </div>
+            <div class="detalles-producto">
+                <p>Detalles</p>
+                <ul>
+                    <li>Lorem ipsum dolor sit amet.</li>
+                    <li>Lorem ipsum dolor sit amet.</li>
+                    <li>Lorem ipsum dolor sit amet.</li>
+                    <li>Lorem ipsum dolor sit amet.</li>
+                </ul>
+            </div>
+            <div class="colores">
+                <h2>2 colores</h2>
+                <div class="imagenes-colores">
+                    <img src="img/Campus_ADV_Shoes_Black_B22716_01_standard.jpg" alt="Adidas Campus ADV Black">
+                    <img src="img/Campus_ADV_Shoes_Black_B22716_01_standard.jpg" alt="Adidas Campus ADV Black">
+                </div>
+                <h4>Envíos gratis. Devoluciones gratis.</h4>
+            </div>
+            
+            <div class="links-ruta">
+                <a href="#">Sneakerest | </a>
+                <a href="#">Hombre | </a>
+                <a href="#">New in</a>
+            </div>
+        </section>
+        <!-->=lg-->
+        <section class="content-laptop fotos-laptop">
+            <div class="foto-top-laptop">
+                <a href="#"><img src="/img/<%= miZapatilla.imagen %> " alt="<%= miZapatilla.marca + " "%> + <%= miZapatilla.modelo %>"></a>
+            </div>
+            <div class="fotos-resto-laptop">
+                <a href="#"><img src="img/chucks2.jpg" alt="Converse Chucks Naranja"></a>
+                <a href="#"><img src="img/chucks3.jpg" alt="Converse Chucks Naranja"></a>
+                <a href="#"><img src="img/chucks4.jpg" alt="Converse Chucks Naranja"></a>
+                <a href="#"><img src="img/chucks5.jpg" alt="Converse Chucks Naranja"></a>
+                <a href="#"><img src="img/chucks6.jpg" alt="Converse Chucks Naranja"></a>
+                <a href="#"><img src="img/chucks7.jpg" alt="Converse Chucks Naranja"></a>
+            </div>
+        </section>
+        <section class="content-laptop filtros-laptop">
+            <div class="container contenedor-filtros col-10">
+                <div class="titulo-modelo">
+                    <h2><%= miZapatilla.marca + " "%> + <%= miZapatilla.modelo %></h2>
+                    <p class="codigo-texto"><%= miZapatilla.id %> </p>
+                    <h5>$+<%= miZapatilla.precio %> </h5>
+                </div>
+                <div class="cuadros-colores">
+                    <div>
+                        <a href="#"><img src="img/converse/converseChucksBlancas/162056C_A_107X1.jpg" alt="Converse Chucks blancas"></a>
+                    </div>
+                    <div>
+                        <a href="#"><img src="img/converse/converseChucksAzules/162055C_A_107X1.jpg" alt="Converse Chucks Azules"></a>
+                    </div>
+                    <div>
+                        <a href="#"><img src="img/converse/converseChucksCrema/162053C_A_107X1.jpg" alt="Converse Chucks Crema"></a>
+                    </div>
+                    <div>
+                        <a href="#"><img src="img/converse/converseChucksGrises/164946C_A_107X1.jpg" alt="Converse Chucks Grises"></a>
+                    </div>
+                    <div>
+                        <a href="#"><img src="img/converse/converseChucksNegras/162050C_A_107X1.jpg" alt="Converse Chucks Negras"></a>
+                    </div>
+                </div>
+                <div class="talles-laptop">
+                    <div>
+                        <p>elegir talle</p>
+                    </div>
+                    <div class="numeros-talles">
+                        <div class="m-2 w-25">
+                            <a href="#" class="p-auto">38</a>
+                        </div>
+                        <div class="m-2 w-25">
+                            <a href="#" class="p-auto">38.8</a>
+                        </div>
+                        <div class="m-2 w-25">
+                            <a href="#" class="p-auto">39</a>
+                        </div>
+                        <div class="m-2 w-25">
+                            <a href="#" class="p-auto">39.5</a>
+                        </div>
+                        <div class="m-2 w-25">
+                            <a href="#" class="p-auto">40</a>
+                        </div>
+                        <div class="m-2 w-25">
+                            <a href="#" class="p-auto">40.5</a>
+                        </div>
+                        <div class="m-2 w-25">
+                            <a href="#" class="p-auto">41</a>
+                        </div>
+                        <div class="m-2 w-25">
+                            <a href="#" class="p-auto">41.5</a>
+                        </div>
+                        <div class="m-2 w-25">
+                            <a href="#" class="p-auto">42</a>
+                        </div>
+                        <div class="m-2 w-25">
+                            <a href="#" class="p-auto">42.5</a>
+                        </div>
+                        <div class="m-2 w-25">
+                            <a href="#" class="p-auto">43</a>
+                        </div>
+                        <div class="m-2 w-25">
+                            <a href="#" class="p-auto">43.5</a>
+                        </div>
+                        <div class="m-2 w-25">
+                            <a href="#" class="p-auto">44</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="boton-anadir-carrito col-10">
+                    <button class="btn text-uppercase text-white">añadir al carrito</button>
+                </div>
+                <div class="boton-proceder-pago col-10">
+                    <button class="btn text-uppercase text-white">Proceder al pago</button>
+                </div>
+                <div class="descripcion-producto-laptop">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae nihil consequatur repudiandae, dolorum optio adipisci distinctio totam eius ducimus, dolorem veniam minima obcaecati officiis. Cumque rerum odio ullam earum expedita?</p>
+                </div>
+                <div class="resenas-laptop col-10 mx-auto">
+                    <p class="boton-resenas">
+                        <button class="btn btn-primary elementos-boton-resena" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                            <div class="contenido-boton-resenas pt-0">
+                                <p>Reseñas (23)</p>
+                                <div class="estrellas-resena">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <i class="fas fa-angle-down flecha-resena"></i>
+                                </div>
+                            </div>
+                        </button>
+                    </p>
+                    <div class="collapse" id="collapseExample">
+                        <div class="card card-body cuadro-resena">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique molestiae doloremque adipisci eius voluptatum minus corporis exercitationem sapiente eligendi debitis?.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <!-- FOOTER -->
+    <footer>
+        <!--Footer mobile-->
+        <div class="d-sm-block d-md-none">
+            <div class="container-fluid fondo-footer mt-3">
+                <div class="row">
+                    <!--Redes Footer-->
+                    <div class="col-10 d-flex justify-content-between align-items-center redes-footer mt-3 mx-auto">
+                        <a href="https://www.instagram.com">Instagram</a>
+                        <a href="https://www.behance.com">Behance</a>
+                        <a href="https://www.facebook.com">Facebook</a>
+                    </div>
+                    <!--Logo footer-->
+                    <div class="col-12 mt-4 mb-0 pb-0">
+                        <div class="col-12 text-center">
+                            <a href="#"><img src="img/Mesa de trabajo 3@.png" alt="Logo Sneakerest" class="logo-footer-mobile mx-auto"></a>
+                        </div>
+                        <div class="col-12 text-center">
+                            <p class="copyright-footer-mobile mx-auto">© 2020 Copyright: SNEAKEREST S.R.L.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Footer tablet para arriba-->
+        <div class="d-none d-md-block">
+            <div class="container-fluid fondo-footer redes-footer d-flex justify-content-center">
+                <div class="col-12 row pt-5 px-0">
+                    <!--Mapa del sitio-->
+                    <div class="col-7 d-flex justify-content-around mapa-footer mapa-del-sitio px-0">
+                        <!--Categorias-->
+                        <div class="col-2 d-flex flex-column">
+                            <p class="font-weight-bold">Categorias</p>
+                            <a href="#">Men</a>
+                            <a href="#">Women</a>
+                            <a href="#">Kids</a>
+                            <a href="#">New In</a>
+                            <a href="#">Sale</a>
+                        </div>
+                        <!--Marcas-->
+                        <div class="col-2 d-flex flex-column">
+                            <p class="font-weight-bold">Marcas
+                            </p>
+                            <a href="#">Adidas</a>
+                            <a href="#">Converse</a>
+                            <a href="#">DC Shoes</a>
+                            <a href="#">New Balance</a>
+                            <a href="#">Nike</a>
+                            <a href="#">Rebook</a>
+                            <a href="#">Vans</a>
+                        </div>
+                        <!--Soporte-->
+                        <div class="col-2 d-flex flex-column">
+                            <p 
+                            class="font-weight-bold">Soporte</p>
+                            <a href="#">Ayuda</a>
+                            <a href="#">Cambios</a>
+                            <a href="#">Devoluciones</a>
+                            <a href="#">Envíos</a>
+                            <a href="#">Seguimiento</a>
+                            <a href="#">Tabla de talles</a>
+                        </div>
+                        <!--Sobre Nosotros-->
+                        <div class="col-2 d-flex flex-column">
+                            <p class="font-weight-bold">Sobre SNKRST</p>
+                            <a href="#">Nosotros</a>
+                            <a href="#">Proposito</a>
+                            <a href="#">Noticias</a>
+                        </div>
+                    </div>
+                    <!--Redes, logo y TC-->
+                    <div class="col-5 mapa-footer">
+                        <!--Redes Footer-->
+                        <div class="col-12 d-flex justify-content-around">
+                            <a href="https://www.instagram.com">Instagram</a>
+                            <a href="https://www.behance.com">Behance</a>
+                            <a href="https://www.facebook.com">Facebook</a>
+                        </div>
+                        <!--Logo Footer-->
+                        <div class="col-12 logo-footer">
+                            <div class="col-12 text-center">
+                                <a href="/"><img src="img/Mesa de trabajo 3@.png" alt="Logo Sneakerest" class="logo-footer-grande mx-auto"></a>
+                            </div>
+                            <div class="col-12 text-center">
+                                <p class="copyright-footer-grande mx-auto" >© 2020 Copyright: SNEAKEREST S.R.L.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Terminos y condiciones-->
+                    <div class="col-12 terminos-condiciones d-flex justify-content-center align-items-center">
+                        <a href="#">Términos y condiciones</a>
+                        <p class="mb-0"> | </p>
+                        <a href="#">Políticas de cambio</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>

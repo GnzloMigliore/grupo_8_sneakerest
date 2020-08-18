@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SNKRST</title>
+    <!--Fontawesonme icons-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <!--Mi css-->
+    <link rel="stylesheet" href="/css/detalleProducto2.css">
+</head>
+<body>
+    
+    <main class="container-fluid">
+        <!--Mobile-->
+        <section class="row">
+            <!--Imágenes-->
+            <article class="col-12">
+                <img src="/img/<%= miZapatilla.imagen %>" alt="<%= miZapatilla.marca + " "%><%= miZapatilla.modelo %>">
+            </article>
+            <!--Info producto-->
+            <article class="col-12">
+                <div class="col-12">
+                    <p><%= miZapatilla.marca + " "%><%= miZapatilla.modelo %></p>
+                    <p><%= miZapatilla.precio %></p>
+                </div>
+                <div class="col-12">
+                    <button type="button" class="btn btn-outline-dark text-uppercase rounded-0">añadir</button>
+                </div>
+                <div class="col-12">
+                    <p><%= miZapatilla.descripcion %> </p>
+                </div>
+                <div class="col-12">
+                    <p><%= "Colores: " + miZapatilla.color.length %> </p>
+                </div>
+                <div class="row">
+                    <% for (let i=0; i<miZapatilla.length; i++) { %>
+                        <% if (miZapatilla.marca == miZapatilla[i].marca &&miZapatilla.modelo == miZapatilla[i].modelo) { %>
+                            <img class="col-12" src="img/<%= miZapatilla[i].imagen %>" alt="<%= miZapatilla.marca + " "%><%= miZapatilla.modelo %>">
+                        <% } %>  
+                    <% } %> 
+                </div>
+                <div>
+                    <p class="col-12 text-uppercase">Envíos gratis. Devoluciones gratis</p>
+                </div>
+                
+            </article>
+        </section>
+    </main>
+</body>
+</html>

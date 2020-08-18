@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>SNEAKEREST</title>
+    
+    <!--Fontawesonme icons & Google Fonts-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/ayuda.css">
+    <link rel="stylesheet" href="/css/navBar.css">
+    <link rel="stylesheet" href="/css/footer.css">
+</head>
+
+<header>
+    <%- include('../partials/navBar.ejs') %>
+    </header>
+
+    <body>
+    
+        <section>
+            <div class="container ayuda-pagina text-center">
+                <h1 id="help-us">AYUDA</h1>
+            </div>
+            
+            <div class="container" id="datos">
+                <h3>LLAMANOS:</h3>
+                <p>Teléfono: +54 11 4545-1234</p>
+                <br>
+                <h3>MANDANOS UN EMAIL:</h3>
+                <p>E-mail: info@sneakerest.com</p>
+                <br>
+                <h3>VISITANOS:</h3>
+                <p>Horario: Lunes a Viernes de 9 a 18hs</p>
+            </div>
+            <div class="container" id="direccion">
+                <h5>Estamos aquí:</h5>
+                <p>Dirección: Av. Monroe 860, C1428 BKD, Buenos Aires</p>
+            </div>
+    
+        <div class="container" id="mapa">
+            <h4>Estamos aquí:</h4>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13144.745852812272!2d-58.45240950745639!3d-34.54883398910763!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb436efe09303%3A0xfb39818e7624ac76!2sDigital%20House!5e0!3m2!1ses-419!2sar!4v1595599098201!5m2!1ses-419!2sar" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </div>
+
+            <div class="container text-center">
+                <a style="color: black; text-decoration: none;" href="#">Términos y Condiciones | </a>
+                <a style="color: black; text-decoration: none;"" href="#">Políticas de cambios</a>
+            </div>        
+        </section>
+    
+    </body>
+
+
+<!-- FOOTER -->
+<%- include('../partials/footer.ejs') %>
+
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+</html>

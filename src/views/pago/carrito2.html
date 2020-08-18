@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito</title>
+    <!--Fontawesonme icons & Google Fonts-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!--Mi CSS-->
+    <link rel="stylesheet" href="/public/css/carrito.css">
+</head>
+<body>
+    
+    <main>
+        <!--Main mobile/tablet-->
+        <div class="d-sm-block d-lg-none">
+            <div class="container">
+                <div class="row d-flex justify-content-center">
+                    <!--Lista carrito-->
+                    <section class="col-12">
+                        <!--Encabezado Carrito-->
+                        <div class="col-12 d-flex justify-content-between align-items-center encabezado-carrito mt-3 pb-2">
+                            <h4 class="col-3 text-uppercase mb-0">Carrito</h4>
+                            <p class="col-7 mb-0">2 elementos en su carrito</p>
+                        </div>
+                        <!--Productos-->
+                        <div>
+                            <!--Primer producto carrito-->
+                            <div class="col-12 d-flex justify-content-between linea-producto align-items-center">
+                                <!--Imagen producto-->
+                                <div class="col-4">
+                                    <img src="/public/img/Campus_ADV_Shoes_Black_B22716_01_standard.jpg" alt="Adidas Campus ADV Black">
+                                </div>
+                                <!--Descripción producto-->
+                                <div class="col-8 pt-2">
+                                    <!--Primera linea descripcion-->
+                                    <div class="col-12 d-flex justify-content-between align-items-center mb-5">
+                                        <div class="modelo-carrito">
+                                            <p class="text-uppercase">adidas campus adv black</p>
+                                        </div>
+                                        <div class="x-eliminar-producto-carrito">
+                                            <a href="#"><i class="fas fa-times"></i></a>
+                                        </div>
+                                    </div>
+                                    <!--Segunda linea descripcion-->
+                                    <div class="col-12 d-flex justify-content-between align-items-center mt-5">
+                                        <div class="talle-carrito">
+                                            <p>42 (US-10)</p>
+                                        </div>
+                                        <div class="precio-carrito">
+                                            <p>$4.579,99</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Segundo producto carrito-->
+                            <div class="col-12 d-flex justify-content-between linea-producto align-items-center">
+                                <!--Imagen producto-->
+                                <div class="col-4">
+                                    <img src="/public/img/Campus_ADV_Shoes_Black_B22716_01_standard.jpg" alt="Adidas Campus ADV Black">
+                                </div>
+                                <!--Descripción producto-->
+                                <div class="col-8 pt-2">
+                                    <!--Primera linea descripcion-->
+                                    <div class="col-12 d-flex justify-content-between align-items-center mb-5">
+                                        <div class="modelo-carrito">
+                                            <p class="text-uppercase">adidas campus adv black</p>
+                                        </div>
+                                        <div class="x-eliminar-producto-carrito">
+                                            <a href="#"><i class="fas fa-times"></i></a>
+                                        </div>
+                                    </div>
+                                    <!--Segunda linea descripcion-->
+                                    <div class="col-12 d-flex justify-content-between align-items-center mt-5">
+                                        <div class="talle-carrito">
+                                            <p>42 (US-10)</p>
+                                        </div>
+                                        <div class="precio-carrito">
+                                            <p>$4.579,99</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!--Detalles precios-->
+                    <section class="col-11 detalles-compra d-flex justify-content-between mt-3 mb-2">
+                        <!--Columna Izquierda-->
+                        <div>
+                            <p>2 productos</p>
+                            <p>Envío</p>
+                            <p class="font-weight-bold text-uppercase">Total</p>
+                        </div>
+                        <!--Columna Derecha-->
+                        <div>
+                            <p class="">$9159,98</p>
+                            <p>$0,00</p>
+                            <p class="font-weight-bold text-uppercase mb-0">$9159,98</p>
+                            <p class="iva-incluido mb-0">IVA incluido</p>
+                        </div>
+
+                    </section>
+                    <!--Boton realizar pedido-->
+                    <section class="col-11 d-flex justify-content-end pr-0">
+                        <div class="col-8 d-flex justify-content-end pr-0">
+                            <button type="button" class="btn rounded-0 text-uppercase texto-boton">Realizar pedido</button>
+                        </div>
+
+                    </section>
+                    <section class="container ruta-ante-footer">
+                        <div class="row">
+                            <div class="col-12 d-flex justify-content-center align-items-center ruta-ante-footer-a">
+                                <a href="#" class="px-1 text-uppercase text-decoration-none text-body">SNKRST</a>
+                                <p class="px-1 mb-0"> | </p>
+                                <a href="#" class="px-1 text-uppercase text-decoration-none text-body">Carrito</a>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <!--Main pantallas grandes-->
+        <div class="d-none d-lg-block">
+            <div class="container-fluid">
+                <div class="row d-flex justify-content-around">
+                    <!--Columna Izquierda principal-->
+                    <section class="col-7">
+                        <!--Encabezado Carrito-->
+                        <div class="col-10 d-flex justify-content-between align-items-center encabezado-carrito mt-3 pb-2 mx-auto">
+                            <h4 class="col-3 text-uppercase mb-0">Carrito</h4>
+                            <p class="col-7 mb-0 pr-0 d-flex justify-content-end">2 elementos en su carrito</p>
+                        </div>
+                        <!--Primer producto lista carrito-->
+                        <div class="col-10 row linea-producto d-flex justify-content-between align-items-center mx-auto">
+                            <!--Imagen producto-->
+                            <div class="col-3 pl-0">
+                                <img src="/public/img/Campus_ADV_Shoes_Black_B22716_01_standard.jpg" alt="Adidas Campus ADV Black">
+                            </div>
+                            <!--Modelo, código y color-->
+                            <div class="col-4 descripcion-producto d-flex flex-column justify-content-between">
+                                <!--Modelo y codigo-->
+                                <div class="modelo-codigo">
+                                    <p class="font-weight-bold mb-0 modelo-descripcion-producto" id="modeloLg">Adidas Campus ADV</p>
+                                    <p class="codigo-descripcion-producto">#AC45B65</p>
+                                </div>
+                                <!--Circulos colores-->
+                                <div class="d-flex justify-content-start">
+                                    <i class="fas fa-circle circulo-color-carrito circulo-blanco"></i>
+                                    <i class="fas fa-circle circulo-color-carrito circulo-negro"></i>
+                                    <i class="fas fa-circle circulo-color-carrito circulo-dorado"></i>
+                                </div>
+                            </div>
+                            <!--Cantidad producto-->
+                            <div class="col-1 d-flex justify-content-center align-items-center">
+                                <p class="cantidad-producto my-auto">1u.</p>
+                            </div>
+                            <!--Precio producto-->
+                            <div class="col-2 precio-producto d-flex justify-content-end">
+                                <p class="precio-producto my-auto">$4.798.99</p>
+                            </div>
+                            <!--Eliminar producto-->
+                            <div class="col-1 x-eliminar-producto-carrito d-flex justify-content-end">
+                                <a href="#"><i class="fas fa-times"></i></a>
+                            </div>
+                            
+                        </div>
+                        <!--Segundo producto lista carrito-->
+                        <div class="col-10 row linea-producto d-flex justify-content-between align-items-center mx-auto">
+                            <!--Imagen producto-->
+                            <div class="col-3 pl-0">
+                                <img src="/public/img/Campus_ADV_Shoes_Black_B22716_01_standard.jpg" alt="Adidas Campus ADV Black">
+                            </div>
+                            <!--Modelo, código y color-->
+                            <div class="col-4 descripcion-producto d-flex flex-column justify-content-between">
+                                <!--Modelo y codigo-->
+                                <div class="modelo-codigo">
+                                    <p class="font-weight-bold mb-0 modelo-descripcion-producto" id="modeloLg">Adidas Campus ADV</p>
+                                    <p class="codigo-descripcion-producto">#AC45B65</p>
+                                </div>
+                                <!--Circulos colores-->
+                                <div class="d-flex justify-content-start">
+                                    <i class="fas fa-circle circulo-color-carrito circulo-blanco"></i>
+                                    <i class="fas fa-circle circulo-color-carrito circulo-negro"></i>
+                                    <i class="fas fa-circle circulo-color-carrito circulo-dorado"></i>
+                                </div>
+                            </div>
+                            <!--Cantidad producto-->
+                            <div class="col-1 d-flex justify-content-center align-items-center">
+                                <p class="cantidad-producto my-auto">1u.</p>
+                            </div>
+                            <!--Precio producto-->
+                            <div class="col-2 precio-producto d-flex justify-content-end">
+                                <p class="precio-producto my-auto">$4.798.99</p>
+                            </div>
+                            <!--Eliminar producto-->
+                            <div class="col-1 x-eliminar-producto-carrito d-flex justify-content-end">
+                                <a href="#"><i class="fas fa-times"></i></a>
+                            </div>
+                            
+                        </div>
+                    </section>
+                    <!--Columna derecha-->
+                    <section class="col-3 mt-3 affix">
+                        <div class="col-12">
+                            <div class="items-columna-derecha">
+                                <p class="text-uppercase font-weight-bold total-carrito">Total: $9.999,99</p>
+                            </div>
+                            <div class="col-6 bg-dark d-flex justify-content-center align-items-center items-columna-derecha" id="realizar-pedido">
+                                <button type="button" class="btn boton-carrito" >Realizar pedido</button>
+                            </div>
+                            <div class="col-6 d-flex justify-content-center align-items-center items-columna-derecha" id="seguir-comprando">
+                                <button type="button" class="btn boton-carrito" >Seguir comprando</button>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="col-12 container ruta-ante-footer">
+                        <div class="row">
+                            <div class="col-12 d-flex justify-content-center align-items-center ruta-ante-footer-a">
+                                <a href="#" class="px-1 text-uppercase text-decoration-none text-body">SNKRST</a>
+                                <p class="px-1 mb-0"> | </p>
+                                <a href="#" class="px-1 text-uppercase text-decoration-none text-body">Carrito</a>
+                            </div>
+                        </div>
+                    </section>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <!--Footer mobile-->
+        <div class="d-sm-block d-md-none">
+            <div class="container-fluid fondo-footer mt-3">
+                <div class="row">
+                    <!--Redes Footer-->
+                    <div class="col-10 d-flex justify-content-between align-items-center redes-footer mt-3 mx-auto">
+                        <a href="https://www.instagram.com">Instagram</a>
+                        <a href="https://www.behance.com">Behance</a>
+                        <a href="https://www.facebook.com">Facebook</a>
+                    </div>
+                    <!--Logo footer-->
+                    <div class="col-12 mt-4 mb-0 pb-0">
+                        <div class="col-12 text-center">
+                            <a href="#"><img src="/public/img/Mesa de trabajo 3@.png" alt="Logo Sneakerest" class="logo-footer-mobile mx-auto"></a>
+                        </div>
+                        <div class="col-12 text-center">
+                            <p class="copyright-footer-mobile mx-auto">© 2020 Copyright: SNEAKEREST S.R.L.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Footer tablet para arriba-->
+        <div class="d-none d-md-block">
+            <div class="container-fluid fondo-footer redes-footer">
+                <div class="row pt-5">
+                    <!--Mapa del sitio-->
+                    <div class="col-7 d-flex justify-content-around mapa-footer mapa-del-sitio">
+                        <!--Categorias-->
+                        <div class="col-2 d-flex flex-column">
+                            <p class="font-weight-bold">Categorias</p>
+                            <a href="#">Men</a>
+                            <a href="#">Women</a>
+                            <a href="#">Kids</a>
+                            <a href="#">New In</a>
+                            <a href="#">Sale</a>
+                        </div>
+                        <!--Marcas-->
+                        <div class="col-2 d-flex flex-column">
+                            <p class="font-weight-bold">Marcas
+                            </p>
+                            <a href="#">Adidas</a>
+                            <a href="#">Converse</a>
+                            <a href="#">DC Shoes</a>
+                            <a href="#">New Balance</a>
+                            <a href="#">Nike</a>
+                            <a href="#">Rebook</a>
+                            <a href="#">Vans</a>
+                        </div>
+                        <!--Soporte-->
+                        <div class="col-2 d-flex flex-column">
+                            <p 
+                            class="font-weight-bold">Soporte</p>
+                            <a href="#">Ayuda</a>
+                            <a href="#">Cambios</a>
+                            <a href="#">Devoluciones</a>
+                            <a href="#">Envíos</a>
+                            <a href="#">Seguimiento</a>
+                            <a href="#">Tabla de talles</a>
+                        </div>
+                        <!--Sobre Nosotros-->
+                        <div class="col-2 d-flex flex-column">
+                            <p class="font-weight-bold">Sobre SNKRST</p>
+                            <a href="#">Nosotros</a>
+                            <a href="#">Proposito</a>
+                            <a href="#">Noticias</a>
+                        </div>
+                    </div>
+                    <!--Redes, logo y TC-->
+                    <div class="col-5 mapa-footer">
+                        <!--Redes Footer-->
+                        <div class="col-12 d-flex justify-content-around">
+                            <a href="https://www.instagram.com">Instagram</a>
+                            <a href="https://www.behance.com">Behance</a>
+                            <a href="https://www.facebook.com">Facebook</a>
+                        </div>
+                        <!--Logo Footer-->
+                        <div class="col-12 logo-footer">
+                            <div class="col-12 text-center">
+                                <a href="/"><img src="/public/img/Mesa de trabajo 3@.png" alt="Logo Sneakerest" class="logo-footer-grande mx-auto"></a>
+                            </div>
+                            <div class="col-12 text-center">
+                                <p class="copyright-footer-grande mx-auto" >© 2020 Copyright: SNEAKEREST S.R.L.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Terminos y condiciones-->
+                    <div class="col-12 terminos-condiciones d-flex justify-content-center align-items-center">
+                        <a href="#">Términos y condiciones</a>
+                        <p> | </p>
+                        <a href="#">Políticas de cambio</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+</html>

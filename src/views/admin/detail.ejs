@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <%- include('../partials/head.ejs') %>
+    <link rel="stylesheet" href="/css/administrar.css">
+  </head>
+  <body>
+    <header>
+      <%- include('../partials/navBar.ejs') %>
+    </header>
+    <div class="container-fluid">
+      
+
+        
+        <section class="row">
+          <!-- Cuerpo principal -->
+          <h1 class="col-12 mt-5 text-center">DETALLE DE PRODUCTO</h1>
+          <article id="article" class="col-12 col-md-6 mx-auto mt-5">
+            <div class="card-body">
+              <img src="/images/zapatillas/<%= miZapatilla.imagen1 %>" alt="<%= miZapatilla.marca + " "%><%= miZapatilla.modelo %>" class="col-12 px-0">
+              <h4 class="card-title">Marca:<%= miZapatilla.marca%></h4>
+              <h5 class="card-title">Modelo:<%= miZapatilla.modelo %></h5>
+              <h5 class="card-title">$<%= miZapatilla.precio %></h5>  
+              <h5 class="card-title">Descuento: <%= miZapatilla.descuento %></h5>            
+              <p class="card-text"><%= miZapatilla.descripcion %></p>
+              <a href="/admin" class="btn btn-dark">Volver</a>
+            </div> 
+             
+              
+         
+          </article>
+    </section>
+    </div>
+        <!-- Footer -->
+        <%- include('../partials/footer.ejs') %>
+</body>
+</html>
