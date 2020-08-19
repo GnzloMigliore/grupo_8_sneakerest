@@ -15,3 +15,11 @@ html {
     margin: 10px;
     border-radius: 50%;
 }
+
+.inputs-actualizar {
+    background-color: #9999;
+}
+
+.imagen-editar{
+    opacity: .5;
+}

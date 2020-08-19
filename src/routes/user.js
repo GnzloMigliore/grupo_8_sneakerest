@@ -101,6 +101,8 @@ router.post('/login/registro', upload.single('imagen'),[
 ],controllersUser.save);
 router.get('/logout', controllersUser.logout);
 router.get('/perfil', controllersUser.show);
+router.get('/perfil/editar/:id', controllersUser.profile);
+router.post('/perfil/editar/:id', upload.single('imagen'), controllersUser.update)
 //router.put('/perfil/edit/', upload.single('imagen'), controllersUser.update);
 //router.get('/recover', controllersUser.recover);
 

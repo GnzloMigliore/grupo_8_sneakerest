@@ -7,7 +7,7 @@ const {
     validationResult,
     body
 } = require('express-validator');
-const { userInfo } = require('os');
+//const { userInfo } = require('os');
 const {users, adresses} = require ('../database/models');
 
 module.exports = {
@@ -17,6 +17,7 @@ module.exports = {
         res.render(path.resolve(__dirname , '..','views','usuarios','login') , {usuarios}); 
     },
     login: async (req, res) => {
+        
         const errors = validationResult(req);
         //return res.send(errors.mapped());
         if(!errors.isEmpty()) {
@@ -33,6 +34,9 @@ module.exports = {
             //Devolver a la vista los errores
             res.render(path.resolve(__dirname, '../views/usuarios/login'),{errors:errors.mapped(),old:req.body});  
         }
+        
+
+
     },
     create: async (req, res) => {
         const usuarios = await users.findAll()
@@ -49,7 +53,7 @@ module.exports = {
         let usuario={
             first_name: req.body.nombre,
             last_name : req.body.apellido,
-            //telephone : req.body.telefono,
+            telephone : req.body.telefono,
             email: req.body.email,
             password: bcrypt.hashSync(req.body.contraseña, 10),
             //genre: req.body.genero,    
@@ -75,26 +79,32 @@ module.exports = {
     show: async (req, res) => {
         const usuarios = await users.findAll()
         //return res.send(usuarios); 
-        res.render(path.resolve(__dirname , '..','views','usuarios','registro') , {usuarios}); 
+        res.render(path.resolve(__dirname , '..','views','usuarios','perfilUsuario') , {usuarios}); 
         /*let usuarios =  JSON.parse(fs.readFileSync(path.resolve(__dirname,'..','data','usuarios.json')));
         const usuarioEmail = req.params.email;
         let usuarioMostrar = usuarios.find(usuario => usuario.email == usuarioEmail);
         res.render(path.resolve(__dirname, '../views/usuarios/perfilUsuario'), {usuarioMostrar});*/
     },
+    profile: async (req, res) => {
+        const usuarios = await users.findByPk(req.params.id)
+        //return res.send(usuarios); 
+        res.render(path.resolve(__dirname , '..','views','usuarios','editarUsuario') , {usuarios});
+    },
     update: async (req,res) =>{
-        const usuarios = await users.findAll({where: {email: req.session.email}})  
-        //tengo que buscar usuarios[0].id
-        req.body.email = req.params.email;
-        req.body.imagen = req.file ? req.file.filename : req.body.oldImagen;
-        let userUpdate = usuarios.map(usuario => {
-            if(usuario.email  == req.body.email){
-                return usuario = req.body;
-            }
-            return usuario;
-        });
-        let usuarioActualizado = JSON.stringify(userUpdate,null,2)
-        fs.writeFileSync(path.resolve(__dirname,'..','data','usuarios.json'), usuarioActualizado);
-        res.redirect('/');
+        const usuarios = await users.findByPk(req.params.id)
+        const usuario_body = { 
+            //return res.send(_body);
+            first_name: req.body.nombre,
+            last_name: req.body.apellido,
+            telephone: req.body.telefono,
+            email: req.body.email,
+            //password: req.body.password,
+            image: req.file ? req.file.filename : req.body.oldImagen   
+        }
+        //return res.send(zapatillas_body);
+        let updateUsuario = await users.update(usuario_body, {where: {id: req.params.id}})
+        //return res.send(newZapatilla)
+        res.redirect('/perfil');
     }
     
 }

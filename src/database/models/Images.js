@@ -20,8 +20,8 @@ module.exports = (sequelize, DataTypes) =>{
             {
                 as: 'images',
                 through: 'imageproducts',
-                foreignKey: 'image_id',
-                otherKey: 'product_id'
+                foreignKey: 'product_id',
+                otherKey: 'image_id'
             }
         )
     }

@@ -16,30 +16,47 @@ module.exports = {
         res.render(path.resolve(__dirname , '..','views','admin','detailUsuario') , {usuarios}); 
     },
     destroy: async (req,res) =>{ 
-        let destroyUsuario = await usuarios.destroy({where: {id: req.params.id}, force: true})
+        let destroyUsuario = await users.destroy({where: {id: req.params.id}, force: true})
         res.redirect('/adminUsers')
+        
+        /*users.destroy({
+            where : {
+               id:  req.params.id
+            },
+            force : true 
+        })
+        .then(confirm =>{
+            res.redirect('/adminUsers');
+        })*/
     },
     edit: async (req,res) =>{   
-        const usuarios = await users.findAll()
+        const usuarios = await users.findByPk(req.params.id)
         //return res.send(usuarios); 
-        res.render(path.resolve(__dirname , '..','views','admin','administrarUsuarios') , {usuarios});    
+        res.render(path.resolve(__dirname , '..','views','admin','editUsuario') , {usuarios});    
     },
-    updateRole: (req,res) =>{ 
-        req.body.email = req.params.email;
-        /*req.body.nombre = req.params.nombre;
-        req.body.apellido = req.params.apellido;
-        req.body.genero = req.params.genero;
-        req.body.imagen = req.params.imagen;*/
-
-        let usuarios =  JSON.parse(fs.readFileSync(path.resolve(__dirname,'..','data','usuarios.json')));  
-        let usuarioUpdate = usuarios.map(usuario=>{
-            if(usuario.email == req.body.email){
-                return usuario = req.body;
+    updateRole: async (req,res) =>{ 
+        /*users.update({
+            role:req.body.role
+        },
+        {
+            where : {
+                id : req.params.id
             }
-            return usuario;
-        });
-        fs.writeFileSync(path.resolve(__dirname,'../data/usuarios.json'),JSON.stringify(usuarioUpdate, null, 2));
-        res.redirect('/adminUsers');
+        })
+        .then(confirm =>{
+            res.redirect('/adminUsers')
+        })
+        .catch(error => res.send(error));*/
+        const usuarios = await users.findByPk(req.params.id)
+        let role_body = {
+            role: req.body.role
+        }
+        //return res.send(role_body);
+        let newRole = await users.update(role_body, {where: {id: req.params.id}})
+        res.redirect('/adminUsers')
+        
+        
+        
     }
     
 };

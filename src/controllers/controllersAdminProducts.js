@@ -1,7 +1,7 @@
 const path = require('path');
 const fs = require('fs');
 const { Op } = require("sequelize");
-const {products, brands, examples} = require ('../database/models');
+const {products, brands, examples, images, imageproducts} = require ('../database/models');
 
 
 module.exports = {
@@ -30,7 +30,7 @@ module.exports = {
             modelos_body = modelos[0].id 
         } else {
             let newModelo = await examples.create({name: req.body.modelo})
-            modelo_body = newModelo.id
+            modelos_body = newModelo.id
         }
         const zapatillas_body = { 
             //return res.send(_body);
@@ -42,19 +42,23 @@ module.exports = {
             brand_id: marcas_body,
             example_id: modelos_body
         }
-        let images = [];
+        let images_body = [];
         req.files.forEach(async file => {
-            let newImage = await image.create({filename: file.filename})
-            images.push(newImage.id)
+            let newImage = await images.create({filename: file.filename})
+            images_body.push(newImage.id)
         });
         
         //return res.send(zapatillas_body);
         let newZapatilla = await products.create(zapatillas_body)
         //hay que hacer el modelo imageProducts
-        images.forEach(async image => {
-            await imageProducts.create({image_id: image, product_id: newZapatilla.id})
+        let image_products = null;
+        images_body.forEach(async images => {
+            let newImageproducts = await imageproducts.create({image_id: images, product_id: newZapatilla.id})
+            image_products.push(newImageproducts.id);
         })
-        res.redirect(`/productos/detalle/${newZapatilla.id}`);
+        
+        return res.send({newZapatilla, images_body, image_products})
+        //res.redirect(`/productos/detalle/${newZapatilla.id}`);
         //res.redirect('/adminProducts')
     },
     show: async (req,res)=>{

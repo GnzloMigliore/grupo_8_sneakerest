@@ -1,0 +1,65 @@
+.select-talles button {
+    border-radius: 0 !important;
+}
+
+.select-talles .dropdown-menu {
+    color: #999 !important;
+}
+
+input::-webkit-input-placeholder {
+    color: #999999 !important;
+}
+
+/* Firefox < 19 */
+input:-moz-placeholder {
+    color: #999999 !important;
+}
+
+/* Firefox > 19 */
+input::-moz-placeholder {
+    color: #999999 !important;
+}
+
+/* Internet Explorer 10 */
+input:-ms-input-placeholder {
+    color: #999999 !important;
+}
+
+input::placeholder{
+    color: #999999 !important;
+}
+
+select::placeholder{
+    color: #999999 !important;
+}
+
+select::-webkit-input-placeholder {
+    color: #999999 !important;
+}
+
+/* Firefox < 19 */
+select:-moz-placeholder {
+    color: #999999 !important;
+}
+
+/* Firefox > 19 */
+select::-moz-placeholder {
+    color: #999999 !important;
+}
+
+/* Internet Explorer 10 */
+select:-ms-input-placeholder {
+    color: #999999 !important;
+}
+
+select:hover{
+    background-color: rgb(226, 229, 234, 1) !important;
+}
+
+input:hover{
+    background-color: rgb(226, 229, 234, 1) !important;
+}
+
+.inputs-imagenes input:hover{
+    background-color: white !important;
+}
