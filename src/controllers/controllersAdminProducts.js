@@ -4,6 +4,7 @@ const { Op } = require("sequelize");
 const {products, brands, examples, images, imageproducts} = require ('../database/models');
 
 
+
 module.exports = {
     index: async (req,res) =>{   
         const zapatillas = await products.findAll({include: ['brands', 'examples']})
@@ -42,25 +43,28 @@ module.exports = {
             brand_id: marcas_body,
             example_id: modelos_body
         }
-        let images_body = [];
-        req.files.forEach(async file => {
-            let newImage = await images.create({filename: file.filename})
-            images_body.push(newImage.id)
+        let newImages = [];
+        req.files.forEach(async image => {
+            let newImage = await images.create({filename: image.filename})
+            newImages.push(newImage.id)
         });
         
         //return res.send(zapatillas_body);
         let newZapatilla = await products.create(zapatillas_body)
         //hay que hacer el modelo imageProducts
-        let image_products = null;
-        images_body.forEach(async images => {
-            let newImageproducts = await imageproducts.create({image_id: images, product_id: newZapatilla.id})
-            image_products.push(newImageproducts.id);
+        newImages.forEach(async imagen => {
+            imageproducts.create({image_id: imagen, product_id: newZapatilla.id})           
         })
         
-        return res.send({newZapatilla, images_body, image_products})
-        //res.redirect(`/productos/detalle/${newZapatilla.id}`);
-        //res.redirect('/adminProducts')
+        //return res.send({newZapatilla, newImages})
+        res.redirect(`/productos/detalle/${newZapatilla.id}`);
+        //res.redirect('/adminProducts')*/
     },
+
+
+
+
+    
     show: async (req,res)=>{
         const zapatillas = await products.findByPk(req.params.id, {include: ['brands', 'examples']});
         //return res.send(zapatillas);
@@ -69,6 +73,7 @@ module.exports = {
     },
     destroy: async (req, res) => {
         let destroyZapatilla = await products.destroy({where: {id: req.params.id}, force: true})
+        
         res.redirect('/adminProducts')
     },
     edit: async (req,res) => {
@@ -77,7 +82,7 @@ module.exports = {
         res.render(path.resolve(__dirname , '..','views','admin','editProductos') , {zapatillas});                       
         
     },
-
+    
     //Agregar varias iamgenes
     //crear array con id de las  imagenes que el producto actualmente tiene
     //despues recorrer ese array y eliminar las relaciones donde coincida la imagen del producto con el producto(imgID con el Array)
@@ -120,6 +125,5 @@ module.exports = {
         res.redirect(`/productos/detalle/${newZapatilla.id}`);
         //res.redirect('/adminProducts')
     }     
-        
-}
     
+}

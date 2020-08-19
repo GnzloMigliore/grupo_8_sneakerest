@@ -5,6 +5,7 @@ module.exports = (sequelize, DataTypes) =>{
         id: {
             type: DataTypes.INTEGER,
             primaryKey : true,
+            allowNull: false,
             autoIncrement: true
         },
         filename: DataTypes.STRING,
@@ -18,10 +19,10 @@ module.exports = (sequelize, DataTypes) =>{
         images.belongsToMany(
             models.products,
             {
-                as: 'images',
+                as: 'products',
                 through: 'imageproducts',
-                foreignKey: 'product_id',
-                otherKey: 'image_id'
+                foreignKey: 'image_id',
+                otherKey: 'product_id'
             }
         )
     }
