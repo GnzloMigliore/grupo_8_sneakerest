@@ -1,9 +1,9 @@
-<nav class="navbar row">
-    <div class=" col-12 d-flex justify-content-between align-items-center">
-        <div id="item1" class="col-3">
-           <span style="font-size:30px;cursor:pointer;padding-top: 20px; padding-right: 1rem;" onclick="openNav()">&#9776; </span>
-           <a href="/"><img src="/img/logonegro@.png" alt=""></i></a>
-        
+<nav>
+    <div class="container-fluid px-0">
+    <div class="col-12 row mr-0 pr-0">
+        <div class="col 2.4 d-flex ml-0 pl-4 pb-2">
+           <span style="font-size:30px;cursor:pointer;padding-top: 10px; padding-right: 1rem;" onclick="openNav()">&#9776; </span>
+           <a href="/"><img class="d-none d-md-block" src="/img/logonegro@.png" alt=""></a>     
 
            <div id="mySidenav" class="sidenav">
            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -21,51 +21,142 @@
             <a id="menuinfo" href="/ayuda">AYUDA</a>
            <br>
            <br>
-           <% if(locals.usuario) { %>
-            <a href="/admin">ADMIN</a>
-            <% } else { %>
-           <a href="/login">LOG IN</a>
-           <% } %>
+           <% if(locals.usuario) { %> <div class="dropdown d-flex pr-2 d-none d-sm-block d-md-none">
+            <button class="btn btn-dark dropdown-toggle f ml-3 " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Administrar
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item"href="/adminProducts">Productos</a>  
+                <a class="dropdown-item"href="/adminUsers">Usuarios</a>    
+            </div>       
+            <% } else { %> 
+                <div class=" d-sm-block d-md-none">
+            <a  href="/login">LOGIN</a>  
+        </div>
+            <% } %>
            </div>
-           </div>     
-        <div id="search" class="d-flex justify-content-center align-items-center col-4 ">
-            <form action="/action_page.php" class="d-none d-md-block">
+           </div>      
+           <% if(locals.usuario) { %>
+            <div class="col 2 d-flex justify-content-end align-items-center">
+              <form action="/action_page.php" class="d-none d-md-block">
                 <div class="d-flex justify-content-center align-items-center">
                     <div class="border-bottom border-dark">
                         <input type="text" placeholder="BUSCAR" name="search" class="border-0 rounded-0 buscar-input">
                     </div>
                     <button type="submit" class="border-0 bg-white"><i class="fa fa-search"></i></button>
                 </div>
-            </form>
-        </div>
-        <% if(locals.usuario) { %>
-        <div class="d-flex justify-content-between align-items-center col-2 mr-3">
-            <div class="dropdown">
-                <button class="btn btn-light dropdown-toggle f" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    ¡Hola <%= locals.usuario.first_name %> !
+              </form>
+            </div>
+        <% } else { %> 
+            <div class="col 4.8 d-flex justify-content-center align-items-center">
+              <form action="/action_page.php" class="d-none d-md-block">
+                <div class="d-flex justify-content-center align-items-center">
+                    <div class="border-bottom border-dark">
+                        <input type="text" placeholder="BUSCAR" name="search" class="border-0 rounded-0 buscar-input">
+                    </div>
+                    <button type="submit" class="border-0 bg-white"><i class="fa fa-search"></i></button>
+                </div>
+              </form>
+            </div>
+        <% } %>
+        <% if(locals.usuario) { %>          
+
+            <div class="col 4.8 d-flex justify-content-end align-items-center pr-0">
+            <div class="dropdown d-flex">
+                <button class="btn btn-light dropdown-toggle f mr-2  mt-2 d-none d-md-block" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Administrar
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item"href="/adminProducts">Productos</a>  
+                    <a class="dropdown-item"href="/adminUsers">Usuarios</a>    
+                </div>       
+            <div class="dropdown d-flex">
+                <button class="btn btn-light dropdown-toggle f pr-2 mt-2" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    ¡Hola <%= locals.usuario.nombre %> !
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                     <a class="dropdown-item"href="/perfil">Mi perfil</a>  
                     <a class="dropdown-item"href="/logout">Cerrar sesión</a>        
-                </div>             
-            </div>
-        
-            <div class="d-flex pl-6">
-               <a href="/carrito"><i class="fas fa-shopping-cart ml-4" style="font-size: 1.5rem; color: black;"></i></a>
-            </div>
+                </div>                         
+            </div>        
+               <div class="d-flex">
+               <a href="/carrito"><i class="fas fa-shopping-cart  ml-2 mr-0 pr-0 mt-3" style="font-size: 1.5rem; color: black;"></i></a>
+               </div>
         </div>    
         <% } else { %>  
-            <div class="d-flex justify-content-between align-items-center mr-2">    
-                <div>     
-                    <a class="text-uppercase text-body text-decoration-none p-3" href="/login">Iniciar sesión</a>
+            <div class="col 4.8 d-flex justify-content-end align-items-center pr-5">   
+           <!-- Button trigger modal -->
+<button type="button" class="btn btn-light" data-toggle="modal" data-target="#exampleModalCenter">
+    INICIAR SESIÓN
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+            <div class="row">
+                <h3 class="ml-3">INGRESA A TU CUENTA</h3>
+            </div>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          
+            <!--Formulario-->
+            <form action="/login" method="POST">
+                <div class="form-group col-12 d-flex justify-content-center mb-0 mt-5">
+                    <input type="Email" name="email" placeholder="Email" class="form-control form-control-sm mb-2 datos-envio-input" value="<%=typeof old == 'undefined' ? '':old.email %>">
                 </div>
-                <div>
-                    <a class="text-uppercase text-body text-decoration-none p-3" href="/contacto">Contacto  </a>
+                <div class="form-group col-12 d-flex justify-content-center mt-0 mb-1">
+                    <% if(typeof errors != 'undefined' && errors.email){%>
+                        <span class="text-danger" > <%=errors.email.msg %></span>
+                    <%}%>
                 </div>
-                <div class="d-flex pl-6 ml-3">
-                    <a href="/carrito"><i class="fas fa-shopping-cart" style="font-size: 1.5rem; color: black;"></i></a>
+                <div class="form-group col-12 d-flex justify-content-center mb-0">
+                    <input type="password" name="contraseña" placeholder="Contraseña" class="form-control form-control-sm mb-2 datos-envio-input">
+                    </div>
+                <div class="form-group col-12 d-flex justify-content-center mt-0 mb-1">
+                    <% if(typeof errors != 'undefined' && errors.contraseña){%>
+                        <span class="text-danger" > <%=errors.contraseña.msg %></span>
+                    <%}%>
+                </div>
+                    <div>
+                        <div class="form-check text-center">
+                            <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="..." name="recordarme"> Recordarme
+                        </div>     
+                        <a href="/recover" class="text-decoration-none text-body text-center"><p>OLVIDÉ MI CONTRASEÑA</p></a>
+                    </div>
+                        
+                        
+                        <div class="ingresar">
+                            <div class="form-group w-60 d-flex justify-content-center">
+                                <button type="submit" class="btn btn-dark  w-60">INICIAR SESION</button>
+                            </div>
+                            <div class="d-flex justify-content-center">
+                            <button type="button" class="btn btn-dark mb-3">INICIO DE SESIÓN CON FB</button>
+                            </div>
+                            <div class="d-flex w-60 justify-content-center">
+                            <button type="button" class="btn btn-dark mb-2">INICIO DE SESIÓN CON GOOGLE</button>
+                            </div>
+                            <div class="d-flex w-60 justify-content-center">
+                            <a href="login/registro" class="w-60 btn btn-light  btn-lg mt-3" tabindex="-1" role="button" aria-disabled="true">CREAR CUENTA</a>
+                            </div>
+                            </div>
+                    </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+           <div>
+            <a class="text-uppercase text-body text-decoration-none p-1 d-none d-md-block" href="/contacto">Contacto  </a>
            </div>
-        <% } %> 
+           <div class="d-flex col-1">
+            <a href="/carrito"><i class="fas fa-shopping-cart t ml-2 mr-0 pr-0 mt-1" style="font-size: 1.5rem; color: black;"></i></a>
+           </div>
+           <% } %> 
         
         </div>
     </div>
@@ -80,4 +171,5 @@
         document.getElementById("mySidenav").style.width = "0";
     }
 </script>
+</div>
 </nav>

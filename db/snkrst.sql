@@ -25,19 +25,19 @@ DROP TABLE IF EXISTS `adresses`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `adresses` (
-  `id` int(11) NOT NULL,
-  `street` varchar(45) NOT NULL,
-  `number` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `street` varchar(45) DEFAULT NULL,
+  `number` int(11) DEFAULT NULL,
   `floor` int(11) DEFAULT NULL,
   `apartment` varchar(45) DEFAULT NULL,
-  `city` varchar(45) NOT NULL,
-  `province` varchar(45) NOT NULL,
-  `postalCode` int(11) NOT NULL,
+  `city` varchar(45) DEFAULT NULL,
+  `province` varchar(45) DEFAULT NULL,
+  `postalCode` int(11) DEFAULT NULL,
   `createdAt` timestamp NULL DEFAULT NULL,
   `updatedAt` timestamp NULL DEFAULT NULL,
   `deletedAt` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -46,6 +46,7 @@ CREATE TABLE `adresses` (
 
 LOCK TABLES `adresses` WRITE;
 /*!40000 ALTER TABLE `adresses` DISABLE KEYS */;
+INSERT INTO `adresses` VALUES (1,'Calle Falsa',123,NULL,NULL,'BsAs','BsAs',1644,NULL,NULL,NULL);
 /*!40000 ALTER TABLE `adresses` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -73,6 +74,7 @@ CREATE TABLE `adressuser` (
 
 LOCK TABLES `adressuser` WRITE;
 /*!40000 ALTER TABLE `adressuser` DISABLE KEYS */;
+INSERT INTO `adressuser` VALUES (0,1,1,NULL,NULL,NULL);
 /*!40000 ALTER TABLE `adressuser` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -90,7 +92,7 @@ CREATE TABLE `brands` (
   `updatedAt` timestamp NULL DEFAULT NULL,
   `deletedAt` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=48 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -99,7 +101,7 @@ CREATE TABLE `brands` (
 
 LOCK TABLES `brands` WRITE;
 /*!40000 ALTER TABLE `brands` DISABLE KEYS */;
-INSERT INTO `brands` VALUES (1,'Adidas',NULL,NULL,NULL),(23,'Adidas','2020-08-17 13:51:50','2020-08-17 13:51:50',NULL);
+INSERT INTO `brands` VALUES (47,'otroproducto222','2020-08-19 21:21:36','2020-08-19 21:21:36',NULL);
 /*!40000 ALTER TABLE `brands` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -226,7 +228,7 @@ CREATE TABLE `examples` (
   `updatedAt` timestamp NULL DEFAULT NULL,
   `deletedAt` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=47 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -235,7 +237,7 @@ CREATE TABLE `examples` (
 
 LOCK TABLES `examples` WRITE;
 /*!40000 ALTER TABLE `examples` DISABLE KEYS */;
-INSERT INTO `examples` VALUES (1,'Superstar',NULL,NULL,NULL),(17,'Adidas','2020-08-17 13:51:51','2020-08-17 13:51:51',NULL);
+INSERT INTO `examples` VALUES (46,'otro22','2020-08-19 21:21:37','2020-08-19 21:21:37',NULL);
 /*!40000 ALTER TABLE `examples` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -273,14 +275,14 @@ DROP TABLE IF EXISTS `imageproducts`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `imageproducts` (
-  `id` int(11) NOT NULL,
-  `image_id` int(11) NOT NULL,
-  `product_id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `image_id` int(11) DEFAULT NULL,
+  `product_id` int(11) DEFAULT NULL,
   `createdAt` timestamp NULL DEFAULT NULL,
   `updatedAt` timestamp NULL DEFAULT NULL,
   `deletedAt` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -289,6 +291,7 @@ CREATE TABLE `imageproducts` (
 
 LOCK TABLES `imageproducts` WRITE;
 /*!40000 ALTER TABLE `imageproducts` DISABLE KEYS */;
+INSERT INTO `imageproducts` VALUES (13,315,114,'2020-08-19 21:21:37','2020-08-19 21:21:37',NULL);
 /*!40000 ALTER TABLE `imageproducts` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -301,13 +304,12 @@ DROP TABLE IF EXISTS `images`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `images` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `product_id` int(11) NOT NULL,
-  `filename` varchar(50) NOT NULL,
+  `filename` varchar(50) DEFAULT NULL,
   `createdAt` timestamp NULL DEFAULT NULL,
   `updatedAt` timestamp NULL DEFAULT NULL,
   `deletedAt` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=316 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -316,6 +318,7 @@ CREATE TABLE `images` (
 
 LOCK TABLES `images` WRITE;
 /*!40000 ALTER TABLE `images` DISABLE KEYS */;
+INSERT INTO `images` VALUES (311,'zapatilla-1597872096914.jpg','2020-08-19 21:21:37','2020-08-19 21:21:37',NULL),(312,'zapatilla-1597872096915.jpg','2020-08-19 21:21:37','2020-08-19 21:21:37',NULL),(313,'zapatilla-1597872096916.jpg','2020-08-19 21:21:37','2020-08-19 21:21:37',NULL),(314,'zapatilla-1597872096917.jpg','2020-08-19 21:21:37','2020-08-19 21:21:37',NULL),(315,'zapatilla-1597872096918.jpg','2020-08-19 21:21:37','2020-08-19 21:21:37',NULL);
 /*!40000 ALTER TABLE `images` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -394,7 +397,7 @@ CREATE TABLE `products` (
   `updatedAt` timestamp NULL DEFAULT NULL,
   `deletedAt` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=115 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -403,7 +406,7 @@ CREATE TABLE `products` (
 
 LOCK TABLES `products` WRITE;
 /*!40000 ALTER TABLE `products` DISABLE KEYS */;
-INSERT INTO `products` VALUES (1,6999.00,10,'Zapatilla de prueba en la prueba de editar product','zapatilla-1597672310918.jpg',0,23,17,NULL,NULL,'2020-08-17 13:51:51',NULL);
+INSERT INTO `products` VALUES (114,123123.00,NULL,'12312312',NULL,123,47,46,NULL,'2020-08-19 21:21:37','2020-08-19 21:21:37',NULL);
 /*!40000 ALTER TABLE `products` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -494,21 +497,20 @@ DROP TABLE IF EXISTS `users`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `users` (
-  `id` int(11) NOT NULL,
-  `first_name` varchar(45) NOT NULL,
-  `last_name` varchar(45) NOT NULL,
-  `telephone` int(11) NOT NULL,
-  `email` varchar(45) NOT NULL,
-  `password` varchar(45) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `first_name` varchar(45) DEFAULT NULL,
+  `last_name` varchar(45) DEFAULT NULL,
+  `telephone` int(11) DEFAULT NULL,
+  `email` varchar(45) DEFAULT NULL,
+  `password` varchar(45) DEFAULT NULL,
   `image` varchar(45) DEFAULT NULL,
-  `adress_id` int(11) NOT NULL,
-  `role` int(11) NOT NULL,
+  `role` int(11) DEFAULT NULL,
   `createdAt` timestamp NULL DEFAULT NULL,
   `updatedAt` timestamp NULL DEFAULT NULL,
   `deletedAt` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `email_UNIQUE` (`email`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -517,6 +519,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
+INSERT INTO `users` VALUES (4,'pepe  ','aspd',151251,'pepe@gmail.com','$2a$10$SZb1r4u5jJdw5vHbCM0nlO/seJfYqPwq98W5pP','usuario-1597795319417.jpg',9,'2020-08-18 00:55:06','2020-08-19 00:01:59',NULL),(5,'pepa  ','pepita',1512341234,'pepa@gmail.com','$2a$10$fD8cthYnHGq/.84H83pIluWm8VjY8e7nbZz5m8','usuario-1597794957863.jpg',1,'2020-08-18 15:43:21','2020-08-18 23:55:57',NULL),(8,'juana','juanesa',549846,'juanesa@gmail.com','$2a$10$nVn6WBQ/g88oWcW.oHA6wu7V45H92kdcSCwN..','usuario-1597793663701.jpg',1,'2020-08-18 23:34:23','2020-08-18 23:53:04',NULL);
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -529,4 +532,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-08-17 18:25:42
+-- Dump completed on 2020-08-19 22:19:05
