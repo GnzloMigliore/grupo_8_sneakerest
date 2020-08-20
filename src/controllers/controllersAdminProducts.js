@@ -119,8 +119,11 @@ module.exports = {
             brand_id: marcas_body,
             example_id: modelos_body
         }
+        
         //return res.send(zapatillas_body);
         let newZapatilla = await products.update(zapatillas_body, {where: {id: req.params.id}})
+        //hay que hacer el modelo imageProducts
+        
         //return res.send(newZapatilla)
         res.redirect(`/productos/detalle/${newZapatilla.id}`);
         //res.redirect('/adminProducts')
