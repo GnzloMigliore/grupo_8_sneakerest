@@ -13,19 +13,18 @@ module.exports = (sequelize, DataTypes) =>{
     const colors = sequelize.define(alias,cols);
     
     // Esto es la relacion entre Product, colors, Model y Gender
-    /*colors.associate = function (models){
+    colors.associate = function (models){
         colors.belongsToMany(
             models.products,
             {
                 as: 'products',
-                through: 'colorProduct',
-                foreignKey: 'product_id',
-                otherKey: 'color_id',
-                timestamps: false 
+                through: 'colorproduct',
+                foreignKey: 'color_id',
+                otherKey: 'product_id'
             }
         )
         
         
-    }*/
+    }
     return colors;
 }

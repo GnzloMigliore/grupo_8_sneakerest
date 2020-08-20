@@ -4,7 +4,8 @@
     <%- include('../partials/head.ejs') %>
     <!--Mi CSS-->
     <link rel="stylesheet" href="/css/administrar.css">  
-    <link rel="stylesheet" href="/css/createProductos.css">  
+    <link rel="stylesheet" href="/css/createProductos.css"> 
+    <link rel="stylesheet" href="/css/navbar.css">  
 </head>
 <body>
     <header>
@@ -34,15 +35,23 @@
                             <!--Género-->
                             <div class="form-group col-4" placeholder="Modelo" required="required" value="">
                                 <select class="selectpicker col-12 select-talles pl-0" title="Género" data-header="Seleccione el género" name="genero">
-                                    <option value="1">Men</option>
-                                    <option value="2">Women</option>
-                                    <option value="3">Kids</option>
+                                    <option value="men">Men</option>
+                                    <option value="women">Women</option>
+                                    <option value="kids">Kids</option>
                                 </select>
                             </div>
                             <!--Color-->
                             <div class="form-group col-2 pl-0">
-                                <input type="color" class="form-control border-0 rounded-0 bg-light" name="color" required="required" value="">
+                                <input type="color" list="presetColors" class="form-control border-0 rounded-0 bg-light" name="color" required="required" value="">
+                                <datalist id="presetColors">
+                                <option value="#ff0000"/>
+                                <option value="#00ff00"/>
+                                <option value="#0000ff"/>
+                                </datalist>
                             </div>
+                            <!--<div class="form-group col-2 pl-0">
+                                <input type="color" class="form-control border-0 rounded-0 bg-light" name="color" required="required" value="">
+                            </div>-->
                             <!--Talles-->
                             <!--<div class="form-group col-6 pl-0">
                                 <input class="form-control border-0 rounded-0 bg-light" name="talle" placeholder="Talles (separados por guión sin espacio)" required="required" value="">

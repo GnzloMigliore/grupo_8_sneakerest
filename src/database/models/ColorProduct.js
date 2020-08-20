@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = 'colorProduct';
+    let alias = 'colorproduct';
     let cols = {
         id: {
             type: dataTypes.INTEGER,
@@ -7,26 +7,24 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false,
             autoIncrement: true
         }
-    };
-        
+    };       
     
-    const colorProduct = sequelize.define(alias, cols)
-    /*colorProduct.associate = function(models) {
-        colorProduct.belongsTo(
-            models.color,
+    const colorproduct = sequelize.define(alias, cols)
+    /*colorproduct.associate = function(models) {
+        colorproduct.belongsTo(
+            models.colors,
             {
-                as : 'color',
+                as : 'colors',
                 foreignKey: 'color_id'
             }
         ),
-        colorProduct.belongsTo(
-            models.product,
+        colorproduct.belongsTo(
+            models.products,
             {
-                as : 'product',
+                as : 'products',
                 foreignKey: 'product_id'
             }
         )
     };*/
-
-    return colorProduct;
+    return colorproduct;
 }

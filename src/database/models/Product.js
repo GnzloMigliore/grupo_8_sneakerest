@@ -10,8 +10,8 @@ module.exports = (sequelize, dataTypes) => {
         price: dataTypes.DECIMAL,
         //discount: dataTypes.INTEGER,
         description: dataTypes.STRING,
-        //image: dataTypes.STRING,
-        stock: dataTypes.INTEGER,
+        color: dataTypes.STRING,
+        stock: dataTypes.INTEGER
     };
 
         
@@ -33,6 +33,13 @@ module.exports = (sequelize, dataTypes) => {
                 foreignKey: 'example_id'
             }
         )
+        products.belongsTo(
+            models.genders,
+            {
+                as : 'genders',
+                foreignKey: 'gender_id'
+            }
+        )
         products.belongsToMany(
             models.images,
             {
@@ -42,6 +49,15 @@ module.exports = (sequelize, dataTypes) => {
                 otherKey: 'image_id'
             }
         )
+        /*products.belongsToMany(
+            models.colors,
+            {
+                as: 'colors',
+                through: 'colorproduct',
+                foreignKey: 'product_id',
+                otherKey: 'color_id'
+            }
+        )*/
     };
 
     return products

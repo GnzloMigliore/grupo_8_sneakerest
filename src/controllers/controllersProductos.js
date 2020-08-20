@@ -6,11 +6,10 @@ const {products, brands, examples, images, imageproducts} = require ('../databas
 
 module.exports = {
     productos: async (req,res) =>{   
-        const zapatillas = await products.findAll({include: ['brands', 'examples']})
-        const imagenes = await images.findAll();
-        
-            //return res.send(zapatillas); 
-            res.render(path.resolve(__dirname , '..','views','productos','productos') , {zapatillas, imagenes});           
+        const zapatillas = await products.findAll({include: ['brands', 'examples', 'images']})
+        //const imagenes = await images.findAll();   
+        //return res.send(zapatillas) 
+        res.render(path.resolve(__dirname , '..','views','productos','productos') , {zapatillas});           
     },    
     detail: async (req,res) => {
         const zapatillas = await products.findByPk(req.params.id, {include: ['brands', 'examples', 'images']})

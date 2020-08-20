@@ -3,6 +3,7 @@
 <head>
     <%- include ('../partials/head.ejs')  %> 
     <link rel="stylesheet" href="/css/detalleProducto.css">
+    <link rel="stylesheet" href="/css/navbar.css">  
 </head>
 <body>
     <header>
@@ -71,7 +72,8 @@
                     </div>
                 </div>                 
             </article>
-            <article class="col-4 bg-light d-none d-lg-block">
+            <!--Filtros, descripcion y botones-->
+        <article class="col-4 d-none d-lg-block" style="background-color: <%= zapatillas.color %>">
                 <!--Marca, modelo, id-->
                 <div class="col-12 pt-3 pb-3">
                     <h2 class="text-uppercase font-weight-bold"><%=  zapatillas.brands.name + " "%><%= zapatillas.examples.name %></h2>
@@ -83,14 +85,6 @@
                 </div>
                 <!--Imágenes colores-->
                 <div class="col-12 d-flex flex-wrap justify-content-start mt-5">
-                    <!--% for (let i=0; i<zapatillas.length; i++) { %>
-                        % if (zapatillas.marca && zapatillas.modelo == zapatillas[i].modelo) { %>
-                            <div class="col-4">
-                                <img src="img/%= zapatillas[0].imagen %>" alt="%= zapatillas.marca + " "%>%= zapatillas.modelo %>">
-                            </div>
-                        % } %>  
-                    % } %-->
-    
                     <p class="text-uppercase col-12 pl-0">colores</p>
                     <a href="#" class="col-3 py-2 px-2">
                         <div>

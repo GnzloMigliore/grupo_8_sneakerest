@@ -5,15 +5,16 @@ module.exports = (sequelize, DataTypes) =>{
         id: {
             type: DataTypes.INTEGER,
             primaryKey : true,
+            allowNull: false,
             autoIncrement: true
         },
         name: DataTypes.STRING,
     };
-
+    
     const genders = sequelize.define(alias,cols);
     
     // Esto es la relacion entre Product, Brand, Model y Gender
-    /*genders.associate = function (models){
+    genders.associate = function (models){
         genders.hasMany(
             models.products,
             {
@@ -21,7 +22,7 @@ module.exports = (sequelize, DataTypes) =>{
                 foreignKey: 'gender_id'
             }
             )
-        }*/
+    }
         
         return genders;
-}
+    }
