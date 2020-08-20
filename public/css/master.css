@@ -229,7 +229,7 @@ body {
 }
 @media (min-width: 500px) {
 .primera-pagina {
-    background-image: url(/img/adidasgif.gif);
+    background-image: url(/img/nikegif1.gif);
     background-repeat: no-repeat;
     background-size: cover; 
     text-align: center;
@@ -237,9 +237,10 @@ body {
     width: 100%;
     height: 100vh;  
 }
+
 /* SEGUNDO SLIDE */
 .segunda-pagina {
-    background-image: url(/img/nikegif1.gif);
+    background-image: url(/img/addidasloop.gif);
     background-repeat: no-repeat;
     background-size: cover; 
     text-align: center;
