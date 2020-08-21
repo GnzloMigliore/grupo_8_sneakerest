@@ -8,7 +8,7 @@ module.exports = (sequelize, dataTypes) => {
             autoIncrement: true
         },
         price: dataTypes.DECIMAL,
-        //discount: dataTypes.INTEGER,
+        discount: dataTypes.INTEGER,
         description: dataTypes.STRING,
         color: dataTypes.STRING,
         stock: dataTypes.INTEGER

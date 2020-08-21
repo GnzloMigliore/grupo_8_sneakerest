@@ -24,7 +24,7 @@ module.exports = {
         if(marcas.length > 1){
             marcas_body = marcas[0].id;
         } else {
-            await brands.destroy({where: {name: req.body.marca}})
+            //await brands.destroy({where: {name: req.body.marca}})
             let newBrand = await brands.create({name: req.body.marca})
             marcas_body = newBrand.id;
         }
@@ -32,7 +32,7 @@ module.exports = {
         if(modelos.length > 1){
             modelos_body = modelos[0].id 
         } else {
-            await examples.destroy({where: {name: req.body.modelo}})
+            //await examples.destroy({where: {name: req.body.modelo}})
             let newModelo = await examples.create({name: req.body.modelo})
             modelos_body = newModelo.id
         }
@@ -40,7 +40,7 @@ module.exports = {
         if (generos.length > 1){
             generos_body = generos[0].id;
         } else {
-            await genders.destroy({where: {name: req.body.genero}})
+            //await genders.destroy({where: {name: req.body.genero}})
             let newGenero = await genders.create({name: req.body.genero})
             generos_body = newGenero.id;
         }
@@ -48,7 +48,7 @@ module.exports = {
         const zapatillas_body = { 
             //return res.send(_body);
             price: req.body.precio,
-            //discount: req.body.descuento,
+            discount: req.body.descuento,
             description: req.body.descripcion,
             color: req.body.color,
             stock: req.body.descuento,
@@ -89,14 +89,14 @@ module.exports = {
         res.redirect('/adminProducts')
     },
     edit: async (req,res) => {
-        const zapatillas = await products.findByPk(req.params.id, {include: ['brands', 'examples']})
+        const zapatillas = await products.findByPk(req.params.id, {include: ['brands', 'examples', 'images']})
         //return res.send(zapatillas);
         res.render(path.resolve(__dirname , '..','views','admin','editProductos') , {zapatillas});                       
         
     },
     
     //Agregar varias iamgenes
-    //crear array con id de las  imagenes que el producto actualmente tiene
+    //crear array con id de las  imagenes que el producto actualmente tiene -->listo
     //despues recorrer ese array y eliminar las relaciones donde coincida la imagen del producto con el producto(imgID con el Array)
     // despues denuevo guardarlas en la tabla intermedia agregando al nuevo array las nuevas que se eliminan
     // opcion buscarlas en la carpeta y eliminarlas fisicamente (fs unlink)
@@ -107,38 +107,90 @@ module.exports = {
         let marcas_body = null;
         let modelos_body = null;
         if (marcas.length > 1){
-            let actualizarBrand = await brands.update({name: req.body.marca})
-            marcas_body = actualizarBrand.id
+            //let actualizarBrand = await brands.update({name: req.body.marca})
+            marcas_body = marcas[0].id
             //marcas_body = marcas[0].id;
         } else {
+            await brands.destroy({where: {name: req.body.oldBrand}})
             let newBrand = await brands.create({name: req.body.marca})
             marcas_body = newBrand.id;
         }
         if (modelos.length > 1){
-            let actualizarExample = await examples.update({name: req.body.modelo})
-            modelos_body = actualizarExample.id
+            //let actualizarExample = await examples.update({name: req.body.modelo})
+            modelos_body = modelos[0].id
             //modelos_body = marcas[0].id;
         } else {
-            let newExample = await examples.create({name: req.body.marca})
+            let newExample = await examples.update({name: req.body.marca})
             modelos_body = newExample.id;
         }
         const zapatillas_body = { 
             //return res.send(_body);
             price: req.body.precio,
             description: req.body.descripcion,
-            image: req.file ? req.file.filename : req.body.oldImagen,
-            stock: req.body.descuento,
+            color: req.body.color,
+            discount: req.body.descuento,
+            stock: req.body.stock,
             brand_id: marcas_body,
             example_id: modelos_body
         }
         
         //return res.send(zapatillas_body);
         let newZapatilla = await products.update(zapatillas_body, {where: {id: req.params.id}})
-        //hay que hacer el modelo imageProducts
+
+        
+       let destroyImages = [];
+        req.files.forEach(async image => {
+            //console.log('ooooooooooooo' + image.id)
+            //if(image.fieldname){
+            let imagen1 = await images.findOne({where: {filename: req.body.oldImagen}});
+            await imageproducts.destroy({where: {image_id: imagen1.id}})
+            await images.destroy({where: {id: imagen1.id}})
+            let newImage1 = await images.create ({filename: image.filename})
+            await imageproducts.create({
+                product_id: req.params.id,
+                image_id: newImage1.id
+            })
+            let imagen2 = await images.findOne({where: {filename: req.body.oldImagen2}});
+            await imageproducts.destroy({where: {image_id: imagen2.id}})
+            await images.destroy({where: {id: imagen2.id}})
+            let newImage2 = await images.create ({filename: image.filename})
+            await imageproducts.create({
+                product_id: req.params.id,
+                image_id: newImage2.id
+            })
+            let imagen3 = await images.findOne({where: {filename: req.body.oldImagen3}});
+            await imageproducts.destroy({where: {image_id: imagen3.id}})
+            await images.destroy({where: {id: imagen3.id}})
+            let newImage3 = await images.create ({filename: image.filename})
+            await imageproducts.create({
+                product_id: req.params.id,
+                image_id: newImage3.id
+            })
+            let imagen4 = await images.findOne({where: {filename: req.body.oldImagen3}});
+            await imageproducts.destroy({where: {image_id: imagen4.id}})
+            await images.destroy({where: {id: imagen4.id}})
+            let newImage4 = await images.create ({filename: image.filename})
+            await imageproducts.create({
+                product_id: req.params.id,
+                image_id: newImage4.id
+            })
+            let imagen5 = await images.findOne({where: {filename: req.body.oldImagen3}});
+            await imageproducts.destroy({where: {image_id: imagen5.id}})
+            await images.destroy({where: {id: imagen5.id}})
+            let newImage5 = await images.create ({filename: image.filename})
+            await imageproducts.create({
+                product_id: req.params.id,
+                image_id: newImage5.id
+            })
+            
+        });
+        //return res.send(destroyImages);
+       
         
         //return res.send(newZapatilla)
-        res.redirect(`/productos/detalle/${newZapatilla.id}`);
-        //res.redirect('/adminProducts')
+        //res.redirect(`/productos/detalle/${newZapatilla.id}`);
+        res.redirect('/productos')
+        
     }     
     
 }

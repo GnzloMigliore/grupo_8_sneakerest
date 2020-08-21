@@ -21,7 +21,14 @@ module.exports = (sequelize, DataTypes) =>{
                 as: 'products',
                 foreignKey: 'gender_id'
             }
-            )
+        )
+        genders.hasMany(
+            models.users,
+            {
+                as:'users',
+                foreignKey: gender_id
+            }
+        )
     }
         
         return genders;

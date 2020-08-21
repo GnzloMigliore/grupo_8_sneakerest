@@ -75,7 +75,7 @@ body {
     align-content: center;
 }
 .primera-pagina {
-    background-image: url(/img/airforce@.jpg);
+    background-image: url(/img/portadamobile@.jpg);
     background-repeat: no-repeat;
     background-size: cover; 
     text-align: center;
@@ -86,7 +86,7 @@ body {
 
 /* SEGUNDO SLIDE */
 .segunda-pagina {
-    background-image: url(/img/adidasoriginal@.jpg);
+    background-image: url(/img/portadamobilenike@.jpg);
     background-repeat: no-repeat;
     background-size: cover; 
     text-align: center;
@@ -226,4 +226,26 @@ body {
             display: none;
         }
         
+}
+@media (min-width: 500px) {
+.primera-pagina {
+    background-image: url(/img/nikegif1.gif);
+    background-repeat: no-repeat;
+    background-size: cover; 
+    text-align: center;
+    padding-bottom: 125px;
+    width: 100%;
+    height: 100vh;  
+}
+
+/* SEGUNDO SLIDE */
+.segunda-pagina {
+    background-image: url(/img/addidasloop.gif);
+    background-repeat: no-repeat;
+    background-size: cover; 
+    text-align: center;
+    padding-bottom: 125px;
+    width: 100%;
+    height: 100vh;  
+}
 }

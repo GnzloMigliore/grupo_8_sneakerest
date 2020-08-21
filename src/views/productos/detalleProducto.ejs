@@ -17,7 +17,7 @@
             <article class="col-12 px-0">
                 <div class="col-12 px-0">
                     <div class="imagenes-resto px-0">                       
-                        <%= zapatillas.images[0].filename %> 
+                        <!--%= zapatillas.images[0].filename %--> 
                     </div>
                 </div>
             </article>
@@ -86,23 +86,17 @@
                 <!--Imágenes colores-->
                 <div class="col-12 d-flex flex-wrap justify-content-start mt-5">
                     <p class="text-uppercase col-12 pl-0">colores</p>
-                    <a href="#" class="col-3 py-2 px-2">
-                        <div>
-                            <img src="/img/Busenitz_Shoes_Blue_FV5876_01_standard.jpg" alt="">
-                        </div>
-                    </a>
-                    <a href="#" class="col-3 py-2 px-2">
-                        <div>
-                            <img src="/img/Busenitz_Shoes_Blue_FV5876_01_standard.jpg" alt="">
-                        </div>
-                    </a>
-                    <a href="#" class="col-3 py-2 px-2">
-                        <div>
-                            <img src="/img/Busenitz_Shoes_Blue_FV5876_01_standard.jpg" alt="">
-                        </div>
-                    </a>
-                    
-                    
+                    <!--% if (zapatillas.example_id == mismoModelo.id) { %>
+                        % zapatillasModelos.images.forEach((modelo, i) => { %>
+                            % if (i == 0) { %>                           
+                                <a href="#" class="col-3 py-2 px-2">
+                                    <div>
+                                        <img src="/images/zapatillas/%= modelo.filename %>" alt="">
+                                    </div>
+                                </a>
+                            % } %>   
+                        % }) %>
+                    % } %-->
                 </div>
                 <!--Talles-->
                 <div class="col-12 d-flex flex-wrap justify-content-start mt-5">

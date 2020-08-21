@@ -19,6 +19,13 @@ module.exports = (sequelize, dataTypes) => {
     const users = sequelize.define(alias, cols)
     //Relaciones entre Users y Address
     users.associate = function(models) {
+        users.belongsTo(
+            models.genders,
+            {
+                as : 'genders',
+                foreignKey: 'gender_id'
+            }
+        )
         users.belongsToMany(
             models.adresses,
             {
