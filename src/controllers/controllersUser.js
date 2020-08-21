@@ -21,22 +21,44 @@ module.exports = {
         const errors = validationResult(req);
         //return res.send(errors.mapped());
         if(!errors.isEmpty()) {
-            const usuario = await users.findAll({where: {email: req.body.email}})
-            delete usuario[0].password;
-            //Acá voy a guardar en session al usuario
-            req.session.usuario = usuario[0];  //Guardar del lado del servidor
-            //Aquí voy a guardar las cookies del usuario que se loguea
+            let usuarioLogueado = await users.findOne({
+                where: {
+                    email: req.body.email
+                }
+            })
+            delete usuarioLogueado.password;
+            req.session.usuario = usuarioLogueado;
             if(req.body.recordarme){
-                res.cookie('email',usuario[0].email,{maxAge: 1000 * 60 * 60 * 24})
+                res.cookie('email', usuarioLogueado.email, {maxAge: 1000 * 60 * 60 * 48})
             }
-            return res.redirect('/');   //Aquí ustedes mandan al usuario para donde quieran (Perfil- home)
+            res.redirect('/');
         }else{
             //Devolver a la vista los errores
-            res.render(path.resolve(__dirname, '../views/usuarios/login'),{errors:errors.mapped(),old:req.body});  
+            return res.render(path.resolve(__dirname, '../views/usuarios/login'), {errors: errors.mapped(),  old: req.body}) 
         }
+        /*let errors = validationResult(req); 
+        if(errors.isEmpty()){
+            users.findAll({where:{email:req.body.email}})
+            .then(user => {
+                let userLogueado = user;
+                delete userLogueado.password;
+                req.session.user = userLogueado;
+                //console.log('asdasd' + req.body.rememberme);
+                if(req.body.recordarme){
+                    //Crear la cookie de ese usuario
+                    res.cookie('email', userLogueado.email, {maxAge: 1000 * 60 * 60 * 24})
+                    //console.log('asdasd' + ' ' +req.cookies.email);
+                }
+                res.redirect('/');
+            })
+            .catch(err => res.send(err));
+        }else{
+            
+            return res.render(path.resolve(__dirname, '../views/usuarios/login'), {errors: errors.mapped(),  old: req.body})
+        }*/
         
-
-
+        
+        
     },
     create: async (req, res) => {
         const usuarios = await users.findAll()
@@ -56,7 +78,7 @@ module.exports = {
             telephone : req.body.telefono,
             email: req.body.email,
             password: bcrypt.hashSync(req.body.contraseña, 10),
-            //genre: req.body.genero,    
+            genre: req.body.genero,    
             image: req.file.filename,
             role: 1   
         };
@@ -67,10 +89,10 @@ module.exports = {
         })
         .catch(error => console.log(error));    
     },
-
-
-
-
+    
+    
+    
+    
     logout: (req, res) => {
         req.session.destroy();
         res.cookie('email',null,{maxAge: -1});
@@ -98,13 +120,19 @@ module.exports = {
             last_name: req.body.apellido,
             telephone: req.body.telefono,
             email: req.body.email,
+            gender: req.body.gender,
             //password: req.body.password,
             image: req.file ? req.file.filename : req.body.oldImagen   
         }
-        //return res.send(zapatillas_body);
         let updateUsuario = await users.update(usuario_body, {where: {id: req.params.id}})
-        //return res.send(newZapatilla)
+        
         res.redirect('/perfil');
+    },
+    destroy: async (req, res) => {
+        await users.destroy({where: {id:req.params.id}, force: true})
+        req.session.destroy();
+        res.cookie('email',null,{maxAge: -1});        
+        res.redirect('/')
     }
     
 }

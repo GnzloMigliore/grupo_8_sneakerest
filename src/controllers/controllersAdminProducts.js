@@ -36,14 +36,6 @@ module.exports = {
             let newModelo = await examples.create({name: req.body.modelo})
             modelos_body = newModelo.id
         }
-        let generos_body = null;
-        if (generos.length > 1){
-            generos_body = generos[0].id;
-        } else {
-            //await genders.destroy({where: {name: req.body.genero}})
-            let newGenero = await genders.create({name: req.body.genero})
-            generos_body = newGenero.id;
-        }
         
         const zapatillas_body = { 
             //return res.send(_body);
@@ -52,10 +44,11 @@ module.exports = {
             description: req.body.descripcion,
             color: req.body.color,
             stock: req.body.descuento,
+            gender: req.body.genero,
             brand_id: marcas_body,
-            example_id: modelos_body,
-            gender_id: generos_body
+            example_id: modelos_body
         }
+
         let newImages = [];
         req.files.forEach(async image => {
             let newImage = await images.create({filename: image.filename})
@@ -63,12 +56,9 @@ module.exports = {
         });
         //return res.send(zapatillas_body);
         let newZapatilla = await products.create(zapatillas_body)
-        //hay que hacer el modelo imageProducts
         newImages.forEach(async imagen => {
             imageproducts.create({image_id: imagen, product_id: newZapatilla.id})           
-        })
-        
-        //return res.send({newZapatilla, newImages})
+        })        
         res.redirect(`/productos/detalle/${newZapatilla.id}`);
         //res.redirect('/adminProducts')*/
     },
@@ -130,6 +120,7 @@ module.exports = {
             color: req.body.color,
             discount: req.body.descuento,
             stock: req.body.stock,
+            gender: req.body.gender,
             brand_id: marcas_body,
             example_id: modelos_body
         }

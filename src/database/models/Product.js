@@ -11,7 +11,8 @@ module.exports = (sequelize, dataTypes) => {
         discount: dataTypes.INTEGER,
         description: dataTypes.STRING,
         color: dataTypes.STRING,
-        stock: dataTypes.INTEGER
+        stock: dataTypes.INTEGER,
+        gender: dataTypes.STRING
     };
 
         
@@ -31,13 +32,6 @@ module.exports = (sequelize, dataTypes) => {
             {
                 as : 'examples',
                 foreignKey: 'example_id'
-            }
-        )
-        products.belongsTo(
-            models.genders,
-            {
-                as : 'genders',
-                foreignKey: 'gender_id'
             }
         )
         products.belongsToMany(
