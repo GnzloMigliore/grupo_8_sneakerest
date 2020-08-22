@@ -90,7 +90,7 @@ module.exports = {
             marcas_body = marcas[0].id
             //marcas_body = marcas[0].id;
         } else {
-            await brands.destroy({where: {name: req.body.oldBrand}})
+            //await brands.destroy({where: {name: req.body.oldBrand}})
             let newBrand = await brands.create({name: req.body.marca})
             marcas_body = newBrand.id;
         }
@@ -99,7 +99,7 @@ module.exports = {
             modelos_body = modelos[0].id
             //modelos_body = marcas[0].id;
         } else {
-            let newExample = await examples.update({name: req.body.marca})
+            let newExample = await examples.create({name: req.body.modelo})
             modelos_body = newExample.id;
         }
         const zapatillas_body = { 
