@@ -48,7 +48,7 @@ module.exports = {
             brand_id: marcas_body,
             example_id: modelos_body
         }
-
+        
         let newImages = [];
         req.files.forEach(async image => {
             let newImage = await images.create({filename: image.filename})
@@ -62,11 +62,6 @@ module.exports = {
         res.redirect(`/productos/detalle/${newZapatilla.id}`);
         //res.redirect('/adminProducts')*/
     },
-
-
-
-
-    
     show: async (req,res)=>{
         const zapatillas = await products.findByPk(req.params.id, {include: ['brands', 'examples']});
         //return res.send(zapatillas);
@@ -84,12 +79,6 @@ module.exports = {
         res.render(path.resolve(__dirname , '..','views','admin','editProductos') , {zapatillas});                       
         
     },
-    
-    //Agregar varias iamgenes
-    //crear array con id de las  imagenes que el producto actualmente tiene -->listo
-    //despues recorrer ese array y eliminar las relaciones donde coincida la imagen del producto con el producto(imgID con el Array)
-    // despues denuevo guardarlas en la tabla intermedia agregando al nuevo array las nuevas que se eliminan
-    // opcion buscarlas en la carpeta y eliminarlas fisicamente (fs unlink)
     updateZapatillas: async (req,res) => {
         const zapatillas = await products.findAll();
         const marcas = await brands.findAll({where: {name: {[Op.like]: req.body.marca}}});
@@ -127,56 +116,45 @@ module.exports = {
         
         //return res.send(zapatillas_body);
         let newZapatilla = await products.update(zapatillas_body, {where: {id: req.params.id}})
-
         
-       let destroyImages = [];
-        req.files.forEach(async image => {
-            //console.log('ooooooooooooo' + image.id)
-            //if(image.fieldname){
-            let imagen1 = await images.findOne({where: {filename: req.body.oldImagen}});
-            await imageproducts.destroy({where: {image_id: imagen1.id}})
-            await images.destroy({where: {id: imagen1.id}})
-            let newImage1 = await images.create ({filename: image.filename})
+        //Acá actualizo imagenes
+        //let destroyImages = [];
+        await imageproducts.destroy({where: {product_id: req.params.id}})
+        
+        let lastImages = await products.findByPk(req.params.id, {include: ['images']})
+        lastImages.images.forEach(async imagenes => await images.destroy({where: {id: imagenes.id}}))
+
+
+
+            let newImage1 = await images.create ({filename: req.files[0] ? req.files[0].filename : req.body.oldImagen})
             await imageproducts.create({
                 product_id: req.params.id,
                 image_id: newImage1.id
             })
-            let imagen2 = await images.findOne({where: {filename: req.body.oldImagen2}});
-            await imageproducts.destroy({where: {image_id: imagen2.id}})
-            await images.destroy({where: {id: imagen2.id}})
-            let newImage2 = await images.create ({filename: image.filename})
+            let newImage2 = await images.create ({filename: req.files[1] ? req.files[1].filename : req.body.oldImagen2})
             await imageproducts.create({
                 product_id: req.params.id,
                 image_id: newImage2.id
             })
-            let imagen3 = await images.findOne({where: {filename: req.body.oldImagen3}});
-            await imageproducts.destroy({where: {image_id: imagen3.id}})
-            await images.destroy({where: {id: imagen3.id}})
-            let newImage3 = await images.create ({filename: image.filename})
+            let newImage3 = await images.create ({filename: req.files[2] ? req.files[2].filename : req.body.oldImagen3})
             await imageproducts.create({
                 product_id: req.params.id,
                 image_id: newImage3.id
             })
-            let imagen4 = await images.findOne({where: {filename: req.body.oldImagen3}});
-            await imageproducts.destroy({where: {image_id: imagen4.id}})
-            await images.destroy({where: {id: imagen4.id}})
-            let newImage4 = await images.create ({filename: image.filename})
+            let newImage4 = await images.create ({filename: req.files[3] ? req.files[3].filename : req.body.oldImagen4})
             await imageproducts.create({
                 product_id: req.params.id,
                 image_id: newImage4.id
             })
-            let imagen5 = await images.findOne({where: {filename: req.body.oldImagen3}});
-            await imageproducts.destroy({where: {image_id: imagen5.id}})
-            await images.destroy({where: {id: imagen5.id}})
-            let newImage5 = await images.create ({filename: image.filename})
+            let newImage5 = await images.create ({filename: req.files[4] ? req.files[4].filename : req.body.oldImagen5})
             await imageproducts.create({
                 product_id: req.params.id,
                 image_id: newImage5.id
             })
             
-        });
+        
         //return res.send(destroyImages);
-       
+        
         
         //return res.send(newZapatilla)
         //res.redirect(`/productos/detalle/${newZapatilla.id}`);
