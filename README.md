@@ -320,3 +320,6 @@ ___
 
 + ## ___Repositorio___
 - [https://github.com/GonzaloMigliore/grupo_8_sneakerest.git](https://github.com/GonzaloMigliore/grupo_8_sneakerest.git)
+
++ ## ___DataBase___
+- [https://app.dbdesigner.id?action=open&shared=public&uuid=75768fbd-3fad-416b-ba5d-9a6c507766c7]
