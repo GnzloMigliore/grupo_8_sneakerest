@@ -18,7 +18,7 @@
         <!--Formulario-->
         <form action="/login" method="POST">
             <div class="form-group col-12 d-flex justify-content-center mb-0">
-                <input type="Email" name="email" placeholder="Email" class="form-control form-control-sm mb-2 datos-envio-input" value="<%=typeof old == 'undefined' ? '':old.email %>">
+                <input type="Email" name="email" placeholder="Email" class="form-control form-control-sm mb-2 datos-envio-input">
             </div>
             <div class="form-group col-12 d-flex justify-content-center mt-0 mb-1">
                 <% if(typeof errors != 'undefined' && errors.email){%>

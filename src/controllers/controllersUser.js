@@ -8,7 +8,7 @@ const {
     body
 } = require('express-validator');
 //const { userInfo } = require('os');
-const {users, adresses} = require ('../database/models');
+const {users} = require ('../database/models');
 
 module.exports = {
     index: async (req, res) => {
@@ -18,7 +18,7 @@ module.exports = {
     },
     login: async (req, res) => {
         
-        const errors = validationResult(req);
+        /*const errors = validationResult(req);
         //return res.send(errors.mapped());
         if(!errors.isEmpty()) {
             let usuarioLogueado = await users.findOne({
@@ -35,27 +35,22 @@ module.exports = {
         }else{
             //Devolver a la vista los errores
             return res.render(path.resolve(__dirname, '../views/usuarios/login'), {errors: errors.mapped(),  old: req.body}) 
-        }
-        /*let errors = validationResult(req); 
-        if(errors.isEmpty()){
-            users.findAll({where:{email:req.body.email}})
-            .then(user => {
-                let userLogueado = user;
-                delete userLogueado.password;
-                req.session.user = userLogueado;
-                //console.log('asdasd' + req.body.rememberme);
-                if(req.body.recordarme){
-                    //Crear la cookie de ese usuario
-                    res.cookie('email', userLogueado.email, {maxAge: 1000 * 60 * 60 * 24})
-                    //console.log('asdasd' + ' ' +req.cookies.email);
-                }
-                res.redirect('/');
-            })
-            .catch(err => res.send(err));
-        }else{
-            
-            return res.render(path.resolve(__dirname, '../views/usuarios/login'), {errors: errors.mapped(),  old: req.body})
         }*/
+        let errors = validationResult(req);
+        if(!errors.isEmpty()){
+            //return res.send(errors.mapped())
+            return res.render(path.resolve(__dirname, '..', 'views', 'usuarios', 'login'), {
+                errors: errors.mapped(),  old: req.body});
+        } else {
+            let usuarioLogueado = await users.findOne({where: {email: req.body.email}})
+            delete usuarioLogueado.password;
+            req.session.usuario = usuarioLogueado;
+            //return res.send (req.session.usuario)
+            if(req.body.recordarme){
+                res.cookie('email', usuarioLogueado.email, {maxAge: 1000 * 60 * 60 * 48})
+            }
+            res.redirect('/');
+        }
         
         
         

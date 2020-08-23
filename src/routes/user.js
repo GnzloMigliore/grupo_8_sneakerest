@@ -30,35 +30,12 @@ const controllersUser = require(path.resolve(__dirname, '..', 'controllers', 'co
 //Requiero mi base datos
 const {users} = require('../database/models')
 
+//Requiero middlewares
+const validacionAcceso = require('../middlewares/validacionAcceso')
+
 
 router.get('/login', controllersUser.index);
-users.findAll().then((archivoUsuarios) => {
-  router.post('/login',[
-    check('email').isEmail().withMessage('Debe agregar un email válido'),
-    body('email').custom( (value) =>{
-      for (let i = 0; i < archivoUsuarios.length; i++) {
-        if (archivoUsuarios[i].email == value) {
-          
-          return true  
-        }
-      }
-      return false   
-    }).withMessage('¡Ups...! El usuario no se encuentra registrado'),
-    check('contraseña').isLength({min: 6 }).withMessage('La contraseña debe tener un mínimo de 6 caractéres'),
-    body('contraseña').custom((value, {req}) =>{
-      for (let i = 0; i < archivoUsuarios.length; i++) {
-        if (archivoUsuarios[i].email == req.body.email) {
-          if(bcrypt.compareSync(value, archivoUsuarios[i].password)){
-            return true
-          }else{
-            return false
-          }
-        }
-      }
-    }).withMessage('¡Ups...! Las contraseñas es incorrecta')
-  ], controllersUser.login)
-})
-
+router.post('/login', validacionAcceso, controllersUser.login)
 router.get('/login/registro', controllersUser.create);
 users.findAll().then((archivoUsuarios) => {
   router.post('/login/registro', upload.single('imagen'),[
