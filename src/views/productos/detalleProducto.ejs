@@ -16,8 +16,12 @@
             <!--Imágenes-->
             <article class="col-12 px-0">
                 <div class="col-12 px-0">
-                    <div class="imagenes-resto px-0">                       
+                    <div class="imagenes-resto px-0">   
+                        <% zapatillas.images.forEach(image => { %>
+                            <img src="/images/zapatillas/<%= image.filename %>" alt="<%=  zapatillas.brands.name + " "%><%= zapatillas.examples.name %>">
+                        <% }) %>                    
                         <!--%= zapatillas.images[0].filename %--> 
+                        
                     </div>
                 </div>
             </article>
