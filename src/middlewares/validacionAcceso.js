@@ -24,6 +24,7 @@ module.exports = [
     let user = await users.findOne({
       where: {email: req.body.email}
     })
+    //console.log(bcrypt.compareSync(value, user.password))
     if(bcrypt.compareSync(value, user.password)){
       return true
     } else {
