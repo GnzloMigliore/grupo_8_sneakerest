@@ -82,12 +82,8 @@ module.exports = {
         .then((usuarioRegistrado) => {
             return res.redirect('/login');
         })
-        .catch(error => console.log(error));    
+        .catch(error => res.send(error));    
     },
-    
-    
-    
-    
     logout: (req, res) => {
         req.session.destroy();
         res.cookie('email',null,{maxAge: -1});

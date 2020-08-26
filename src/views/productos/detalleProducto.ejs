@@ -37,14 +37,17 @@
                 <div class="col-12 mb-4 pt-4">
                     <p class="descripcion-producto"><%= zapatillas.description %> </p>
                 </div>
-                <!--<div class="col-12">
-                    <p class="text-uppercase font-weight-bold"><!--%= "Colores: " + zapatillas.imagen1 %> </p>
-                </div>-->
-                <div class="mb-4 d-flex flex-wrap justify-content-between">
-                    <!--<img src="/images/zapatillas/%= miZapatilla.imagen2 %>" alt="%= miZapatilla.marca + " "%>%= miZapatilla.modelo %>" class="col-6 py-3 align-self-center">
-                    <img src="/images/zapatillas/%= miZapatilla.imagen3 %>" alt="%= miZapatilla.marca + " "%>%= miZapatilla.modelo %>" class="col-6 py-3 align-self-center">
-                    <img src="/images/zapatillas/%= miZapatilla.imagen4 %>" alt="%= miZapatilla.marca + " "%>%= miZapatilla.modelo %>" class="col-6 py-3 align-self-center">
-                    <img src="/images/zapatillas/%= miZapatilla.imagen5 %>" alt="%= miZapatilla.marca + " "%>%= miZapatilla.modelo %>" class="col-6 py-3 align-self-center">-->
+                <div class="col-12">
+                    <p class="text-uppercase font-weight-bold"><%= "Colores: " + modelos.length %> </p>
+                </div>
+                <div class="col-12 mb-4 d-flex flex-wrap justify-content-around">
+                    <% modelos.forEach( zapatilla => { %>
+                        <a href="/productos/detalle/<%= zapatilla.id %> " class="col-6">
+                            <div class="col-12 mx-0">
+                                <img src="/images/zapatillas/<%= zapatilla.images[0].filename %>" alt="" class="col-12 py-3 align-self-center">
+                            </div>
+                        </a>
+                <% }) %>
                 </div>
                 <div class="mb-5">
                     <p class="col-12 text-uppercase envios-devoluciones">Envíos gratis. Devoluciones gratis</p>
@@ -90,17 +93,14 @@
                 <!--Imágenes colores-->
                 <div class="col-12 d-flex flex-wrap justify-content-start mt-5">
                     <p class="text-uppercase col-12 pl-0">colores</p>
-                    <!--% if (zapatillas.example_id == mismoModelo.id) { %>
-                        % zapatillasModelos.images.forEach((modelo, i) => { %>
-                            % if (i == 0) { %>                           
-                                <a href="#" class="col-3 py-2 px-2">
+                        <% modelos.forEach( zapatilla => { %>
+                                <a href="/productos/detalle/<%= zapatilla.id %> " class="col-3 py-2 px-2">
                                     <div>
-                                        <img src="/images/zapatillas/%= modelo.filename %>" alt="">
+                                        <img src="/images/zapatillas/<%= zapatilla.images[0].filename %> " alt="">
+                                        <!--p>%= image.example_id %> </p-->
                                     </div>
                                 </a>
-                            % } %>   
-                        % }) %>
-                    % } %-->
+                        <% }) %>
                 </div>
                 <!--Talles-->
                 <div class="col-12 d-flex flex-wrap justify-content-start mt-5">

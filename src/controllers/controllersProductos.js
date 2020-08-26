@@ -13,8 +13,14 @@ module.exports = {
     },    
     detail: async (req,res) => {
         const zapatillas = await products.findByPk(req.params.id, {include: ['brands', 'examples', 'images']})
-        //return res.send(zapatillas.images[0]);
-        res.render(path.resolve(__dirname , '..','views','productos','detalleProducto') , {zapatillas});           
-
+        //let category_id = req.params.id;
+        //const modelos = await products.findAll({include: ['images']})
+        const modelos = await products.findAll({
+            where: {example_id: zapatillas.example_id},
+            include: ['brands', 'examples', 'images']
+        })
+        //Promise.all([zapatillas, modelos])
+        //return res.send(modelos);
+        res.render(path.resolve(__dirname , '..','views','productos','detalleProducto') , {zapatillas, modelos});           
 }    
 }

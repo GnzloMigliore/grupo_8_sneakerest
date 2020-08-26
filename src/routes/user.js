@@ -31,8 +31,7 @@ const controllersUser = require(path.resolve(__dirname, '..', 'controllers', 'co
 const {users} = require('../database/models')
 
 //Requiero middlewares
-const validacionAcceso = require('../middlewares/validacionAcceso')
-
+const validacionAcceso = require(path.resolve(__dirname, '..', 'middlewares', 'validacionAcceso'));
 
 router.get('/login', controllersUser.index);
 router.post('/login', validacionAcceso, controllersUser.login)
