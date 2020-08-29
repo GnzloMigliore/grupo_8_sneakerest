@@ -21,43 +21,57 @@
         <section class="container">
             <div class="row">
                 <article id="crear" class="col-8 mx-auto">
+                    <% if(typeof(errors) != 'undefined'){%>
+                        <ul class="alert alert-danger">
+                          <% errors.forEach(error => { %>
+                            <li><%= error.msg%></li>
+                            <%});%>
+                        </ul>
+                      <%}%>
                     <form action="/adminProducts/create" method="POST" enctype="multipart/form-data">
                         <!--Marca-->
                         <div class="form-group">
-                            <input type="text" class="form-control border-0 rounded-0 bg-light" name="marca" placeholder="Marca" required="required" value="">
+                            <input type="text" class="form-control border-0 rounded-0 bg-light" name="marca" placeholder="Marca"  value=""<%= typeof old != 'undefined' ? old.marca : '' %>">
                         </div>
                         <!--Modelo-->
                         <div class="form-group">
-                            <input type="text" class="form-control border-0 rounded-0 bg-light" name="modelo" placeholder="Modelo" required="required" value="">
+                            <input type="text" class="form-control border-0 rounded-0 bg-light" name="modelo" placeholder="Modelo"  value=""<%= typeof old != 'undefined' ? old.modelo : '' %>">
+                        </div>
+                        <!--Descripción de producto-->
+                        <div class="form-group">
+                            <input type="text" class="form-control border-0 rounded-0 bg-light" name="descripcion" placeholder="Descripción del producto"  value=""<%= typeof old != 'undefined' ? old.descripcion : '' %>">
                         </div>
                         <!--Género, color, talles, precio y descuento-->
                         <div class="row">
                             <!--Género-->
-                            <div class="form-group col-4" placeholder="Modelo" required="required" value="">
-                                <select class="selectpicker col-12 select-talles pl-0" title="Género" data-header="Seleccione el género" name="genero">
-                                    <option value="men">Men</option>
-                                    <option value="women">Women</option>
-                                    <option value="kids">Kids</option>
+                            <div class="form-group col-4"  >
+                                <select class="form-group col-12 pl-0 py-2 border-0 rounded-0 bg-light" name="genero" value="<%= typeof old != 'undefined' ? old.genero : '' %>">
+                                    <option disabled selected>Seleccione un género</option>
+                                    <option value="hombre">Hombre</option>
+                                    <option value="mujer">Mujer</option>
+                                    <option value="niños">niños</option>
                                 </select>
                             </div>
+                            
                             <!--Color-->
                             <div class="form-group col-2 pl-0">
-                                <input type="color" list="presetColors" class="form-control border-0 rounded-0 bg-light" name="color" required="required" value="">
+                                <input type="color" list="presetColors" class="form-control border-0 rounded-0 bg-light" name="color" value=""<%= typeof old != 'undefined' ? old.color : '' %>">
                                 <datalist id="presetColors">
-                                <option value="#ff0000"/>
-                                <option value="#00ff00"/>
-                                <option value="#0000ff"/>
+                                    <option selected value="#000000"/>
+                                    <option value="#ff0000"/>
+                                    <option value="#00ff00"/>
+                                    <option value="#0000ff"/>
                                 </datalist>
                             </div>
                             <!--<div class="form-group col-2 pl-0">
-                                <input type="color" class="form-control border-0 rounded-0 bg-light" name="color" required="required" value="">
+                                <input type="color" class="form-control border-0 rounded-0 bg-light" name="color"  value="">
                             </div>-->
                             <!--Talles-->
                             <!--<div class="form-group col-6 pl-0">
-                                <input class="form-control border-0 rounded-0 bg-light" name="talle" placeholder="Talles (separados por guión sin espacio)" required="required" value="">
+                                <input class="form-control border-0 rounded-0 bg-light" name="talle" placeholder="Talles (separados por guión sin espacio)"  value="">
                             </div>-->
                             <div class="form-group col-6 pl-0">
-                                <select class="selectpicker col-12 select-talles pr-0" multiple title="Seleccione los talles" data-header="Seleccione los talles" name="talles">
+                                <select class="selectpicker col-12 select-talles pr-0" multiple title="Seleccione los talles" data-header="Seleccione los talles" name="talles" value=""<%= typeof old != 'undefined' ? old.talles : '' %>" >
                                     <option value="16">16</option>
                                     <option value="17">17</option>
                                     <option value="18">18</option>
@@ -80,23 +94,19 @@
                                   </select>
                             </div>
                             <!--Precio-->
-                            <div class="form-group col-7">
-                                <input type="number" class="form-control border-0 rounded-0 bg-light" name="precio" placeholder="$" required="required" value="">
+                            <div class="form-group col-6">
+                                <input type="number" class="form-control border-0 rounded-0 bg-light" name="precio" placeholder="$"  value=""<%= typeof old != 'undefined' ? old.precio : '' %>">
                             </div>
                             <!--Descuento-->
-                            <select class="form-group col-5 pl-0" name="descuento">
-                                <option disabled value="#">Seleccione un descuento</option>
+                            <select class="form-group col-6 pl-0 pr-2 border-0 rounded-0 bg-light" name="descuento" value=""<%= typeof old != 'undefined' ? old.descuento : '' %>">
+                                <option disabled selected>Seleccione un descuento</option>
                                 <option value="0">Sin descuento</option>
                                 <option value="10">10%</option>
                             </select>
                         </div>
-                        <!--Descripción de producto-->
-                        <div class="form-group">
-                            <input type="text" class="form-control border-0 rounded-0 bg-light" name="descripcion" placeholder="Descripción del producto" required="required" value="">
-                        </div>
                         <!--Stock-->
                         <div class="form-group">
-                            <input type="number" class="form-control border-0 rounded-0 bg-light" name="stock" placeholder="Stock" required="required" value="">
+                            <input type="number" class="form-control border-0 rounded-0 bg-light" name="stock" placeholder="Stock"  value=""<%= typeof old != 'undefined' ? old.stock : '' %>">
                         </div>
                         <!--Seleccionar imagenes-->
                         <div class="form-group d-flex flex-wrap justify-content-between">

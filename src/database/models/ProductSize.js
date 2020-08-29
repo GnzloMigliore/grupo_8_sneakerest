@@ -1,31 +1,41 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = 'productSize';
+    let alias = 'productsize';
     let cols = {
         id: {
             type: dataTypes.INTEGER,
             primaryKey: true,
+            allowNull: false,
             autoIncrement: true
+        },
+        size_id: {
+            type: dataTypes.INTEGER,
+        },
+        product_id: {
+            type: dataTypes.INTEGER,
         }
     };
+
+    let config = {
+        tableName: 'productsize'
+    }
     
-    const productSize = sequelize.define(alias, cols)
-    //Aquí creo mi relación entre Platos (Diskes) y Categorias (Categories)
-    /*productSize.associate = function(models) {
-        productSize.belongsTo(
-            models.size,
+    const productsize = sequelize.define(alias, cols, config)
+    productsize.associate = function(models) {
+        productsize.belongsTo(
+            models.sizes,
             {
-                as : 'size',
+                as : 'sizes',
                 foreignKey: 'size_id'
             }
         ),
-        productSize.belongsTo(
-            models.product,
+        productsize.belongsTo(
+            models.products,
             {
-                as : 'product',
+                as : 'products',
                 foreignKey: 'product_id'
             }
         )
-    };*/
+    };
 
-    return productSize;
+    return productsize;
 }

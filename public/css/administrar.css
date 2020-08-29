@@ -24,6 +24,23 @@ img {
     border-radius: 50%;
 }
 
+li {
+    display: flex!important;
+    flex-direction: column!important;
+    justify-content: center!important;
+}
 
+.slider-img {
+    /*box-shadow: 0 0 5px rgb(102, 102, 102);*/
+    border: 1.5px solid black;
+}
+
+.borde-bajo {
+    border-bottom: 1px solid rgb(131, 131, 131);
+}
+
+.flechas-slider {
+    color: black!important;
+}
 
     

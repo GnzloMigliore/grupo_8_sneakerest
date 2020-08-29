@@ -43,15 +43,15 @@ module.exports = (sequelize, dataTypes) => {
                 otherKey: 'image_id'
             }
         )
-        /*products.belongsToMany(
-            models.colors,
+        products.belongsToMany(
+            models.sizes,
             {
-                as: 'colors',
-                through: 'colorproduct',
+                as: 'sizes',
+                through: 'productsize',
                 foreignKey: 'product_id',
-                otherKey: 'color_id'
+                otherKey: 'size_id'
             }
-        )*/
+        )
     };
 
     return products

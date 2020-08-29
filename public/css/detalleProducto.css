@@ -26,15 +26,21 @@ img {
     transform: scale(1.2);
 }
 
-/** Main **/
+.filtros-colores:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 5px #444444;
+}
+
+.box-talles div:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 5px #444444;
+}
 
 .boton-añadir{
     font-size: 1.2rem;
 }
 
-.descripcion-producto{
-    font-size: .8rem;
-}
+
 
 .envios-devoluciones {
     font-size: .6rem;

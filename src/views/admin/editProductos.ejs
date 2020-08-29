@@ -19,110 +19,118 @@
     </section>
     
     <section class="bg-home pt-4">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row" >
-                <div id="editar" class="col-8 mx-auto">
+                <div id="editar" class="col-12 mx-auto">
                     <div class="create-form">
                         <form action="/adminProducts/edit/<%= zapatillas.id%>?_method=PUT
                             " method="POST" enctype="multipart/form-data" >
-                            
-                            <div class="form-group">
-                                <input type="hidden" name="oldBrand"  value="<%= zapatillas.brands.name%>">
-                                <input type="text" class="form-control" name="marca" placeholder="Marca" required="required" value="<%= zapatillas.brands.name%>">
-                            </div>	
-                            <div class="form-group">
-                                <input type="hidden" name="oldExample"  value="<%= zapatillas.examples.name%>">
-                                <input type="text" class="form-control" name="modelo" placeholder="Modelo" required="required" value="<%= zapatillas.examples.name%>">
+                            <!--Inputs-->
+                            <div class="col-8 mx-auto px-0">
+                                <!--Marca-->
+                                <div class="form-group">
+                                    <input type="hidden" name="oldBrand"  value="<%= zapatillas.brands.name%>">
+                                    <input type="text" class="form-control border-0 rounded-0 bg-light" name="marca" placeholder="Marca" required="required" value="<%= zapatillas.brands.name%>">
+                                </div>	
+                                <!--Modelo-->
+                                <div class="form-group">
+                                    <input type="hidden" name="oldExample"  value="<%= zapatillas.examples.name%>">
+                                    <input type="text" class="form-control border-0 rounded-0 bg-light" name="modelo" placeholder="Modelo" required="required" value="<%= zapatillas.examples.name%>">
+                                </div>
+                                <!--Descripción-->
+                                <div class="form-group">
+                                    <input type="hidden" name="oldDescription"  value="<%= zapatillas.description%>">
+                                    <input type="text" class="form-control border-0 rounded-0 bg-light" name="descripcion" placeholder="Descripción del producto" required="required" value="<%= zapatillas.description%>">
+                                </div>
+                                <!--Precio-->
+                                <div class="form-group">
+                                    <input type="hidden" name="oldPrice"  value="<%= zapatillas.price%>">
+                                    <input type="number" class="form-control border-0 rounded-0 bg-light" name="precio" placeholder="Indique el precio" required="required" value="<%=zapatillas.price%>">
+                                </div>
+                                <!--Descuento-->
+                                <div class="form-group">
+                                    <select  name="descuento" class="custom-select border-0 rounded-0 bg-light" id="validationCustom04" required>
+                                        <option disabled value="#">Seleccione un descuento"</option>
+                                        <option value="0" <%= zapatillas.discount == 0 ? "selected" : null %>>Sin descuento</option>
+                                        <option value="10" <%= zapatillas.discount == 10 ? "selected" : null %>>10%</option>
+                                        
+                                    </select>
+                                </div>
+                                <!--Aqui solicito la imagen al usuario-->
+                                <!--div class="custom-file"-->
+                                <!--Color, tales y stock-->
+                                <div class="col-12 d-flex justify-content-between mx-0 px-0">
+                                    <!--Color-->
+                                    <div class="form-group col-2 pl-0">
+                                        <input type="color" list="presetColors" class="form-control border-0 rounded-0 bg-light" name="color" required="required" value="<%= zapatillas.color %>" >
+                                        <datalist id="presetColors" >
+                                            <option value="#74cfe0"/>
+                                            <option value="#00ff00"/>
+                                            <option value="#0000ff"/>
+                                        </datalist>
+                                    </div>
+                                    <!--Talles-->
+                                    <div class="form-group col-6 pl-0">
+                                        <select class="selectpicker col-12 select-talles pr-0" multiple title="Seleccione los talles" data-header="Seleccione los talles" name="talles">
+                                            <option value="16">16</option>
+                                            <option value="17">17</option>
+                                            <option value="18">18</option>
+                                            <option value="19">19</option>
+                                            <option value="20">20</option>
+                                            <option value="27">27</option>
+                                            <option value="28">28</option>
+                                            <option value="28.5">28.5</option>
+                                            <option value="29">29</option>
+                                            <option value="29.5">29.5</option>
+                                            <option value="30">30</option>
+                                            <option value="30.5">30.5</option>
+                                            <option value="31">31</option>
+                                            <option value="31.5">31.5</option>
+                                            <option value="32">32</option>
+                                            <option value="32.5">32.5</option>
+                                            <option value="33">33</option>
+                                            <option value="34.5">34.5</option>
+                                            <option value="35">35</option>  
+                                        </select>
+                                    </div>
+                                    <!--Stock-->
+                                    <div class="form-group">
+                                        <input type="number" class="form-control border-0 rounded-0 bg-light" name="stock" placeholder="Stock" required="required" value="<%=zapatillas.stock%>">
+                                    </div>
+                                </div>
                             </div>
-                            <div class="form-group">
-                                <input type="hidden" name="oldDescription"  value="<%= zapatillas.description%>">
-                                <input type="text" class="form-control" name="descripcion" placeholder="Descripción del producto" required="required" value="<%= zapatillas.description%>">
-                            </div>
-                            <div class="form-group">
-                                <input type="hidden" name="oldPrice"  value="<%= zapatillas.price%>">
-                                <input type="number" class="form-control" name="precio" placeholder="Indique el precio" required="required" value="<%=zapatillas.price%>">
-                            </div>
-                            <div class="form-group">
+                            <!--Imágenes-->
+                            <div class="col-12 d-flex flex-wrap justify-content-start align-items-end mx-auto px-0">
                                 
-                                <select  name="descuento" class="custom-select" id="validationCustom04" required>
-                                    <option disabled value="#">Seleccione un descuento"</option>
-                                    <option value="0" <%= zapatillas.discount == 0 ? "selected" : null %>>Sin descuento</option>
-                                    <option value="10" <%= zapatillas.discount == 10 ? "selected" : null %>>10%</option>
-                                    
-                                </select>
+                                    <figure class="col-4 d-flex flex-column justify-content-center align-items-center">
+                                        <img class="w-100 border-1 p-1 col-6" src="/images/zapatillas/<%= zapatillas.images[0].filename%>" alt="imagen">
+                                        <input type="hidden" name="oldImagen"  value="<%= zapatillas.images[0].filename%>">
+                                        <input type="file" name="imagen[]" class="botonImg p-1 w-50" >
+                                    </figure>    
+                                    <figure class="col-4 d-flex flex-column justify-content-center align-items-center">
+                                        <img class="w-100 border-1 p-1 col-6" src="/images/zapatillas/<%= zapatillas.images[1].filename%>" alt="imagen">
+                                        <input type="hidden" name="oldImagen2"  value="<%= zapatillas.images[1].filename%>">
+                                        <input type="file" name="imagen[]" class="botonImg p-1 w-50" >
+                                    </figure>
+                                    <figure class="col-4 d-flex flex-column justify-content-center align-items-center">
+                                        <img class="w-100 border-1 p-1 col-6" src="/images/zapatillas/<%= zapatillas.images[2].filename%>" alt="imagen">
+                                        <input type="hidden" name="oldImagen3"  value="<%= zapatillas.images[2].filename%>">
+                                        <input type="file" name="imagen[]" class="botonImg p-1 w-50" >
+                                    </figure>
+                                    <figure class="col-4 d-flex flex-column justify-content-center align-items-center">
+                                        <img class="w-100 border-1 p-1 col-6" src="/images/zapatillas/<%= zapatillas.images[3].filename%>" alt="imagen">
+                                        <input type="hidden" name="oldImagen4"  value="<%= zapatillas.images[3].filename%>">
+                                        <input type="file" name="imagen[]" class="botonImg p-1 w-50" >
+                                    </figure>
+                                    <figure class="col-4 d-flex flex-column justify-content-center align-items-center">
+                                        <img class="w-100 border-1 p-1 col-6" src="/images/zapatillas/<%= zapatillas.images[4].filename%>" alt="imagen">
+                                        <input type="hidden" name="oldImagen5"  value="<%= zapatillas.images[4].filename%>">
+                                        <input type="file" name="imagen[]" class="botonImg p-1 w-50" >
+                                    </figure>
                             </div>
-                            <!--Aqui solicito la imagen al usuario-->
-                            <div class="custom-file">
-                            <!--Color-->
-                            <div class="form-group col-2 pl-0">
-                                <input type="color" list="presetColors" class="form-control border-0 rounded-0 bg-light" name="color" required="required" value="<%= zapatillas.color %>" >
-                                <datalist id="presetColors" >
-                                    <option value="#74cfe0"/>
-                                    <option value="#00ff00"/>
-                                    <option value="#0000ff"/>
-                                </datalist>
-                            </div>
-                            <!--Talles-->
-                            <div class="form-group col-6 pl-0">
-                                <select class="selectpicker col-12 select-talles pr-0" multiple title="Seleccione los talles" data-header="Seleccione los talles" name="talles">
-                                    <option value="16">16</option>
-                                    <option value="17">17</option>
-                                    <option value="18">18</option>
-                                    <option value="19">19</option>
-                                    <option value="20">20</option>
-                                    <option value="27">27</option>
-                                    <option value="28">28</option>
-                                    <option value="28.5">28.5</option>
-                                    <option value="29">29</option>
-                                    <option value="29.5">29.5</option>
-                                    <option value="30">30</option>
-                                    <option value="30.5">30.5</option>
-                                    <option value="31">31</option>
-                                    <option value="31.5">31.5</option>
-                                    <option value="32">32</option>
-                                    <option value="32.5">32.5</option>
-                                    <option value="33">33</option>
-                                    <option value="34.5">34.5</option>
-                                    <option value="35">35</option>  
-                                  </select>
-                            </div>
-                            <!--Stock-->
-                            <div class="form-group">
-                                <input type="number" class="form-control border-0 rounded-0 bg-light" name="stock" placeholder="Stock" required="required" value="<%=zapatillas.stock%>">
-                            </div>
-                                
-                            </div>
-                                                    
-                            <figure>
-                                <img class="w-100 border-1 p-1" src="/images/zapatillas/<%= zapatillas.images[0].filename%>" alt="imagen">
-                                <input type="hidden" name="oldImagen"  value="<%= zapatillas.images[0].filename%>">
-                                <input type="file" name="imagen[]" class="botonImg" >
-                            </figure>    
-                            <figure>
-                                <img class="w-100 border-1 p-1" src="/images/zapatillas/<%= zapatillas.images[1].filename%>" alt="imagen">
-                                <input type="hidden" name="oldImagen2"  value="<%= zapatillas.images[1].filename%>">
-                                <input type="file" name="imagen[]" class="botonImg" >
-                            </figure>
-                            <figure>
-                                <img class="w-100 border-1 p-1" src="/images/zapatillas/<%= zapatillas.images[2].filename%>" alt="imagen">
-                                <input type="hidden" name="oldImagen3"  value="<%= zapatillas.images[2].filename%>">
-                                <input type="file" name="imagen[]" class="botonImg" >
-                            </figure>
-                            <figure>
-                                <img class="w-100 border-1 p-1" src="/images/zapatillas/<%= zapatillas.images[3].filename%>" alt="imagen">
-                                <input type="hidden" name="oldImagen4"  value="<%= zapatillas.images[3].filename%>">
-                                <input type="file" name="imagen[]" class="botonImg" >
-                            </figure>
-                            <figure>
-                                <img class="w-100 border-1 p-1" src="/images/zapatillas/<%= zapatillas.images[4].filename%>" alt="imagen">
-                                <input type="hidden" name="oldImagen5"  value="<%= zapatillas.images[4].filename%>">
-                                <input type="file" name="imagen[]" class="botonImg" >
-                            </figure>
-
-
-                            <div class="form-group">
-                                <button type="submit" class="btn btn btn-dark">Actualizar</button>
-                                <a href="/adminProducts" class="btn btn-dark">Volver</a>
+                            <div class="col-12 form-group d-flex flex-wrap justify-content-center">
+                                <button type="submit" class="col-6 mx-5 mt-5 btn btn btn-dark">Actualizar</button>
+                                <a href="/adminProducts" class="col-6 mx-5 my-3 btn btn-light border">Volver</a>
                             </div>
                             
                         </form>

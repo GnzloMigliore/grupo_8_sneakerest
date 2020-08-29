@@ -12,21 +12,28 @@
     
     <main class="container-fluid">
         <!--Mobile-->
-        <section class="row mt-0 d-sm-block d-lg-none mb-2 px-0">
+        <section class="row mt-0 d-sm-block d-lg-none mb-0 px-0">
             <!--Imágenes-->
             <article class="col-12 px-0">
                 <div class="col-12 px-0">
-                    <div class="imagenes-resto px-0">   
-                        <% zapatillas.images.forEach(image => { %>
-                            <img src="/images/zapatillas/<%= image.filename %>" alt="<%=  zapatillas.brands.name + " "%><%= zapatillas.examples.name %>">
-                        <% }) %>                    
-                        <!--%= zapatillas.images[0].filename %--> 
-                        
+                    <div class="imagenes-resto px-0">  
+                        <% zapatillas.images.forEach((image, i) => { %>
+                            <% if (i < 1) { %>
+                                <img src="/images/zapatillas/<%= image.filename %>" alt="<%=  zapatillas.brands.name + " "%><%= zapatillas.examples.name %>">
+                            <% } %>
+                        <% }) %>
+                        <div class="col-12 m-0 p-0 d-flex flex-wrap justify-content-around">
+                            <% zapatillas.images.forEach((image, i) => { %>
+                                <% if (i > 0) { %>
+                                    <img src="/images/zapatillas/<%= image.filename %>" alt="<%=  zapatillas.brands.name + " "%><%= zapatillas.examples.name %>" class="col-5 py-3">
+                                <% } %>
+                            <% }) %>  
+                        </div>               
                     </div>
                 </div>
             </article>
             <!--Info producto-->
-            <article class="col-12 col-md-12">
+            <article class="col-12 col-md-12 py-3" style="background-color: <%= zapatillas.color %>">
                 <div class="col-12 mb-4">
                     <p class="text-uppercase font-weight-bold mt-4 mb-0"><%= zapatillas.brands.name + " "%><%= zapatillas.examples.name %></p>
                     <p class="font-weight-bold"><%= '$' + zapatillas.price %></p>
@@ -42,12 +49,12 @@
                 </div>
                 <div class="col-12 mb-4 d-flex flex-wrap justify-content-around">
                     <% modelos.forEach( zapatilla => { %>
-                        <a href="/productos/detalle/<%= zapatilla.id %> " class="col-6">
-                            <div class="col-12 mx-0">
+                        <a href="/productos/detalle/<%= zapatilla.id %> " class="col-4">
+                            <div class="col-12 mx-auto px-auto d-flex justify-content-center">
                                 <img src="/images/zapatillas/<%= zapatilla.images[0].filename %>" alt="" class="col-12 py-3 align-self-center">
                             </div>
                         </a>
-                <% }) %>
+                   <% }) %>
                 </div>
                 <div class="mb-5">
                     <p class="col-12 text-uppercase envios-devoluciones">Envíos gratis. Devoluciones gratis</p>
@@ -95,9 +102,8 @@
                     <p class="text-uppercase col-12 pl-0">colores</p>
                         <% modelos.forEach( zapatilla => { %>
                                 <a href="/productos/detalle/<%= zapatilla.id %> " class="col-3 py-2 px-2">
-                                    <div>
+                                    <div class="filtros-colores">
                                         <img src="/images/zapatillas/<%= zapatilla.images[0].filename %> " alt="">
-                                        <!--p>%= image.example_id %> </p-->
                                     </div>
                                 </a>
                         <% }) %>
@@ -105,23 +111,13 @@
                 <!--Talles-->
                 <div class="col-12 d-flex flex-wrap justify-content-start mt-5">
                     <p class="col-12 text-uppercase pl-0">talles</p>
-                    <a href="#" class="col-2 py-2 px-2 text-decoration-none">
-                        <div class="border text-center">
-                            <p class="my-auto">38</p>
-                        </div>
-                    </a>
-                    <a href="#" class="col-2 py-2 px-2 text-decoration-none">
-                        <div class="border text-center">
-                            <p class="my-auto">38</p>
-                        </div>
-                    </a>
-                    <a href="#" class="col-2 py-2 px-2 text-decoration-none">
-                        <div class="border text-center">
-                            <p class="my-auto">38</p>
-                        </div>
-                    </a>
-                    
-
+                    <% zapatillas.sizes.forEach(talle => { %>
+                        <a href="#" class="col-2 py-2 px-2 text-decoration-none box-talles">
+                            <div class="border text-center bg-white">
+                                <p class="my-auto"><%= talle.number %> </p>
+                            </div>
+                        </a>
+                    <% }) %>
                 </div>
                 <!--Boton añadir al carrito-->
                 <div class="col-12 mt-5 d-flex justify-content-center">

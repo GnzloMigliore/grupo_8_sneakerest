@@ -5,24 +5,27 @@ module.exports = (sequelize, DataTypes) =>{
         id: {
             type: DataTypes.INTEGER,
             primaryKey : true,
+            allowNull: false,
             autoIncrement: true
         },
-        name: DataTypes.STRING,
+        number: DataTypes.INTEGER
     };
 
     
     const sizes = sequelize.define(alias,cols);
     
     // Esto es la relacion entre Product y Size
-    /*sizes.associate = function (models){
-        sizes.hasMany(
+    sizes.associate = function (models){
+        sizes.belongsToMany(
             models.products,
             {
-                as: 'productSize',
-                foreignKey: 'size_id'
+                as: 'products',
+                through: 'productsize',
+                foreignKey: 'size_id',
+                otherKey: 'product_id'
             }
-            )
-        }*/
+        )
+    }
         
-        return sizes;
+    return sizes;
     }

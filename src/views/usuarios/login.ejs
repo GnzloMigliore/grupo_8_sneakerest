@@ -15,8 +15,11 @@
         <div class="row">
             <h2 class="col-8 mx-auto mb-5 py-4 pb-3 text-center border-bottom">INGRESA A TU CUENTA</h2>
         </div>
+        <div>
+            <ul id="errores"> </ul>
+        </div>
         <!--Formulario-->
-        <form action="/login" method="POST">
+        <form action="/login" method="POST" id="formulario">
             <div class="form-group col-12 d-flex justify-content-center mb-0">
                 <input type="Email" name="email" placeholder="Email" class="form-control form-control-sm mb-2 datos-envio-input">
             </div>
@@ -66,5 +69,6 @@
         </div>
         <!--Footer-->
         <%- include('../partials/footer.ejs') %>
+        <script src="/js/login.js"></script>
     </body> 
     </html>
