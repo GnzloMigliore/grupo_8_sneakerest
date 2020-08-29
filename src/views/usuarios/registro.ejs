@@ -29,21 +29,21 @@
         <!--Formulario-->
         <form action="/login/registro" method="POST" enctype="multipart/form-data" class="mt-0">
           <!--Nombre-->
-          <input type="text" name="nombre" placeholder="Nombre" class="col-12 mb-2 datos-envio-input" required="required" value="<%= typeof old != 'undefined' ? old.nombre : '' %>">
+          <input type="text" name="nombre" placeholder="Nombre" class="col-12 mb-2 datos-envio-input" value="<%= typeof old != 'undefined' ? old.nombre : '' %>">
           <!--Apellido-->
-          <input type="text" name="apellido" placeholder="Apellido" class="col-12 mb-2 datos-envio-input" required="required" value="<%= typeof old != 'undefined' ? old.apellido : '' %>">
+          <input type="text" name="apellido" placeholder="Apellido" class="col-12 mb-2 datos-envio-input" value="<%= typeof old != 'undefined' ? old.apellido : '' %>">
           <!--Email-->
-          <input type="Email" name="email" placeholder="Email" class="col-12 mb-2 datos-envio-input" required="required" value="<%= typeof old != 'undefined' ? old.email : '' %>">
+          <input type="text" name="email" placeholder="Email" class="col-12 mb-2 datos-envio-input" value="<%= typeof old != 'undefined' ? old.email : '' %>">
           <!--Teléfono-->
-          <input type="text" name="telefono" placeholder="Teléfono (Ej: 12345678)" class="col-12 mb-2 datos-envio-input" required="required" value="<%= typeof old != 'undefined' ? old.telefono : '' %>">
+          <input type="number" name="telefono" placeholder="Teléfono (Ej: 12345678)" class="col-12 mb-2 datos-envio-input" value="<%= typeof old != 'undefined' ? old.telefono : '' %>">
           <!--password-->
-          <input type="password" name="contraseña" placeholder="Contraseña" class="col-12 mb-2 datos-envio-input" required="required" value="">
+          <input type="password" name="contraseña" placeholder="Contraseña" class="col-12 mb-2 datos-envio-input" value="">
           <!--Confirmar password-->
-          <input type="password" name="confirmar_contraseña" placeholder="Repetir contraseña" class="col-12 mb-2 datos-envio-input"  required="required" value="">
+          <input type="password" name="confirmar_contraseña" placeholder="Repetir contraseña" class="col-12 mb-2 datos-envio-input"  value="">
           <!--<input type="text" name="descripcion" placeholder="Descripción" class="col-12 mb-2 datos-envio-input"  required="required" value="">-->
           <!--Genero-->
-          <select id="genero" name="genero" class="custom-select border-0 btn btn-outline-dark py-0" value="<%= typeof old != 'undefined' ? old.genero : '' %>" required>
-            <option selected>Género</option>
+          <select id="genero" name="genero" class="custom-select border-0 btn btn-outline-dark py-0">
+            <option selected disabled>Seleccione su género</option>
             <option value="Hombre">Hombre</option>
             <option value="Mujer">Mujer</option>
             <option value="Niño">Niño</option>
@@ -52,7 +52,7 @@
           </select>
           <!--Imagen-->
           <div class="custom-file py-3 mx-auto">
-            <input type="file" name="imagen" value="<%= typeof old != 'undefined' ? old.file : '' %>" required>
+            <input type="file" name="imagen" value="<%= typeof old != 'undefined' ? old.file : '' %>">
           </div>
           <!--terminos y condiciones-->
           <div class="col-12 row align px-auto d-flex justify-content-center mt-3">
@@ -60,7 +60,7 @@
               <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="..."> Quiero novedades de snkrst.com
             </div>
             <div class="form-check col-4 text-center">
-              <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="..." required> Acepto los terminos y condiciones 
+              <input name="terminos" class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="..."> Acepto los terminos y condiciones 
             </div>
           </div>
           <!--Botón crear cuenta-->

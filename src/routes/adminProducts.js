@@ -14,11 +14,14 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage });
 
+//Middlewares
+const creacionProductos = require(path.resolve(__dirname, '..', 'middlewares', 'creacionProductos'));
+
 const controllersAdminProducts = require(path.resolve(__dirname, '..', 'controllers', 'controllersAdminProducts'));
 
 router.get('/adminProducts', controllersAdminProducts.index);
 router.get("/adminProducts/create", controllersAdminProducts.create);
-router.post("/adminProducts/create", upload.any('imagen[]'), controllersAdminProducts.save);
+router.post('/adminProducts/create', upload.any('imagen[]'), creacionProductos, controllersAdminProducts.save);
 router.get('/adminProducts/detail/:id', controllersAdminProducts.show);
 router.get("/adminProducts/delete/:id", controllersAdminProducts.destroy);
 router.get("/adminProducts/edit/:id", controllersAdminProducts.edit);

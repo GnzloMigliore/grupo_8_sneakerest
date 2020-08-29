@@ -190,8 +190,9 @@
                                             </button>
                                         </div>
                                         <div class="modal-body">
+                                            
                                             <!--Formulario-->
-                                            <form action="/login" method="POST">
+                                            <form action="/login" method="POST" id="formulario">
                                                 <div class="form-group col-12 d-flex justify-content-center mb-0 mt-5">
                                                     <input type="Email" name="email" placeholder="Email" class="form-control form-control-sm mb-2 datos-envio-input" value="<%=typeof old == 'undefined' ? '':old.email %>">
                                                 </div>
@@ -207,6 +208,9 @@
                                                     <% if(typeof errors != 'undefined' && errors.contraseña){%>
                                                         <span class="text-danger" > <%=errors.contraseña.msg %></span>
                                                     <%}%>
+                                                </div>
+                                                <div class="col-12 rounded">
+                                                    <ul id="errores" class="rounded"> </ul>
                                                 </div>
                                                 <div>
                                                     <div class="form-check text-center">
@@ -257,3 +261,4 @@
         document.getElementById("mySidenav").style.width = "0";
     }
 </script>
+<script src="/js/login.js"></script>

@@ -1,8 +1,12 @@
 const path = require('path');
 const fs = require('fs');
 const { Op } = require("sequelize");
-const {products, brands, examples, images, imageproducts, genders} = require ('../database/models');
-
+const {products, brands, examples, images, imageproducts, sizes, productsize} = require ('../database/models');
+const {
+    check,
+    validationResult,
+    body
+} = require('express-validator');
 
 
 module.exports = {
@@ -15,13 +19,19 @@ module.exports = {
         res.render(path.resolve(__dirname, '..','views','admin','createProductos'));
     },
     save: async (req,res)=>{
+        let errors = validationResult(req);
+        if (!errors.isEmpty()) {
+            return res.render(path.resolve(__dirname, '../views/admin/createProductos'), {
+                errors: errors.errors,  old: req.body
+            });
+        }
         //return res.send(req.files)
         const zapatillas = await products.findAll();
         const marcas = await brands.findAll({where: {name: {[Op.like]: req.body.marca}}});
         const modelos = await examples.findAll({where: {name: {[Op.like]: req.body.modelo}}});
-        const generos = await genders.findAll({where: {name: {[Op.like]: req.body.genero}}});
+        
         let marcas_body = null;
-        if(marcas.length > 1){
+        if(marcas.length > 0){
             marcas_body = marcas[0].id;
         } else {
             //await brands.destroy({where: {name: req.body.marca}})
@@ -29,7 +39,7 @@ module.exports = {
             marcas_body = newBrand.id;
         }
         let modelos_body = null;
-        if(modelos.length > 1){
+        if(modelos.length > 0){
             modelos_body = modelos[0].id 
         } else {
             //await examples.destroy({where: {name: req.body.modelo}})
@@ -54,16 +64,43 @@ module.exports = {
             let newImage = await images.create({filename: image.filename})
             newImages.push(newImage.id)
         });
-        //return res.send(zapatillas_body);
+        
+        let newTalles = [];
+        req.body.talles.forEach(async talle => {
+            let talleNuevo = await sizes.create({number: talle})
+            newTalles.push(talleNuevo.id)
+            //console.log('oooooooooooooooooooooooooooooooooooooo    ' + talleNuevo)
+        });
+        
         let newZapatilla = await products.create(zapatillas_body)
         newImages.forEach(async imagen => {
             imageproducts.create({image_id: imagen, product_id: newZapatilla.id})           
-        })        
+        })   
+        
+        newTalles.forEach(async size => { productsize.create({size_id: size, product_id: newZapatilla.id})})   
+        
+        
+        
+        //return res.send(newTalles)
+        //let newZapatillaTalles = await products.create(zapatillas_body)
+        
+        //console.log('oooooooooooooooooooooooooooooooooooooooo   ' + tallesProducto())         
+        
+        
         res.redirect(`/productos/detalle/${newZapatilla.id}`);
         //res.redirect('/adminProducts')*/
+        
+        
+        
+        
+        
+        
+        
+        
+        
     },
     show: async (req,res)=>{
-        const zapatillas = await products.findByPk(req.params.id, {include: ['brands', 'examples']});
+        const zapatillas = await products.findByPk(req.params.id, {include: ['brands', 'examples', 'images', 'sizes']});
         //return res.send(zapatillas);
         res.render(path.resolve(__dirname , '..','views','admin','detailProducto') , {zapatillas});    
         
@@ -74,7 +111,7 @@ module.exports = {
         res.redirect('/adminProducts')
     },
     edit: async (req,res) => {
-        const zapatillas = await products.findByPk(req.params.id, {include: ['brands', 'examples', 'images']})
+        const zapatillas = await products.findByPk(req.params.id, {include: ['brands', 'examples', 'images', 'sizes']})
         //return res.send(zapatillas);
         res.render(path.resolve(__dirname , '..','views','admin','editProductos') , {zapatillas});                       
         
@@ -117,49 +154,51 @@ module.exports = {
         //return res.send(zapatillas_body);
         let newZapatilla = await products.update(zapatillas_body, {where: {id: req.params.id}})
         
-        //Acá actualizo imagenes
-        //let destroyImages = [];
-        await imageproducts.destroy({where: {product_id: req.params.id}})
         
+        await imageproducts.destroy({where: {product_id: req.params.id}})
+
         let lastImages = await products.findByPk(req.params.id, {include: ['images']})
         lastImages.images.forEach(async imagenes => await images.destroy({where: {id: imagenes.id}}))
+        
+        let newImage1 = await images.create ({filename: req.files[0] ? req.files[0].filename : req.body.oldImagen})
+        await imageproducts.create({
+            product_id: req.params.id,
+            image_id: newImage1.id
+        })
+        let newImage2 = await images.create ({filename: req.files[1] ? req.files[1].filename : req.body.oldImagen2})
+        await imageproducts.create({
+            product_id: req.params.id,
+            image_id: newImage2.id
+        })
+        let newImage3 = await images.create ({filename: req.files[2] ? req.files[2].filename : req.body.oldImagen3})
+        await imageproducts.create({
+            product_id: req.params.id,
+            image_id: newImage3.id
+        })
+        let newImage4 = await images.create ({filename: req.files[3] ? req.files[3].filename : req.body.oldImagen4})
+        await imageproducts.create({
+            product_id: req.params.id,
+            image_id: newImage4.id
+        })
+        let newImage5 = await images.create ({filename: req.files[4] ? req.files[4].filename : req.body.oldImagen5})
+        await imageproducts.create({
+            product_id: req.params.id,
+            image_id: newImage5.id
+        })
 
 
+        let lastTalles = await products.findByPk(req.params.id, {include: ['sizes']});
+        lastTalles.sizes.forEach(async talles => await sizes.destroy({where: {id: talles.id}}))
 
-            let newImage1 = await images.create ({filename: req.files[0] ? req.files[0].filename : req.body.oldImagen})
-            await imageproducts.create({
-                product_id: req.params.id,
-                image_id: newImage1.id
-            })
-            let newImage2 = await images.create ({filename: req.files[1] ? req.files[1].filename : req.body.oldImagen2})
-            await imageproducts.create({
-                product_id: req.params.id,
-                image_id: newImage2.id
-            })
-            let newImage3 = await images.create ({filename: req.files[2] ? req.files[2].filename : req.body.oldImagen3})
-            await imageproducts.create({
-                product_id: req.params.id,
-                image_id: newImage3.id
-            })
-            let newImage4 = await images.create ({filename: req.files[3] ? req.files[3].filename : req.body.oldImagen4})
-            await imageproducts.create({
-                product_id: req.params.id,
-                image_id: newImage4.id
-            })
-            let newImage5 = await images.create ({filename: req.files[4] ? req.files[4].filename : req.body.oldImagen5})
-            await imageproducts.create({
-                product_id: req.params.id,
-                image_id: newImage5.id
-            })
-            
-        
-        //return res.send(destroyImages);
-        
-        
-        //return res.send(newZapatilla)
-        //res.redirect(`/productos/detalle/${newZapatilla.id}`);
-        res.redirect('/productos')
-        
+        let newTalles = [];
+        req.body.talles.forEach(async talle => {
+            let talleNuevo = await sizes.create({number: talle})
+            newTalles.push(talleNuevo.id)
+            //console.log('oooooooooooooooooooooooooooooooooooooo    ' + talleNuevo)
+        });
+
+        res.redirect(`/productos/detalle/${newZapatilla.id}`);
+        //res.redirect('/productos')
     }     
     
 }

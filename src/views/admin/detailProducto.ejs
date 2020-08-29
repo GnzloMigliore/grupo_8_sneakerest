@@ -2,6 +2,8 @@
 <html lang="es">
   <head>
     <%- include('../partials/head.ejs') %>
+    <!-- UIkit CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.7/dist/css/uikit.min.css" />
     <link rel="stylesheet" href="/css/administrar.css">
     <link rel="stylesheet" href="/css/navbar.css">
   </head>
@@ -16,23 +18,63 @@
         <section class="row">
           <!-- Cuerpo principal -->
           <h1 class="col-12 mt-5 text-center">DETALLE DE PRODUCTO</h1>
-          <article id="article" class="col-12 col-md-6 mx-auto mt-5">
-            <div class="card-body">
-              <img src="/images/zapatillas/<%= zapatillas.image %>" alt="<%= zapatillas.brands.name + " "%><%= zapatillas.examples.name %>" class="col-12 px-0">
-              <h4 class="card-title">Marca:<%= zapatillas.brands.name %></h4>
-              <h5 class="card-title">Modelo:<%= zapatillas.examples.name %></h5>
-              <h5 class="card-title">$<%= zapatillas.price %></h5>  
-              <h5 class="card-title">Descuento: <%= zapatillas.discount %></h5>            
-              <p class="card-text"><%= zapatillas.description %></p>
-              <a href="/adminProducts" class="btn btn-dark">Volver</a>
-            </div> 
-             
+          <article id="article" class="col-12 mx-auto mt-5 mb-3 d-flex justify-content-around align-items-center">
+            <!--Fotos-->
+            <div class="col-5 mx-auto">
+              <div class="uk-position-relative uk-visible-toggle uk-light slider-img" tabindex="-1" uk-slider="center: true">
+                <ul class="uk-slider-items uk-grid">
+                  <% zapatillas.images.forEach(image => { %>
+                    <li class="uk-width-3-4" style="background-color: rgba(255, 255, 255, 1);">
+                        <div class="uk-panel">
+                            <img src="/images/zapatillas/<%= image.filename %>" alt="<%= zapatillas.brands.name + " "%><%= zapatillas.examples.name %>">
+                        </div>
+                    </li>
+                  <% }) %>
+                </ul>
+                <a class="uk-position-center-left uk-position-small uk-hidden-hover flechas-slider" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+                <a class="uk-position-center-right uk-position-small uk-hidden-hover flechas-slider" href="#" uk-slidenav-next uk-slider-item="next"></a>
+              </div>
+            </div>
+            <!--Info-->
+            <div class="col-7 card-body pt-0 d-flex justify-content-around flex-wrap align-items-center" style="background-color: <%= zapatillas.color %>">
+              <!--Marca y modelo-->
+              <div class="col-12 d-flex flex-wrap justify-content-between align-items-center my-3 pb-3 borde-bajo">
+                <h4 class="card-title col-6 m-0 pl-0">MARCA: <%= zapatillas.brands.name %></h4>
+                <h4 class="card-title col-6 m-0">MODELO: <%= zapatillas.examples.name %></h4>
+              </div>
+              <!--Precio y descuento-->
+              <div class="col-12 d-flex flex-wrap justify-content-between align-items-center my-3 pb-3 borde-bajo">
+                <h5 class="card-title col-6 m-0 pl-0">PRECIO:  $<%= zapatillas.price %></h5>  
+                <h5 class="card-title col-6 m-0">DESCUENTO: <%= zapatillas.discount %></h5> 
+              </div>
+              <!--Descripción-->
+              <div class="col-12 my-3 pb-3 borde-bajo">
+                <p class="card-text">DESCRIPCIÓN: <%= zapatillas.description %></p>
+              </div>
+              <!--Talles-->
+              <div class="col-12 d-flex flex-wrap justify-content-around my-3 pb-3 borde-bajo">
+                <p class="col-3 text-uppercase mb-2 pl-0 py-1">talles:</p>
+                <div class="col-9 d-flex flex-wrap justify-content-start">
+                  <% zapatillas.sizes.forEach(talle => { %>
+                        <div class="slider-img text-center col-2 m-2 py-1 px-1">
+                            <p class="my-auto"><%= talle.number %> </p>
+                        </div>
+                  <% }) %>
+                </div>
+              </div>
               
-         
+            </div> 
           </article>
+          <!--Boton volver-->
+          <div class="col-12 d-flex justify-content-end pr-5 my-5">
+            <a href="/adminProducts" class="btn btn-dark px-5">Volver</a>
+          </div>
     </section>
-    </div>
-        <!-- Footer -->
-        <%- include('../partials/footer.ejs') %>
+  </div>
+  <!-- Footer -->
+  <%- include('../partials/footer.ejs') %>
+  <!-- UIkit JS -->
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.7/dist/js/uikit.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.7/dist/js/uikit-icons.min.js"></script>
 </body>
 </html>
