@@ -2,137 +2,7 @@
     <div class="container-fluid">
         <div class="row">
             
-            <% if (locals.usuario.role==9) { %>
-                <div class="col-12 d-flex justify-content-between align-items-center">
-                    <!--Menu hamburguesa, sidebar y logo-->
-                    <div class="col-4 d-flex ml-0 pl-2 pb-2">
-                        <span style="font-size:30px;cursor:pointer;padding-top: 10px; padding-right: 1rem;" onclick="openNav()">&#9776; </span>
-                        <a href="/"><img class="d-none d-md-block" src="/img/logonegro@.png" alt=""></a>
-                        <div id="mySidenav" class="sidenav">
-                            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                            <a href="/productos">WOMEN</a>
-                            <a href="/productos">MEN</a>
-                            <a href="/productos">NEW IN</a>
-                            <a href="/productos">SALE</a>
-                            <br>
-                            <br>
-                            <a href="#">+INFO</a>
-                                <a id="menuinfo" href="/newsletter">NEWSLETTER</a>
-                                <a id="menuinfo" href="/contacto">CONTACTO</a>
-                                <a id="menuinfo" href="/nosotros">NOSOTROS</a>
-                                <a id="menuinfo" href="/giftcard">GIFT CARD</a>
-                                <a id="menuinfo" href="/ayuda">AYUDA</a>
-                            <br>
-                            <br>
-                            <!--Administrar-->
-                            <div class="dropdown d-flex pr-2 d-none d-sm-block d-md-none">
-                                <button class="btn btn-dark dropdown-toggle f ml-3 " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Administrar
-                                </button>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item"href="/adminProducts">Productos</a>  
-                                    <a class="dropdown-item"href="/adminUsers">Usuarios</a>    
-                                </div>
-                            </div>  
-                        </div>
-                    </div>
-                    <!--Buscador-->
-                    <div class="col-3 d-flex justify-content-center align-items-center">
-                        <form action="/action_page.php" class="d-none d-md-block">
-                        <div class="d-flex justify-content-center align-items-center">
-                            <div class="border-bottom border-dark">
-                                <input type="text" placeholder="BUSCAR" name="search" class="border-0 rounded-0 buscar-input">
-                            </div>
-                            <button type="submit" class="border-0 bg-white"><i class="fa fa-search"></i></button>
-                        </div>
-                        </form>
-                    </div>
-                    <!--Administrar y usuario-->
-                    <div class="col-4 d-flex justify-content-end align-items-center pr-4">
-                        <!--Dropdown Administrar-->
-                        <div class="dropdown d-flex pr-3">
-                            <button class="btn btn-light dropdown-toggle d-none d-md-block" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Administrar
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item"href="/adminProducts">Productos</a>  
-                                <a class="dropdown-item"href="/adminUsers">Usuarios</a>        
-                            </div>                         
-                        </div> 
-                        <!--Dropdown Usuario-->       
-                        <div class="dropdown d-flex pr-2">
-                            <button class="btn btn-light dropdown-toggle d-none d-md-block" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                ¡Hola <%= locals.usuario.first_name %> !
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item"href="/perfil">Mi perfil</a>  
-                                <a class="dropdown-item"href="/logout">Cerrar sesión</a>        
-                            </div>                         
-                        </div>        
-                        <!--Carrito-->
-                        <div class="d-flex col-1">
-                            <a href="/carrito"><i class="fas fa-shopping-cart t ml-2 mr-0 pr-0 mt-1" style="font-size: 1.5rem; color: black;"></i></a>
-                        </div>
-                    </div>
-                </div>
-            <% } else if(locals.usuario){%>
-                <div class="col-12 d-flex justify-content-between align-items-center">
-                    <!--Menu hamburguesa, sidebar y logo-->
-                    <div class="col-4 d-flex ml-0 pl-2 pb-2">
-                        <span style="font-size:30px;cursor:pointer;padding-top: 10px; padding-right: 1rem;" onclick="openNav()">&#9776; </span>
-                        <a href="/"><img class="d-none d-md-block" src="/img/logonegro@.png" alt=""></a>
-                        <div id="mySidenav" class="sidenav">
-                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                        <a href="/productos">WOMEN</a>
-                        <a href="/productos">MEN</a>
-                        <a href="/productos">NEW IN</a>
-                        <a href="/productos">SALE</a>
-                        <br>
-                        <br>
-                        <a href="#">+INFO</a>
-                            <a id="menuinfo" href="/newsletter">NEWSLETTER</a>
-                            <a id="menuinfo" href="/contacto">CONTACTO</a>
-                            <a id="menuinfo" href="/nosotros">NOSOTROS</a>
-                            <a id="menuinfo" href="/giftcard">GIFT CARD</a>
-                            <a id="menuinfo" href="/ayuda">AYUDA</a>
-                        <br>
-                        <br>
-                        </div>  
-                    </div>
-                    <!--Buscador-->
-                    <div class="col-3 d-flex justify-content-center align-items-center">
-                        <form action="/action_page.php" class="d-none d-md-block">
-                        <div class="d-flex justify-content-center align-items-center">
-                            <div class="border-bottom border-dark">
-                                <input type="text" placeholder="BUSCAR" name="search" class="border-0 rounded-0 buscar-input">
-                            </div>
-                            <button type="submit" class="border-0 bg-white"><i class="fa fa-search"></i></button>
-                        </div>
-                        </form>
-                    </div>
-                    <!--Usuario, contacto y carrito-->
-                    <div class="col-4 d-flex justify-content-end align-items-center pr-4">
-                        <!--Usuario-->
-                        <div class="dropdown d-flex pr-3">
-                            <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                ¡Hola <%= locals.usuario.first_name %> !
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item"href="/perfil">Mi perfil</a>  
-                                <a class="dropdown-item"href="/logout">Cerrar sesión</a>        
-                            </div>                         
-                        </div>  
-                        <!--Contacto-->
-                        <div>
-                            <a class="col-3 text-uppercase text-body text-decoration-none p-1 d-none d-md-block" href="/contacto">Contacto  </a>
-                        </div>
-                        <!--Carrito-->
-                        <div class="d-flex col-1">
-                            <a href="/carrito"><i class="fas fa-shopping-cart t ml-2 mr-0 pr-0 mt-1" style="font-size: 1.5rem; color: black;"></i></a>
-                        </div>
-                    </div>
-                </div>
-            <% } else {%>
+            <% if (!usuario) { %>
                 <div class="col-12 d-flex justify-content-between">
                     <!--Menu hamburguesa, sidebar y logo-->
                     <div class="col-4 d-flex ml-0 pl-2 pb-2">
@@ -248,7 +118,137 @@
                         </div>
                     </div>
                 </div>
-           <% } %> 
+            <% } else if(usuario){ %>
+                <div class="col-12 d-flex justify-content-between align-items-center">
+                    <!--Menu hamburguesa, sidebar y logo-->
+                    <div class="col-4 d-flex ml-0 pl-2 pb-2">
+                        <span style="font-size:30px;cursor:pointer;padding-top: 10px; padding-right: 1rem;" onclick="openNav()">&#9776; </span>
+                        <a href="/"><img class="d-none d-md-block" src="/img/logonegro@.png" alt=""></a>
+                        <div id="mySidenav" class="sidenav">
+                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                        <a href="/productos">WOMEN</a>
+                        <a href="/productos">MEN</a>
+                        <a href="/productos">NEW IN</a>
+                        <a href="/productos">SALE</a>
+                        <br>
+                        <br>
+                        <a href="#">+INFO</a>
+                            <a id="menuinfo" href="/newsletter">NEWSLETTER</a>
+                            <a id="menuinfo" href="/contacto">CONTACTO</a>
+                            <a id="menuinfo" href="/nosotros">NOSOTROS</a>
+                            <a id="menuinfo" href="/giftcard">GIFT CARD</a>
+                            <a id="menuinfo" href="/ayuda">AYUDA</a>
+                        <br>
+                        <br>
+                        </div>  
+                    </div>
+                    <!--Buscador-->
+                    <div class="col-3 d-flex justify-content-center align-items-center">
+                        <form action="/action_page.php" class="d-none d-md-block">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <div class="border-bottom border-dark">
+                                <input type="text" placeholder="BUSCAR" name="search" class="border-0 rounded-0 buscar-input">
+                            </div>
+                            <button type="submit" class="border-0 bg-white"><i class="fa fa-search"></i></button>
+                        </div>
+                        </form>
+                    </div>
+                    <!--Usuario, contacto y carrito-->
+                    <div class="col-4 d-flex justify-content-end align-items-center pr-4">
+                        <!--Usuario-->
+                        <div class="dropdown d-flex pr-3">
+                            <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                ¡Hola <%= locals.usuario.first_name %> !
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item"href="/perfil">Mi perfil</a>  
+                                <a class="dropdown-item"href="/logout">Cerrar sesión</a>        
+                            </div>                         
+                        </div>  
+                        <!--Contacto-->
+                        <div>
+                            <a class="col-3 text-uppercase text-body text-decoration-none p-1 d-none d-md-block" href="/contacto">Contacto  </a>
+                        </div>
+                        <!--Carrito-->
+                        <div class="d-flex col-1">
+                            <a href="/carrito"><i class="fas fa-shopping-cart t ml-2 mr-0 pr-0 mt-1" style="font-size: 1.5rem; color: black;"></i></a>
+                        </div>
+                    </div>
+                </div>
+            <% } else if(usuario.role == 9){ %> 
+                <div class="col-12 d-flex justify-content-between align-items-center">
+                    <!--Menu hamburguesa, sidebar y logo-->
+                    <div class="col-4 d-flex ml-0 pl-2 pb-2">
+                        <span style="font-size:30px;cursor:pointer;padding-top: 10px; padding-right: 1rem;" onclick="openNav()">&#9776; </span>
+                        <a href="/"><img class="d-none d-md-block" src="/img/logonegro@.png" alt=""></a>
+                        <div id="mySidenav" class="sidenav">
+                            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                            <a href="/productos">WOMEN</a>
+                            <a href="/productos">MEN</a>
+                            <a href="/productos">NEW IN</a>
+                            <a href="/productos">SALE</a>
+                            <br>
+                            <br>
+                            <a href="#">+INFO</a>
+                                <a id="menuinfo" href="/newsletter">NEWSLETTER</a>
+                                <a id="menuinfo" href="/contacto">CONTACTO</a>
+                                <a id="menuinfo" href="/nosotros">NOSOTROS</a>
+                                <a id="menuinfo" href="/giftcard">GIFT CARD</a>
+                                <a id="menuinfo" href="/ayuda">AYUDA</a>
+                            <br>
+                            <br>
+                            <!--Administrar-->
+                            <div class="dropdown d-flex pr-2 d-none d-sm-block d-md-none">
+                                <button class="btn btn-dark dropdown-toggle f ml-3 " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Administrar
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item"href="/adminProducts">Productos</a>  
+                                    <a class="dropdown-item"href="/adminUsers">Usuarios</a>    
+                                </div>
+                            </div>  
+                        </div>
+                    </div>
+                    <!--Buscador-->
+                    <div class="col-3 d-flex justify-content-center align-items-center">
+                        <form action="/action_page.php" class="d-none d-md-block">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <div class="border-bottom border-dark">
+                                <input type="text" placeholder="BUSCAR" name="search" class="border-0 rounded-0 buscar-input">
+                            </div>
+                            <button type="submit" class="border-0 bg-white"><i class="fa fa-search"></i></button>
+                        </div>
+                        </form>
+                    </div>
+                    <!--Administrar y usuario-->
+                    <div class="col-4 d-flex justify-content-end align-items-center pr-4">
+                        <!--Dropdown Administrar-->
+                        <div class="dropdown d-flex pr-3">
+                            <button class="btn btn-light dropdown-toggle d-none d-md-block" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Administrar
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item"href="/adminProducts">Productos</a>  
+                                <a class="dropdown-item"href="/adminUsers">Usuarios</a>        
+                            </div>                         
+                        </div> 
+                        <!--Dropdown Usuario-->       
+                        <div class="dropdown d-flex pr-2">
+                            <button class="btn btn-light dropdown-toggle d-none d-md-block" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                ¡Hola <%= locals.usuario.first_name %> !
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item"href="/perfil">Mi perfil</a>  
+                                <a class="dropdown-item"href="/logout">Cerrar sesión</a>        
+                            </div>                         
+                        </div>        
+                        <!--Carrito-->
+                        <div class="d-flex col-1">
+                            <a href="/carrito"><i class="fas fa-shopping-cart t ml-2 mr-0 pr-0 mt-1" style="font-size: 1.5rem; color: black;"></i></a>
+                        </div>
+                    </div>
+                </div>
+            <% }%> 
         </div>
     </div>
 </nav>
