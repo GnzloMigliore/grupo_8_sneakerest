@@ -18,38 +18,68 @@
         <h2 class="titulo-admin pb-3 border-bottom text-center pt-5 mx-auto text-uppercase">Nuevo usuario</h2>
       </article>
     </section>
-    
-    <% if(typeof(errors) != 'undefined'){%>
-      <ul class="alert alert-danger">
-        <% errors.forEach(error => { %>
-          <li><%= error.msg%></li>
-          <%});%>
-      </ul>
-    <%}%>
+        <div>
+          <ul id="errores-registro"></ul>
+        </div>
         <!--Formulario-->
-        <form action="/login/registro" method="POST" enctype="multipart/form-data" class="mt-0">
+        <form action="/login/registro" method="POST" enctype="multipart/form-data" class="mt-0" id="formulario-registro">
           <!--Nombre-->
-          <input type="text" name="nombre" placeholder="Nombre" class="col-12 mb-2 datos-envio-input" value="<%= typeof old != 'undefined' ? old.nombre : '' %>">
+          <input type="text" name="nombre" placeholder="Nombre" class="col-12 form-control mb-2 datos-envio-input" value="<%= typeof old != 'undefined' ? old.nombre : '' %>">
+          <div class="form-group col-12 d-flex justify-content-center mt-0 mb-1">
+            <% if(typeof errors != 'undefined' && errors.nombre){%>
+                <span class="text-danger" > <%=errors.nombre.msg %></span>
+            <%}%>
+          </div>
           <!--Apellido-->
-          <input type="text" name="apellido" placeholder="Apellido" class="col-12 mb-2 datos-envio-input" value="<%= typeof old != 'undefined' ? old.apellido : '' %>">
+          <input type="text" name="apellido" placeholder="Apellido" class="col-12 form-control mb-2 datos-envio-input" value="<%= typeof old != 'undefined' ? old.apellido : '' %>">
+          <div class="form-group col-12 d-flex justify-content-center mt-0 mb-1">
+            <% if(typeof errors != 'undefined' && errors.apellido){%>
+                <span class="text-danger" > <%=errors.apellido.msg %></span>
+            <%}%>
+          </div>
           <!--Email-->
-          <input type="text" name="email" placeholder="Email" class="col-12 mb-2 datos-envio-input" value="<%= typeof old != 'undefined' ? old.email : '' %>">
+          <input type="email" name="email" placeholder="Email" class="col-12 form-control mb-2 datos-envio-input" value="<%= typeof old != 'undefined' ? old.email : '' %>">
+          <div class="form-group col-12 d-flex justify-content-center mt-0 mb-1">
+            <% if(typeof errors != 'undefined' && errors.email){%>
+                <span class="text-danger" > <%=errors.email.msg %></span>
+            <%}%>
+          </div>
           <!--Teléfono-->
-          <input type="number" name="telefono" placeholder="Teléfono (Ej: 12345678)" class="col-12 mb-2 datos-envio-input" value="<%= typeof old != 'undefined' ? old.telefono : '' %>">
+          <input type="number" name="telefono" placeholder="Teléfono (Ej: 12345678)" class="col-12 form-control mb-2 datos-envio-input" value="<%= typeof old != 'undefined' ? old.telefono : '' %>">
+          <div class="form-group col-12 d-flex justify-content-center mt-0 mb-1">
+            <% if(typeof errors != 'undefined' && errors.telefono){%>
+                <span class="text-danger" > <%=errors.telefono.msg %></span>
+            <%}%>
+          </div>
           <!--password-->
-          <input type="password" name="contraseña" placeholder="Contraseña" class="col-12 mb-2 datos-envio-input" value="">
+          <input type="password" name="contraseña" placeholder="Contraseña" class="col-12 form-control mb-2 datos-envio-input" value="">
+          <div class="form-group col-12 d-flex justify-content-center mt-0 mb-1">
+            <% if(typeof errors != 'undefined' && errors.contraseña){%>
+                <span class="text-danger" > <%=errors.contraseña.msg %></span>
+            <%}%>
+          </div>
           <!--Confirmar password-->
-          <input type="password" name="confirmar_contraseña" placeholder="Repetir contraseña" class="col-12 mb-2 datos-envio-input"  value="">
+          <input type="password" name="confirmar_contraseña" placeholder="Repetir contraseña" class="col-12 form-control mb-2 datos-envio-input"  value="">
+          <div class="form-group col-12 d-flex justify-content-center mt-0 mb-1">
+            <% if(typeof errors != 'undefined' && errors.confirmar_contraseña){%>
+                <span class="text-danger" > <%=errors.confirmar_contraseña.msg %></span>
+            <%}%>
+          </div>
           <!--<input type="text" name="descripcion" placeholder="Descripción" class="col-12 mb-2 datos-envio-input"  required="required" value="">-->
           <!--Genero-->
-          <select id="genero" name="genero" class="custom-select border-0 btn btn-outline-dark py-0">
-            <option selected disabled>Seleccione su género</option>
+          <select id="genero" name="genero" class="custom-select form-control btn btn-outline-dark py-0">
+            <option selected disabled value="">Seleccione su género</option>
             <option value="Hombre">Hombre</option>
             <option value="Mujer">Mujer</option>
             <option value="Niño">Niño</option>
             <option value="Niña">Niña</option>
             <option value="Otro">Otro</option>
           </select>
+          <div class="form-group col-12 d-flex justify-content-center mt-0 mb-1">
+            <% if(typeof errors != 'undefined' && errors.generos){%>
+                <span class="text-danger" > <%=errors.generos.msg %></span>
+            <%}%>
+          </div>
           <!--Imagen-->
           <div class="custom-file py-3 mx-auto">
             <input type="file" name="imagen" value="<%= typeof old != 'undefined' ? old.file : '' %>">
@@ -60,8 +90,9 @@
               <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="..."> Quiero novedades de snkrst.com
             </div>
             <div class="form-check col-4 text-center">
-              <input name="terminos" class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="..."> Acepto los terminos y condiciones 
+              <input name="terminos" class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">Acepto los terminos y condiciones
             </div>
+            
           </div>
           <!--Botón crear cuenta-->
           <div class="ingresar col-12 mx-auto px-auto text-center mt-3">
@@ -83,6 +114,7 @@
   </main>
   <!--Footer-->
   <%- include('../partials/footer.ejs') %>
+  <script src="/js/registro.js"></script>
 </body>
     
 </html>

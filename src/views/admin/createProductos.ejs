@@ -20,116 +20,166 @@
         </section>
         <section class="container">
             <div class="row">
+                <div>
+                    <ul id="errores-create"></ul>
+                </div>
                 <article id="crear" class="col-8 mx-auto">
-                    <% if(typeof(errors) != 'undefined'){%>
-                        <ul class="alert alert-danger">
-                          <% errors.forEach(error => { %>
-                            <li><%= error.msg%></li>
-                            <%});%>
-                        </ul>
-                      <%}%>
-                    <form action="/adminProducts/create" method="POST" enctype="multipart/form-data">
+                    
+                    <form action="/adminProducts/create" method="POST" enctype="multipart/form-data" id="formulario-create">
                         <!--Marca-->
                         <div class="form-group">
-                            <input type="text" class="form-control border-0 rounded-0 bg-light" name="marca" placeholder="Marca"  value=""<%= typeof old != 'undefined' ? old.marca : '' %>">
+                            <input type="text" class="form-control bg-light" name="marca" placeholder="Marca"  value=""<%= typeof old != 'undefined' ? old.marca : '' %>">
                         </div>
+                        <div class="form-group col-12 d-flex justify-content-center mt-0 mb-1">
+                            <% if(typeof errors != 'undefined' && errors.marca){%>
+                                <span class="text-danger" > <%=errors.marca.msg %></span>
+                            <%}%>
+                          </div>
                         <!--Modelo-->
                         <div class="form-group">
-                            <input type="text" class="form-control border-0 rounded-0 bg-light" name="modelo" placeholder="Modelo"  value=""<%= typeof old != 'undefined' ? old.modelo : '' %>">
+                            <input type="text" class="form-control bg-light" name="modelo" placeholder="Modelo"  value=""<%= typeof old != 'undefined' ? old.modelo : '' %>">
                         </div>
+                        <div class="form-group col-12 d-flex justify-content-center mt-0 mb-1">
+                            <% if(typeof errors != 'undefined' && errors.modelo){%>
+                                <span class="text-danger" > <%=errors.modelo.msg %></span>
+                            <%}%>
+                          </div>
                         <!--Descripción de producto-->
                         <div class="form-group">
-                            <input type="text" class="form-control border-0 rounded-0 bg-light" name="descripcion" placeholder="Descripción del producto"  value=""<%= typeof old != 'undefined' ? old.descripcion : '' %>">
+                            <input type="text" class="form-control bg-light" name="descripcion" placeholder="Descripción del producto"  value=""<%= typeof old != 'undefined' ? old.descripcion : '' %>">
                         </div>
-                        <!--Género, color, talles, precio y descuento-->
-                        <div class="row">
+                        <div class="form-group col-12 d-flex justify-content-center mt-0 mb-3">
+                            <% if(typeof errors != 'undefined' && errors.descripcion){%>
+                                <span class="text-danger" > <%=errors.descripcion.msg %></span>
+                            <%}%>
+                          </div>
+                        <!--Género, color, talles-->
+                        <div class="col-12 px-0 d-flex justify-content-between">
                             <!--Género-->
-                            <div class="form-group col-4"  >
-                                <select class="form-group col-12 pl-0 py-2 border-0 rounded-0 bg-light" name="genero" value="<%= typeof old != 'undefined' ? old.genero : '' %>">
-                                    <option disabled selected>Seleccione un género</option>
-                                    <option value="hombre">Hombre</option>
-                                    <option value="mujer">Mujer</option>
-                                    <option value="niños">niños</option>
-                                </select>
+                            <div class="col-4 pl-0">
+                                <div class="form-group col-12 mb-0 pl-0">
+                                    <select class="form-group form-control col-12 mb-0 pl-0 py-2 bg-light" name="genero" value="<%= typeof old != 'undefined' ? old.genero : '' %>">
+                                        <option disabled selected value="">Seleccione un género</option>
+                                        <option value="hombre">Hombre</option>
+                                        <option value="mujer">Mujer</option>
+                                        <option value="niños">niños</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-12 d-flex justify-content-center mt-0 mb-3 mx-0 px-0">
+                                    <% if(typeof errors != 'undefined' && errors.genero){%>
+                                        <span class="text-danger" > <%=errors.genero.msg %></span>
+                                    <%}%>
+                                </div>
                             </div>
                             
                             <!--Color-->
-                            <div class="form-group col-2 pl-0">
-                                <input type="color" list="presetColors" class="form-control border-0 rounded-0 bg-light" name="color" value=""<%= typeof old != 'undefined' ? old.color : '' %>">
-                                <datalist id="presetColors">
-                                    <option selected value="#000000"/>
-                                    <option value="#ff0000"/>
-                                    <option value="#00ff00"/>
-                                    <option value="#0000ff"/>
-                                </datalist>
+                            <div class="col-2 px-0">
+                                <div class="form-group col-12 px-0">
+                                    <input type="color" list="presetColors" class="form-control bg-light mb-0" name="color" value=""<%= typeof old != 'undefined' ? old.color : '' %>">
+                                    <datalist id="presetColors">
+                                        <option value="#" disabled></option>
+                                        <option selected value="#000000"/>
+                                        <option value="#ff0000"/>
+                                        <option value="#00ff00"/>
+                                        <option value="#0000ff"/>
+                                    </datalist>
+                                </div>
+                                <div class="form-group col-12 d-flex justify-content-center mt-0 mb-3">
+                                    <% if(typeof errors != 'undefined' && errors.color){%>
+                                        <span class="text-danger" > <%=errors.color.msg %></span>
+                                    <%}%>
+                                </div>
                             </div>
-                            <!--<div class="form-group col-2 pl-0">
-                                <input type="color" class="form-control border-0 rounded-0 bg-light" name="color"  value="">
-                            </div>-->
+                            
                             <!--Talles-->
-                            <!--<div class="form-group col-6 pl-0">
-                                <input class="form-control border-0 rounded-0 bg-light" name="talle" placeholder="Talles (separados por guión sin espacio)"  value="">
-                            </div>-->
-                            <div class="form-group col-6 pl-0">
-                                <select class="selectpicker col-12 select-talles pr-0" multiple title="Seleccione los talles" data-header="Seleccione los talles" name="talles" value=""<%= typeof old != 'undefined' ? old.talles : '' %>" >
-                                    <option value="16">16</option>
-                                    <option value="17">17</option>
-                                    <option value="18">18</option>
-                                    <option value="19">19</option>
-                                    <option value="20">20</option>
-                                    <option value="27">27</option>
-                                    <option value="28">28</option>
-                                    <option value="28.5">28.5</option>
-                                    <option value="29">29</option>
-                                    <option value="29.5">29.5</option>
-                                    <option value="30">30</option>
-                                    <option value="30.5">30.5</option>
-                                    <option value="31">31</option>
-                                    <option value="31.5">31.5</option>
-                                    <option value="32">32</option>
-                                    <option value="32.5">32.5</option>
-                                    <option value="33">33</option>
-                                    <option value="34.5">34.5</option>
-                                    <option value="35">35</option>  
-                                  </select>
+                            <div class="col-6 pr-0">
+                                <div class="form-group col-12 mb-0 pr-0">
+                                    <select class="selectpicker form-control col-12 select-talles mb-0 pr-0" multiple title="Seleccione los talles" data-header="Seleccione los talles" name="talles" value=""<%= typeof old != 'undefined' ? old.talles : '' %>" >
+                                        <option value="" disabled></option>
+                                        <option value="16">16</option>
+                                        <option value="17">17</option>
+                                        <option value="18">18</option>
+                                        <option value="19">19</option>
+                                        <option value="20">20</option>
+                                        <option value="27">27</option>
+                                        <option value="28">28</option>
+                                        <option value="28.5">28.5</option>
+                                        <option value="29">29</option>
+                                        <option value="29.5">29.5</option>
+                                        <option value="30">30</option>
+                                        <option value="30.5">30.5</option>
+                                        <option value="31">31</option>
+                                        <option value="31.5">31.5</option>
+                                        <option value="32">32</option>
+                                        <option value="32.5">32.5</option>
+                                        <option value="33">33</option>
+                                        <option value="34.5">34.5</option>
+                                        <option value="35">35</option>  
+                                    </select>
+                                </div>
+                                <div class="form-group col-12 d-flex justify-content-center mt-0 mb-3 mx-0 px-0">
+                                    <% if(typeof errors != 'undefined' && errors.talles){%>
+                                        <span class="text-danger" > <%=errors.talles.msg %></span>
+                                    <%}%>
+                                </div>
                             </div>
+                            
+                        </div>
+                        <!--Precio y descuento-->
+                        <div class="col-12 px-0 d-flex justify-content-between">
                             <!--Precio-->
-                            <div class="form-group col-6">
-                                <input type="number" class="form-control border-0 rounded-0 bg-light" name="precio" placeholder="$"  value=""<%= typeof old != 'undefined' ? old.precio : '' %>">
+                            <div class="form-group col-5 pl-0">
+                                <input type="number" class="form-control bg-light" name="precio" placeholder="$"  value=""<%= typeof old != 'undefined' ? old.precio : '' %>">
                             </div>
+                            <% if(typeof errors != 'undefined' && errors.precio){%>
+                                <span class="text-danger" > <%=errors.precio.msg %></span>
+                            <%}%>
                             <!--Descuento-->
-                            <select class="form-group col-6 pl-0 pr-2 border-0 rounded-0 bg-light" name="descuento" value=""<%= typeof old != 'undefined' ? old.descuento : '' %>">
-                                <option disabled selected>Seleccione un descuento</option>
+                            <select class="form-group form-control col-7 pl-0 pr-2 bg-light" name="descuento" value=""<%= typeof old != 'undefined' ? old.descuento : '' %>">
+                                <option disabled selected value="">Seleccione un descuento</option>
                                 <option value="0">Sin descuento</option>
                                 <option value="10">10%</option>
                             </select>
+                            <% if(typeof errors != 'undefined' && errors.descuento){%>
+                                <span class="text-danger" > <%=errors.descuento.msg %></span>
+                            <%}%>
                         </div>
                         <!--Stock-->
                         <div class="form-group">
-                            <input type="number" class="form-control border-0 rounded-0 bg-light" name="stock" placeholder="Stock"  value=""<%= typeof old != 'undefined' ? old.stock : '' %>">
+                            <input type="number" class="form-control bg-light" name="stock" placeholder="Stock"  value=""<%= typeof old != 'undefined' ? old.stock : '' %>">
                         </div>
+                        <div class="form-group col-12 d-flex justify-content-center mt-0 mb-1">
+                            <% if(typeof errors != 'undefined' && errors.stock){%>
+                                <span class="text-danger" > <%=errors.stock.msg %></span>
+                            <%}%>
+                          </div>
                         <!--Seleccionar imagenes-->
                         <div class="form-group d-flex flex-wrap justify-content-between">
                             <!--<div class="custom-file">
                                 <input type="file" class="custom-file-input" id="customFile" placeholder="Seleccionar imágenes" multiple>
                                 <label class="custom-file-label border-0 rounded-0 bg-light" for="customFile"></label>
                             </div>-->
-                            <div class="custom-file inputs-imagenes">
+                            <div class="custom-file border-0 form-control inputs-imagenes">
                                 <input type="file" name="imagen[]">
                             </div>
-                            <div class="custom-file inputs-imagenes">
+                            <div class="custom-file border-0 form-control inputs-imagenes">
                                 <input type="file" name="imagen[]">
                             </div>
-                            <div class="custom-file inputs-imagenes">
+                            <div class="custom-file border-0 form-control inputs-imagenes">
                                 <input type="file" name="imagen[]">
                             </div>
-                            <div class="custom-file inputs-imagenes">
+                            <div class="custom-file border-0 form-control inputs-imagenes">
                                 <input type="file" name="imagen[]">
                             </div>
-                            <div class="custom-file inputs-imagenes">
+                            <div class="custom-file border-0 form-control inputs-imagenes">
                                 <input type="file" name="imagen[]">
                             </div>
                         </div>
+                        <div class="form-group col-12 d-flex justify-content-center mt-0 mb-1">
+                            <% if(typeof errors != 'undefined' && errors.imagen){%>
+                                <span class="text-danger" > <%=errors.imagen.msg %></span>
+                            <%}%>
+                          </div>
                         <!--Botones guardar volver-->
                         <div class="form-group row d-flex justify-content-center mx-auto mt-5">
                             <button type="submit" class="btn btn-dark col-8 border-0 rounded-0">Guardar producto</button>
@@ -148,8 +198,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
-    <!-- (Optional) Latest compiled and minified JavaScript translation files -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/i18n/defaults-*.min.js"></script>
+    
+    
+    <script src="/js/createProductos.js"></script>
     
 </body>
 </html>

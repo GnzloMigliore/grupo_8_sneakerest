@@ -63,3 +63,10 @@ input:hover{
 .inputs-imagenes input:hover{
     background-color: white !important;
 }
+
+.borde-rojo {
+    border: 3px red solid!important;
+}
+.borde-verde {
+    border: 3px green solid!important;
+}

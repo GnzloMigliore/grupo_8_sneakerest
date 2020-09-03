@@ -62,10 +62,10 @@ module.exports = {
     },
     save: (req, res) => {
         let errors = validationResult(req);
-        if (!errors.isEmpty()) {
-            return res.render(path.resolve(__dirname, '../views/usuarios/registro'), {
-                errors: errors.errors,  old: req.body
-            });
+        if(!errors.isEmpty()){
+            //return res.send(errors.mapped())
+            return res.render(path.resolve(__dirname, '..', 'views', 'usuarios', 'registro'), {
+                errors: errors.mapped(),  old: req.body});
         }
         let usuario={
             first_name: req.body.nombre,
@@ -73,7 +73,7 @@ module.exports = {
             telephone : req.body.telefono,
             email: req.body.email,
             password: bcrypt.hashSync(req.body.contraseña, 10),
-            genre: req.body.genero,    
+            gender: req.body.genero,    
             image: req.file.filename,
             role: 1   
         };

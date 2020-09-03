@@ -21,36 +21,45 @@
     <section class="bg-home pt-4">
         <div class="container-fluid">
             <div class="row" >
+                <!--UL de errores-->
+                <div class="col-8 mx-auto">
+                    <ul id="errores-edit"></ul>
+                </div>
                 <div id="editar" class="col-12 mx-auto">
                     <div class="create-form">
-                        <form action="/adminProducts/edit/<%= zapatillas.id%>?_method=PUT
-                            " method="POST" enctype="multipart/form-data" >
+                        <form action="/adminProducts/edit/<%= zapatillas.id%>?_method=PUT" method="POST" enctype="multipart/form-data" id="formulario-edit">
                             <!--Inputs-->
                             <div class="col-8 mx-auto px-0">
                                 <!--Marca-->
                                 <div class="form-group">
                                     <input type="hidden" name="oldBrand"  value="<%= zapatillas.brands.name%>">
-                                    <input type="text" class="form-control border-0 rounded-0 bg-light" name="marca" placeholder="Marca" required="required" value="<%= zapatillas.brands.name%>">
+                                    <input type="text" class="form-control border-0 rounded-0 bg-light" name="marca" placeholder="Marca" value="<%= zapatillas.brands.name%>">
+                                </div>
+                                <!--Error-->
+                                <div class="form-group d-flex justify-content-center mt-0 mb-1">
+                                    <% if(typeof errors != 'undefined' && errors.marca){%>
+                                        <span class="text-danger" > <%=errors.marca.msg %></span>
+                                    <%}%>
                                 </div>	
                                 <!--Modelo-->
                                 <div class="form-group">
                                     <input type="hidden" name="oldExample"  value="<%= zapatillas.examples.name%>">
-                                    <input type="text" class="form-control border-0 rounded-0 bg-light" name="modelo" placeholder="Modelo" required="required" value="<%= zapatillas.examples.name%>">
+                                    <input type="text" class="form-control border-0 rounded-0 bg-light" name="modelo" placeholder="Modelo"  value="<%= zapatillas.examples.name%>">
                                 </div>
                                 <!--Descripción-->
                                 <div class="form-group">
                                     <input type="hidden" name="oldDescription"  value="<%= zapatillas.description%>">
-                                    <input type="text" class="form-control border-0 rounded-0 bg-light" name="descripcion" placeholder="Descripción del producto" required="required" value="<%= zapatillas.description%>">
+                                    <input type="text" class="form-control border-0 rounded-0 bg-light" name="descripcion" placeholder="Descripción del producto"  value="<%= zapatillas.description%>">
                                 </div>
                                 <!--Precio-->
                                 <div class="form-group">
                                     <input type="hidden" name="oldPrice"  value="<%= zapatillas.price%>">
-                                    <input type="number" class="form-control border-0 rounded-0 bg-light" name="precio" placeholder="Indique el precio" required="required" value="<%=zapatillas.price%>">
+                                    <input type="number" class="form-control border-0 rounded-0 bg-light" name="precio" placeholder="Indique el precio"  value="<%=zapatillas.price%>">
                                 </div>
                                 <!--Descuento-->
                                 <div class="form-group">
                                     <select  name="descuento" class="custom-select border-0 rounded-0 bg-light" id="validationCustom04" required>
-                                        <option disabled value="#">Seleccione un descuento"</option>
+                                        <option disabled value="">Seleccione un descuento</option>
                                         <option value="0" <%= zapatillas.discount == 0 ? "selected" : null %>>Sin descuento</option>
                                         <option value="10" <%= zapatillas.discount == 10 ? "selected" : null %>>10%</option>
                                         
@@ -62,7 +71,7 @@
                                 <div class="col-12 d-flex justify-content-between mx-0 px-0">
                                     <!--Color-->
                                     <div class="form-group col-2 pl-0">
-                                        <input type="color" list="presetColors" class="form-control border-0 rounded-0 bg-light" name="color" required="required" value="<%= zapatillas.color %>" >
+                                        <input type="color" list="presetColors" class="form-control border-0 rounded-0 bg-light" name="color"  value="<%= zapatillas.color %>" >
                                         <datalist id="presetColors" >
                                             <option value="#74cfe0"/>
                                             <option value="#00ff00"/>
@@ -71,31 +80,32 @@
                                     </div>
                                     <!--Talles-->
                                     <div class="form-group col-6 pl-0">
-                                        <select class="selectpicker col-12 select-talles pr-0" multiple title="Seleccione los talles" data-header="Seleccione los talles" name="talles">
-                                            <option value="16">16</option>
-                                            <option value="17">17</option>
-                                            <option value="18">18</option>
-                                            <option value="19">19</option>
-                                            <option value="20">20</option>
-                                            <option value="27">27</option>
-                                            <option value="28">28</option>
-                                            <option value="28.5">28.5</option>
-                                            <option value="29">29</option>
-                                            <option value="29.5">29.5</option>
-                                            <option value="30">30</option>
-                                            <option value="30.5">30.5</option>
-                                            <option value="31">31</option>
-                                            <option value="31.5">31.5</option>
-                                            <option value="32">32</option>
-                                            <option value="32.5">32.5</option>
-                                            <option value="33">33</option>
-                                            <option value="34.5">34.5</option>
-                                            <option value="35">35</option>  
+                                        <select name="talles" class="selectpicker col-12 select-talles pr-0 form-control" multiple title="Seleccione los talles">
+                                            <option disabled value="">Seleccione un talle</option>
+                                            <option value="16" <%= zapatillas.sizes.number == 16 ? "selected" : null %>>16</option>
+                                            <option value="17" <%= zapatillas.sizes.number == 17 ? "selected" : null %>>17</option>
+                                            <option value="18" <%= zapatillas.sizes.number == 18 ? "selected" : null %>>18</option>
+                                            <option value="19" <%= zapatillas.sizes.number == 19 ? "selected" : null %>>19</option>
+                                            <option value="20" <%= zapatillas.sizes.number == 20 ? "selected" : null %>>20</option>
+                                            <option value="27" <%= zapatillas.sizes.number == 27 ? "selected" : null %>>27</option>
+                                            <option value="28" <%= zapatillas.sizes.number == 28 ? "selected" : null %>>28</option>
+                                            <option value="28.5" <%= zapatillas.sizes.number == 28.5 ? "selected" : null %>>28.5</option>
+                                            <option value="29" <%= zapatillas.sizes.number == 29 ? "selected" : null %>>29</option>
+                                            <option value="29.5" <%= zapatillas.sizes.number == 29.5 ? "selected" : null %>>29.5</option>
+                                            <option value="30" <%= zapatillas.sizes.number == 30 ? "selected" : null %>>30</option>
+                                            <option value="30.5" <%= zapatillas.sizes.number == 30.5 ? "selected" : null %>>30.5</option>
+                                            <option value="31" <%= zapatillas.sizes.number == 31 ? "selected" : null %>>31</option>
+                                            <option value="31.5" <%= zapatillas.sizes.number == 31.5 ? "selected" : null %>>31.5</option>
+                                            <option value="32" <%= zapatillas.sizes.number == 32 ? "selected" : null %>>32</option>
+                                            <option value="32.5" <%= zapatillas.sizes.number == 32.5 ? "selected" : null %>>32.5</option>
+                                            <option value="33" <%= zapatillas.sizes.number == 33 ? "selected" : null %>>33</option>
+                                            <option value="34.5" <%= zapatillas.sizes.number == 34.5 ? "selected" : null %>>34.5</option>
+                                            <option value="35" <%= zapatillas.sizes.number == 35 ? "selected" : null %>>35</option>  
                                         </select>
                                     </div>
                                     <!--Stock-->
                                     <div class="form-group">
-                                        <input type="number" class="form-control border-0 rounded-0 bg-light" name="stock" placeholder="Stock" required="required" value="<%=zapatillas.stock%>">
+                                        <input type="number" class="form-control border-0 rounded-0 bg-light" name="stock" placeholder="Stock"  value="<%=zapatillas.stock%>">
                                     </div>
                                 </div>
                             </div>
@@ -147,9 +157,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
-    <!-- (Optional) Latest compiled and minified JavaScript translation files -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/i18n/defaults-*.min.js"></script>
     
+    <script src="/js/editProducts.js"></script>
 </body>
 
 </html>

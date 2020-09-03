@@ -19,10 +19,18 @@ form{
     height: 15vh;
 }
 
+.borde-rojo {
+    border: 3px red solid;
+}
+.borde-verde {
+    border: 3px green solid;
+}
+.letra-rojo {
+    color: ;
+}
+
 .datos-envio-input {
     background-color: #F2F3F2;
-    border: black;
-    border-radius: 1px;
     width: 60%;
     margin-top: 1vh;
 }

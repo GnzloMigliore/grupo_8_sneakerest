@@ -1,5 +1,6 @@
 const path = require('path');
 const fs = require('fs');
+const { Op } = require("sequelize");
 //const db = require ('../database/models');
 //const products = db.products;
 const {products, brands, examples, images, imageproducts, sizes} = require ('../database/models');
@@ -13,14 +14,10 @@ module.exports = {
     },    
     detail: async (req,res) => {
         const zapatillas = await products.findByPk(req.params.id, {include: ['brands', 'examples', 'images', 'sizes']})
-        //let category_id = req.params.id;
-        //const modelos = await products.findAll({include: ['images']})
-        const modelos = await products.findAll({
-            where: {example_id: zapatillas.example_id},
-            include: ['brands', 'examples', 'images']
-        })
-        //Promise.all([zapatillas, modelos])
-        //return res.send(modelos);
-        res.render(path.resolve(__dirname , '..','views','productos','detalleProducto') , {zapatillas, modelos});           
-}    
+        //return res.send(zapatillas)
+        const allZapatillas = await products.findAll({include: ['images']});
+        //return res.send (allZapatillas)
+        
+        res.render(path.resolve(__dirname , '..','views','productos','detalleProducto') , {zapatillas, allZapatillas});
+    }    
 }

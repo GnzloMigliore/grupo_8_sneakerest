@@ -14,21 +14,24 @@ window.addEventListener('load', () => {
             let {email, contraseña } = formulario.elements;
             let errores = [];
             console.log(formulario.elements.email.value);
-            
-            
+
             let reEmail  = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-            if(!reEmail.test(email.value)){
+            if(!reEmail.test(email.value) || email.value == ''){
                 errores.push('El email es inválido...');
-                email.classList.add('is-invalid');   
+                email.classList.add('is-invalid'); 
+                email.classList.remove('is-valid');  
             }else{
                 email.classList.add('is-valid');
                 email.classList.remove('is-invalid');
             }
             
             let rePassword = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/
-            if(!rePassword.test(contraseña.value)){
+            if(!rePassword.test(contraseña.value) || contraseña.value == ''){
                 errores.push('La contraseña es incorrecta...');
-                contraseña.classList.add('is-invalid');   
+                contraseña.classList.add('is-invalid'); 
+                contraseña.classList.remove('is-valid'); 
+                email.classList.add('is-invalid');
+                email.classList.remove('is-valid');  
             }else{
                 contraseña.classList.add('is-valid');
                 contraseña.classList.remove('is-invalid');

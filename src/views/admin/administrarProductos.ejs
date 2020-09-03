@@ -44,7 +44,7 @@
                                 <td><%= zapatilla.examples.name %></td>
                                 <td><a href="/adminProducts/detail/<%= zapatilla.id %>">Ver detalle</a></td>
                                 <td><a href="/adminProducts/edit/<%= zapatilla.id%>">Editar producto</a></td>
-                                <td><a href="/adminProducts/delete/<%= zapatilla.id%>">Eliminar producto</a></td>
+                                <td><a href="/adminProducts/delete/<%= zapatilla.id%>" class="btn-eliminar-producto">Eliminar producto</a></td>
                             </tr>
                         <% }); %> 
                     </tbody>
@@ -54,5 +54,7 @@
     </main>
     <!-- FOOTER -->
     <%- include('../partials/footer.ejs') %>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script src="/js/adminProducts.js"></script>
 </body>
 </html>

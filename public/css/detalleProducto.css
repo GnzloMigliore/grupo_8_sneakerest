@@ -36,6 +36,11 @@ img {
     box-shadow: 0 0 5px #444444;
 }
 
+.descripcion-producto {
+    word-wrap: break-word;
+    text-align: center;
+}
+
 .boton-añadir{
     font-size: 1.2rem;
 }

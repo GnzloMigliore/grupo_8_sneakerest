@@ -50,32 +50,8 @@ body {
 
 /* PRIMER SLIDE */
 
-
-#new-in {
-    color: black;
-    padding-top: 150px;
-    font-size: 3rem;
-    font-weight: bold;
-    text-align: center;
-}
-#new-in-p {
-    color: black;
-    font-size: 1rem;
-    text-align: center;
-}
-.catalogo {
-    text-decoration: none;
-    padding: 5px;
-    font-weight: 600;
-    font-size: 15px;
-    color: #000000;
-    background-color: #ffffff;
-    border: 1px solid #000000;
-    text-align: center;
-    align-content: center;
-}
 .primera-pagina {
-    background-image: url(/img/portadamobile@.jpg);
+    
     background-repeat: no-repeat;
     background-size: cover; 
     text-align: center;
@@ -94,28 +70,11 @@ body {
     width: 100%;
     height: 100vh;  
 }
-#new-in {
-    color: black;
-    padding-top: 301px;
-    font-size: 4rem;
-    font-weight: bold;
-    text-align: center;
-}
+
 #new-in-p {
     color: black;
     font-size: 1.2rem;
     text-align: center;
-}
-.catalogo {
-    text-decoration: none;
-    padding: 5px;
-    font-weight: 600;
-    font-size: 2.5rem;
-    color: #000000;
-    background-color: #ffffff;
-    border: 1px solid #000000;
-    text-align: center;
-    align-content: center;
 }
 #bottom-menu {
     text-decoration: none;

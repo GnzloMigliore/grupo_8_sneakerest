@@ -42,19 +42,19 @@
                     <button type="button" class="btn btn-outline-dark col-11 text-uppercase rounded-0 boton-añadir">añadir</button>
                 </div>
                 <div class="col-12 mb-4 pt-4">
-                    <p class="descripcion-producto"><%= zapatillas.description %> </p>
+                    <p class="col-12 descripcion-producto"><%= zapatillas.description %> </p>
                 </div>
                 <div class="col-12">
-                    <p class="text-uppercase font-weight-bold"><%= "Colores: " + modelos.length %> </p>
+                    <p class="text-uppercase font-weight-bold"><%= "Colores: " + zapatillas.example_id.length %> </p>
                 </div>
                 <div class="col-12 mb-4 d-flex flex-wrap justify-content-around">
-                    <% modelos.forEach( zapatilla => { %>
+                    <% allZapatillas.forEach( zapatilla => { %>
                         <a href="/productos/detalle/<%= zapatilla.id %> " class="col-4">
                             <div class="col-12 mx-auto px-auto d-flex justify-content-center">
                                 <img src="/images/zapatillas/<%= zapatilla.images[0].filename %>" alt="" class="col-12 py-3 align-self-center">
                             </div>
                         </a>
-                   <% }) %>
+                    <% }) %>
                 </div>
                 <div class="mb-5">
                     <p class="col-12 text-uppercase envios-devoluciones">Envíos gratis. Devoluciones gratis</p>
@@ -100,13 +100,13 @@
                 <!--Imágenes colores-->
                 <div class="col-12 d-flex flex-wrap justify-content-start mt-5">
                     <p class="text-uppercase col-12 pl-0">colores</p>
-                        <% modelos.forEach( zapatilla => { %>
-                                <a href="/productos/detalle/<%= zapatilla.id %> " class="col-3 py-2 px-2">
-                                    <div class="filtros-colores">
-                                        <img src="/images/zapatillas/<%= zapatilla.images[0].filename %> " alt="">
-                                    </div>
-                                </a>
-                        <% }) %>
+                    <% allZapatillas.forEach( zapatilla => { %>
+                        <a href="/productos/detalle/<%= zapatilla.id %> " class="col-3 py-2 px-2">
+                            <div class="filtros-colores">
+                                <img src="/images/zapatillas/<%= zapatilla.images[0].filename %> " alt="">
+                            </div>
+                        </a>
+                    <% }) %>
                 </div>
                 <!--Talles-->
                 <div class="col-12 d-flex flex-wrap justify-content-start mt-5">
@@ -133,7 +133,7 @@
                 </div>
                 <!--Descripción de producto-->
                 <div class="col-12 mt-5 d-flex flex-wrap justify-content-center">
-                    <p><%= zapatillas.description %></p>
+                    <p class="col-12 descripcion-producto"><%= zapatillas.description %></p>
                 </div>
                 <!--Reseñas-->
                 <div class="col-12 mt-5">

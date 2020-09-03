@@ -20,10 +20,10 @@ module.exports = {
     },
     save: async (req,res)=>{
         let errors = validationResult(req);
-        if (!errors.isEmpty()) {
-            return res.render(path.resolve(__dirname, '../views/admin/createProductos'), {
-                errors: errors.errors,  old: req.body
-            });
+        if(!errors.isEmpty()){
+            //return res.send(errors.mapped())
+            return res.render(path.resolve(__dirname, '..','views','admin','createProductos'), {
+                errors: errors.mapped(),  old: req.body});
         }
         //return res.send(req.files)
         const zapatillas = await products.findAll();
@@ -117,6 +117,12 @@ module.exports = {
         
     },
     updateZapatillas: async (req,res) => {
+        let errors = validationResult(req);
+        if(!errors.isEmpty()){
+            //return res.send(errors.mapped())
+            return res.render(path.resolve(__dirname, '..','views','admin','editProductos'), {errors: errors.mapped(),  old: req.body});
+        }
+
         const zapatillas = await products.findAll();
         const marcas = await brands.findAll({where: {name: {[Op.like]: req.body.marca}}});
         const modelos = await examples.findAll({where: {name: {[Op.like]: req.body.modelo}}});
@@ -191,14 +197,17 @@ module.exports = {
         lastTalles.sizes.forEach(async talles => await sizes.destroy({where: {id: talles.id}}))
 
         let newTalles = [];
-        req.body.talles.forEach(async talle => {
-            let talleNuevo = await sizes.create({number: talle})
-            newTalles.push(talleNuevo.id)
-            //console.log('oooooooooooooooooooooooooooooooooooooo    ' + talleNuevo)
-        });
+        if(!req.body.talles == undefined){
+            req.body.talles.forEach(async talle => {
+                let talleNuevo = await sizes.create({number: talle})
+                newTalles.push(talleNuevo.id)
+                //console.log('oooooooooooooooooooooooooooooooooooooo    ' + talleNuevo)
+            });
+        }
+        
 
-        res.redirect(`/productos/detalle/${newZapatilla.id}`);
-        //res.redirect('/productos')
+        //res.redirect(`/productos/detalle/${newZapatilla.id}`);
+        res.redirect('/productos')
     }     
     
 }
