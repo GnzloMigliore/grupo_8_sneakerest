@@ -125,10 +125,13 @@ button:focus {
 
 .filtros-menu-drop {
     left: auto;
+    
     right: 5px;
     position: absolute;
+    height: calc(100vh - 50vh);
     width: calc( 100vw - 50vw );
     margin : auto ;
+    overflow: scroll;
 }
 
 .dos-drops1 {

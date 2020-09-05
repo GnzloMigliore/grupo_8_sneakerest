@@ -49,11 +49,13 @@
                 </div>
                 <div class="col-12 mb-4 d-flex flex-wrap justify-content-around">
                     <% allZapatillas.forEach( zapatilla => { %>
-                        <a href="/productos/detalle/<%= zapatilla.id %> " class="col-4">
-                            <div class="col-12 mx-auto px-auto d-flex justify-content-center">
-                                <img src="/images/zapatillas/<%= zapatilla.images[0].filename %>" alt="" class="col-12 py-3 align-self-center">
-                            </div>
-                        </a>
+                        <% if (zapatilla.example_id == zapatillas.example_id) {%> 
+                            <a href="/productos/detalle/<%= zapatilla.id %> " class="col-4">
+                                <div class="col-12 mx-auto px-auto d-flex justify-content-center">
+                                    <img src="/images/zapatillas/<%= zapatilla.images[0].filename %>" alt="" class="col-12 py-3 align-self-center">
+                                </div>
+                            </a>
+                        <% } %> 
                     <% }) %>
                 </div>
                 <div class="mb-5">
@@ -97,15 +99,17 @@
                 <div class="col-12 mt-3">
                     <h3 class="font-weight-bold"><%= '$' + zapatillas.price %></h3>
                 </div>
-                <!--Imágenes colores-->
+                <!--Imágenes filtro colores-->
                 <div class="col-12 d-flex flex-wrap justify-content-start mt-5">
                     <p class="text-uppercase col-12 pl-0">colores</p>
                     <% allZapatillas.forEach( zapatilla => { %>
-                        <a href="/productos/detalle/<%= zapatilla.id %> " class="col-3 py-2 px-2">
+                        <% if (zapatilla.example_id == zapatillas.example_id) { %>
+                            <a href="/productos/detalle/<%= zapatilla.id %> " class="col-3 py-2 px-2">
                             <div class="filtros-colores">
                                 <img src="/images/zapatillas/<%= zapatilla.images[0].filename %> " alt="">
                             </div>
-                        </a>
+                            </a>
+                        <% } %>
                     <% }) %>
                 </div>
                 <!--Talles-->

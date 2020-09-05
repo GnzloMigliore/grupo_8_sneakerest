@@ -17,7 +17,9 @@ module.exports = {
         //return res.send(zapatillas)
         const allZapatillas = await products.findAll({include: ['images']});
         //return res.send (allZapatillas)
-        
+
+        //return res.send(allZapatillas);
+
         res.render(path.resolve(__dirname , '..','views','productos','detalleProducto') , {zapatillas, allZapatillas});
     }    
 }

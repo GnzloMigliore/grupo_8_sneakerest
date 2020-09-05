@@ -94,19 +94,7 @@ window.addEventListener('load', ()=>{
             }
 
 
-            //Valido que el precio sean solo caracteres numéricos
-            let rePrecio = /^[0-9]+$/
-            if(!rePrecio.test(precio.value)){
-                errores.push('El precio deben ser caracteres numéricos');
-                precio.classList.add('is-invalid');
-                precio.classList.remove('is-valid');
-                precio.classList.remove('borde-verde');
-                precio.classList.add('borde-rojo')   
-            }else{
-                precio.classList.add('is-valid');
-                precio.classList.remove('is-invalid');
-                precio.classList.add('borde-verde')
-            }
+           
 
             //Valido que el precio sean solo caracteres numéricos
             if(precio.value == ''){
