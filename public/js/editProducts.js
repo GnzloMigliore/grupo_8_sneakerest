@@ -19,7 +19,7 @@ window.addEventListener('load', ()=>{
 
             //Validar Modelo
             if(marca.value == ''){
-                errores.push('La marca no puede estar vacia');
+                errores.push('Debe seleccionar una marca');
                 marca.classList.add('is-invalid'); 
                 marca.classList.remove('is-valid'); 
                 marca.classList.add('borde-rojo'); 
@@ -28,18 +28,7 @@ window.addEventListener('load', ()=>{
                 marca.classList.remove('is-invalid');
                 marca.classList.add('borde-verde');
             }
-            //Validar Modelo
-            if(marca.value.length < 2){
-                errores.push('La marca debe tener al menos dos caracteres');
-                marca.classList.add('is-invalid'); 
-                marca.classList.remove('is-valid');
-                marca.classList.remove('borde-verde'); 
-                marca.classList.add('borde-rojo'); 
-            }else{
-                marca.classList.add('is-valid');
-                marca.classList.remove('is-invalid');
-                marca.classList.add('borde-verde');
-            }
+            
 
             //Validar modelo
             if(modelo.value == ''){

@@ -1,8 +1,9 @@
 window.addEventListener('load', function() {
     
+    //Modal suscribirse
     let modal = document.getElementById('modalSuscribirse');
-    let close = document.querySelector('.close')
-    
+    let close = document.querySelector('.close');
+    let suscribite = document.getElementById('suscribite-newsletter');
     
     if (sessionStorage.getItem('modalSuscribirse') !== 'true') { //Acá se obtiene un item desde el cual se lee la data almacenada en la session
         setTimeout(function(){                                   //Si todavía no hay data guardada en la session (si es false) ejecuta el setTimeOut
@@ -21,9 +22,13 @@ window.addEventListener('load', function() {
         }
     })
 
+    //On click en suscribite al news letter del ante footer
+    suscribite.addEventListener('click', ()=>{
+        //console.log('asdsdasdasdasdasd')
+        $('#modalSuscribirse').modal('show')
+    })
 
-
-    
+    //Carrousel generos
     //document ready
     $(document).ready(function(){
         //Event for pushed the video
@@ -33,7 +38,7 @@ window.addEventListener('load', function() {
         });
     });
     
-    
+    //Flechas scroll 
     let flechaScroll = document.querySelectorAll('.flecha-scroll'); 
     flechaScroll.forEach(link => { 
         link.onclick = function (e) { 

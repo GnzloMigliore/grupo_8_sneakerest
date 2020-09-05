@@ -19,7 +19,7 @@ window.addEventListener('load',function(){
             //console.log(formulario.elements.marca.value);
             //Validar Nombre
             if(marca.value == ''){
-                errores.push('La marca debe tener al menos dos caracteres');
+                errores.push('Debe seleccionar una marca');
                 marca.classList.add('is-invalid'); 
                 marca.classList.remove('is-valid'); 
                 marca.classList.add('borde-rojo')  

@@ -31,15 +31,15 @@ module.exports = {
             const modelos = await examples.findAll({where: {name: {[Op.like]: req.body.modelo}}});
             
             let marcas_body = null;
-            if(marcas.length > 0){
-                marcas_body = marcas[0].id;
+            if(marcas.length >= 1){
+                marcas_body = marcas[0].id 
             } else {
                 //await brands.destroy({where: {name: req.body.marca}})
                 let newBrand = await brands.create({name: req.body.marca})
                 marcas_body = newBrand.id;
             }
             let modelos_body = null;
-            if(modelos.length > 0){
+            if(modelos.length >= 1){
                 modelos_body = modelos[0].id 
             } else {
                 //await examples.destroy({where: {name: req.body.modelo}})
@@ -128,7 +128,7 @@ module.exports = {
             const modelos = await examples.findAll({where: {name: {[Op.like]: req.body.modelo}}});
             let marcas_body = null;
             let modelos_body = null;
-            if (marcas.length > 1){
+            if (marcas.length >= 1){
                 //let actualizarBrand = await brands.update({name: req.body.marca})
                 marcas_body = marcas[0].id
                 //marcas_body = marcas[0].id;
@@ -137,7 +137,7 @@ module.exports = {
                 let newBrand = await brands.create({name: req.body.marca})
                 marcas_body = newBrand.id;
             }
-            if (modelos.length > 1){
+            if (modelos.length >= 1){
                 //let actualizarExample = await examples.update({name: req.body.modelo})
                 modelos_body = modelos[0].id
                 //modelos_body = marcas[0].id;

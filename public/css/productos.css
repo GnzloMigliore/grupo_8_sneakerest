@@ -24,84 +24,11 @@ img {
 
 /* Navbar  */   
 
-header {
-    height: 10rem;
-}
-
-nav {
-    width: 100%;   
-    display: flex;
-    flex: auto;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 2rem;
-}
-
-#item1 {
-    width: 15%;
-    font-size: 20px;
-    text-align: center;
-    
-}
-
-#item1 a img {
-    height: 100%;
-}
-
-#item2 {
-    width: 70%;
-    height: 3rem; 
-    font-size: 1rem;  
-    text-align: center;
-    display: flex;
-    align-items: center;
-}
-
-h1 {
-    font-size: 1.8rem;
-    font-weight: 700;
-    
-}
-
-#item3 {
-    width: 15%;
-    height: 3rem;
-    font-size: 20px;
-    text-align: center;
-}
-
-
-.content-laptop {
-    display: none;
-}
-
-.content-drop {
-    display: none;
-}
-
-.contenido-nav {
-    width: 100%;
-    background-color: white;
-    display: flex;
-    justify-content: center;
-}
-
-.navbar-detalles {
-    width: 95%;
-    height: 6vh;
-    display: flex;
-    flex: row;
-    justify-content: space-between;
-}
-
-.iconos-top {
-    margin: 1rem 0;
-}
 
 .orden-filtros {
     display: flex;
     justify-content: flex-end;
-    margin-top: 2rem;
+    padding-top: 2rem;
 }
 
 .boton-orden-filtro {
@@ -177,54 +104,6 @@ button:focus {
 
 .padre-box-colores a i {
     padding: 0.5rem 1rem;
-}
-
-#circulo-naranja {
-    color: orange;
-}
-
-#circulo-rojo {
-    color: red;
-}
-
-#circulo-azul{
-    color: blue;
-}
-
-#circulo-celeste {
-    color: lightskyblue;
-}
-
-#circulo-verde {
-    color: green;
-}
-
-#circulo-amarillo {
-    color: yellow;
-}
-
-#circulo-violeta {
-    color: purple;
-}
-
-#circulo-rosa {
-    color: violet;
-}
-
-#circulo-marron {
-    color: brown;
-}
-
-#circulo-gris {
-    color: gray;
-} 
-
-#circulo-blanco {
-    color: whitesmoke;
-}
-
-#circulo-negro {
-    color: black;
 }
 
 .padre-box-precio {
@@ -322,7 +201,7 @@ div.fondo-grisOscuro-productos:hover {
     }
     
     .marcas-arriba {
-        display: flex;
+        display: inline-flex;
         flex-flow: row wrap;
         justify-content: center;
     }
@@ -395,6 +274,9 @@ div.fondo-grisOscuro-productos:hover {
     
     .marcas-arriba {
         margin: auto 2rem auto auto;
+        display: inline-flex!important;
+        flex-flow: row wrap;
+        justify-content: center;
     }
     
     .marcas-arriba a {
@@ -442,6 +324,12 @@ div.fondo-grisOscuro-productos:hover {
     
     .orden-filtros {
         padding-bottom: 5rem;
+    }
+
+    .marcas-arriba{
+        display: inline-flex!important;
+        flex-flow: row wrap;
+        justify-content: center;
     }
     
     
