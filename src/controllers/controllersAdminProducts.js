@@ -108,7 +108,16 @@ module.exports = {
         },
         destroy: async (req, res) => {
             let destroyZapatilla = await products.destroy({where: {id: req.params.id}, force: true})
-            
+            await imageproducts.destroy ({where: {product_id: req.params.id}, force: true})
+            let idImageDestroy = await imageproducts.findAll({where: {id: req.params.id}});
+            idImageDestroy.forEach(async image => {
+                let destroyImageLocal = await images.findOne({ where: { id: fila.image_id } })
+                fs.unlink(path.resolve(__dirname, '../../public/images/zapatillas/' + destroyImageLocal.name), (err) => {
+                  if (err) { console.log(err) };
+                  console.log('../../public/images/zapatillas/' + destroyImageLocal.name + ' fue borrada');
+                })
+                await images.destroy({ where: { id: image.image_id }, force: true })
+              })
             res.redirect('/adminProducts')
         },
         edit: async (req,res) => {
@@ -205,7 +214,7 @@ module.exports = {
             //console.log('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa ', talleNuevo.id);
             //await productsize.update({size_id: talleNuevo.id, product_id: req.params.id}, {where: {product_id: req.params.id}})
             //return talleNuevo
-            await productsize.destroy({where:{product_id:req.params.id},force:true,truncate:true})
+            await productsize.destroy({where:{product_id: req.params.id},force:true})
             
             let newTalles = req.body.talles.map(talle => sizes.create({number: talle}).then(async size => {await productsize.create({size_id: size.id, product_id: req.params.id}, {where: {product_id: req.params.id}})}))
             

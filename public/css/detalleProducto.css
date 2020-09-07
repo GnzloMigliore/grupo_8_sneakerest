@@ -18,12 +18,17 @@ img {
     max-width: 100%;
 }
 
+
 .fotos-ampliadas {
     transition: transform .2s;
 }
 
 .fotos-ampliadas:hover {
     transform: scale(1.2);
+}
+
+.texto-descuento {
+    text-shadow: 1px 1px 2px #000000;
 }
 
 .filtros-colores img {
@@ -35,6 +40,8 @@ img {
     box-shadow: 0 0 5px #444444;
     border-radius: 5px;
 }
+
+
 
 .box-talles div {
     border-radius: 3px;

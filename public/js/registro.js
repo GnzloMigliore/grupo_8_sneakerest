@@ -46,7 +46,7 @@ window.addEventListener('load',function(){
             //Validar el email - Expresiones Regulares https://www.w3schools.com/jsref/jsref_obj_regexp.asp       https://stackoverflow.com/questions/46155/how-to-validate-an-email-address-in-javascript
             let reEmail  = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
             
-            if(!reEmail.test(email.value) && email.value == ''){
+            if(!reEmail.test(email.value)){
                 errores.push('Debe ingresar un email válido');
                 email.classList.add('is-invalid');  
                 email.classList.remove('is-valid'); 
@@ -60,7 +60,7 @@ window.addEventListener('load',function(){
 
             //Valido que el telefono sean solo caracteres numéricos
             let reTelefono = /^[0-9]+$/
-            if(!reTelefono.test(telefono.value) && telefono.value == ''){
+            if(!reTelefono.test(telefono.value)){
                 errores.push('El telefono deben ser caracteres numéricos');
                 telefono.classList.add('is-invalid');
                 telefono.classList.remove('is-valid');
@@ -75,7 +75,7 @@ window.addEventListener('load',function(){
             //Aquí valido el password haciendo uso de Expresiones Regulares
             //Esta expresión regular valida como Mínimo seis caracteres, al menos una letra y un número:
             let rePassword = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/
-            if(!rePassword.test(contraseña.value) && contraseña.value == ''){
+            if(!rePassword.test(contraseña.value)){
                 errores.push('La contraseña como mínimo debe tener ocho caracteres y al menos una letra y un número');
                 contraseña.classList.add('is-invalid');   
                 contraseña.classList.remove('is-valid');

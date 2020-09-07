@@ -103,7 +103,7 @@
                     <% } else if (zapatillas.discount >= 1){%>
                         <div class="d-flex justify-content-start text-align-center">
                             <h3 class="font-weight-bold mb-1 pr-1"><%= "$" +  `${zapatillas.price - zapatillas.price * zapatillas.discount / 100}` %></h3>
-                            <p class="mb-1 pl-1 text-danger font-weight-bold descuento-zapatilla d-flex flex-column justify-content-center"><%= zapatillas.discount + '%OFF' %> </p>
+                            <p class="mb-1 pl-1 text-danger font-weight-bold descuento-zapatilla d-flex flex-column justify-content-center texto-descuento"><%= zapatillas.discount + '%OFF' %> </p>
                             
                         </div>
                         <h4 class="text-secondary"><del><%= "$" + zapatillas.price %></del></h4>

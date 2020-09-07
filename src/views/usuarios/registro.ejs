@@ -38,7 +38,7 @@
             <%}%>
           </div>
           <!--Email-->
-          <input type="email" name="email" placeholder="Email" class="col-12 form-control mb-2 datos-envio-input" value="<%= typeof old != 'undefined' ? old.email : '' %>">
+          <input type="text" name="email" placeholder="Email" class="col-12 form-control mb-2 datos-envio-input" value="<%= typeof old != 'undefined' ? old.email : '' %>">
           <div class="form-group col-12 d-flex justify-content-center mt-0 mb-1">
             <% if(typeof errors != 'undefined' && errors.email){%>
                 <span class="text-danger" > <%=errors.email.msg %></span>
