@@ -18,9 +18,6 @@ header,
     z-index: 9999999999;
 }
 
-.container-fluid {
-    
-}
 
 .padre-contenido1 {
     height: 100vh;
@@ -49,22 +46,15 @@ header,
 
 .texto-contenido1 {
     position: absolute;
-    top: 40vh;
+    top: 47vh;
     left: 25vw;
     width: 50vw;
     height: 50vh;
 }
 
-#new-in {
-    color: black;
-    font-size: 4rem;
-    font-weight: bold;
-    text-align: center;
-}
-
 .texto-contenido2 {
     position: absolute;
-    top: 125vh;
+    top: 147vh;
     left: 25vw;
     width: 50vw;
     height: 50vh;
@@ -79,13 +69,13 @@ header,
 }
 
 .new-in-sale-p {
-    width: 50%;
+    width: 75%;
 }
 
 .new-in-sale-p p{
     color: white;
     text-shadow: 2px 2px 4px #000000;
-    font-size: 1rem;
+    font-size: 1.2rem;
     text-align: center;
     line-height: 100%;
 }
@@ -96,12 +86,12 @@ header,
     color: white;
     text-shadow: 2px 2px 4px #000000;
     font-weight: 600;
-    font-size: 2.5rem;
+    font-size: 1.75rem;
     text-align: center;
     align-content: center;
     padding-bottom: .1rem;
     margin: auto;
-    width: 60%;
+    width: 75%;
     -webkit-transition: .5s;
     -webkit-transition-delay: 0s;
 }
@@ -132,46 +122,17 @@ header,
 /***** Flecha scroll down ******/
 
 .flecha-scroll {
-    display: block;
-    position: absolute;
-    top: 93vh;
-    left: 42vw;
-    width: 15%;
-    margin: auto;
-    display: flex;
-    justify-content: center;
+    display: none;
 }
 
 .flecha-scroll2 {
-    display: block;
-    position: absolute;
-    top: 193vh;
-    left: 42vw;
-    width: 15%;
-    margin: auto;
-    display: flex;
-    justify-content: center;
+    display: none;
 }
-
-
-.flecha-scroll-icon:hover {
-    transform: scale(1.5);
-    opacity: 1;
-}
-
 
 .flecha-scroll-icon{
-    display: block;
-    background-size: 100%, 100%;
-    background-image: none;
+    display: none;
 }
 
-.flecha-scroll-icon {
-    font-size: 1.5rem;
-    color: white;
-    text-shadow: 2px 2px 4px #000000;
-    opacity: .5;
-}
 
 
 /*** Flechas next & prev ***/
@@ -299,5 +260,119 @@ header,
     z-index: 999999999999;
 }
 
-
+@media(min-width: 768px){
+    /***** Texto ****/
+    .texto-contenido1 {
+        position: absolute;
+        top: 40vh;
+        left: 25vw;
+        width: 50vw;
+        height: 50vh;
+    }
+    
+    #new-in {
+        color: black;
+        font-size: 4rem;
+        font-weight: bold;
+        text-align: center;
+    }
+    
+    .texto-contenido2 {
+        position: absolute;
+        top: 140vh;
+        left: 25vw;
+        width: 50vw;
+        height: 50vh;
+    }
+    
+    .new-in-sale {
+        color: white;
+        text-shadow: 2px 2px 4px #000000;
+        font-size: 4rem;
+        font-weight: bold;
+        text-align: center;
+    }
+    
+    .new-in-sale-p {
+        width: 50%;
+    }
+    
+    .new-in-sale-p p{
+        color: white;
+        text-shadow: 2px 2px 4px #000000;
+        font-size: 1rem;
+        text-align: center;
+        line-height: 100%;
+    }
+    
+    .catalogo p{
+        text-align: center;
+        text-decoration: underline;
+        color: white;
+        text-shadow: 2px 2px 4px #000000;
+        font-weight: 600;
+        font-size: 2.5rem;
+        text-align: center;
+        align-content: center;
+        padding-bottom: .1rem;
+        margin: auto;
+        width: 60%;
+        -webkit-transition: .5s;
+        -webkit-transition-delay: 0s;
+    }
+    
+    .catalogo p:hover {
+        transform: scale(1.2);
+        transition: .5s .5s;
+        transition-delay: 0s;
+        text-decoration: underline;
+        color: white;
+        text-shadow: 2px 2px 4px #000000;
+    }
+    
+    
+    /***** Flecha scroll down ******/
+    
+    .flecha-scroll {
+        display: block;
+        position: absolute;
+        top: 93vh;
+        left: 42vw;
+        width: 15%;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .flecha-scroll2 {
+        display: block;
+        position: absolute;
+        top: 193vh;
+        left: 42vw;
+        width: 15%;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+    }
+    
+    
+    .flecha-scroll-icon:hover {
+        transform: scale(1.5);
+        opacity: 1;
+    }
+    
+    
+    .flecha-scroll-icon{
+        display: block;
+        background-size: 100%, 100%;
+        background-image: none;
+    }
+    
+    .flecha-scroll-icon {
+        font-size: 1.5rem;
+        color: white;
+        text-shadow: 2px 2px 4px #000000;
+        opacity: .5;
+    }
+}
 

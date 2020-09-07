@@ -11,8 +11,8 @@ let archivoUsuarios = users.findAll();
 
 module.exports = [
     
-    //Aquí incoporé otras validaciones, para que las tengan de guía para sus proyectos  
-    check('marca').isLength({min: 4}).withMessage('El campo marca debe tener al menos 4 caracteres'),
+    //Aquí incoporé otras validaciones, para que las tengan de guía para sus proyectos
+    //check('marca').isLength({min: 4}).withMessage('El campo marca debe tener al menos 4 caracteres'),
     check('marca').not().isEmpty().withMessage('El campo marca no puede estar vacio'),
     check('modelo').isLength({min: 2}).withMessage('El campo modelo debe tener al menos 2 caracteres'),
     check('modelo').not().isEmpty().withMessage('El campo modelo no puede estar vacio'),

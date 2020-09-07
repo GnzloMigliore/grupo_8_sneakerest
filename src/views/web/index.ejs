@@ -1,76 +1,125 @@
 <!DOCTYPE html>
 <html lang="es">
-    
-      <head>
-          <%- include('../partials/head.ejs') %>
-         <link rel="stylesheet" href="/css/navbar.css">  
-      </head>
-
+<head>
+    <%- include('../partials/head.ejs') %>
+    <link rel="stylesheet" href="/css/navbar.css">
+    <link rel="stylesheet" href="/css/master2.css">
+</head>
 <body>
-<!-- Modal --> 
     <header>
-        <%- include('../partials/navBar.ejs') %>
+        <%- include('../partials/navbar.ejs') %>  
     </header>
-    <section>
-        <div id="modalSuscribirse" class=" modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true"id="myModal">
-            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-              <div class="modal-content">
-                <div>     
-                  <button type="button" class="close mt-2 mr-2" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
+    <main class="container-fluid">
+        <div class="row">
+            <!--Carousel1-->
+            <div id="carouselExampleControls" class="col-12 carousel slide carousel-fade px-0" data-interval="false">
+                <div class="carousel-inner">
+                    <!--Página 1-->
+                    <div class="carousel-item active padre-img" id="pag-hombre">
+                        <!--Primera imagen-->
+                        <div class="padre-contenido1">
+                            <video class="m-0 p-0 contenido" autoplay loop muted src="videos/originals-fw20-zx-drop2-sustain-hp-tc-3-dt_nqm9p0.mp4"></video> 
+                        </div>
+                        <!--Texto NEW IN-->
+                        <div class="texto-contenido1 text-center">
+                            <h2 class="new-in-sale">NEW IN</h2>
+                            <div class="new-in-sale-p mx-auto">
+                                <p>Descubrí las ofertas de esta semana, seleccionadas exclusivamente para vos</p>
+                            </div>
+                            <a class="catalogo" href="/productos"><p>VER LO NUEVO</p></a>
+                        </div>
+                        <!--Flecha scroll down-->
+                        <a class="d-sm-none d-md-block flecha-scroll text-decoration-none mx-auto text-center" href="#segunda-imagen1"><i class="fas fa-angle-double-down flecha-scroll-icon"></i></a>
+                        <!--Segunda imagen-->
+                        <div class="padre-contenido" id="segunda-imagen1">
+                            <img class="mySlides contenido" id="segundaImagen"src="img/One_Star_3_Layout_brockhampton_turquoise.png" style="width:100%">
+                        </div>
+                        <!--TEXTO SALE-->
+                        <div class="texto-contenido2 text-center">
+                            <h2 class="new-in-sale">SALE</h2>
+                            <div class="new-in-sale-p mx-auto">
+                                <p style="line-height: 100%;">Descubrí las ofertas de esta semana, seleccionadas exclusivamente para vos</p>
+                            </div>
+                            <a class="catalogo" href="/productos"><p>CATÁLOGO</p></a>
+                        </div>
+                        <!--Flecha scroll dow2n-->
+                        <a class="d-sm-none d-md-inline flecha-scroll2 text-decoration-none mx-auto text-center" href="#newsletter1"><i class="fas fa-angle-double-down flecha-scroll-icon"></i></a>
+                        <!--Suscribite al newsletter-->
+                        <div class="padre-newsletter d-flex justify-content-center align-items center" id="newsletter1">
+                            <button class="col-6 padre-suscribite m-auto text-center bg-white btn" id="suscribite-newsletter">
+                                <h3 class="suscribite text-uppercase my-1 pb-1" >suscribite al newsletter</h3>    
+                            </button>
+                        </div>
+                        <p class="genero-flechas genero-prev">NIÑOS</p>
+                        <p class="genero-flechas genero-next">MUJER</p>
+                    </div>
+                    <!--Página 2-->
+                    <div class="carousel-item padre-img" id="pag-mujer">
+                        <!--Primera imagen-->
+                        <div class="padre-contenido1">
+                            <img class="mySlides contenido" src="img/bannergazelleverde.jpg" style="width:100%">
+                        </div>
+                        <!--Flecha scroll down-->
+                        <a class="d-sm-none d-md-inline flecha-scroll text-decoration-none mx-auto text-center" href="#segunda-imagen2"><i class="fas fa-angle-double-down flecha-scroll-icon"></i></a>
+                        <!--Segunda imagen-->
+                        <div class="padre-contenido" id="segunda-imagen2">
+                            <img class="mySlides2 contenido" src="img/e4806e41729683.57b237e28896b.jpg" style="width:100%">
+                        </div>
+                        <!--Flecha scroll down2-->
+                        <a class="d-sm-none d-md-inline flecha-scroll2 text-decoration-none mx-auto text-center" href="#newsletter2"><i class="fas fa-angle-double-down flecha-scroll-icon"></i></a>
+                        <!--Suscribite al newsletter-->
+                        <div class="padre-newsletter d-flex justify-content-center align-items center" id="newsletter2">
+                            <button class="col-6 padre-suscribite m-auto text-center bg-white btn">
+                                <h3 class="suscribite text-uppercase my-1 pb-1">suscribite al newsletter</h3>    
+                            </button>
+                        </div>
+                        <!--Genero de flechas next-prev-->
+                        <p class="genero-flechas genero-prev" id="genero-hombre-prev">HOMBRE</p>
+                        <p class="genero-flechas genero-next">NIÑOS</p>
+                        
+                    </div>
+                    <!--Página 3-->
+                    <div class="carousel-item padre-img" id="pag-niño">
+                        <div class="padre-contenido1">
+                            <img class="mySlides contenido" src="img/Nike-throwback-future-pack-air-max-720-1.jpg" style="width:100%">
+                        </div>
+                        <a class="d-sm-none d-md-inline flecha-scroll text-decoration-none mx-auto text-center" href="#segunda-imagen3"><i class="fas fa-angle-double-down flecha-scroll-icon"></i></a>
+                        <div class="padre-contenido" id="segunda-imagen3">
+                            <img class="mySlides2 contenido" src="img/01052018_Blog_1140x762px_04.jpg" style="width:100%">
+                        </div>
+                        <!--Flecha scroll down2-->
+                        <a class="d-sm-none d-md-inline flecha-scroll2 text-decoration-none mx-auto text-center" href="#newsletter3"><i class="fas fa-angle-double-down flecha-scroll-icon"></i></a>
+                        <div class="padre-newsletter d-flex justify-content-center align-items center" id="newsletter3">
+                            <button class="col-6 padre-suscribite m-auto text-center bg-white btn" type="button" data-toggle="modal" data-target="#exampleModal">
+                                <h3 class="suscribite text-uppercase my-1 pb-1">suscribite al newsletter</h3>    
+                            </button>
+                        </div>
+                        <p class="genero-flechas genero-prev">MUJER</p>
+                        <p class="genero-flechas genero-next" id="genero-hombre-next">HOMBRE</p>
+                    </div>
+                    
                 </div>
-                <div class="modal-body">
-                  <div class="d-flex justify-content-center"><ion-icon class="icono" name="mail-open-outline"></ion-icon></div>
-                  <h2 class="modal-title text-center mt-3">¡SUSCRIBETE AL NEWSLETTER!</h2>
-                  <p class="text-center mt-3"><strong>¡Suscribete a nuestro newsletter para recibir  nuestras noticias <br>semanales e información sobre nuevas tendencias!</strong></p>
-                </div>
-                <div class="modal-footer d-flex justify-content-center">
-                  <form class="form-inline mt-3 mb-3">
-                      <div class="form-group  mr-2">              
-                        <input type="email" class="form-control" placeholder="Email">
-                      </div>
-                      <button type="button" class="btn btn-dark">ENVIAR</button>
-                    </form>
-                </div>
-              </div>
+                <a class="carousel-control-prev d-flex justify-content-start" href="#carouselExampleControls" role="button" data-slide="prev" id="flecha-prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next d-flex justify-content-end" href="#carouselExampleControls" role="button" data-slide="next" id="flecha-next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
             </div>
-          </div>
-    </section>
-      
-    <section>
-      <div class="primera-pagina text-center">
-          <h1 id="new-in">SALE</h1>
-          <p style="line-height: 100%;" id="new-in-p">Descubrí las ofertas de esta semana,</p>
-          <p style="line-height: 100%;" id="new-in-p">seleccionadas exclusivamente para vos.</p>
-          <br>
-          <a style="text-align: center; color: black; text-decoration: none;" class="catalogo" href="/productos">CATÁLOGO</a>
-      </div>
-    <section>
-        <div class="segunda-pagina text-center">
-            <h1 id="new-in">SALE</h1>
-            <p style="line-height: 100%;" id="new-in-p">Descubrí las ofertas de esta semana,</p>
-            <p style="line-height: 100%;" id="new-in-p">seleccionadas exclusivamente para vos.</p>
-            <br>
-            <a style="text-align: center; color: black; text-decoration: none;" class="catalogo" href="/productos">CATÁLOGO</a>
         </div>
-        
-        
-    </section>
+        <!-- MODAL SUSCRIBIRSE -->
+        <%- include('../partials/modalSuscribe.ejs') %>
+    </main>
     
-    <section> <div class="container tercera-pagina text-center">
-       
-            <h3 id="new-in-suscribe"><a style="text-align: center; color: black; text-decoration: none;" class="catalogo" href="/newsletter">SUSCRIBITE AL NEWSLETTER</a></h3>
-            <a style="color: black; text-decoration: none;" href="#">Términos y Condiciones | </a>
-            <a style="color: black; text-decoration: none;"" href="#">Políticas de cambios</a>
-        </div>
-        
-    </section>
-
-
-
-<!-- FOOTER -->
-<%- include('../partials/footer.ejs') %>
-<script src="/js/index.js"></script>
+    
+    
+    
+    
+    
+    <!-- FOOTER -->
+    <%- include('../partials/footer.ejs') %>
+    <script src="/js/index.js"></script>
 </body>
 </html>

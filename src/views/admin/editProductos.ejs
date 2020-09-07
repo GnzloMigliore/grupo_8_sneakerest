@@ -32,8 +32,16 @@
                             <div class="col-8 mx-auto px-0">
                                 <!--Marca-->
                                 <div class="form-group">
-                                    <input type="hidden" name="oldBrand"  value="<%= zapatillas.brands.name%>">
-                                    <input type="text" class="form-control border-0 rounded-0 bg-light" name="marca" placeholder="Marca" value="<%= zapatillas.brands.name%>">
+                                    <select class="form-control border-0 rounded-0 bg-light" name="marca" value="<%= typeof old != 'undefined' ? old.marca : '' %>">
+                                        <option disabled selected value=""><%= zapatillas.brands.name%></option>
+                                        <option value="Adidas">Adidas</option>
+                                        <option value="Converse">Converse</option>
+                                        <option value="DC Shoes">DC Shoes</option>
+                                        <option value="New Balance">New Balance</option>
+                                        <option value="Nike">Nike</option>
+                                        <option value="Rebook">Rebook</option>
+                                        <option value="vans">Vans</option>
+                                    </select>
                                 </div>
                                 <!--Error-->
                                 <div class="form-group d-flex justify-content-center mt-0 mb-1">

@@ -20,7 +20,7 @@
         </section>
         <section class="container">
             <div class="row">
-                <div>
+                <div class="col-8 mx-auto">
                     <ul id="errores-create"></ul>
                 </div>
                 <article id="crear" class="col-8 mx-auto">
@@ -28,7 +28,16 @@
                     <form action="/adminProducts/create" method="POST" enctype="multipart/form-data" id="formulario-create">
                         <!--Marca-->
                         <div class="form-group">
-                            <input type="text" class="form-control bg-light" name="marca" placeholder="Marca"  value=""<%= typeof old != 'undefined' ? old.marca : '' %>">
+                            <select class="form-control bg-light" name="marca" value="<%= typeof old != 'undefined' ? old.marca : '' %>">
+                                <option disabled selected value="">Seleccione una marca</option>
+                                <option value="Adidas">Adidas</option>
+                                <option value="Converse">Converse</option>
+                                <option value="DC Shoes">DC Shoes</option>
+                                <option value="New Balance">New Balance</option>
+                                <option value="Nike">Nike</option>
+                                <option value="Rebook">Rebook</option>
+                                <option value="vans">Vans</option>
+                            </select>
                         </div>
                         <div class="form-group col-12 d-flex justify-content-center mt-0 mb-1">
                             <% if(typeof errors != 'undefined' && errors.marca){%>

@@ -13,30 +13,14 @@
         
         <div class="orden-filtros pb-0 mt-0">
             <div class="marcas-arriba d-none d-md-block">
-                <form class="d-flex justify-content-center" action="/productos/adidas" method="GET">
-                    <a href="/productos/adidas" id="adidas">Adidas</a>
-                </form>
-                <form class="d-flex justify-content-center" action="/productos/converse" method="GET">
-                    <a href="/productos/converse">Converse</a>
-                </form>
-                <form class="d-flex justify-content-center" action="/productos/dc-shoes" method="GET">
-                    <a href="/productos/dc-shoes">DC Shoes</a>
-                </form>
-                <form class="d-flex justify-content-center" action="/productos/new-balance" method="GET">
-                    <a href="/productos/new-balance">New Balance</a>
-                </form>
-                <form class="d-flex justify-content-center" action="/productos/nike" method="GET">
-                    <a href="/productos/nike">Nike</a>
-                </form>
-                <form class="d-flex justify-content-center" action="/productos/rebook" method="GET">
-                    <a href="/productos/rebook">Rebook</a>
-                </form>
-                <form class="d-flex justify-content-center" action="/productos/vans" method="GET">
-                    <a href="/productos/vans">Vans</a>
-                </form>
-                <form class="d-flex justify-content-center" action="/productos" method="GET">
-                    <a href="/productos">Ver Todas</a>
-                </form> 
+                <a href="#" id="adidas">Adidas</a>
+                <a href="#">Converse</a>
+                <a href="#">DC Shoes</a>
+                <a href="#">New Balance</a>
+                <a href="#">Nike</a>
+                <a href="#">Rebook</a>
+                <a href="#">Vans</a>
+                <a href="#">Ver Todas</a>
             </div>
             
             <!--Filtros mobile-->
@@ -78,18 +62,10 @@
                         <div class="contenedores-panel-filtros">
                             <a class="dropdown-item titulo-panel-filtros" href="#">colores</a>
                             <div class="padre-box-colores">
-                                <a href="#"><i class="fas fa-circle circulos-filtros" id="circulo-naranja"></i></a>
-                                <a href="#"><i class="fas fa-circle circulos-filtros" id="circulo-rojo"></i></a>
-                                <a href="#"><i class="fas fa-circle circulos-filtros" id="circulo-azul"></i></a>
-                                <a href="#"><i class="fas fa-circle circulos-filtros" id="circulo-celeste"></i></a>
-                                <a href="#"><i class="fas fa-circle circulos-filtros" id="circulo-verde"></i></a>
-                                <a href="#"><i class="fas fa-circle circulos-filtros" id="circulo-amarillo"></i></a>
-                                <a href="#"><i class="fas fa-circle circulos-filtros" id="circulo-violeta"></i></a>
-                                <a href="#"><i class="fas fa-circle circulos-filtros" id="circulo-rosa"></i></a>
-                                <a href="#"><i class="fas fa-circle circulos-filtros" id="circulo-marron"></i></a>
-                                <a href="#"><i class="fas fa-circle circulos-filtros" id="circulo-gris"></i></a>
-                                <a href="#"><i class="fas fa-circle circulos-filtros" id="circulo-blanco"></i></a>
-                                <a href="#"><i class="fas fa-circle circulos-filtros" id="circulo-negro"></i></a>
+                                <% zapatillas.forEach(zapatilla => { %>
+                                    <a href="#"><i class="fas fa-circle circulos-filtros" style="color: <%= zapatillas.color %>"></i></a>
+                                <% }) %>
+                                
                             </div>
                         </div>
                         <div class="contenedores-panel-filtros">
@@ -149,9 +125,18 @@
                         <div class="contenedores-panel-filtros">
                             <a class="dropdown-item titulo-panel-filtros" href="#">colores</a>
                             <div class="padre-box-colores">
-                                <% zapatillas.forEach(zapatilla => { %>
-                                    <a href="#"><i class="fas fa-circle circulos-filtros" style="color: <%= zapatilla.color %>"></i></a>
-                                <% }) %>
+                                <a href="#"><i class="fas fa-circle circulos-filtros" id="circulo-naranja"></i></a>
+                                <a href="#"><i class="fas fa-circle circulos-filtros" id="circulo-rojo"></i></a>
+                                <a href="#"><i class="fas fa-circle circulos-filtros" id="circulo-azul"></i></a>
+                                <a href="#"><i class="fas fa-circle circulos-filtros" id="circulo-celeste"></i></a>
+                                <a href="#"><i class="fas fa-circle circulos-filtros" id="circulo-verde"></i></a>
+                                <a href="#"><i class="fas fa-circle circulos-filtros" id="circulo-amarillo"></i></a>
+                                <a href="#"><i class="fas fa-circle circulos-filtros" id="circulo-violeta"></i></a>
+                                <a href="#"><i class="fas fa-circle circulos-filtros" id="circulo-rosa"></i></a>
+                                <a href="#"><i class="fas fa-circle circulos-filtros" id="circulo-marron"></i></a>
+                                <a href="#"><i class="fas fa-circle circulos-filtros" id="circulo-gris"></i></a>
+                                <a href="#"><i class="fas fa-circle circulos-filtros" id="circulo-blanco"></i></a>
+                                <a href="#"><i class="fas fa-circle circulos-filtros" id="circulo-negro"></i></a>
                             </div>
                         </div>
                         <div class="contenedores-panel-filtros">
