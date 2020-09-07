@@ -61,4 +61,15 @@ window.addEventListener('load', function() {
             }); 
         } 
     });  
+    let flechaScrollUp = document.querySelectorAll('.flecha-scroll-up')
+    flechaScrollUp.forEach(link => { 
+        link.onclick = function (e) { 
+            e.preventDefault(); 
+            let destination =  
+            document.querySelector(this.hash); 
+            destination.scrollIntoView({ 
+                behavior: 'smooth' 
+            }); 
+        } 
+    });
 });

@@ -29,7 +29,7 @@
                     <a href="/productos/nike">Nike</a>
                 </form>
                 <form class="d-flex justify-content-center" action="/productos/rebook" method="GET">
-                    <a href="/productos/rebook">Rebook</a>
+                    <a href="/productos/reebok">Reebok</a>
                 </form>
                 <form class="d-flex justify-content-center" action="/productos/vans" method="GET">
                     <a href="/productos/vans">Vans</a>
@@ -40,7 +40,7 @@
             </div>
             
             <!--Filtros mobile-->
-            <div class="dos-drops1 col-12 d-flex justify-content-end d-sm-block d-md-none content-mov">
+            <div class="dos-drops1 col-12 d-flex justify-content-end d-sm-block d-md-none content-mov" id="filtros-mobile">
                 <div class="dropdown ">
                     <button class="btn btn-secondary dropdown-toggle boton-orden-filtro" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         orden
@@ -184,7 +184,16 @@
                             </a>
                             <div class="modelo-precio text-center">
                                 <p><%= zapatilla.brands.name + " " + zapatilla.examples.name %></p>
-                                <p><%= "$" + zapatilla.price %> </p>
+                                <% if (zapatilla.discount <= 0) { %>
+                                    <p><%= "$" + zapatilla.price %> </p>
+                                <% } else if (zapatilla.discount >= 1){%>
+                                    <div class="d-flex justify-content-center text-align-center">
+                                        <p class="mb-1 pr-1 text-danger descuento-zapatilla d-flex flex-column justify-content-center"><%= zapatilla.discount + '%OFF' %> </p>
+                                        <p class="text-decoration-underline mb-1 pl-1"><%= "$" +  `${zapatilla.price - zapatilla.price * zapatilla.discount / 100}` %></p>
+                                    </div>
+                                    
+                                    <p class="text-secondary "><del><%= "$" + zapatilla.price %></del></p>
+                                <% } %> 
                             </div>
                         </figure>
                     </article>

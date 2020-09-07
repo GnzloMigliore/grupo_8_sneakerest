@@ -8,7 +8,7 @@ module.exports = (sequelize, DataTypes) =>{
             allowNull: false,
             autoIncrement: true
         },
-        number: DataTypes.INTEGER
+        number: DataTypes.DECIMAL
     };
 
     

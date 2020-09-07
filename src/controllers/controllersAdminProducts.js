@@ -53,7 +53,7 @@ module.exports = {
                 discount: req.body.descuento,
                 description: req.body.descripcion,
                 color: req.body.color,
-                stock: req.body.descuento,
+                stock: req.body.stock,
                 gender: req.body.genero,
                 brand_id: marcas_body,
                 example_id: modelos_body
@@ -64,6 +64,7 @@ module.exports = {
                 let newImage = await images.create({filename: image.filename})
                 newImages.push(newImage.id)
             });
+            
             
             let newTalles = [];
             req.body.talles.forEach(async talle => {
@@ -194,13 +195,13 @@ module.exports = {
             
             //return res.send(req.body.talles)
             /*--------------------------------------------------------------------------*/
-
-
+            
+            
             let lastTalles = await products.findByPk(req.params.id, {include: ['sizes']});
             
             //return res.send(lastSizes)
             lastTalles.sizes.forEach(async talles => {await sizes.destroy({where: {id: talles.id}})})
-
+            
             //console.log('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa ', talleNuevo.id);
             //await productsize.update({size_id: talleNuevo.id, product_id: req.params.id}, {where: {product_id: req.params.id}})
             //return talleNuevo
@@ -211,13 +212,49 @@ module.exports = {
             //return res.send(newTalles)
             //req.body.talles.forEach(async talles => {await productsize.destroy({where: {product_id: req.params.id}})})
             //newTalles.forEach(async size => {await productsize.update({size_id: size, product_id: req.params.id}, {where: {product_id: req.params.id}})})  
-             
-
+            
+            
             /*----------------------------------------------------------------------------*/
             
-            res.redirect(`/productos/detalle/${req.params.id}`);
-            //res.redirect('/productos')
-        }     
+            //res.redirect(`/productos/detalle/${req.params.id}`);
+            res.redirect('/adminProducts')
+        },
+        //Filtros por marca
+        adidas: async (req, res) => {
+            let marcas = await brands.findOne({where: {name: 'Adidas'}})
+            const zapatillas = await products.findAll({where: {brand_id: marcas.id}, include: ['brands', 'examples', 'images']});
+            res.render(path.resolve(__dirname , '..','views','admin','administrarProductos') , {zapatillas});
+        },
+        converse: async (req, res) => {
+            let marcas = await brands.findOne({where: {name: 'Converse'}})
+            const zapatillas = await products.findAll({where: {brand_id: marcas.id}, include: ['brands', 'examples', 'images']});
+            res.render(path.resolve(__dirname , '..','views','admin','administrarProductos') , {zapatillas});
+        },
+        dcShoes: async (req, res) => {
+            let marcas = await brands.findOne({where: {name: 'DC Shoes'}})
+            const zapatillas = await products.findAll({where: {brand_id: marcas.id}, include: ['brands', 'examples', 'images']});
+            res.render(path.resolve(__dirname , '..','views','admin','administrarProductos') , {zapatillas});
+        },
+        newBalance: async (req, res) => {
+            let marcas = await brands.findOne({where: {name: 'New Balance'}})
+            const zapatillas = await products.findAll({where: {brand_id: marcas.id}, include: ['brands', 'examples', 'images']});
+            res.render(path.resolve(__dirname , '..','views','admin','administrarProductos') , {zapatillas});
+        },
+        nike: async (req, res) => {
+            let marcas = await brands.findOne({where: {name: 'Nike'}})
+            const zapatillas = await products.findAll({where: {brand_id: marcas.id}, include: ['brands', 'examples', 'images']});
+            res.render(path.resolve(__dirname , '..','views','admin','administrarProductos') , {zapatillas});
+        },
+        reebok: async (req, res) => {
+            let marcas = await brands.findOne({where: {name: 'Reebok'}})
+            const zapatillas = await products.findAll({where: {brand_id: marcas.id}, include: ['brands', 'examples', 'images']});
+            res.render(path.resolve(__dirname , '..','views','admin','administrarProductos') , {zapatillas});
+        },
+        vans: async (req, res) => {
+            let marcas = await brands.findOne({where: {name: 'Vans'}})
+            const zapatillas = await products.findAll({where: {brand_id: marcas.id}, include: ['brands', 'examples', 'images']});
+            res.render(path.resolve(__dirname , '..','views','admin','administrarProductos') , {zapatillas});
+        }
         
     }
     

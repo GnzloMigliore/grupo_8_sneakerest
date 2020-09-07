@@ -19,26 +19,44 @@ module.exports = {
         //return res.send(zapatillas)
         const allZapatillas = await products.findAll({include: ['images']});
         //return res.send (allZapatillas)
-
+        
         //return res.send(allZapatillas);
-
+        
         res.render(path.resolve(__dirname , '..','views','productos','detalleProducto') , {zapatillas, allZapatillas});
     },
+    /***** Acá arrancan los filtros *****/
     novedades: async (req, res) => {
-        const zapatillas = await products.findAll({include: ['brands', 'examples', 'images'], order: [['updatedAt', 'DESC']]});
+        const zapatillas = await products.findAll({where: {updatedAt:  {[Op.gte]: '2020-09-05 19:38:51'}}, include: ['brands', 'examples', 'images'], order: [['updatedAt', 'DESC']]});
         //return res.send(zapatillas)
-        res.render(path.resolve(__dirname , '..','views','productos','novedades') , {zapatillas});
+        res.render(path.resolve(__dirname , '..','views','productos','productos') , {zapatillas});
     },
-    vendidos: async (req, res) => {
-        
+    sale: async (req, res) => {
+        const zapatillas = await products.findAll({where: {discount: {[Op.gt]: '0'}}, include: ['brands', 'examples', 'images'], order: [['updatedAt', 'DESC']]});
+        //return res.send(zapatillas)
+        res.render(path.resolve(__dirname , '..','views','productos','productos') , {zapatillas});
+    },
+    hombre: async (req, res) => {
+        const zapatillas = await products.findAll({where: {gender: 'hombre'}, include: ['brands', 'examples', 'images']});
+        //return res.send(zapatillas)
+        res.render(path.resolve(__dirname , '..','views','productos','productos') , {zapatillas});
+    },
+    mujer: async (req, res) => {
+        const zapatillas = await products.findAll({where: {gender: 'mujer'}, include: ['brands', 'examples', 'images']});
+        //return res.send(zapatillas)
+        res.render(path.resolve(__dirname , '..','views','productos','productos') , {zapatillas});
+    },
+    ninos: async (req, res) => {
+        const zapatillas = await products.findAll({where: {gender: 'niños'}, include: ['brands', 'examples', 'images']});
+        //return res.send(zapatillas)
+        res.render(path.resolve(__dirname , '..','views','productos','productos') , {zapatillas});
     },
     menor: async (req, res) => {
         const zapatillas = await products.findAll({include: ['brands', 'examples', 'images'], order: [['price', 'ASC']]});
-        res.render(path.resolve(__dirname , '..','views','productos','ordenMenorMayor') , {zapatillas});
+        res.render(path.resolve(__dirname , '..','views','productos','productos') , {zapatillas});
     },
     mayor: async (req, res) => {
         const zapatillas = await products.findAll({include: ['brands', 'examples', 'images'], order: [['price', 'DESC']]});
-        res.render(path.resolve(__dirname , '..','views','productos','ordenMayorMenor') , {zapatillas});
+        res.render(path.resolve(__dirname , '..','views','productos','productos') , {zapatillas});
     },
     //Filtros por marca
     adidas: async (req, res) => {
@@ -66,8 +84,8 @@ module.exports = {
         const zapatillas = await products.findAll({where: {brand_id: marcas.id}, include: ['brands', 'examples', 'images']});
         res.render(path.resolve(__dirname , '..','views','productos','productos') , {zapatillas});
     },
-    rebook: async (req, res) => {
-        let marcas = await brands.findOne({where: {name: 'Rebook'}})
+    reebok: async (req, res) => {
+        let marcas = await brands.findOne({where: {name: 'Reebok'}})
         const zapatillas = await products.findAll({where: {brand_id: marcas.id}, include: ['brands', 'examples', 'images']});
         res.render(path.resolve(__dirname , '..','views','productos','productos') , {zapatillas});
     },

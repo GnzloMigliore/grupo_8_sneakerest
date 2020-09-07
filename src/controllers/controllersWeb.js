@@ -13,5 +13,8 @@ module.exports = {
   },
   noticias: (req,res) => {
     res.render(path.resolve(__dirname, '..', 'views','web','noticias'))
+  },
+  recover: (req, res) => {
+    res.render(path.resolve(__dirname, '..', 'views','usuarios','recover'))
   }
 }

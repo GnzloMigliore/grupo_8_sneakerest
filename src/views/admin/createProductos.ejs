@@ -35,8 +35,8 @@
                                 <option value="DC Shoes">DC Shoes</option>
                                 <option value="New Balance">New Balance</option>
                                 <option value="Nike">Nike</option>
-                                <option value="Rebook">Rebook</option>
-                                <option value="vans">Vans</option>
+                                <option value="Reebok">Reebok</option>
+                                <option value="Vans">Vans</option>
                             </select>
                         </div>
                         <div class="form-group col-12 d-flex justify-content-center mt-0 mb-1">
@@ -88,10 +88,24 @@
                                     <datalist id="presetColors">
                                         <option value="#" disabled></option>
                                         <option selected value="#000000"/>
-                                        <option value="#ff0000"/>
-                                        <option value="#00ff00"/>
-                                        <option value="#0000ff"/>
                                         <option value="#b0c9d8"/>
+                                        <option value="#2f425f"/>
+                                        <option value="#ff641e"/>
+                                        <option value="#bab6af"/>
+                                        <option value="#7d3d47"/>
+                                        <option value="#a19053"/>
+                                        <option value="#d6ba9f"/>
+                                        <option value="#a4b2ca"/>
+                                        <option value="#d3898a"/>
+                                        <option value="#aa94a2"/>
+                                        <option value="#3c9392"/>
+                                        <option value="#98ab2d"/>
+                                        <option value=""/>
+                                        <option value=""/>
+                                        <option value=""/>
+                                        <option value=""/>
+                                        <option value=""/>
+                                        <option value=""/>
                                     </datalist>
                                 </div>
                                 <div class="form-group col-12 d-flex justify-content-center mt-0 mb-3">
@@ -148,7 +162,13 @@
                             <select class="form-group form-control col-7 pl-0 pr-2 bg-light" name="descuento" value=""<%= typeof old != 'undefined' ? old.descuento : '' %>">
                                 <option disabled selected value="">Seleccione un descuento</option>
                                 <option value="0">Sin descuento</option>
+                                <option value="5">5%</option>
                                 <option value="10">10%</option>
+                                <option value="15">15%</option>
+                                <option value="20">20%</option>
+                                <option value="25">25%</option>
+                                <option value="35">35%</option>
+                                <option value="50">50%</option>
                             </select>
                             <% if(typeof errors != 'undefined' && errors.descuento){%>
                                 <span class="text-danger" > <%=errors.descuento.msg %></span>

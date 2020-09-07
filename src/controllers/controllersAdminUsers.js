@@ -56,7 +56,6 @@ module.exports = {
         res.redirect('/adminUsers')
         
         
-        
     }
     
 };

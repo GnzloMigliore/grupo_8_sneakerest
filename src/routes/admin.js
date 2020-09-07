@@ -16,11 +16,14 @@ const upload = multer({ storage });
 
 const controllersAdmin = require(path.resolve(__dirname, '..', 'controllers', 'controllersAdmin'));
 
-router.get('/admin', controllersAdmin.index);
-router.get("/admin/create", controllersAdmin.create);
-router.post("/admin/create", upload.any(), controllersAdmin.save);
-router.get('/admin/detail/:id', controllersAdmin.show);
-router.get("/delete/:id", controllersAdmin.destroy);
-router.get("/edit/:id", controllersAdmin.edit);
-router.put("/edit/:id", upload.any(), controllersAdmin.updateZapatillas);
+//Middlewares
+const adminOnly = require(path.resolve(__dirname, '..', 'middlewares', 'adminOnly'));
+
+router.get('/admin', adminOnly, controllersAdmin.index);
+router.get("/admin/create", adminOnly, controllersAdmin.create);
+router.post("/admin/create", adminOnly, upload.any(), controllersAdmin.save);
+router.get('/admin/detail/:id', adminOnly, controllersAdmin.show);
+router.get("/delete/:id", adminOnly, controllersAdmin.destroy);
+router.get("/edit/:id", adminOnly, controllersAdmin.edit);
+router.put("/edit/:id", adminOnly, upload.any(), controllersAdmin.updateZapatillas);
 module.exports = router;

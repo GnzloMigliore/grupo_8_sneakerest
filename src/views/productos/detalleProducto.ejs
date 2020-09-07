@@ -2,8 +2,9 @@
 <html lang="es">
 <head>
     <%- include ('../partials/head.ejs')  %> 
-    <link rel="stylesheet" href="/css/detalleProducto.css">
     <link rel="stylesheet" href="/css/navbar.css">
+    <link rel="stylesheet" href="/css/detalleProducto.css">
+    
 </head>
 <body>
     <header>
@@ -97,13 +98,22 @@
                 </div>
                 <!--Precio-->
                 <div class="col-12 mt-3">
-                    <h3 class="font-weight-bold"><%= '$' + zapatillas.price %></h3>
+                    <% if (zapatillas.discount <= 0) { %>
+                        <h3 class="font-weight-bold"><%= '$' + zapatillas.price %></h3>
+                    <% } else if (zapatillas.discount >= 1){%>
+                        <div class="d-flex justify-content-start text-align-center">
+                            <h3 class="font-weight-bold mb-1 pr-1"><%= "$" +  `${zapatillas.price - zapatillas.price * zapatillas.discount / 100}` %></h3>
+                            <p class="mb-1 pl-1 text-danger font-weight-bold descuento-zapatilla d-flex flex-column justify-content-center"><%= zapatillas.discount + '%OFF' %> </p>
+                            
+                        </div>
+                        <h4 class="text-secondary"><del><%= "$" + zapatillas.price %></del></h4>
+                    <% } %> 
                 </div>
                 <!--Imágenes filtro colores-->
                 <div class="col-12 d-flex flex-wrap justify-content-start mt-5">
                     <p class="text-uppercase col-12 pl-0">colores</p>
                     <% allZapatillas.forEach( zapatilla => { %>
-                        <% if (zapatilla.example_id == zapatillas.example_id) { %>
+                        <% if (zapatilla.example_id == zapatillas.example_id && zapatilla.gender == zapatillas.gender) { %>
                             <a href="/productos/detalle/<%= zapatilla.id %> " class="col-3 py-2 px-2">
                             <div class="filtros-colores">
                                 <img src="/images/zapatillas/<%= zapatilla.images[0].filename %> " alt="">

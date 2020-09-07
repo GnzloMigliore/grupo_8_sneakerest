@@ -39,6 +39,10 @@
     .copyright-footer-grande {
         font-size: .6rem;
     }
+
+    .terminos-condiciones {
+        bottom: 2vh;
+    }
     
     .terminos-condiciones a {
         font-size: .75rem;

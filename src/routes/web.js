@@ -11,4 +11,5 @@ const controllersWeb = require(path.resolve(__dirname, '..', 'controllers', 'con
 router.get('/', controllersWeb.index);
 router.get('/newsletter', controllersWeb.newsletter);
 router.get('/noticias', controllersWeb.noticias);
+router.get('/recover', controllersWeb.recover)
 module.exports = router; 

@@ -27,5 +27,14 @@ router.get('/adminProducts/detail/:id', controllersAdminProducts.show);
 router.get("/adminProducts/delete/:id", controllersAdminProducts.destroy);
 router.get("/adminProducts/edit/:id", controllersAdminProducts.edit);
 router.put("/adminProducts/edit/:id", upload.any('imagen[]'), editProductos, controllersAdminProducts.updateZapatillas);
+/********************* Filtros por marca en admin **********************/
+router.get('/adminProducts/adidas', controllersAdminProducts.adidas);
+router.get('/adminProducts/converse', controllersAdminProducts.converse);
+router.get('/adminProducts/dc-shoes', controllersAdminProducts.dcShoes);
+router.get('/adminProducts/new-balance', controllersAdminProducts.newBalance);
+router.get('/adminProducts/nike', controllersAdminProducts.nike);
+router.get('/adminProducts/reebok', controllersAdminProducts.reebok);
+router.get('/adminProducts/vans', controllersAdminProducts.vans);
+
 module.exports = router;
 

@@ -1,6 +1,5 @@
 html {
     min-width: 300px;
-     /** Reset para rem --> 62.5% = 10px de 16px **/
 }
 
 body {
@@ -61,10 +60,18 @@ button:focus {
     overflow: scroll;
 }
 
+#filtros-mobile {
+    display: flex!important;
+    justify-content: flex-end!important;
+}
+
 .dos-drops1 {
     display: flex;
     align-items: center;
     justify-content: flex-end;
+}
+.dos-drops {
+    display: none;
 }
 
 .orden-filtros-drop {
@@ -109,6 +116,11 @@ button:focus {
 .padre-box-precio {
     padding-left: 0;
     padding-top: 0;
+}
+
+.descuento-zapatilla {
+    font-size: .8rem;
+    font-weight: bold;
 }
 
 .lista-productos {
@@ -201,16 +213,21 @@ div.fondo-grisOscuro-productos:hover {
     }
     
     .marcas-arriba {
-        display: inline-flex;
+        margin: auto 2rem auto auto;
+        display: inline-flex!important;
         flex-flow: row wrap;
-        justify-content: center;
+        justify-content: flex-end;
     }
     
     .marcas-arriba a {
         padding: 0 1rem;
-        font-size: 1.2rem;
+        font-size: 1rem;
         text-decoration: none;
         color: black;
+    }
+
+    #filtros-mobile {
+        display: none!important;
     }
     
     .dos-drops {
@@ -250,7 +267,10 @@ div.fondo-grisOscuro-productos:hover {
 }
 
 @media (min-width: 992px) {
-    
+    #filtros-mobile {
+        display: none!important;
+    }
+
     .content-mobile {
         display: none;
     }
@@ -321,7 +341,10 @@ div.fondo-grisOscuro-productos:hover {
 }
 
 @media (min-width: 1200px) {
-    
+    #filtros-mobile {
+        display: none!important;
+    }
+
     .orden-filtros {
         padding-bottom: 5rem;
     }

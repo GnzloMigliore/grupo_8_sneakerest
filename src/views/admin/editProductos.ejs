@@ -33,14 +33,13 @@
                                 <!--Marca-->
                                 <div class="form-group">
                                     <select class="form-control border-0 rounded-0 bg-light" name="marca" value="<%= typeof old != 'undefined' ? old.marca : '' %>">
-                                        <option disabled selected value=""><%= zapatillas.brands.name%></option>
-                                        <option value="Adidas">Adidas</option>
-                                        <option value="Converse">Converse</option>
-                                        <option value="DC Shoes">DC Shoes</option>
-                                        <option value="New Balance">New Balance</option>
-                                        <option value="Nike">Nike</option>
-                                        <option value="Rebook">Rebook</option>
-                                        <option value="vans">Vans</option>
+                                        <option value="Adidas" <%= zapatillas.brands.name == 'Adidas' ? "selected" : null %>>Adidas</option>
+                                        <option value="Converse" <%= zapatillas.brands.name == 'Converse' ? "selected" : null %>>Converse</option>
+                                        <option value="DC Shoes" <%= zapatillas.brands.name == 'DC Shoes' ? "selected" : null %>>DC Shoes</option>
+                                        <option value="New Balance" <%= zapatillas.brands.name == 'New Balance' ? "selected" : null %>>New Balance</option>
+                                        <option value="Nike" <%= zapatillas.brands.name == 'Nike' ? "selected" : null %>>Nike</option>
+                                        <option value="Reebok" <%= zapatillas.brands.name == 'Reebok' ? "selected" : null %>>Reebok</option>
+                                        <option value="Vans" <%= zapatillas.brands.name == 'Vans' ? "selected" : null %>>Vans</option>
                                     </select>
                                 </div>
                                 <!--Error-->
@@ -69,8 +68,13 @@
                                     <select  name="descuento" class="custom-select border-0 rounded-0 bg-light" id="validationCustom04" required>
                                         <option disabled value="">Seleccione un descuento</option>
                                         <option value="0" <%= zapatillas.discount == 0 ? "selected" : null %>>Sin descuento</option>
+                                        <option value="5" <%= zapatillas.discount == 5 ? "selected" : null %>>5%</option>
                                         <option value="10" <%= zapatillas.discount == 10 ? "selected" : null %>>10%</option>
-                                        
+                                        <option value="15" <%= zapatillas.discount == 15 ? "selected" : null %>>15%</option>
+                                        <option value="20" <%= zapatillas.discount == 20 ? "selected" : null %>>20%</option>
+                                        <option value="25" <%= zapatillas.discount == 25 ? "selected" : null %>>25%</option>
+                                        <option value="35" <%= zapatillas.discount == 35 ? "selected" : null %>>35%</option>
+                                        <option value="50" <%= zapatillas.discount == 50 ? "selected" : null %>>50%</option>
                                     </select>
                                 </div>
                                 <!--Aqui solicito la imagen al usuario-->
@@ -81,9 +85,18 @@
                                     <div class="form-group col-2 pl-0">
                                         <input type="color" list="presetColors" class="form-control border-0 rounded-0 bg-light" name="color"  value="<%= zapatillas.color %>" >
                                         <datalist id="presetColors" >
-                                            <option value="#74cfe0"/>
-                                            <option value="#00ff00"/>
-                                            <option value="#0000ff"/>
+                                            <option value="#b0c9d8"/>
+                                            <option value="#2f425f"/>
+                                            <option value="#ff641e"/>
+                                            <option value="#bab6af"/>
+                                            <option value="#7d3d47"/>
+                                            <option value="#a19053"/>
+                                            <option value="#d6ba9f"/>
+                                            <option value="#a4b2ca"/>
+                                            <option value="#d3898a"/>
+                                            <option value="#aa94a2"/>
+                                            <option value="#3c9392"/>
+                                            <option value="#98ab2d"/>
                                         </datalist>
                                     </div>
                                     <!--Talles-->

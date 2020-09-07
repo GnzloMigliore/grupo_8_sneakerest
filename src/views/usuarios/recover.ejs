@@ -3,35 +3,34 @@
 
 <head>
     <%- include('../partials/head.ejs') %>
-    <link rel="stylesheet" href="css/recover.css">
+    
+    <link rel="stylesheet" href="/css/recover.css">
+    <link rel="stylesheet" href="/css/navbar.css">
 </head>
 
 <body>
-    <%- include('../partials/navBar.ejs') %>
+    <header>
+        <%- include('../partials/navBar.ejs') %>
+    </header>
+    
+    <div class="container-fluid">
+        <section class="row my-5">
+            <article class="col-8 mx-auto">
+                <h2 class="titulo-crear pb-3 border-bottom text-center pt-5 mx-auto text-uppercase">Recuperar Contraseña</h2>
+            </article>
+        </section>
+    </div>
+
     <div class="conteiner">
         
-        <div id="item1" class="box">
-            <a href="/login"><i class="fas fa-arrow-left" style="color: black;"></i></a>
-        </div>
-        <div id="item2" class="box ">
-            <h1>¿HAS OLVIDADO TU CONTRASEÑA?</h1>
-        </div>
-        <div id="item3" class="box">
-            <a href="/carrito"><i class="fas fa-shopping-cart" style="color: black;"></i></a>
-        </div>
         <!--texto-->
-        <main class="my-5 py-5">
-            
-            
+        <main class="mt-3 mb-5 py-3">            
             <p>Si has olvidado tu contraseña proporciona tu dirección <br> de correo electrónico y te enviaremos un email con instrucciones de como recuperarla.</p>
-            
-            
-            
             <!--Formulario-->
             <!--Email-->
-            <form class="pb-5">
-                <input type="Email" name="Email" placeholder="Email" class="col-12 mb-2 datos-envio-input">
-                <button type="button" class="btn btn-dark mb-5 mt-2">RECUPERAR CONTRASEÑA</button>
+            <form class="pb-5 pt-3">
+                <input type="Email" name="Email" placeholder="Email" class="col-12 mb-2 datos-envio-input form-control form-control-lg">
+                <button type="button" class="btn btn-dark mb-5 mt-2 boton-recuperar">RECUPERAR CONTRASEÑA</button>
             </form>
         </main>
         
