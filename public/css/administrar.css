@@ -1,6 +1,8 @@
-body {
-    font-family: 'Montserrat', sans-serif;
+body, h1, h2, h3, h4, h5, p {
+    font-family: 'Montserrat', sans-serif!important;
 }
+
+
 
 img {
     max-width: 100%;
@@ -33,6 +35,10 @@ li {
 .slider-img {
     /*box-shadow: 0 0 5px rgb(102, 102, 102);*/
     border: 1.5px solid black;
+}
+
+.texto-descuento {
+    text-shadow: 1px 1px 2px #000000;
 }
 
 .borde-bajo {

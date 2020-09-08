@@ -18,24 +18,6 @@ module.exports = {
     },
     login: async (req, res) => {
         
-        /*const errors = validationResult(req);
-        //return res.send(errors.mapped());
-        if(!errors.isEmpty()) {
-            let usuarioLogueado = await users.findOne({
-                where: {
-                    email: req.body.email
-                }
-            })
-            delete usuarioLogueado.password;
-            req.session.usuario = usuarioLogueado;
-            if(req.body.recordarme){
-                res.cookie('email', usuarioLogueado.email, {maxAge: 1000 * 60 * 60 * 48})
-            }
-            res.redirect('/');
-        }else{
-            //Devolver a la vista los errores
-            return res.render(path.resolve(__dirname, '../views/usuarios/login'), {errors: errors.mapped(),  old: req.body}) 
-        }*/
         let errors = validationResult(req);
         if(!errors.isEmpty()){
             //return res.send(errors.mapped())

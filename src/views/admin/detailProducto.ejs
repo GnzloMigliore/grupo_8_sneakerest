@@ -3,7 +3,7 @@
   <head>
     <%- include('../partials/head.ejs') %>
     <!-- UIkit CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.7/dist/css/uikit.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.7/dist/css/uikit.min.css" />
     <link rel="stylesheet" href="/css/administrar.css">
     <link rel="stylesheet" href="/css/navbar.css">
   </head>
@@ -17,8 +17,10 @@
         
         <section class="row">
           <!-- Cuerpo principal -->
-          <h1 class="col-12 mt-5 text-center">DETALLE DE PRODUCTO</h1>
-          <article id="article" class="col-12 mx-auto mt-5 mb-3 d-flex justify-content-around align-items-center">
+          <article class="col-8 mx-auto">
+            <h1 class="titulo-admin pb-3 border-bottom text-center pt-5 mx-auto text-uppercase">detalle de producto</h1>
+          </article>
+          <article id="article" class="col-12 mx-auto mt-3 mb-3 d-flex justify-content-around align-items-top">
             <!--Fotos-->
             <div class="col-5 mx-auto">
               <div class="uk-position-relative uk-visible-toggle uk-light slider-img" tabindex="-1" uk-slider="center: true">
@@ -43,10 +45,20 @@
                 <h4 class="card-title col-6 m-0">MODELO: <%= zapatillas.examples.name %></h4>
               </div>
               <!--Precio y descuento-->
-              <div class="col-12 d-flex flex-wrap justify-content-between align-items-center my-3 pb-3 borde-bajo">
-                <h5 class="card-title col-6 m-0 pl-0">PRECIO:  $<%= zapatillas.price %></h5>  
-                <h5 class="card-title col-6 m-0">DESCUENTO: <%= zapatillas.discount %></h5> 
-              </div>
+              <% if (zapatillas.discount <= 0) { %>
+                <div class="col-12 d-flex flex-wrap justify-content-between align-items-center my-3 pb-3 borde-bajo">
+                  <h5 class="card-title col-6 m-0 pl-0">PRECIO:  $<%= zapatillas.price %></h5>  
+                  <h5 class="card-title col-6 m-0">DESCUENTO: <%= zapatillas.discount %></h5> 
+                </div>
+              <% } else { %> 
+                <div class="col-12 d-flex flex-wrap justify-content-between align-items-end my-3 pb-3 pl-0 borde-bajo">
+                  <div class="col-6">
+                    <h5 class="card-title col-12 m-0 pl-0"><del>PRECIO:  $<%= zapatillas.price %></del></h5>  
+                    <h5 class="card-title col-12 m-0 pl-0 text-danger font-weight-bold descuento-zapatilla texto-descuento">DESCUENTO: <%= zapatillas.discount %>%</h5> 
+                  </div>
+                  <h5 class="card-title col-6 m-0"><u><%="PRECIO CON DESCUENTO: $" +  `${zapatillas.price - zapatillas.price * zapatillas.discount / 100}` %></u></h5>
+                </div>
+              <% } %> 
               <!--Descripción-->
               <div class="col-12 my-3 pb-3 borde-bajo">
                 <p class="card-text">DESCRIPCIÓN: <%= zapatillas.description %></p>
@@ -66,8 +78,9 @@
             </div> 
           </article>
           <!--Boton volver-->
-          <div class="col-12 d-flex justify-content-end pr-5 my-5">
-            <a href="/adminProducts" class="btn btn-dark px-5">Volver</a>
+          <div class="col-12 d-flex justify-content-end mb-5">
+            <a href="/adminProducts/edit/<%= zapatillas.id %> " class="btn btn-dark px-5 mr-3">Editar Producto</a>
+            <a href="/adminProducts" class="btn btn-light btn-outline-dark px-5">Volver</a>
           </div>
     </section>
   </div>

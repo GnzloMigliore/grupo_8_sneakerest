@@ -27,9 +27,9 @@
                             <th scope="col">Rol</th>
                             <th scope="col">Nombre y apellido</th>
                             <th scope="col">Correo electrónico</th>
-                            <th scope="col">Ver</th>
-                            <th scope="col">Editar</th>
-                            <th scope="col">Borrar</th>
+                            <th scope="col" class="text-center">Ver</th>
+                            <th scope="col" class="text-center">Editar</th>
+                            <th scope="col" class="text-center">Borrar</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -38,10 +38,9 @@
                                 <td><%= usuario.role %></td>
                                 <td><%= usuario.first_name + ' ' + usuario.last_name %></td>
                                 <td><%= usuario.email %></td>
-                                <td><a href="/adminUsers/detail/<%= usuario.id %> ">Ver usuario</a></td>
-                                <td><a href="/adminUsers/edit/<%= usuario.id %> ">Editar Rol de usuario</a></td>
-                                <td><a href="/adminUsers/delete/<%= usuario.id%>">Eliminar usuario</a></td>
-                               
+                                <td class="text-center"><a href="/adminUsers/detail/<%= usuario.id %> "><i class="fas fa-eye"></i></a></td>
+                                <td class="text-center"><a href="/adminUsers/edit/<%= usuario.id %> "><i class="fas fa-pencil-alt"></i></a></td>
+                                <td class="text-center"><a href="/adminUsers/delete/<%= usuario.id%>"><i class="fas fa-trash-alt"></i></a></td>
                             </tr>
                         <% }); %> 
                     </tbody>

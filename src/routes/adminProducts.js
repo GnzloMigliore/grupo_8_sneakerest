@@ -19,22 +19,24 @@ const controllersAdminProducts = require(path.resolve(__dirname, '..', 'controll
 //Middlewares
 const creacionProductos = require(path.resolve(__dirname, '..', 'middlewares', 'creacionProductos'));
 const editProductos = require(path.resolve(__dirname, '..', 'middlewares', 'editProductos'));
+const adminOnly = require(path.resolve(__dirname, '..', 'middlewares', 'adminOnly'));
 
-router.get('/adminProducts', controllersAdminProducts.index);
-router.get("/adminProducts/create", controllersAdminProducts.create);
-router.post('/adminProducts/create', upload.any('imagen[]'), creacionProductos, controllersAdminProducts.save);
-router.get('/adminProducts/detail/:id', controllersAdminProducts.show);
-router.get("/adminProducts/delete/:id", controllersAdminProducts.destroy);
-router.get("/adminProducts/edit/:id", controllersAdminProducts.edit);
-router.put("/adminProducts/edit/:id", upload.any('imagen[]'), editProductos, controllersAdminProducts.updateZapatillas);
+
+router.get('/adminProducts', adminOnly, controllersAdminProducts.index);
+router.get("/adminProducts/create", adminOnly, controllersAdminProducts.create);
+router.post('/adminProducts/create', upload.any('imagen[]'), adminOnly, creacionProductos, controllersAdminProducts.save);
+router.get('/adminProducts/detail/:id', adminOnly, controllersAdminProducts.show);
+router.get("/adminProducts/delete/:id", adminOnly, controllersAdminProducts.destroy);
+router.get("/adminProducts/edit/:id", adminOnly, controllersAdminProducts.edit);
+router.put("/adminProducts/edit/:id", adminOnly, upload.any('imagen[]'), editProductos, controllersAdminProducts.updateZapatillas);
 /********************* Filtros por marca en admin **********************/
-router.get('/adminProducts/adidas', controllersAdminProducts.adidas);
-router.get('/adminProducts/converse', controllersAdminProducts.converse);
-router.get('/adminProducts/dc-shoes', controllersAdminProducts.dcShoes);
-router.get('/adminProducts/new-balance', controllersAdminProducts.newBalance);
-router.get('/adminProducts/nike', controllersAdminProducts.nike);
-router.get('/adminProducts/reebok', controllersAdminProducts.reebok);
-router.get('/adminProducts/vans', controllersAdminProducts.vans);
+router.get('/adminProducts/adidas', adminOnly, controllersAdminProducts.adidas);
+router.get('/adminProducts/converse', adminOnly, controllersAdminProducts.converse);
+router.get('/adminProducts/dc-shoes', adminOnly, controllersAdminProducts.dcShoes);
+router.get('/adminProducts/new-balance', adminOnly, controllersAdminProducts.newBalance);
+router.get('/adminProducts/nike', adminOnly, controllersAdminProducts.nike);
+router.get('/adminProducts/reebok', adminOnly, controllersAdminProducts.reebok);
+router.get('/adminProducts/vans', adminOnly, controllersAdminProducts.vans);
 
 module.exports = router;
 

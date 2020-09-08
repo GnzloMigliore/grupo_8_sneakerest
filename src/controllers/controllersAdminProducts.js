@@ -79,26 +79,8 @@ module.exports = {
             })   
             
             newTalles.forEach(async size => { productsize.create({size_id: size, product_id: newZapatilla.id})})   
-            
-            
-            
-            //return res.send(newTalles)
-            //let newZapatillaTalles = await products.create(zapatillas_body)
-            
-            //console.log('oooooooooooooooooooooooooooooooooooooooo   ' + tallesProducto())         
-            
-            
-            res.redirect(`/productos/detalle/${newZapatilla.id}`);
-            //res.redirect('/adminProducts')*/
-            
-            
-            
-            
-            
-            
-            
-            
-            
+
+            res.redirect(`/productos/detalle/${newZapatilla.id}`);  
         },
         show: async (req,res)=>{
             const zapatillas = await products.findByPk(req.params.id, {include: ['brands', 'examples', 'images', 'sizes']});
@@ -139,16 +121,12 @@ module.exports = {
             let marcas_body = null;
             let modelos_body = null;
             if (marcas.length >= 1){
-                //let actualizarBrand = await brands.update({name: req.body.marca})
                 marcas_body = marcas[0].id
-                //marcas_body = marcas[0].id;
             } else {
-                //await brands.destroy({where: {name: req.body.oldBrand}})
                 let newBrand = await brands.create({name: req.body.marca})
                 marcas_body = newBrand.id;
             }
             if (modelos.length >= 1){
-                //let actualizarExample = await examples.update({name: req.body.modelo})
                 modelos_body = modelos[0].id
                 //modelos_body = marcas[0].id;
             } else {
@@ -201,32 +179,16 @@ module.exports = {
                 product_id: req.params.id,
                 image_id: newImage5.id
             })
-            
-            //return res.send(req.body.talles)
-            /*--------------------------------------------------------------------------*/
-            
-            
+
             let lastTalles = await products.findByPk(req.params.id, {include: ['sizes']});
             
-            //return res.send(lastSizes)
             lastTalles.sizes.forEach(async talles => {await sizes.destroy({where: {id: talles.id}})})
-            
-            //console.log('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa ', talleNuevo.id);
-            //await productsize.update({size_id: talleNuevo.id, product_id: req.params.id}, {where: {product_id: req.params.id}})
-            //return talleNuevo
+
             await productsize.destroy({where:{product_id: req.params.id},force:true})
             
             let newTalles = req.body.talles.map(talle => sizes.create({number: talle}).then(async size => {await productsize.create({size_id: size.id, product_id: req.params.id}, {where: {product_id: req.params.id}})}))
-            
-            //return res.send(newTalles)
-            //req.body.talles.forEach(async talles => {await productsize.destroy({where: {product_id: req.params.id}})})
-            //newTalles.forEach(async size => {await productsize.update({size_id: size, product_id: req.params.id}, {where: {product_id: req.params.id}})})  
-            
-            
-            /*----------------------------------------------------------------------------*/
-            
-            //res.redirect(`/productos/detalle/${req.params.id}`);
-            res.redirect('/adminProducts')
+
+            res.redirect(`/adminProducts/detail/${req.params.id}`)
         },
         //Filtros por marca
         adidas: async (req, res) => {

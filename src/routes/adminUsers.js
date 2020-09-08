@@ -15,12 +15,13 @@ const storage = multer.diskStorage({
 const upload = multer({ storage });
 
 const controllersAdminUsers = require(path.resolve(__dirname, '..', 'controllers', 'controllersAdminUsers'));
+const adminOnly = require(path.resolve(__dirname, '..', 'middlewares', 'adminOnly'));
 
-router.get('/adminUsers', controllersAdminUsers.index);
-router.get('/adminUsers/detail/:id', controllersAdminUsers.show);
-router.get("/adminUsers/delete/:id", controllersAdminUsers.destroy);
-router.get("/adminUsers/edit/:id", controllersAdminUsers.edit);
-router.put("/adminUsers/edit/:id", controllersAdminUsers.updateRole);
+router.get('/adminUsers', adminOnly, controllersAdminUsers.index);
+router.get('/adminUsers/detail/:id', adminOnly, controllersAdminUsers.show);
+router.get("/adminUsers/delete/:id", adminOnly, controllersAdminUsers.destroy);
+router.get("/adminUsers/edit/:id", adminOnly, controllersAdminUsers.edit);
+router.put("/adminUsers/edit/:id", adminOnly, controllersAdminUsers.updateRole);
 
 
 module.exports = router;
